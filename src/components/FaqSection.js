@@ -8,7 +8,7 @@ export class FaqSection extends Component {
                 <Row>
                     <Col md={8}> </Col>
                     <Col md={4}>
-                        <p>Impressum for the Footer</p>
+                        <p>FAQ</p>
                     </Col>
                 </Row>
             </Container>
