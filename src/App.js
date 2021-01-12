@@ -1,5 +1,6 @@
 import tree from "./tree.json";
-import "./App.css";
+import "./components/TreeCard.css";
+import "./components/Search.css";
 import TreeCard from "./components/TreeCard";
 import Search from "./components/Search";
 import { useState } from "react";
@@ -35,7 +36,7 @@ function App() {
 
   function sortByCoAscending() {
     let newProducts = [...products];
-    let sorted = newProducts.sort((a, b) => Number(a.co2) - Number(b.co2));
+    let sorted = newProducts.sort((a, b) => a.co2 - b.co2);
     setProducts(sorted);
   }
 
