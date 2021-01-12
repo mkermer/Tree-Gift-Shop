@@ -1,16 +1,32 @@
-import tree from "./tree.json";
-import "./components/TreeCard.css";
-import "./components/Search.css";
-import ProductList from "./components/ProductList";
+
+import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import Cart from "./components/Cart";
+import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <div className="App">
-      <Navigation />
-      <ProductList products={tree} />
-    </div>
-  );
-}
+    <Router>
+      <div className="App">
+        <div>
+          <Navigation />
+          <nav className="navbar navbar-light">
+            <ul className="nav navbar-nav">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/checkout">Cart</Link>
+              </li>
+            </ul>
+          </nav>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/checkout" exact>
+              <Cart />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
 
-export default App;
