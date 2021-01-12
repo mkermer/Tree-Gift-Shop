@@ -3,6 +3,7 @@ import TreeCard from "./TreeCard";
 import Search from "./Search";
 import { useState } from "react";
 import Filters from "./Filters";
+import './ProductList.css'
 
 function ProductList(props) {
   const [products, setProducts] = useState(props.products);
@@ -74,7 +75,7 @@ function ProductList(props) {
   console.log(cartState);
 
   return (
-    <div>
+    <div className="ProductList">
       <Search handleChange={handleChange} />
       <Filters
         priceDesc={sortByPriceDescending}

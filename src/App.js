@@ -1,12 +1,15 @@
+
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <div>
+          <Navigation />
           <nav className="navbar navbar-light">
             <ul className="nav navbar-nav">
               <li>
@@ -26,7 +29,4 @@ function App() {
         </div>
       </div>
     </Router>
-  );
-}
 
-export default App;

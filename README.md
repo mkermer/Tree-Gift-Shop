@@ -11,6 +11,8 @@
 - git commit -m "message"
 - git push
 
+After a merge, type **git pull upstream main**!!!
+
 Note: This React App is running on Port 8080
 
 **Product Owner:** Johanna von Horn
