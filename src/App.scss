@@ -1,0 +1,18 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&family=Open+Sans&display=swap');
+
+$body-bg: #8896;
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Denk One', sans-serif;
+}
+
