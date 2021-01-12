@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-export class Impressum extends Component {
+export class FaqSection extends Component {
     render() {
         return (
             <Container>
@@ -16,4 +16,4 @@ export class Impressum extends Component {
     }
 }
 
-export default Impressum
+export default FaqSection

@@ -9,7 +9,7 @@ export class AboutUs extends Component {
                     <Col md={8}> </Col>
                     <Col md={4}>
                         <h1>About Us</h1>
-                        <p>Impressum Paragraph</p>
+                        <p>Get to Know the Team</p>
                         <Button>Contact</Button>
                     </Col>
                 </Row>
