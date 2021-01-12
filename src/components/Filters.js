@@ -6,8 +6,12 @@ function Filters(props) {
       <button onClick={props.sortByName}>Sort by name</button>
       <button onClick={props.priceAsc}>Price /\</button>
       <button onClick={props.priceDesc}>Price \/</button>
-      <button onClick={props.co2Asc}>CO2 Absorption /\</button>
-      <button onClick={props.co2Desc}>CO2 Absorption \/</button>
+      <button onClick={props.co2Asc}>
+        CO<sub>2</sub> Absorption /\
+      </button>
+      <button onClick={props.co2Desc}>
+        CO<sub>2</sub> Absorption \/
+      </button>
       <br></br>
       <br></br>
       <label htmlFor="countries">Select a country: </label>
