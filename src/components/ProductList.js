@@ -1,6 +1,4 @@
 import React from "react";
-import "./TreeCard.css";
-import "./Search.css";
 import TreeCard from "./TreeCard";
 import Search from "./Search";
 import { useState } from "react";
@@ -8,6 +6,8 @@ import Filters from "./Filters";
 
 function ProductList(props) {
   const [products, setProducts] = useState(props.products);
+  const [cartState, setCart] = useState([]);
+
   function handleChange(e) {
     var filteredProductList = props.products.filter(
       (product) =>
@@ -59,6 +59,20 @@ function ProductList(props) {
     setProducts(sorted);
   }
 
+  function addToCart(e) {
+    let cart = [];
+    let newProducts = [...props.products];
+    newProducts.forEach((obj) => {
+      if (obj.id === Number(e.target.id)) {
+        cart.push(obj);
+        alert(`${obj.name} was added to your cart`);
+      }
+    });
+    return setCart(cartState.concat(cart));
+  }
+
+  console.log(cartState);
+
   return (
     <div>
       <Search handleChange={handleChange} />
@@ -70,7 +84,7 @@ function ProductList(props) {
         co2Desc={sortByCoDescending}
         selectCountry={handleCountryChange}
       />
-      <TreeCard products={products} />
+      <TreeCard products={products} add={addToCart} />
     </div>
   );
 }
