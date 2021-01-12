@@ -4,6 +4,7 @@ import InfoSection from "./components/InfoSection";
 import ContactSection from "./components/ContactSection";
 import LoginSection from './components/LoginSection';
 import ProductSection from './components/ProductSection';
+import AboutUs from './components/AboutUsSection';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <InfoSection/>
       <ContactSection/>
       <LoginSection/>
+      <AboutUs/>
   
 
     </div>
