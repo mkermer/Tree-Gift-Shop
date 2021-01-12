@@ -8,12 +8,13 @@ import ProductSection from './components/ProductSection';
 function App() {
   return (
     <div className="App">
-      <HeroSection></HeroSection>
-      <ProductSection></ProductSection>
+      <HeroSection/>
+      <ProductSection/>
       {/*<ProductList products={tree} />*/}
-      <InfoSection></InfoSection>
-      <ContactSection></ContactSection>
-      <LoginSection></LoginSection>
+      <InfoSection/>
+      <ContactSection/>
+      <LoginSection/>
+  
 
     </div>
   );
