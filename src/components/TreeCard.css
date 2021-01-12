@@ -27,7 +27,7 @@
   transform: perspective(1px) scale(0.95) translateZ(0);
 }
 
-button {
+.card button {
   height: 40px;
   width: 100px;
   text-align: center;
