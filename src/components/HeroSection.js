@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import  { Jumbotron, Container, Row, Col, Image, Button }  from 'react-bootstrap';
 
 
-export class Jumbo extends Component {
+export class HeroSection extends Component {
     render() {
         return (
-            <>
                 <Jumbotron fluid>
-                    <Container fluid>
+                    <Container>
                         <Row> 
-                            <Col md={4}> </Col>
-                            <Col md={4}> <Image src="holder.js/171x180" rounded fluid /> </Col>
+                            <Col md={8}> <Image src="holder.js/171x180" rounded fluid /> </Col>
                             <Col md={4}> 
                                 <h1>Intro</h1>
                                 <p>Intro Paragraph</p>
@@ -18,10 +16,9 @@ export class Jumbo extends Component {
                             </Col>
                         </Row>
                     </Container>
-                </Jumbotron>
-            </> 
+                </Jumbotron> 
         )
     }
 }
 
-export default Jumbo
+export default HeroSection

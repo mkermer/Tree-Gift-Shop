@@ -1,15 +1,20 @@
 import "./App.scss";
-import tree from "./tree.json";
-import "./components/TreeCard.css";
-import "./components/Search.css";
-import ProductList from "./components/ProductList";
-import Jumbo from './components/HeroSection';
+import HeroSection from './components/HeroSection';
+import InfoSection from "./components/InfoSection";
+import ContactSection from "./components/ContactSection";
+import LoginSection from './components/LoginSection';
+import ProductSection from './components/ProductSection';
 
 function App() {
   return (
     <div className="App">
-      <Jumbo></Jumbo>
-      <ProductList products={tree} />
+      <HeroSection></HeroSection>
+      <ProductSection></ProductSection>
+      {/*<ProductList products={tree} />*/}
+      <InfoSection></InfoSection>
+      <ContactSection></ContactSection>
+      <LoginSection></LoginSection>
+
     </div>
   );
 }
