@@ -27,7 +27,9 @@ function App() {
           <ContactSection />
           <Impressum />
       </div>
+
   );
 }
 
 export default App; 
+
