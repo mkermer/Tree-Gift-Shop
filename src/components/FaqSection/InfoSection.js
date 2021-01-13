@@ -9,9 +9,9 @@ export class InfoSection extends Component {
         return (
             <Container>
                 <Row>
-                    <Col lg={6}><Enviroment className="enviro"/></Col>
-                    <Col lg={6} md={6}><h1>Why Treeduce?</h1> </Col>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={12} sm={12}><Enviroment className="enviro"/></Col>
+                    <Col lg={6} md={12} sm={12}><h1>Why Treeduce?</h1> </Col>
+                    <Col lg={6} md={6} sm={12}>
                         <h3>Our trees</h3>
                         <p>Our trees are planted in agroforestry projects that
                         promote virtuous interaction among different species
@@ -23,7 +23,7 @@ export class InfoSection extends Component {
                         and much more.
                         </p>
                     </Col>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={12}>
                         <h3>Social benefits</h3>
                         <p>Rural communities involved in our projects receive training and financial support.
                         They are the ones who take care of the trees and enjoy their fruits.
