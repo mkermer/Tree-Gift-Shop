@@ -1,0 +1,12 @@
+.cart-container {
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 80%;
+  padding: 50px;
+  height: 50vh;
+  background-color: #c7e2cf;
+}
+
+.cart-banner {
+  border-bottom: 1px solid lightslategray;
+}

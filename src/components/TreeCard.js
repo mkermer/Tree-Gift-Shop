@@ -13,7 +13,7 @@ function TreeCard(props) {
               CO<sub>2</sub>: -{obj.co2}kg
             </p>
             <h3>{obj.price} $</h3>
-            <button id={obj.id} onClick={props.add}>
+            <button class="card-button" id={obj.id} onClick={props.add}>
               Add
             </button>
           </div>
