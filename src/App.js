@@ -21,10 +21,10 @@ function App() {
           <HeroSection />
           <ProductSection />
           <InfoSection />
+          <FaqSection />
           <LoginSection />
           <AboutUs />
           <ContactSection />
-          <FaqSection />
           <Impressum />
       </div>
   );
