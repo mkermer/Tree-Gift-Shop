@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Container, Row, Col } from 'react-bootstrap';
-import { ReactComponent as Enviroment } from '../../assets/undraw_environment_iaus.svg';
+import { ReactComponent as Enviroment } from '../../illustrations/undraw_environment_iaus.svg';
 
 import "./InfoSection.scss";
 
