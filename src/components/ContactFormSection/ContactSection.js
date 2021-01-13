@@ -8,7 +8,7 @@ export class ContactSection extends Component {
         return (
             <Container>
                 <Row>
-                    <Col lg={6} md={12} sm={12}> <Contact /></Col>
+                    <Col lg={6} md={12} sm={12}> <Contact/></Col>
                     <Col lg={6} md={12} sm={12}>
                         <h2>Don't hesitate to contact us</h2>
                         <h1>Contact</h1>
