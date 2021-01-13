@@ -1,21 +1,38 @@
-import React, { Component } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import React, {useState} from 'react';
+// import { Container, Row, Col, Button } from 'react-bootstrap';
 
-export class LoginSection extends Component {
-    render() {
-        return (
-            <Container> 
-                <Row>
-                    <Col md={2}>
-                        <h1>Login</h1>
-                        <p>Have you already an account Paragraph</p>
-                        <Button>Login</Button>
-                    </Col>
-                    <Col md={10}></Col>
-                </Row>
-            </Container>
-        )
+
+function LoginSection({ Login, error }){
+    const [details, setDetails] = useState({name: "", email:"", password:""});
+   
+    const submitHandler = e =>{
+        e.preventDefault();
+
+        Login(details);
     }
-}
 
-export default LoginSection
+    return (
+        <form onSubmit={submitHandler}>
+            <div className="form-inner">
+                <h2>Login</h2>
+                {(error != "") ? (<div className="error">{error}</div>): ""} 
+                <div className ="form-group">
+                     <label htmlFor="name">Name:</label>
+                     <input type="text" name="name" id="name" onChange={e => setDetails({...details,name: e.target.value})} value= {details.name} />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" name="email" id="email" onChange={e => setDetails({...details,email: e.target.value})} value= {details.email}/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" name="password" id="password" onChange={e => setDetails({...details,password: e.target.value})} value= {details.password}/>
+                </div>
+
+            </div>
+        </form>
+
+
+        )
+}
+export default LoginSection;

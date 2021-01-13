@@ -13,24 +13,18 @@ import Impressum  from "./components/ImpressumExtraPage/Impressum";
 import "./App.scss";
 
 function App() {
-  return (
-      <div className="App">
-          <Navigation/>
+return(
+         <div className="App">
+          <Navigation />
           <HeroSection />
           <ProductSection />
           <InfoSection />
-          <LoginSection />
           <AboutUs />
+          <LoginSection />
           <ContactSection />
           <FaqSection />
           <Impressum />
       </div>
-<<<<<<< HEAD
-    </Router>
-  
-=======
->>>>>>> 18054d798a54b6dd63e3e40b7e84004e7eb6e5d4
-
   );
 }
 
