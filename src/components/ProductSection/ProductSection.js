@@ -1,13 +1,11 @@
 import {useState, useContext} from 'react'
-// import { Container, Row, Col } from 'react-bootstrap';
 import TreeCard from "./TreeCard"
 import Cart from '../CartExtraPage/Cart'
 import tree from '../../tree'
 import Filters from "./Filters";
 import Searchbar from "./Searchbar";
-import "./TreeCard.css";
-import "./ProductList.css";
-import "./Search.css";
+import { Container, Row, Col } from 'react-bootstrap';
+import tree from "../../tree.json";
 import {ProductContext} from '../../ProductContext'
 import {CartContext} from '../../CartContext'
 
@@ -94,6 +92,7 @@ function ProductSection(props) {
       </div>
             
         )
+
     }
 
 export default ProductSection
