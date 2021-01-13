@@ -9,9 +9,10 @@ import "./TreeCard.css";
 import "./ProductList.css";
 import "./Search.css";
 import {ProductContext} from '../../ProductContext'
+import {CartContext} from '../../CartContext'
 
 function ProductSection(props) {
-      const [cart, setCart] = useState([]);
+      const [cart, setCart] = useContext(CartContext);
       const [products, setProducts] = useContext(ProductContext);
 
     const value = useContext(ProductContext)

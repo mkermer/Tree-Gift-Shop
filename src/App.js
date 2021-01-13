@@ -18,7 +18,6 @@ function App() {
     <CartProvider>
     <div className="App">
       <Navigation />
-      
     </div>
     </CartProvider>
     </ProductProvider>
