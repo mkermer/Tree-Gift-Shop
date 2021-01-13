@@ -1,7 +1,4 @@
-
-
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
-import Cart from "./components/CartExtraPage/Cart";
 import Navigation from "./components/NavigationBar/Navigation";
 import HeroSection from "./components/HomeSection/HeroSection";
 import InfoSection from "./components/FaqSection/InfoSection";
@@ -16,20 +13,10 @@ import "./App.scss";
 
 function App() {
   return (
-      <div className="App">
-          <Navigation/>
-          <HeroSection />
-          <ProductSection />
-          <InfoSection />
-          <LoginSection />
-          <AboutUs />
-          <ContactSection />
-          <FaqSection />
-          <Impressum />
-      </div>
-
+    <div className="App">
+      <Navigation />
+    </div>
   );
 }
 
-export default App; 
-
+export default App;

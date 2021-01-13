@@ -10,17 +10,16 @@ import "./Search.css";
 export class ProductSection extends Component {
     render() {
         return (
-            <Container>
-                <Row>
-                    <Col md={4}>
-                        <h1>Product</h1>
-                        <p>Contact Paragraph</p>
-                    </Col>
-                </Row>
-                <Row>
-                     <ProductList products={tree} /> 
-                </Row>
-            </Container>
+            // <Container>
+            //     <Row>
+            //         <Col md={4}>
+            //         </Col>
+            //     </Row>
+            //     <Row>
+                     
+            //     </Row>
+            // </Container>
+            <ProductList products={tree} /> 
         )
     }
 }
