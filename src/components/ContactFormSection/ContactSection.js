@@ -10,7 +10,7 @@ export class ContactSection extends Component {
                     <Col md={4}>
                         <h1>Contact</h1>
                         <p>Contact Paragraph</p>
-                        <Button>Contact</Button>
+                        <Button class="btn btn-secondary">Contact</Button>
                     </Col>
                 </Row>
             </Container>

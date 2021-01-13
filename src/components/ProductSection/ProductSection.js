@@ -12,9 +12,9 @@ export class ProductSection extends Component {
         return (
             <Container>
                 <Row>
-                    <Col md={4}>
+                    <Col lg={10} md={6}>
+                        <h2>Look at our</h2>
                         <h1>Product</h1>
-                        <p>Contact Paragraph</p>
                     </Col>
                 </Row>
                 <Row>
