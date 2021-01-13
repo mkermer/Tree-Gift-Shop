@@ -1,9 +1,11 @@
 import React from "react";
 import TreeCard from "./TreeCard";
-import Search from "./Search";
+import Searchbar from "./Searchbar";
 import { useState } from "react";
 import Filters from "./Filters";
-import './ProductList.css'
+import "./ProductList.css";
+import Cart from "../CartExtraPage/Cart";
+// import { useLocation } from "react-router-dom";
 
 function ProductList(props) {
   const [products, setProducts] = useState(props.products);
@@ -72,11 +74,47 @@ function ProductList(props) {
     return setCart(cartState.concat(cart));
   }
 
-  console.log(cartState);
+  let arr = [...cartState];
+
+  let sum = function (items, prop) {
+    return items.reduce(function (a, b) {
+      return a + b[prop];
+    }, 0);
+  };
+
+  function removeFromCart(e) {
+    let arr = [...cartState];
+    arr.filter((obj) => {
+      if (obj.id === Number(e.target.id)) {
+        return arr.splice(arr.indexOf(obj), 1);
+      }
+    });
+    setCart(arr);
+  }
 
   return (
     <div className="ProductList">
-      <Search handleChange={handleChange} />
+      <div className="cart">
+        <Cart state={cartState} />
+      </div>
+      {arr.map((product) => {
+        return (
+          <div className="cart-item">
+            <p>{product.name} &nbsp;</p>
+            <p>{product.price} $ &nbsp;</p>
+            <button id={product.id} onClick={removeFromCart}>
+              x
+            </button>
+          </div>
+        );
+      })}
+      <div className="total">
+        <h4>Total:</h4>
+        {Math.round(sum(arr, "price") * 100) / 100} $
+      </div>
+      <div id="search">
+      <Searchbar handleChange={handleChange} />
+      </div>
       <Filters
         priceDesc={sortByPriceDescending}
         priceAsc={sortByPriceAscending}

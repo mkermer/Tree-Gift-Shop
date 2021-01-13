@@ -1,3 +1,21 @@
-.ProductList{
-    margin-top: 50px;
+.ProductList {
+  margin-top: 50px;
+  /* display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px; */
+}
+
+.cart {
+  display: none;
+}
+
+.cart-item {
+  display: flex;
+  margin-top: 100px;
+}
+
+.total {
+  margin-top: 30px;
 }

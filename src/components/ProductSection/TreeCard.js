@@ -6,6 +6,7 @@ function TreeCard(props) {
     <div>
       {props.products.map((obj) => {
         return (
+
           <div key={obj.id}> 
           <Card> 
           <CardBody> 
@@ -18,9 +19,7 @@ function TreeCard(props) {
                 </p>
                 <h3>{obj.price} $</h3>
                 </CardText>
-              <button id={obj.id} onClick={props.add}>
-              Add
-            </button>
+              <button id={obj.id} onClick={props.add}> Add </button>
             </CardBody>
             </Card>
           </div>

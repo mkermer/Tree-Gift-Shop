@@ -8,19 +8,7 @@ import "./Search.css";
 
 export class ProductSection extends Component {
     render() {
-        return (
-            <Container>
-                <Row>
-                    <Col lg={10} md={6}>
-                        <h2>Look at our</h2>
-                        <h1>Product</h1>
-                    </Col>
-                </Row>
-                <Row>
-                     <ProductList products={tree} /> 
-                </Row>
-            </Container>
-        )
+        return ("Hello World!")
     }
 }
 
