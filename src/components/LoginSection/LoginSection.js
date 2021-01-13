@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
+import "./LoginSection.scss";
+
 export class LoginSection extends Component {
     render() {
         return (
-            <Container> 
+            <Container className="loginbackground"> 
                 <Row>
                     <Col md={2}>
                         <h1>Login</h1>

@@ -1,6 +1,6 @@
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
 import Navigation from "./components/NavigationBar/Navigation";
-import Footer from "./components/Footer";
+import Footer from "./components/FooTer/Footer";
 
 import "./App.scss";
 
