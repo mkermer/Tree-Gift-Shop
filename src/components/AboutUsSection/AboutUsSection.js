@@ -8,7 +8,7 @@ export class AboutUs extends Component {
         return (
             <Container>
                 <Row>
-                    <Col md={8}> </Col>
+                    <Col md={6}> <Contact/></Col>
                     <Col md={12}>
                         <h1>About Us</h1>
                         <p>Get to Know the Team</p>
