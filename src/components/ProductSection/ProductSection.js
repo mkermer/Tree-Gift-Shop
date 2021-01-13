@@ -12,10 +12,8 @@ import {ProductContext} from '../../ProductContext'
 import {CartContext} from '../../CartContext'
 
 function ProductSection(props) {
-      const [cart, setCart] = useContext(CartContext);
+      const {cart, setCart} = useContext(CartContext);
       const [products, setProducts] = useContext(ProductContext);
-
-    const value = useContext(ProductContext)
 
     function addToCart(e) {
     setCart([...cart, { ...e }])

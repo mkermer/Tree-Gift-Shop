@@ -90,7 +90,7 @@ function Navigation(props) {
         </Navbar>
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* <Route path="/checkout" exact component={Cart}/> */}
+          <Route path="/checkout" exact component={Cart}/>
           <Route path="/contact" component={ContactSection} />
           <Route path="/about" component={AboutUsSection} />
         </Switch>
