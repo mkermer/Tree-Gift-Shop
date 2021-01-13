@@ -1,5 +1,14 @@
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/NavigationBar/Navigation";
+import HeroSection from "./components/HomeSection/HeroSection";
+import InfoSection from "./components/FaqSection/InfoSection";
+import ContactSection from "./components/ContactFormSection/ContactSection";
+import LoginSection from "./components/LoginSection/LoginSection";
+import ProductSection from "./components/ProductSection/ProductSection";
+import AboutUs from "./components/AboutUsSection/AboutUsSection";
+import FaqSection from "./components/FaqSection/FaqSection";
+import Impressum  from "./components/ImpressumExtraPage/Impressum";
+
 import "./App.scss";
 
 function App() {

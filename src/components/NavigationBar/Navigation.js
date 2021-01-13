@@ -9,10 +9,11 @@ import Collapse from "react-bootstrap/Collapse";
 import { Search } from "react-bootstrap-icons";
 import { Basket3 } from "react-bootstrap-icons";
 import { PersonCircle } from "react-bootstrap-icons";
-import Searchbar from "./Searchbar";
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
-import Cart from "./Cart";
-import Home from "./Home";
+import Cart from "../CartExtraPage/Cart";
+import Home from "../Home";
+import ContactSection from '../ContactFormSection/ContactSection'
+import AboutUsSection from '../AboutUsSection/AboutUsSection'
 import "./Navigation.css";
 
 function Navigation(props) {
@@ -52,7 +53,7 @@ function Navigation(props) {
                   More than 30€
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="localhost:8080">
+                <NavDropdown.Item href="#search">
                   Show all
                 </NavDropdown.Item>
               </NavDropdown>
@@ -93,6 +94,8 @@ function Navigation(props) {
           <Route path="/checkout">
             <Cart />
           </Route>
+          <Route path="/contact" component={ContactSection} />
+          <Route path="/about" component={AboutUsSection} />
         </Switch>
       </Router>
     </div>

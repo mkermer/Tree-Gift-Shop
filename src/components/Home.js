@@ -1,5 +1,5 @@
 import tree from "../tree.json";
-import ProductList from "./ProductList";
+import ProductSection from "../components/ProductSection/ProductSection";
 import { withRouter } from "react-router-dom";
 
 function Home(props) {
@@ -10,7 +10,7 @@ function Home(props) {
 
   return (
     <div className="App">
-      <ProductList products={tree} state={getState} />
+      <ProductSection products={tree} state={getState} />
       {location.pathname}
     </div>
   );

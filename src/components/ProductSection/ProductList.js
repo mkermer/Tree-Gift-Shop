@@ -4,7 +4,7 @@ import Searchbar from "./Searchbar";
 import { useState } from "react";
 import Filters from "./Filters";
 import "./ProductList.css";
-import Cart from "./Cart";
+import Cart from "../CartExtraPage/Cart";
 // import { useLocation } from "react-router-dom";
 
 function ProductList(props) {
@@ -111,7 +111,9 @@ function ProductList(props) {
       <div className="total">
         <h4>Total:</h4>
         {Math.round(sum(arr, "price") * 100) / 100} $
-        <Searchbar handleChange={handleChange} />
+      </div>
+      <div id="search">
+      <Searchbar handleChange={handleChange} />
       </div>
       <Filters
         priceDesc={sortByPriceDescending}
