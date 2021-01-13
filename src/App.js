@@ -27,7 +27,9 @@ function App() {
           <FaqSection />
           <Impressum />
       </div>
+
   );
 }
 
 export default App; 
+
