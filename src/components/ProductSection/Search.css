@@ -46,3 +46,7 @@ input {
 #countries:focus {
   outline: none;
 }
+
+#search {
+  margin-top: 50px;
+}

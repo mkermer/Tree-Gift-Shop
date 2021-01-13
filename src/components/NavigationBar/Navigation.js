@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
@@ -31,7 +31,6 @@ function Navigation(props) {
               variant="tabs"
               defaultActiveKey="/"
               className="mr-auto"
-              activeClassName="active"
             >
               <Nav.Link as={Link} to="/">
                 Home
@@ -91,9 +90,7 @@ function Navigation(props) {
         </Navbar>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/checkout">
-            <Cart />
-          </Route>
+          <Route path="/checkout" exact component={Cart}/>
           <Route path="/contact" component={ContactSection} />
           <Route path="/about" component={AboutUsSection} />
         </Switch>
