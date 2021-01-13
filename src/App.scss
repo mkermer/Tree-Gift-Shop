@@ -1,20 +1,63 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-$body-bg: #8896;
+$body-bg: #dad7cd;
 
-body{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-}
+// FONTS 
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6{
+h6,
+p{
     font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+    font-size: 72px;
+    font-weight: Semi-bold 600;
+    line-height: 1.6;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+p {
+    font-weight: 300;
+    margin-bottom: 32px;
+    line-height: 1.8;
+}
+
+.container{
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.btn-primary {
+  background-color: #588157 !important;
+  border-color: #588157 !important;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #3a5a40!important;
+  border-color:#3a5a40 !important;
+}
+
+.svgsize{
+    width: 50%;
+}

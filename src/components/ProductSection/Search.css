@@ -5,7 +5,6 @@
 
 input {
   outline: none;
-  border-radius: 20px;
   width: 400px;
   height: 40px;
   text-align: center;
@@ -14,4 +13,40 @@ input {
 .filters {
   text-align: center;
   padding: 20px;
+}
+
+.filters button {
+  padding: 10px;
+  font-size: 1em;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  border: none;
+  background-color: #c7e2cf;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.filters button:hover {
+  -webkit-transform: scale(0.9) translateZ(0);
+  transform: scale(0.9) translateZ(0);
+}
+
+.filters button:focus {
+  outline: none;
+}
+
+#countries {
+  padding: 5px;
+  margin: 10px;
+  width: 200px;
+}
+
+#countries:focus {
+  outline: none;
+}
+
+#search {
+  margin-top: 50px;
 }

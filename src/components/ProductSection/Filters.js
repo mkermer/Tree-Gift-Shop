@@ -1,17 +1,25 @@
 import React from "react";
+import { SortAlphaDown } from 'react-bootstrap-icons';
+import { SortNumericDown } from 'react-bootstrap-icons';
+import { SortNumericUp } from 'react-bootstrap-icons';
 
 function Filters(props) {
   return (
     <div className="filters">
-      <button onClick={props.sortByName}>Sort by name</button>
-      <button onClick={props.priceAsc}>Price /\</button>
-      <button onClick={props.priceDesc}>Price \/</button>
+      <button onClick={props.sortByName}>Name <SortAlphaDown/></button>
+      &nbsp;
+      <button onClick={props.priceAsc}>Price <SortNumericDown/></button>
+      &nbsp;
+      <button onClick={props.priceDesc}>Price <SortNumericUp/></button>
+      &nbsp;
       <button onClick={props.co2Asc}>
-        CO<sub>2</sub> Absorption /\
+        &nbsp; CO<sub>2</sub> Abs. <SortNumericDown/>
       </button>
+      &nbsp;
       <button onClick={props.co2Desc}>
-        CO<sub>2</sub> Absorption \/
+        CO<sub>2</sub> Abs. <SortNumericUp/>
       </button>
+      &nbsp;
       <br></br>
       <br></br>
       <label htmlFor="countries">Select a country: </label>

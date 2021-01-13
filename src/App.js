@@ -1,6 +1,10 @@
+
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
 import Cart from "./components/CartExtraPage/Cart";
+
 import Navigation from "./components/NavigationBar/Navigation";
+import Footer from "./components/FooTer/Footer";
+
 import HeroSection from "./components/HomeSection/HeroSection";
 import InfoSection from "./components/FaqSection/InfoSection";
 import ContactSection from "./components/ContactFormSection/ContactSection";
@@ -10,23 +14,24 @@ import AboutUs from "./components/AboutUsSection/AboutUsSection";
 import FaqSection from "./components/FaqSection/FaqSection";
 import Impressum  from "./components/ImpressumExtraPage/Impressum";
 
+
+
+
 import "./App.scss";
 
 function App() {
-return(
-         <div className="App">
-          <Navigation />
-          <HeroSection />
-          <ProductSection />
-          <InfoSection />
-          <AboutUs />
-          <LoginSection />
-          <ContactSection />
-          <FaqSection />
-          <Impressum />
-      </div>
+
+  return (
+    <ProductProvider>
+    <CartProvider>
+    <div className="App">
+      <Navigation />
+      <Footer/>
+    </div>
+    </CartProvider>
+    </ProductProvider>
+
   );
 }
 
-export default App; 
-
+export default App;
