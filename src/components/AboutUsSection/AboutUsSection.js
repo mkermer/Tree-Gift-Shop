@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-import { ReactComponent as Contact } from '../../assets/undraw_contact_us_15o2.svg';
+import { ReactComponent as Contact } from '../../illustrations/undraw_contact_us_15o2.svg';
 
 export class AboutUs extends Component {
     render() {
