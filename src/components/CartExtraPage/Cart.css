@@ -10,3 +10,41 @@
 .cart-banner {
   border-bottom: 1px solid lightslategray;
 }
+
+
+.checkout-button {
+display: flex;
+outline: none;
+padding: 10px;
+border: none;
+}
+
+.item-button-add {
+  background-color: #2ba031;
+  display: inline;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 2px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.item-button-remove {
+  height: auto;
+  background-color: #bf2e11;
+  display: inline;
+    padding-left: 8px;
+  padding-right: 8px;
+  margin: 2px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.item-button-remove:focus {
+  outline: none;
+}
+.item-button-add:focus {
+  outline: none;
+}
