@@ -20,7 +20,10 @@ function App() {
     <CartProvider>
     <div className="App">
       <Navigation />
+          <InfoSection />
+          <FaqSection />
       <Footer/>
+      
     </div>
     </CartProvider>
     </ProductProvider>
