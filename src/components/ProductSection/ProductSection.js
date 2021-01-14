@@ -5,9 +5,9 @@ import tree from '../../tree'
 import Filters from "./Filters";
 import Searchbar from "./Searchbar";
 import { Container, Row, Col } from 'react-bootstrap';
-import tree from "../../tree.json";
 import {ProductContext} from '../../ProductContext'
 import {CartContext} from '../../CartContext'
+//import {Row} from 'reactstrap'
 
 function ProductSection(props) {
       const {cart, setCart} = useContext(CartContext);
@@ -87,8 +87,12 @@ function ProductSection(props) {
         co2Desc={sortByCoDescending}
         selectCountry={handleCountryChange}
       />
-        <TreeCard products={products} add={addToCart} />
+      <Container> 
+        <Row>
+          <TreeCard products={products} add={addToCart} />
+        </Row>
         <Cart state={cart} remove={removeFromCart} add={addToCart} />
+      </Container>
       </div>
             
         )

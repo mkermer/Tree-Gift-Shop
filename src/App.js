@@ -12,9 +12,6 @@ import AboutUs from "./components/AboutUsSection/AboutUsSection";
 import FaqSection from "./components/FaqSection/FaqSection";
 import Impressum  from "./components/ImpressumExtraPage/Impressum";
 
-
-
-
 import "./App.scss";
 
 function App() {
