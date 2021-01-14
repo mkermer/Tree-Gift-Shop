@@ -1,0 +1,11 @@
+.search-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.searchInput {
+  outline: none;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+}

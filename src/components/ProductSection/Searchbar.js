@@ -1,10 +1,11 @@
 import React from "react";
-import "./Search.css";
+import "./Searchbar.css";
 
 function Searchbar(props) {
   return (
     <div className="search-container">
       <input
+        className="searchInput"
         type="text"
         placeholder="Search.."
         onChange={props.handleChange}

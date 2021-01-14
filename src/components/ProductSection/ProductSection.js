@@ -5,9 +5,10 @@ import tree from '../../tree'
 import Filters from "./Filters";
 import Searchbar from "./Searchbar";
 import { Container, Row, Col } from 'react-bootstrap';
-
 import {ProductContext} from '../../ProductContext'
 import {CartContext} from '../../CartContext'
+// import { Col } from 'reactstrap';
+//import {Row} from 'reactstrap'
 
 function ProductSection(props) {
       const {cart, setCart} = useContext(CartContext);
@@ -74,24 +75,38 @@ function ProductSection(props) {
     setProducts(sorted);
   }
 
-        return (
-      <div>
-        <div id="search">
-        <Searchbar handleChange={handleChange} />
-        </div>
-        <Filters
-        priceDesc={sortByPriceDescending}
-        priceAsc={sortByPriceAscending}
-        sortByName={sortByName}
-        co2Asc={sortByCoAscending}
-        co2Desc={sortByCoDescending}
-        selectCountry={handleCountryChange}
-      />
-        <TreeCard products={products} add={addToCart} />
-        <Cart state={cart} remove={removeFromCart} add={addToCart} />
-      </div>
-            
-        )
+      return (
+      
+        <Container> 
+          <Row>
+            <Col xl={12} lg={12} md={12} sm={12} sx={12}> 
+              <Searchbar id="search" handleChange={handleChange} />
+            </Col>
+          </Row>
+          <Row> 
+            <Col xl={12} lg={12} md={12} sm={12} sx={12}> 
+              <Filters
+                priceDesc={sortByPriceDescending}
+                priceAsc={sortByPriceAscending}
+                sortByName={sortByName}
+                co2Asc={sortByCoAscending}
+                co2Desc={sortByCoDescending}
+                selectCountry={handleCountryChange}
+              />
+            </Col>
+          </Row>
+          <Row>
+              <TreeCard products={products} add={addToCart} />
+          </Row>
+          <Row>
+            <Col xl={12} lg={12} md={12} sm={12} sx={12}> 
+              <Cart state={cart} remove={removeFromCart} add={addToCart} />
+            </Col>
+          </Row>
+          
+      </Container>
+       
+      )
 
     }
 

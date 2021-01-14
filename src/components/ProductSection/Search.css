@@ -5,17 +5,19 @@
 
 input {
   outline: none;
-  width: 400px;
+  width: 345px;
   height: 40px;
   text-align: center;
 }
 
 .filters {
+  justify-content: center;
   text-align: center;
   padding: 20px;
 }
 
 .filters button {
+  margin: 20px;
   padding: 10px;
   font-size: 1em;
   height: 40px;

@@ -6,6 +6,7 @@ import {CartProvider} from './CartContext'
 
 import Navigation from "./components/NavigationBar/Navigation";
 import Footer from "./components/FooTer/Footer";
+import './App.scss'
 
 import HeroSection from "./components/HomeSection/HeroSection";
 import InfoSection from "./components/FaqSection/InfoSection";
@@ -15,9 +16,6 @@ import ProductSection from "./components/ProductSection/ProductSection";
 import AboutUs from "./components/AboutUsSection/AboutUsSection";
 import FaqSection from "./components/FaqSection/FaqSection";
 import Impressum  from "./components/ImpressumExtraPage/Impressum";
-
-
-
 
 import "./App.scss";
 
@@ -29,9 +27,13 @@ function App() {
     <CartProvider>
     <div className="App">
       <Navigation />
+
       <LoginSection />
+      <InfoSection />
+      <FaqSection />
       <Footer/>
           </div>
+
     </CartProvider>
     </ProductProvider>
 
