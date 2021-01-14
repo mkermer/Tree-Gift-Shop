@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import Form from "react-bootstrap/Form";
 
 
+
 function LoginSection({ Login, error }){
     const [details, setDetails] = useState({name: "", email:"", password:""});
    
@@ -31,7 +32,9 @@ function LoginSection({ Login, error }){
                 </div>
                 <div className="form-group">
                     
-                     
+                     <Button block variant="primary" type="submit">
+                            Login
+                    </Button>
                 </div>
             </div>
         </form>
