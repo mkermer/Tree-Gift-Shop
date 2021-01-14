@@ -11,11 +11,13 @@ input {
 }
 
 .filters {
+  justify-content: center;
   text-align: center;
   padding: 20px;
 }
 
 .filters button {
+  margin: 10px;
   padding: 10px;
   font-size: 1em;
   height: 40px;
