@@ -84,7 +84,7 @@ function ProductSection(props) {
             </Col>
           </Row>
           <Row> 
-            <Col xl={12} lg={12} md={6} sm={6} sx={12}> 
+            <Col xl={12} lg={12} md={12} sm={12} sx={12}> 
               <Filters
                 priceDesc={sortByPriceDescending}
                 priceAsc={sortByPriceAscending}
