@@ -1,6 +1,8 @@
 
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
 import Cart from "./components/CartExtraPage/Cart";
+import {ProductProvider} from './ProductContext'
+import {CartProvider} from './CartContext'
 
 import Navigation from "./components/NavigationBar/Navigation";
 import Footer from "./components/FooTer/Footer";
@@ -22,12 +24,14 @@ import "./App.scss";
 function App() {
 
   return (
+    
     <ProductProvider>
     <CartProvider>
     <div className="App">
       <Navigation />
+      <LoginSection />
       <Footer/>
-    </div>
+          </div>
     </CartProvider>
     </ProductProvider>
 
