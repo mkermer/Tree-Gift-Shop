@@ -1,4 +1,4 @@
-.parent {
+/* .parent {
   text-align: center;
   margin: auto;
   width: 50%;
@@ -14,7 +14,6 @@
   padding-bottom: 20px;
   align-items: center;
   border: 1px solid rgb(136, 136, 136);
-  /* background-color: rgb(130, 132, 134); */
   border-radius: 10%;
   box-shadow: 2px 4px 14px -2px rgba(0, 0, 0, 0.15);
   width: 200px;
@@ -51,7 +50,7 @@
 
 .card-button:focus {
   outline: 0;
-}
+} */ 
 
 #pic {
   height: 100px;

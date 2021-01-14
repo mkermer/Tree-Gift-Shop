@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import {Container, Row, Col } from 'react-bootstrap';
-import { ReactComponent as Enviroment } from '../../illustrations/undraw_environment_iaus.svg';
-
-import "./InfoSection.scss";
-
 export class InfoSection extends Component {
     render() {
         return (
             <Container>
                 <Row>
-                    <Col lg={6} md={12} sm={12}><Enviroment className="enviro"/></Col>
                     <Col lg={6} md={12} sm={12}><h1>Why Treeduce?</h1> </Col>
                     <Col lg={6} md={6} sm={12}>
                         <h3>Our trees</h3>
@@ -33,11 +28,9 @@ export class InfoSection extends Component {
                         initial costs of planting trees, ensuring food sovereignty and income opportunities.
                         </p>
                     </Col>
-                    
                 </Row>
             </Container>
         )
     }
 }
-
-export default InfoSection
+export default InfoSection;

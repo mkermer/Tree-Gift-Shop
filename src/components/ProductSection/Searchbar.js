@@ -5,6 +5,7 @@ function Searchbar(props) {
   return (
     <div className="search-container">
       <input
+        className="searchInput"
         type="text"
         placeholder="Search.."
         onChange={props.handleChange}

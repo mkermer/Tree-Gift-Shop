@@ -15,9 +15,11 @@ import { useContext } from "react";
 import "./Navigation.css";
 
 function Navigation(props) {
+
   const [open, setOpen] = useState(false);
   const { cart } = useContext(CartContext);
   return (
+
     <div>
         <Navbar fixed="top" bg="light" expand="lg">
           <Navbar.Brand as={NavLink} to="/">
