@@ -3,12 +3,12 @@
     text-align: center;
 }
 
-.Footer .heading{
+/* .Footer .heading{
     margin-bottom: 32px;
-}
+} */
 
 .Footer p{
-    padding: 5px 0;
+    /* padding: 5px 0; */
 }
 
 .iconFooter{
@@ -28,4 +28,8 @@
 
 .links a{
     color: black;
+}
+
+.background{
+    background-color: #f2f2f2;
 }
