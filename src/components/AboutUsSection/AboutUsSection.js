@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import { ReactComponent as TeamTogether } from '../../illustrations/undraw_good_team_m7uu.svg';
 import { ReactComponent as Plattform } from '../../illustrations/undraw_data_trends_b0wg.svg';
+import Adrian from '../../illustrations/undraw_team_ih79_treeduce_3-01.svg'; 
+import Yiulia from '../../illustrations/undraw_team_ih79_treeduce_3-02.svg';
+import Morgane from '../../illustrations/undraw_team_ih79_treeduce_3-04.svg';
+import Johanna from '../../illustrations/undraw_team_ih79_treeduce_3-03.svg';
+
 
 import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
-
 
 export class AboutUs extends Component {
     render() {
         return (
             <Container>
                 <Row>
-                    
-                    
                     <Col md={6}>
                         <h1>About Us</h1>
                         <h3>Our Mission</h3>
@@ -45,36 +47,38 @@ export class AboutUs extends Component {
                     <Col md={3}> 
                         <Card>
                             <CardBody>
-                                <CardImg src={Plattform} id="pic" alt="tree" />
-                                <CardTitle>Person 1</CardTitle>
-                                <CardText> Blabalbla  </CardText>
+                                <CardImg src={Adrian} id="pic" alt="tree" />
+                                <CardTitle>Adrian</CardTitle>
+                                <CardText>I love creating things that please my and people's eyes ;) </CardText>
                             </CardBody>
                         </Card>
                     </Col>
                     <Col md={3}>
                         <Card >
                             <CardBody>
-                                <CardImg src={Plattform} id="pic" alt="tree" />
-                                <CardTitle>Person 2</CardTitle>
-                                <CardText> Blabalbla  </CardText>
+                                <CardImg src={Yiulia} id="pic" alt="tree"/>
+                                <CardTitle>Yuliya</CardTitle>
+                                <CardText>I got to know Programming in a preparation course, which helped me to 
+                                    find out how I would like to rebuild my future.</CardText>
                             </CardBody>
                         </Card>
                     </Col>
                     <Col md={3}>
                         <Card >
                             <CardBody>
-                                <CardImg src={Plattform} id="pic" alt="tree" />
-                                <CardTitle>Person 3</CardTitle>
-                                <CardText> Blabalbla  </CardText>
+                                <CardImg src={Morgane} id="pic" alt="tree" />
+                                <CardTitle>Morgane</CardTitle>
+                                <CardText>I started coding in school and during the first lockdown I gave myself the goal to look at it again and learn 
+                                    a lot new stuff about it.</CardText>
                             </CardBody>
                         </Card>
                     </Col>
                     <Col md={3}>
                         <Card >
                             <CardBody>
-                                <CardImg src={Plattform} id="pic" alt="tree" />
-                                <CardTitle>Person 4</CardTitle>
-                                <CardText> Blabalbla  </CardText>
+                                <CardImg src={Johanna} id="pic" alt="tree" />
+                                <CardTitle>Johanna</CardTitle>
+                                <CardText>I am an information and graphic designer.</CardText>
                             </CardBody>
                         </Card>
                     </Col>
