@@ -5,7 +5,6 @@ import tree from '../../tree'
 import Filters from "./Filters";
 import Searchbar from "./Searchbar";
 import { Container, Row, Col } from 'react-bootstrap';
-import tree from "../../tree.json";
 import {ProductContext} from '../../ProductContext'
 import {CartContext} from '../../CartContext'
 

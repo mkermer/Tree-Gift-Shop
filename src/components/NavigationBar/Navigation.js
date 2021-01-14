@@ -17,8 +17,8 @@ import AboutUsSection from '../AboutUsSection/AboutUsSection'
 import "./Navigation.css";
 
 function Navigation(props) {
-  const [open, setOpen] = useState(false);
-  return (
+    const [open, setOpen] = useState(false);
+    return (
     <div>
       <Router>
         <Navbar fixed="top" bg="light" expand="lg">

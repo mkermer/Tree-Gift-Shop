@@ -2,6 +2,7 @@ import React from "react";
 import { SortAlphaDown } from 'react-bootstrap-icons';
 import { SortNumericDown } from 'react-bootstrap-icons';
 import { SortNumericUp } from 'react-bootstrap-icons';
+import './Filter.css'
 
 function Filters(props) {
   return (
