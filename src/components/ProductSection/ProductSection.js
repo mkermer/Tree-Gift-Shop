@@ -36,12 +36,6 @@ function ProductSection(props) {
           <Row>
               <TreeCard products={products} add={addToCart} />
           </Row>
-          <Row>
-            <Col xl={12} lg={12} md={12} sm={12} sx={12}> 
-              <Cart state={cart} remove={removeFromCart} add={addToCart} />
-            </Col>
-          </Row>
-          
       </Container>
        
       )

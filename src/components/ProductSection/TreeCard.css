@@ -51,38 +51,3 @@
 .card-button:focus {
   outline: 0;
 } */ 
-
-#pic {
-  height: 100px;
-}
-
-@media only screen and (max-width: 1215px) {
-  .parent {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 30px;
-  }
-}
-
-@media only screen and (max-width: 810px) {
-  .parent {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 30px;
-  }
-}
-
-@media only screen and (max-width: 810px) {
-  .parent {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 30px;
-  }
-
-  .card {
-    width: 300px;
-  }
-}
