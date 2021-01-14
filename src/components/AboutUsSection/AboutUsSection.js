@@ -48,16 +48,16 @@ export class AboutUs extends Component {
                         <Card>
                             <CardBody>
                                 <CardImg src={Adrian} id="pic" alt="tree" />
-                                <CardTitle>Adrian</CardTitle>
+                                <CardTitle tag="h5">Adrian</CardTitle>
                                 <CardText>I love creating things that please my and people's eyes ;) </CardText>
                             </CardBody>
                         </Card>
                     </Col>
                     <Col md={3}>
-                        <Card >
+                        <Card>
                             <CardBody>
                                 <CardImg src={Yiulia} id="pic" alt="tree"/>
-                                <CardTitle>Yuliya</CardTitle>
+                                <CardTitle tag="h5">Yuliya</CardTitle>
                                 <CardText>I got to know Programming in a preparation course, which helped me to 
                                     find out how I would like to rebuild my future.</CardText>
                             </CardBody>
@@ -67,7 +67,7 @@ export class AboutUs extends Component {
                         <Card >
                             <CardBody>
                                 <CardImg src={Morgane} id="pic" alt="tree" />
-                                <CardTitle>Morgane</CardTitle>
+                                <CardTitle tag="h5">Morgane</CardTitle>
                                 <CardText>I started coding in school and during the first lockdown I gave myself the goal to look at it again and learn 
                                     a lot new stuff about it.</CardText>
                             </CardBody>
@@ -77,7 +77,7 @@ export class AboutUs extends Component {
                         <Card >
                             <CardBody>
                                 <CardImg src={Johanna} id="pic" alt="tree" />
-                                <CardTitle>Johanna</CardTitle>
+                                <CardTitle tag="h5">Johanna</CardTitle>
                                 <CardText>I am an information and graphic designer.</CardText>
                             </CardBody>
                         </Card>
