@@ -85,7 +85,6 @@ export class AboutUs extends Component {
                 </Row>
             </Container>
             
-            
             </>
         )
     }

@@ -27,6 +27,7 @@ function App() {
             <Navigation />
             <Route exact path="/">
               <Home />
+              <AboutUsSection />
             </Route>
             <Switch>
               <Route exact path="/about">
@@ -35,6 +36,7 @@ function App() {
               <Route exact path="/contact" component={ContactSection} />
               <Route exact path="/checkout" component={Cart} />
             </Switch>
+            
             <Footer />
           </div>
         </CartProvider>
