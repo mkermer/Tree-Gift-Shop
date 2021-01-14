@@ -1,7 +1,7 @@
 [
   {
     "name": "Cacao",
-    "price": 14.9,
+    "price": 14.99,
     "country": "Cameroon",
     "co2": 55,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428702",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Inga",
-    "price": 24.9,
+    "price": 24.95,
     "country": "Guatemala",
     "co2": 300,
     "img": "https://medias.treedom.net/images/medium/90a8c551732f9b06036cda77689b88ce.png",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Markhamia",
-    "price": 24.9,
+    "price": 24.90,
     "country": "Kenya",
     "co2": 250,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428771",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Lime",
-    "price": 24.9,
+    "price": 24.90,
     "country": "Nepal",
     "co2": 50,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_1102620",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Papaya",
-    "price": 19.9,
+    "price": 19.90,
     "country": "Kenya",
     "co2": 100,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_2139090",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Jackfruit",
-    "price": 34.9,
+    "price": 34.99,
     "country": "Kenya",
     "co2": 200,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428765",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Grevillea",
-    "price": 27.9,
+    "price": 27.95,
     "country": "Kenya",
     "co2": 800,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428774",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Cedar",
-    "price": 18,
+    "price": 18.00,
     "country": "France",
     "co2": 861,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428702",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Larch",
-    "price": 21,
+    "price": 21.00,
     "country": "Guatemala",
     "co2": 690,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428702",
