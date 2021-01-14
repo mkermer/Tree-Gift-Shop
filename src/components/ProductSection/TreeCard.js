@@ -1,12 +1,14 @@
 import React from "react";
-import { Card, CardBody, CardTitle, CardText,CardImg, Col } from "reactstrap";
+import { Card, CardBody, CardTitle, CardText,CardImg } from "reactstrap";
+import './TreeCard.css'
 
 function TreeCard(props) {
   return (
-      props.products.map((obj) => {
-        // <div className="TreeCard col-md-4 col-lg-4 col-sm-4 col-xs-12" key={obj.id}> 
+    <div>
+      {props.products.map((obj) => {
         return (
-          <Col lg={4} xl={3} md={4} sm={12} xs={12} key={obj.id}>
+
+          <div key={obj.id}> 
           <Card> 
           <CardBody> 
               <CardImg src={obj.img} id="pic" alt="tree"/>
@@ -21,9 +23,10 @@ function TreeCard(props) {
               <button id={obj.id} onClick={props.add}> Add </button>
             </CardBody>
             </Card>
-          </Col>
+          </div>
         );
-      })
+      })}
+    </div>
   );
 }
 
