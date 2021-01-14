@@ -13,9 +13,6 @@ import AboutUs from "./components/AboutUsSection/AboutUsSection";
 import FaqSection from "./components/FaqSection/FaqSection";
 import Impressum  from "./components/ImpressumExtraPage/Impressum";
 
-
-
-
 import "./App.scss";
 
 function App() {
@@ -24,7 +21,10 @@ function App() {
     <CartProvider>
     <div className="App">
       <Navigation />
+          <InfoSection />
+          <FaqSection />
       <Footer/>
+      
     </div>
     </CartProvider>
     </ProductProvider>
