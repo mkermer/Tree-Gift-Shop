@@ -11,20 +11,17 @@ import Johanna from '../../illustrations/undraw_team_ih79_treeduce_3-03.svg';
 
 import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
 
+import MissionJumbotron from "./MissionJumbotron";
+
 export class AboutUs extends Component {
     render() {
         return (
+            <>
             <Container>
                 <Row>
                     <Col md={6}>
                         <h1>About Us</h1>
-                        <h3>Our Mission</h3>
-                        <p>Our philosophy is to create sustainable ecosystems and allow farmers to meet the
-                        initial costs of planting trees, ensuring food sovereignty and income opportunities.
-                        </p>
                     </Col>
-                    <Col md={1}> </Col>
-                    <Col md={5} sm={1}> <TeamTogether /></Col>
                 </Row>
                 <Row> 
                     <Col> <Plattform /> </Col>
@@ -40,6 +37,9 @@ export class AboutUs extends Component {
                         </p>
                     </Col>
                 </Row>
+                </Container> 
+                <MissionJumbotron />
+                <Container>
                 <Row>
                     <Col md={12}>
                         <h4>Our Team</h4>
@@ -84,6 +84,9 @@ export class AboutUs extends Component {
                     </Col>
                 </Row>
             </Container>
+            
+            
+            </>
         )
     }
 }
