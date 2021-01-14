@@ -9,36 +9,34 @@ import Collapse from "react-bootstrap/Collapse";
 import { Search } from "react-bootstrap-icons";
 import { Basket3 } from "react-bootstrap-icons";
 import { PersonCircle } from "react-bootstrap-icons";
-import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
-import Cart from "../CartExtraPage/Cart";
-import Home from "../Home";
-import ContactSection from '../ContactFormSection/ContactSection'
-import AboutUsSection from '../AboutUsSection/AboutUsSection'
+import {NavLink,Link} from "react-router-dom";
+import { CartContext } from "../../CartContext";
+import { useContext } from "react";
 import "./Navigation.css";
 
 function Navigation(props) {
   const [open, setOpen] = useState(false);
+  const { cart } = useContext(CartContext);
   return (
     <div>
-      <Router>
         <Navbar fixed="top" bg="light" expand="lg">
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={NavLink} to="/">
             Treeduce
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav
               variant="tabs"
-              defaultActiveKey="/"
               className="mr-auto"
             >
-              <Nav.Link as={Link} to="/">
+              <Nav.Link 
+              as={NavLink} to="/" exact={true}>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link as={NavLink} to="/about">
                 About us
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact">
+              <Nav.Link as={NavLink} to="/contact">
                 Contact
               </Nav.Link>
               <NavDropdown title="Buy a tree giftcard!" id="basic-nav-dropdown">
@@ -52,8 +50,8 @@ function Navigation(props) {
                   More than 30€
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#search">
-                  Show all
+                <NavDropdown.Item as={Link} to="/">
+                Show all
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
@@ -84,17 +82,11 @@ function Navigation(props) {
             <Link to="/checkout">
               <Button variant="light" className="icons">
                 <Basket3 size={25} />
+                <span id="cart-length">{cart.length}</span>
               </Button>
             </Link>
           </Navbar.Collapse>
         </Navbar>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/checkout" exact component={Cart}/>
-          <Route path="/contact" component={ContactSection} />
-          <Route path="/about" component={AboutUsSection} />
-        </Switch>
-      </Router>
     </div>
   );
 }

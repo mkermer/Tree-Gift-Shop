@@ -50,3 +50,12 @@ input {
 #search {
   margin-top: 50px;
 }
+
+@media only screen and (max-width: 810px) {
+  .filters {
+    display: block;
+  }
+  .filters button {
+    width: 100px;
+  }
+}
