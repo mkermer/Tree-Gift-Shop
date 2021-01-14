@@ -2,6 +2,8 @@ import React from "react";
 
 import { Card, CardBody, CardTitle, CardText, CardImg, Col } from "reactstrap";
 import "./TreeCard.css";
+import Modal from './Modal';
+import CollapseDescription from './CollapseDiscription';
 
 
 function TreeCard(props) {
@@ -24,6 +26,8 @@ function TreeCard(props) {
                   {" "}
                   Add{" "}
                 </button>
+                <Modal />
+                <CollapseDescription/>
               </CardBody>
             </Card>
           </Col>
