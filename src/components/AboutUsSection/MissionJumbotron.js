@@ -9,13 +9,13 @@ export class MissionJumbotron extends Component {
             <Jumbotron fluid>
                 <Container>
                     <Row>
-                        <Col md={7}>
+                        <Col lg={{ span: 6, offset: 0 }} md={6}>
                             <h6>Our Mission</h6>
                             <p>Our philosophy is to create sustainable ecosystems and allow farmers to meet the
                             initial costs of planting trees, ensuring food sovereignty and income opportunities.
                             </p>
                         </Col>
-                        <Col md={3}><MissionImg /></Col>
+                        <Col lg={{ span: 4, offset: 2 }} md={{ span: 4, offset: 1 }}><MissionImg /></Col>
                     </Row>
                 </Container>
             </Jumbotron> 
@@ -24,7 +24,3 @@ export class MissionJumbotron extends Component {
 }
 
 export default MissionJumbotron
-
-
-
-
