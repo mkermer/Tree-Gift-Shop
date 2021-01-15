@@ -1,13 +1,20 @@
 import React, {useState} from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+
+import "./LoginSection.scss";
 
 
 
-function LoginSection({ Login, error }){
+
+function LoginSection({ Login, error }) {
     const [details, setDetails] = useState({name: "", email:"", password:""});
    
-    const submitHandler = e =>{
+    const submitHandler = e => {
         e.preventDefault();
 
         Login(details);
@@ -31,10 +38,7 @@ function LoginSection({ Login, error }){
                     <input type="password" name="password" id="password" onChange={e => setDetails({...details,password: e.target.value})} value= {details.password}/>
                 </div>
                 <div className="form-group">
-                    
-                     <Button block variant="primary" type="submit">
-                            Login
-                    </Button>
+                    <input type="submit" value="LOGIN" />
                 </div>
             </div>
         </form>

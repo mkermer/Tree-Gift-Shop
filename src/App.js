@@ -32,6 +32,9 @@ function App() {
               <Route exact path="/about">
                 <AboutUsSection />
               </Route>
+              <Route>
+              <LoginSection />
+              </Route>
               <Route exact path="/contact" component={ContactSection} />
               <Route exact path="/checkout" component={Cart} />
             </Switch>
@@ -41,7 +44,7 @@ function App() {
       </ProductProvider>
     </Router>
     
-//       <LoginSection />
+      
 //       <InfoSection />
 //       <FaqSection />
   );
