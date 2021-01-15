@@ -1,0 +1,13 @@
+.ButtonDesc{
+    width: 100%;
+    background-color: transparent !important;
+    color: #3a5a40 !important;
+}
+
+.ButtonDesc:hover,
+.ButtonDesc:active,
+.ButtonDesc:focus,
+.ButtonDesc:visited{
+    background-color: #eff5f0 !important;
+
+}

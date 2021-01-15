@@ -7,7 +7,7 @@ import Footer from "./components/FooTer/Footer";
 import "./App.scss";
 // import HeroSection from "./components/HomeSection/HeroSection";
 // import InfoSection from "./components/FaqSection/InfoSection";
-// import LoginSection from "./components/LoginSection/LoginSection";
+import LoginSection from "./components/LoginSection/LoginSection";
 // import ProductSection from "./components/ProductSection/ProductSection";
 // import FaqSection from "./components/FaqSection/FaqSection";
 // import Impressum from "./components/ImpressumExtraPage/Impressum";
@@ -24,14 +24,17 @@ function App() {
             <Navigation />
             <Route exact path="/">
               <Home />
+              <AboutUsSection />
             </Route>
             <Switch>
               <Route exact path="/about">
                 <AboutUsSection />
               </Route>
-              <Route exact path="/contact" component={ContactSection} />
-              <Route exact path="/checkout" component={Cart} />
+              <Route path="/contact" component={ContactSection} />
+              <Route path="/checkout" component={Cart} />
+              <Route path="/add" component={LoginSection} />
             </Switch>
+            
             <Footer />
           </div>
         </CartProvider>

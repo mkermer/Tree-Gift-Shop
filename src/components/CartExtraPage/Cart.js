@@ -69,7 +69,7 @@ useEffect(() => {
           {showMessage(cart)}
           <h4>Total:</h4>
           {/* {sum(cart, "price").toFixed(2)} $  */}
-          ${total}
+          ${parseFloat(total).toFixed(2)}
           <button className="checkout-button">Proceed to checkout</button>
           <button className="checkout-button" onClick={resetCart}>
             Reset Cart

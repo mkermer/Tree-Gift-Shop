@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
@@ -6,16 +6,15 @@ import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Collapse from "react-bootstrap/Collapse";
-import { Search } from "react-bootstrap-icons";
-import { Basket3 } from "react-bootstrap-icons";
-import { PersonCircle } from "react-bootstrap-icons";
+import { Search, Basket3} from "react-bootstrap-icons";
 import {NavLink,Link} from "react-router-dom";
 import { CartContext } from "../../CartContext";
-import { useContext } from "react";
+import { ProductContext } from "../../ProductContext";
+import OverlayNav from './OverlayNav'
 import "./Navigation.css";
 
 function Navigation(props) {
-
+  const {handleChange} = useContext(ProductContext)
   const [open, setOpen] = useState(false);
   const { cart } = useContext(CartContext);
   return (
@@ -25,7 +24,7 @@ function Navigation(props) {
           <Navbar.Brand as={NavLink} to="/">
             Treeduce
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav
               variant="tabs"
@@ -56,11 +55,16 @@ function Navigation(props) {
                 Show all
                 </NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link as={NavLink} to="/add">
+                Add trees
+              </Nav.Link>
             </Nav>
+            </Navbar.Collapse>
             <Collapse in={open}>
               <div id="search">
                 <Form inline>
                   <FormControl
+                    onChange={handleChange}
                     type="text"
                     placeholder="Find a tree!"
                     className="mr-sm-2"
@@ -78,16 +82,14 @@ function Navigation(props) {
             >
               <Search size={25} />
             </Button>
-            <Button variant="light" className="icons">
-              <PersonCircle size={25} />
-            </Button>
+            <OverlayNav />
             <Link to="/checkout">
               <Button variant="light" className="icons">
                 <Basket3 size={25} />
                 <span id="cart-length">{cart.length}</span>
               </Button>
             </Link>
-          </Navbar.Collapse>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
         </Navbar>
     </div>
   );

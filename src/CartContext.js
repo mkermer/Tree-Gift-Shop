@@ -3,61 +3,58 @@ import { Link } from "react-router-dom";
 
 export const CartContext = createContext();
 
-
-
 export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState([0])
+  const [total, setTotal] = useState([0]);
 
   const addToCart = (e) => {
-    const check = cart.every(item => {
-      return item.id !== e.id
-    })
-    if(check) {
+    const check = cart.every((item) => {
+      return item.id !== e.id;
+    });
+    if (check) {
       setCart([...cart, { ...e }]);
-    } else{
-    alert(`${e.name} is already in your cart.`);
-  }
+    } else {
+      alert(`${e.name} is already in your cart.`);
+    }
   };
 
   const removeFromCart = (e) => {
-    if(window.confirm(`Do you want to remove ${e.name} from your cart?`)) {
-      const cartUpdater = [...cart]
-      cartUpdater.forEach((item, index) => {
-        if(item.id === e.id){
-          cartUpdater.splice(index, 1)
+    if (window.confirm(`Do you want to remove ${e.name} from your cart?`)) {
+      cart.forEach((item, index) => {
+        if (item.id === e.id) {
+          cart.splice(index, 1);
         }
-      })
-    setCart(cartUpdater)
-    getTotal()
+      });
+      setCart(cart);
+      getTotal();
     }
   };
 
   const reduceCount = (id) => {
-    const cartUpdater = [...cart]
-      cart.forEach(item => {
-        if(item.id === id) {
-          item.count === 1 ? item.count = 1 : item.count -= 1;
-        }
-      })
-      setCart(cartUpdater)
-      getTotal()
-  }
+    const cartUpdater = [...cart];
+    cart.forEach((item) => {
+      if (item.id === id) {
+        item.count === 1 ? (item.count = 1) : (item.count -= 1);
+      }
+    });
+    setCart(cartUpdater);
+    getTotal();
+  };
 
   const increaseCount = (id) => {
-    const cartUpdater = [...cart]
-    cart.forEach(item => {
-        if(item.id === id) {
-          item.count += 1;
-        }
-      })
-      setCart(cartUpdater)
-      getTotal()
-  }
+    const cartUpdater = [...cart];
+    cart.forEach((item) => {
+      if (item.id === id) {
+        item.count += 1;
+      }
+    });
+    setCart(cartUpdater);
+    getTotal();
+  };
 
   const resetCart = () => {
     setCart([]);
-    getTotal()
+    getTotal();
   };
 
   let sum = function (items, prop) {
@@ -77,12 +74,12 @@ export const CartProvider = (props) => {
   }
 
   const getTotal = () => {
-    const total = [...cart]
+    const total = [...cart];
     const res = total.reduce((prev, item) => {
-      return prev + (item.price * item.count);
-    }, 0)
-    setTotal(res)
-  }
+      return prev + item.price * item.count;
+    }, 0);
+    setTotal(res);
+  };
 
   return (
     <CartContext.Provider
