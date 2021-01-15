@@ -15,7 +15,6 @@ import Impressum from "./components/ImpressumExtraPage/Impressum";
 import Home from "./components/HomeSection/Home";
 import AboutUsSection from "./components/AboutUsSection/AboutUsSection";
 import ContactSection from "./components/ContactFormSection/ContactSection";
-import Modal from "./components/ProductSection/Modal"
 
 function App() {
 

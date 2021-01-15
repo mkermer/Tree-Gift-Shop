@@ -1,6 +1,7 @@
 import Collapse from 'react-bootstrap/Collapse';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from "react";
+import './CollapseDiscription.css'
 
 function CollapseDescription() {
     const [open, setOpen] = useState(false);
@@ -11,8 +12,9 @@ function CollapseDescription() {
           onClick={() => setOpen(!open)}
           aria-controls="tree-description"
           aria-expanded={open}
+          className="ButtonDesc"
         >
-          Description (Collapse)
+         Details
         </Button>
         <Collapse in={open}>
           <div id="tree-description">

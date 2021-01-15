@@ -1,3 +1,11 @@
+.ButtonAdd{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#pic:hover{
+  cursor: pointer;
+}
 /* .parent {
   text-align: center;
   margin: auto;
