@@ -1,25 +1,22 @@
-
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
 import Cart from "./components/CartExtraPage/Cart";
-import {ProductProvider} from './ProductContext'
-import {CartProvider} from './CartContext'
+import { ProductProvider } from "./ProductContext";
+import { CartProvider } from "./CartContext";
 import Navigation from "./components/NavigationBar/Navigation";
 import Footer from "./components/FooTer/Footer";
-import './App.scss'
-import HeroSection from "./components/HomeSection/HeroSection";
-import InfoSection from "./components/FaqSection/InfoSection";
+import "./App.scss";
+// import HeroSection from "./components/HomeSection/HeroSection";
+// import InfoSection from "./components/FaqSection/InfoSection";
 import LoginSection from "./components/LoginSection/LoginSection";
-import ProductSection from "./components/ProductSection/ProductSection";
-import FaqSection from "./components/FaqSection/FaqSection";
-import Impressum from "./components/ImpressumExtraPage/Impressum";
+// import ProductSection from "./components/ProductSection/ProductSection";
+// import FaqSection from "./components/FaqSection/FaqSection";
+// import Impressum from "./components/ImpressumExtraPage/Impressum";
 import Home from "./components/HomeSection/Home";
 import AboutUsSection from "./components/AboutUsSection/AboutUsSection";
 import ContactSection from "./components/ContactFormSection/ContactSection";
 
 function App() {
-
   return (
-
     <Router>
       <ProductProvider>
         <CartProvider>
@@ -33,8 +30,9 @@ function App() {
               <Route exact path="/about">
                 <AboutUsSection />
               </Route>
-              <Route exact path="/contact" component={ContactSection} />
-              <Route exact path="/checkout" component={Cart} />
+              <Route path="/contact" component={ContactSection} />
+              <Route path="/checkout" component={Cart} />
+              <Route path="/add" component={LoginSection} />
             </Switch>
             <Footer />
           </div>
@@ -42,11 +40,9 @@ function App() {
       </ProductProvider>
     </Router>
 
-    
-    
-//       <LoginSection />
-//       <InfoSection />
-//       <FaqSection />
+    //       <LoginSection />
+    //       <InfoSection />
+    //       <FaqSection />
   );
 }
 

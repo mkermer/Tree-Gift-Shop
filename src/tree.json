@@ -3,6 +3,7 @@
     "name": "Cacao",
     "price": 14.99,
     "country": "Cameroon",
+    "count": 1,
     "co2": 55,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428702",
     "id": 1
@@ -11,30 +12,34 @@
     "name": "Inga",
     "price": 24.95,
     "country": "Guatemala",
+    "count": 1,
     "co2": 300,
     "img": "https://medias.treedom.net/images/medium/90a8c551732f9b06036cda77689b88ce.png",
     "id": 2
   },
   {
     "name": "Markhamia",
-    "price": 24.90,
+    "price": 24.9,
     "country": "Kenya",
+    "count": 1,
     "co2": 250,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428771",
     "id": 3
   },
   {
     "name": "Lime",
-    "price": 24.90,
+    "price": 24.9,
     "country": "Nepal",
+    "count": 1,
     "co2": 50,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_1102620",
     "id": 4
   },
   {
     "name": "Papaya",
-    "price": 19.90,
+    "price": 19.9,
     "country": "Kenya",
+    "count": 1,
     "co2": 100,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_2139090",
     "id": 5
@@ -43,6 +48,7 @@
     "name": "Jackfruit",
     "price": 34.99,
     "country": "Kenya",
+    "count": 1,
     "co2": 200,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428765",
     "id": 6
@@ -51,26 +57,27 @@
     "name": "Grevillea",
     "price": 27.95,
     "country": "Kenya",
+    "count": 1,
     "co2": 800,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428774",
     "id": 7
   },
   {
     "name": "Cedar",
-    "price": 18.00,
+    "price": 18.0,
     "country": "France",
+    "count": 1,
     "co2": 861,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428702",
     "id": 8
   },
   {
     "name": "Larch",
-    "price": 21.00,
+    "price": 21.0,
     "country": "Guatemala",
+    "count": 1,
     "co2": 690,
     "img": "https://s3-eu-west-1.amazonaws.com/www-treedom-net/images/medium_428702",
     "id": 9
   }
 ]
-
-
