@@ -27,6 +27,7 @@ function App() {
             <Navigation />
             <Route exact path="/">
               <Home />
+              <AboutUsSection />
             </Route>
             <Switch>
               <Route exact path="/about">
@@ -43,6 +44,8 @@ function App() {
         </CartProvider>
       </ProductProvider>
     </Router>
+
+    
     
       
 //       <InfoSection />

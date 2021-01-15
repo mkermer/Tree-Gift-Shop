@@ -1,0 +1,12 @@
+.FName, .LName{
+    width: 48%;
+    display: inline-block;
+}
+
+.FName {
+    margin: 0 2% 10px 0;
+}
+
+.LName {
+    margin: 0 0 10px 2% ;
+}
