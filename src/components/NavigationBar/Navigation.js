@@ -39,7 +39,7 @@ function Navigation(props) {
               <Nav.Link as={NavLink} to="/contact">
                 Contact
               </Nav.Link>
-              <NavDropdown title="Buy a tree giftcard!" id="basic-nav-dropdown">
+              {/* <NavDropdown title="Buy a tree giftcard!" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">
                   Less than 20€
                 </NavDropdown.Item>
@@ -53,7 +53,7 @@ function Navigation(props) {
                 <NavDropdown.Item as={Link} to="/">
                 Show all
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </Nav>
             </Navbar.Collapse>
             <Collapse in={open}>

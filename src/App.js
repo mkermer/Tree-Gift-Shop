@@ -36,7 +36,6 @@ function App() {
               <Route exact path="/contact" component={ContactSection} />
               <Route exact path="/checkout" component={Cart} />
             </Switch>
-          {/* test */}
             <Footer />
           </div>
         </CartProvider>
