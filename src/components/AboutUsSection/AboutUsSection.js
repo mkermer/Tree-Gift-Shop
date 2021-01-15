@@ -19,13 +19,13 @@ export class AboutUs extends Component {
             <>
             <Container>
                 <Row>
-                    <Col md={6}>
+                    <Col lg={12} md={12}>
                         <h1>About Us</h1>
                     </Col>
                 </Row>
                 <Row> 
-                    <Col> <Plattform /> </Col>
-                    <Col md={6}>
+                    <Col lg={6} md={12}> <Plattform /> </Col>
+                    <Col lg={6} md={12}>
                         <h3>Our History</h3>
                         <p>Treeduce is the only online platform in the world where you can have someone plant a tree for you and then follow it online.
                         Since its foundation in 2021 in Vienna, more than 1.000.000 trees have been planted in Austria, Africa, South America and Italy.
@@ -44,7 +44,7 @@ export class AboutUs extends Component {
                     <Col md={12}>
                         <h4>Our Team</h4>
                     </Col>
-                    <Col md={3}> 
+                    <Col lg={3} md={6} sm={6}> 
                         <Card>
                             <CardBody>
                                 <CardImg src={Adrian} id="pic" alt="tree" />
@@ -53,7 +53,7 @@ export class AboutUs extends Component {
                             </CardBody>
                         </Card>
                     </Col>
-                    <Col md={3}>
+                    <Col lg={3} md={6} sm={6}>
                         <Card>
                             <CardBody>
                                 <CardImg src={Yiulia} id="pic" alt="tree"/>
@@ -63,7 +63,7 @@ export class AboutUs extends Component {
                             </CardBody>
                         </Card>
                     </Col>
-                    <Col md={3}>
+                    <Col lg={3} md={6} sm={6}>
                         <Card >
                             <CardBody>
                                 <CardImg src={Morgane} id="pic" alt="tree" />
@@ -73,7 +73,7 @@ export class AboutUs extends Component {
                             </CardBody>
                         </Card>
                     </Col>
-                    <Col md={3}>
+                    <Col lg={3} md={6} sm={6}>
                         <Card >
                             <CardBody>
                                 <CardImg src={Johanna} id="pic" alt="tree" />
