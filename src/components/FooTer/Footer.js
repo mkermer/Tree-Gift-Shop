@@ -2,8 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import FormSignUp from '../NavigationBar/FormSignUp'
 import { Facebook, Instagram, Twitter } from "react-bootstrap-icons";
 import "./Footer.css";
 import {Link} from "react-router-dom";
@@ -28,7 +27,7 @@ function Footer() {
             </Col>
             <Col xs={6} md={2} lg={2} className="links background">
               <p>
-                <a href="#agb">AGB</a>
+                <a href="#tos">Terms of Service</a>
               </p>
               <p>
                 <a href="#jobs">Join our team</a>
@@ -49,19 +48,7 @@ function Footer() {
               <h5>Sign up</h5><br/>
             </Col>
             <Col xs={12} md={4} lg={4} className="background">
-              <Form>
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Control type="text" placeholder="Name" />
-                </Form.Group>
-
-                <Form.Group controlId="formBasicPassword">
-                  <Form.Control type="email" placeholder="Email" />
-                </Form.Group>
-
-                <Button block variant="primary" type="submit">
-                  Submit
-                </Button>
-              </Form>
+              <FormSignUp/>
             </Col>
           </Row>
         </Container>
