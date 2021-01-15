@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import  { Jumbotron, Container, Row, Col, Image, Button }  from 'react-bootstrap';
 
+import Slideshow from './Slideshow';
+
 
 export class HeroSection extends Component {
     render() {
@@ -8,7 +10,7 @@ export class HeroSection extends Component {
                 <Jumbotron fluid>
                     <Container>
                         <Row> 
-                            <Col md={8}> <Image src="holder.js/171x180" rounded fluid /> </Col>
+                            <Col md={4}> <Slideshow /> </Col>
                             <Col md={4}> 
                                 <h1>Intro</h1>
                                 <p>Intro Paragraph</p>

@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import "./Slideshow.css";
 import { Link } from "react-router-dom";
 
 import { ReactComponent as TeamSpirit } from '../../illustrations/undraw_team_spirit_hrr4.svg';
