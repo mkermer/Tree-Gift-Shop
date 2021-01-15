@@ -4,13 +4,7 @@ import { ProductProvider } from "./ProductContext";
 import { CartProvider } from "./CartContext";
 import Navigation from "./components/NavigationBar/Navigation";
 import Footer from "./components/FooTer/Footer";
-import "./App.scss";
-// import HeroSection from "./components/HomeSection/HeroSection";
-// import InfoSection from "./components/FaqSection/InfoSection";
-import LoginSection from "./components/LoginSection/LoginSection";
-// import ProductSection from "./components/ProductSection/ProductSection";
-// import FaqSection from "./components/FaqSection/FaqSection";
-// import Impressum from "./components/ImpressumExtraPage/Impressum";
+import './App.scss'
 import Home from "./components/HomeSection/Home";
 import AboutUsSection from "./components/AboutUsSection/AboutUsSection";
 import ContactSection from "./components/ContactFormSection/ContactSection";
@@ -24,7 +18,6 @@ function App() {
             <Navigation />
             <Route exact path="/">
               <Home />
-              <AboutUsSection />
             </Route>
             <Switch>
               <Route exact path="/about">
@@ -39,10 +32,6 @@ function App() {
         </CartProvider>
       </ProductProvider>
     </Router>
-
-    //       <LoginSection />
-    //       <InfoSection />
-    //       <FaqSection />
   );
 }
 
