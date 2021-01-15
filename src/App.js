@@ -34,7 +34,6 @@ function App() {
               <Route path="/checkout" component={Cart} />
               <Route path="/add" component={LoginSection} />
             </Switch>
-            
             <Footer />
           </div>
         </CartProvider>

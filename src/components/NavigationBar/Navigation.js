@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Collapse from "react-bootstrap/Collapse";
 import { Search, Basket3} from "react-bootstrap-icons";
 import {NavLink,Link} from "react-router-dom";
@@ -40,21 +39,6 @@ function Navigation(props) {
               <Nav.Link as={NavLink} to="/contact">
                 Contact
               </Nav.Link>
-              <NavDropdown title="Buy a tree giftcard!" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
-                  Less than 20€
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  20€ - 30€
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  More than 30€
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to="/">
-                Show all
-                </NavDropdown.Item>
-              </NavDropdown>
               <Nav.Link as={NavLink} to="/add">
                 Add trees
               </Nav.Link>

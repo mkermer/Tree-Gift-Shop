@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import {Container, Row, Col } from 'react-bootstrap';
+
+import { ReactComponent as Planting } from '../../illustrations/undraw_environment_iaus.svg';
+
 export class InfoSection extends Component {
     render() {
         return (
             <Container>
                 <Row>
-                    <Col lg={6} md={12} sm={12}><h1>Why Treeduce?</h1> </Col>
+                    <Col lg={6} md={6} sm={12}> <Planting width={350}/></Col>
+                    <Col lg={6} md={6} sm={12}><h1>Why Treeduce?</h1> </Col>
                     <Col lg={6} md={6} sm={12}>
                         <h3>Our trees</h3>
                         <p>Our trees are planted in agroforestry projects that
