@@ -1,15 +1,9 @@
 .Footer{
-    margin: 10px auto;
+    margin: 0 auto !important;
     text-align: center;
 }
 
-/* .Footer .heading{
-    margin-bottom: 32px;
-} */
 
-.Footer p{
-    /* padding: 5px 0; */
-}
 
 .iconFooter{
     color:darkgray;
@@ -31,5 +25,9 @@
 }
 
 .background{
-    background-color: #f2f2f2;
+    background-color: #e9ecef;
+}
+
+.FooterTwo{
+    margin: 0 auto !important;
 }
