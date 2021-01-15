@@ -11,10 +11,10 @@ export class ContactSection extends Component {
         return (
             <Container>
                 <Row>
-                    <Col lg={12, { span: 6, offset: 3 }} md={12, { span: 8, offset: 2 }} sm={12} xs={12, { span: 10, offset: 1 }}>
+                    <Col lg={12, { span: 6, offset: 3 }} md={12, { span: 8, offset: 2 }} sm={12} sx={12, { span: 10, offset: 1 }}>
                         <Contact />
                     </Col>
-                    <Col lg={12, { span: 6, offset: 3 }} md={12, { span: 8, offset: 2 }} sm={12} xs={12, { span: 10, offset: 1 }}>
+                    <Col lg={12, { span: 6, offset: 3 }} md={12, { span: 8, offset: 2 }} sm={12} sx={12, { span: 10, offset: 1 }}>
                     <h4>Contact Us</h4>
                      <ContactForm />
                     </Col>
