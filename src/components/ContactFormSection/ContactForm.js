@@ -57,11 +57,11 @@ function ContactForm (){
             <Form.Group controlId="validationCustom04">
                 <Form.Check
                     required
-                    label="Please, agree to terms and conditions"
+                    label={<label>I've read and accept the <a href="#tos">Terms of Service</a></label>}
                     feedback="You must agree before submitting."
                 />
             </Form.Group>
-        <Button type="submit">Send it</Button>
+        <Button variant="primary" type="submit">Send it</Button>
     </Form> 
     )   
     
