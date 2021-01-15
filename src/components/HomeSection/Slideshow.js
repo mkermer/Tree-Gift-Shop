@@ -7,15 +7,11 @@ import { ReactComponent as TeamSpirit } from '../../illustrations/undraw_team_sp
 
 function Slideshow() {
   return (
-    <div className="slider-container">
       <Carousel>
         <Carousel.Item>
           <TeamSpirit width={700}/>
           <Carousel.Caption>
             <h3>About us</h3>
-            <Link to="/about">
-              <button className="slider-button">Click</button>
-            </Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -24,7 +20,6 @@ function Slideshow() {
             src="https://images2.alphacoders.com/103/1036023.jpg"
             alt="Third slide"
           />
-
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -44,7 +39,7 @@ function Slideshow() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </div>
+    
   );
 }
 

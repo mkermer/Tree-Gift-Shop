@@ -10,7 +10,7 @@ export class HeroSection extends Component {
                 <Jumbotron fluid>
                     <Container>
                         <Row> 
-                            <Col md={4}> <Slideshow /> </Col>
+                            <Col lg={{span: 4, offset: 2 }} md={4}> <Slideshow /> </Col>
                             <Col md={4}> 
                                 <h1>Intro</h1>
                                 <p>Intro Paragraph</p>
