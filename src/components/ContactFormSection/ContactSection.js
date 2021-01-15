@@ -5,6 +5,7 @@ import ContactForm from './ContactForm';
 
 import { ReactComponent as Contact } from '../../illustrations/undraw_contact_us_15o2.svg';
 
+
 export class ContactSection extends Component {
     render() {
         return (
@@ -14,7 +15,9 @@ export class ContactSection extends Component {
                         <h1>Contact Us</h1>
                         <ContactForm />
                     </Col>
-                    <Col lg={6, { order: 'last' }} md={12, { order: 'first' }} sm={12, { order: 'first' }} xs={{ order: 'first' }}> <Contact /></Col>
+                    <Col lg={6, { order: 'last' }} md={12, { order: 'first' }} sm={12, { order: 'first' }} xs={{ order: 'first' }}> 
+                        <Contact />
+                    </Col>
                 </Row>
             </Container>
         )
