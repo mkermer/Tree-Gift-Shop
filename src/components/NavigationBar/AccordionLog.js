@@ -3,8 +3,15 @@ import FormSignUp from './FormSignUp';
 import Accordion from 'react-bootstrap/Accordion'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
+import useToken from '../../useToken'
 
 function AccordionLog(){
+      const { token, setToken } = useToken();
+
+  const logout = () => {
+    setToken([])
+  }
+
     return(
         <Accordion defaultActiveKey="0">
             <Card>
@@ -14,7 +21,7 @@ function AccordionLog(){
                 </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
-                <Card.Body> <FormLogin/> </Card.Body>
+                <Card.Body> <FormLogin setToken={setToken}/> </Card.Body>
                 </Accordion.Collapse>
             </Card>
             <Card>

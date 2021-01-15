@@ -50,4 +50,23 @@ function TreeCard(props) {
   );
 }
 
+//                 <CardText>
+//                   <p>
+//                     CO<sub>2</sub>: -{obj.co2}kg
+//                   </p>
+//                   <h3>{obj.price} $</h3>
+//                 </CardText>
+//                 <button id={obj.id} onClick={() => props.add(obj)}>
+//                   {" "}
+//                   Add{" "}
+//                 </button>
+//               </CardBody>
+//             </Card>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// }
+
 export default TreeCard;
