@@ -10,11 +10,11 @@ export class ContactSection extends Component {
         return (
             <Container>
                 <Row>
-                    <Col lg={6} md={12} sm={12}> <Contact /></Col>
-                    <Col lg={6} md={12} sm={12}>
+                    <Col lg={6} md={12} sm={12} sx={12}>
                         <h1>Contact Us</h1>
                         <ContactForm />
                     </Col>
+                    <Col lg={6, { order: 'last' }} md={12, { order: 'first' }} sm={12, { order: 'first' }} xs={{ order: 'first' }}> <Contact /></Col>
                 </Row>
             </Container>
         )
