@@ -1,23 +1,17 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import "./Slideshow.css";
 import { Link } from "react-router-dom";
+
+import { ReactComponent as TeamSpirit } from '../../illustrations/undraw_team_spirit_hrr4.svg';
+
 
 function Slideshow() {
   return (
-    <div className="slider-container">
       <Carousel>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://images.wallpaperscraft.com/image/trees_top_view_forest_119902_1920x1080.jpg"
-            alt="First slide"
-          />
+          <TeamSpirit width={700}/>
           <Carousel.Caption>
             <h3>About us</h3>
-            <Link to="/about">
-              <button className="slider-button">Click</button>
-            </Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -26,7 +20,6 @@ function Slideshow() {
             src="https://images2.alphacoders.com/103/1036023.jpg"
             alt="Third slide"
           />
-
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -38,7 +31,6 @@ function Slideshow() {
             src="https://wallpaperboat.com/wp-content/uploads/2019/12/foggy-forest-01.jpg"
             alt="Third slide"
           />
-
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>
@@ -47,7 +39,7 @@ function Slideshow() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </div>
+    
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button} from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 
 import ContactForm from './ContactForm';
 
@@ -11,12 +11,12 @@ export class ContactSection extends Component {
         return (
             <Container>
                 <Row>
-                    <Col lg={6} md={12} sm={12} sx={12}>
-                        <h1>Contact Us</h1>
-                        <ContactForm />
-                    </Col>
-                    <Col lg={6, { order: 'last' }} md={12, { order: 'first' }} sm={12, { order: 'first' }} xs={{ order: 'first' }}> 
+                    <Col lg={12, { span: 6, offset: 3 }} md={12, { span: 8, offset: 2 }} sm={12} xs={12, { span: 10, offset: 1 }}>
                         <Contact />
+                    </Col>
+                    <Col lg={12, { span: 6, offset: 3 }} md={12, { span: 8, offset: 2 }} sm={12} xs={12, { span: 10, offset: 1 }}>
+                    <h4>Contact Us</h4>
+                     <ContactForm />
                     </Col>
                 </Row>
             </Container>
