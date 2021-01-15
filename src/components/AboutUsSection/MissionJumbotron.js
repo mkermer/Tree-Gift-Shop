@@ -11,9 +11,9 @@ export class MissionJumbotron extends Component {
                     <Row>
                         <Col lg={{ span: 6, offset: 0 }} md={6}>
                             <h6>Our Mission</h6>
-                            <p>Our philosophy is to create sustainable ecosystems and allow farmers to meet the
+                            <h3>Our philosophy is to create sustainable ecosystems and allow farmers to meet the
                             initial costs of planting trees, ensuring food sovereignty and income opportunities.
-                            </p>
+                            </h3>
                         </Col>
                         <Col lg={{ span: 4, offset: 2 }} md={{ span: 4, offset: 1 }}><MissionImg /></Col>
                     </Row>

@@ -24,7 +24,7 @@ export class AboutUs extends Component {
                     </Col>
                 </Row>
                 <Row> 
-                    <Col lg={6} md={12}> <Plattform /> </Col>
+                    <Col lg={6} md={12} sm={12}> <Plattform /> </Col>
                     <Col lg={6} md={12}>
                         <h3>Our History</h3>
                         <p>Treeduce is the only online platform in the world where you can have someone plant a tree for you and then follow it online.
