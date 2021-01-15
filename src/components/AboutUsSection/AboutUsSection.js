@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { ReactComponent as TeamTogether } from '../../illustrations/undraw_good_team_m7uu.svg';
 import { ReactComponent as Plattform } from '../../illustrations/undraw_data_trends_b0wg.svg';
 import Adrian from '../../illustrations/undraw_team_ih79_treeduce_3-01.svg'; 
 import Yiulia from '../../illustrations/undraw_team_ih79_treeduce_3-02.svg';
@@ -24,7 +23,7 @@ export class AboutUs extends Component {
                     </Col>
                 </Row>
                 <Row> 
-                    <Col lg={6} md={12}> <Plattform /> </Col>
+                    <Col lg={6} md={12} sm={12}> <Plattform /> </Col>
                     <Col lg={6} md={12}>
                         <h3>Our History</h3>
                         <p>Treeduce is the only online platform in the world where you can have someone plant a tree for you and then follow it online.

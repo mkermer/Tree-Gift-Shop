@@ -1,49 +1,103 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react'
+import FormLogin from '../NavigationBar/FormLogin'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import useToken from '../../useToken'
 
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+export default function LoginSection() {
+  const { token, setToken } = useToken();
+  
 
-import "./LoginSection.scss";
-
-
-
-
-function LoginSection({ Login, error }) {
-    const [details, setDetails] = useState({name: "", email:"", password:""});
-   
-    const submitHandler = e => {
-        e.preventDefault();
-
-        Login(details);
-    }
-
+    if(!token) {
     return (
-        <form onSubmit={submitHandler}>
-            <div className="form-inner">
-                <h2>Login</h2>
-                {(error != "") ? (<div className="error">{error}</div>): ""} 
-                <div className ="form-group">
-                     <label htmlFor="name">Name:</label>
-                     <input type="text" name="name" id="name" onChange={e => setDetails({...details,name: e.target.value})} value= {details.name} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" name="email" id="email" onChange={e => setDetails({...details,email: e.target.value})} value= {details.email}/>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" name="password" id="password" onChange={e => setDetails({...details,password: e.target.value})} value= {details.password}/>
-                </div>
-                <div className="form-group">
-                    <input type="submit" value="LOGIN" />
-                </div>
-            </div>
-        </form>
+      <div style={{marginTop: '5%'}}>
+      <p>You need admin priviliges to access this page.</p>
+      <FormLogin setToken={setToken} /></div>
+    )
+  }
 
 
-        )
+  const logout = () => {
+    setToken([])
+  }
+
+
+  return(
+    <div style={{marginTop: '5%'}}>
+      Add trees functionality coming soon
+      &nbsp;
+      &nbsp;
+      <button onClick={logout}>Logout</button>
+    </div>
+  )
 }
-export default LoginSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, {useState} from 'react';
+// import { Container, Row, Col, Button } from 'react-bootstrap';
+// import Form from "react-bootstrap/Form";
+
+
+
+// function LoginSection({ Login, error }){
+//     const [details, setDetails] = useState({name: "", email:"", password:""});
+   
+//     const submitHandler = e =>{
+//         e.preventDefault();
+
+//         Login(details);
+//     }
+
+//     return (
+//         <form onSubmit={submitHandler}>
+//             <div className="form-inner">
+//                 <h2>Login</h2>
+//                 {(error != "") ? (<div className="error">{error}</div>): ""} 
+//                 <div className ="form-group">
+//                      <label htmlFor="name">Name:</label>
+//                      <input type="text" name="name" id="name" onChange={e => setDetails({...details,name: e.target.value})} value= {details.name} />
+//                 </div>
+//                 <div className="form-group">
+//                     <label htmlFor="email">Email:</label>
+//                     <input type="email" name="email" id="email" onChange={e => setDetails({...details,email: e.target.value})} value= {details.email}/>
+//                 </div>
+//                 <div className="form-group">
+//                     <label htmlFor="password">Password:</label>
+//                     <input type="password" name="password" id="password" onChange={e => setDetails({...details,password: e.target.value})} value= {details.password}/>
+//                 </div>
+//                 <div className="form-group">
+                    
+//                      <Button block variant="primary" type="submit">
+//                             Login
+//                     </Button>
+//                 </div>
+//             </div>
+//         </form>
+
+
+//         )
+// }
+// export default LoginSection;
