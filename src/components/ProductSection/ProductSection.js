@@ -5,6 +5,7 @@ import Searchbar from "./Searchbar";
 import { Container, Row, Col } from "react-bootstrap";
 import { ProductContext } from "../../ProductContext";
 import { CartContext } from "../../CartContext";
+import './ProductSection.css';
 
 function ProductSection(props) {
    const {addToCart} = useContext(CartContext);
@@ -13,7 +14,12 @@ function ProductSection(props) {
 
        return (
       
-        <Container> 
+        <Container className="ProductSection"> 
+          <Row>
+            <Col xs={12}>
+            <h1>Plant a tree</h1>
+            </Col>
+          </Row>
           <Row>
             <Col xl={12} lg={12} md={12} sm={12} sx={12}> 
               <Searchbar id="search" handleChange={handleChange} />

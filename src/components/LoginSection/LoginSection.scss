@@ -1,38 +1,36 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-family: montserat,sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserat, sans-serif;
+}
 
-    input,button {
-        appearance: none ;
-        background:none;
-        border:none;
-        outline: none;
-
-    }
-    .LoginSection
-        height: 100vh;
-        display;
-        align-items:center;
-        justify-content:center;
-        background-color:#53565A
-    }
+input,
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+.LoginSection {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #53565a;
+}
 form {
-    display:block;
-    position:relative;
-
+  display: block;
+  position: relative;
 }
 
 form:after {
-    content:'';
-    display:block;
-    position:absolute;
-    top:-5px;
-    left:-5px;
-    right:-5px;
-    bottom:-5px;
-    z-index:1;
-    background-image: linear-gradient(to buttom right, #FFCE00, FE4880)
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: 1;
+  background-image: linear-gradient(to bottom right, #ffce00, FE4880);
 }
