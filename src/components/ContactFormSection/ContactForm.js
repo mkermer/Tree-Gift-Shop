@@ -5,7 +5,6 @@ import ContactModal from "./ContactModal";
 
 function ContactForm (){
 
-    const [validated, setValidated] = useState(false);
     const [modalShow, setModalShow] = useState(false);
 
     const handleSubmit = (event) => {
