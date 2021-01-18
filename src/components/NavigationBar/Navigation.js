@@ -11,6 +11,7 @@ import { CartContext } from "../../CartContext";
 import { ProductContext } from "../../ProductContext";
 import OverlayNav from './OverlayNav'
 import "./Navigation.css";
+import logo from "../../Logo/Treeduce.png";
 
 function Navigation(props) {
   const {handleChange} = useContext(ProductContext)
@@ -21,7 +22,7 @@ function Navigation(props) {
     <div>
         <Navbar fixed="top" bg="light" expand="lg">
           <Navbar.Brand as={NavLink} to="/">
-            Treeduce
+            <img className="Logo" src={logo} alt="Treeduce"/>
           </Navbar.Brand>
           
           <Navbar.Collapse id="basic-navbar-nav">

@@ -10,7 +10,6 @@ import AboutUsSection from "./components/AboutUsSection/AboutUsSection";
 import ContactSection from "./components/ContactFormSection/ContactSection";
 import LoginSection from "./components/LoginSection/LoginSection"
 
-import LoginSection from "./components/LoginSection/LoginSection";
 
 function App() {
   return (

@@ -12,6 +12,9 @@
   transform: scale(0.9) translateZ(0);
 }
 
+.Logo{
+  height: 50px;
+}
 /* .active {
   background-color: black;
 } */
