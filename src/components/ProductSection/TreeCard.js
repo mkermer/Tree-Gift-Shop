@@ -71,3 +71,5 @@ function TreeCard(props) {
   );
 }
 
+export default TreeCard;
+

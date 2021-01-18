@@ -12,8 +12,8 @@ export class FaqSection extends Component {
                     </Col>
                 </Row>
             </Container>
-        )
-    }
-}
+        );
+    };
+};
 
-export default FaqSection
+export default FaqSection;

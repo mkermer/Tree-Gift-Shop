@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import Collapse from "react-bootstrap/Collapse";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import { Search, Basket3 } from "react-bootstrap-icons";
 import { NavHashLink } from "react-router-hash-link";
 import { HashLink } from "react-router-hash-link";
@@ -16,11 +17,17 @@ import Cart from '../CartExtraPage/Cart'
 import "./Navigation.css";
 import logo from "../../Logo/Treeduce.png";
 
-function Navigation(props) {
+function Navigation() {
   const { handleChange } = useContext(ProductContext);
   const [open, setOpen] = useState(false);
   const { cart, sidebar, showSidebar } = useContext(CartContext);
-
+  const [show, setShow] = useState(false);
+  const showDropdown = (e)=>{
+    setShow(!show);
+  };
+  const hideDropdown = e => {
+    setShow(false);
+  };
 
   return (
     <div>
@@ -41,6 +48,19 @@ function Navigation(props) {
               <Nav.Link as={NavHashLink} smooth to="/#contact">
                 Contact
               </Nav.Link>
+              <Nav.Link as={NavHashLink} smooth to="/#faq">
+                Help & FAQ
+              </Nav.Link>
+              <NavDropdown 
+                  title="Buy a tree giftcard!" 
+                  id="collapsible-nav-dropdown"  
+                  show={show} 
+                  onMouseEnter={showDropdown} 
+                  onMouseLeave={hideDropdown}>
+
+                        <NavDropdown.Item href="#action/3.1">How To</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Find your perfect Tree!</NavDropdown.Item>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
           <Collapse in={open}>
@@ -80,6 +100,6 @@ function Navigation(props) {
       </LoginProvider>
     </div>
   );
-}
+};
 
 export default Navigation;
