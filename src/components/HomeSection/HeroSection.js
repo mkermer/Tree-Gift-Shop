@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  { Jumbotron, Container, Row, Col, Image, Button }  from 'react-bootstrap';
+import  { Jumbotron, Container, Row, Col, Button }  from 'react-bootstrap';
 
 import {ReactComponent as IntroImg} from '../../illustrations/undraw_the_world_is_mine_nb0e.svg';
 

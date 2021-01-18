@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     margin : 0;
     padding: 0;
     box-sizing: border-box;
@@ -106,3 +107,40 @@ welcome button:hover {
     color: #FE4880;
     font-weight: 700;
 }
+=======
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserat, sans-serif;
+}
+
+input,
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+.LoginSection {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #53565a;
+}
+form {
+  display: block;
+  position: relative;
+}
+
+form:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: 1;
+  background-image: linear-gradient(to bottom right, #ffce00, FE4880);
+}
+>>>>>>> 3d19a99ea86bdb2a7cd0718bc406a65c8321f1ad

@@ -1,70 +1,70 @@
-import Popover from 'react-bootstrap/Popover';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Button from 'react-bootstrap/Button';
+import Popover from "react-bootstrap/Popover";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Button from "react-bootstrap/Button";
 import { PersonCircle } from "react-bootstrap-icons";
-import AccordionLog from './AccordionLog';
-import useToken from '../../useToken'
-import {useEffect} from 'react'
-import FormLogin from '../NavigationBar/FormLogin'
-import {Link} from 'react-router-dom'
+import AccordionLog from "./AccordionLog";
+import { useContext } from "react";
+import { LoginContext } from "../../LoginContext";
 
 function OverlayNav() {
-  const { token, setToken } = useToken();
+  const { getToken, getName, getLastName, logout } = useContext(LoginContext);
+    const token = getToken()
 
-  const logout = () => {
-    setToken([])
-  }
-  
-    const notLoggedPopover = (
-        <Popover id="popover-basic">
-          <Popover.Title as="h3">Login or Sign up</Popover.Title>
-          <Popover.Content>
-            <AccordionLog/>
-          </Popover.Content>
-        </Popover>
-      );
+  const notLoggedPopover = (
+    <Popover id="popover-basic">
+      <Popover.Title as="h3">Login or Sign up</Popover.Title>
+      <Popover.Content>
+        <AccordionLog />
+      </Popover.Content>
+    </Popover>
+  );
 
-      const loggedInPopover = (
-        <Popover id="popover-basic">
-          <Popover.Title as="h3">Already logged in</Popover.Title>
-          <Popover.Content>
-            <button onClick={logout}>Logout</button>
-          </Popover.Content>
-        </Popover>
-      );
-      
-      const NotLogged = () => (
-        <OverlayTrigger trigger="click" placement="bottom" overlay={notLoggedPopover}>
-          <Button variant="light" className="icons">
-              <PersonCircle size={25} />
-            </Button>
-        </OverlayTrigger>
-      );
+  const loggedInPopover = (
+    <Popover id="popover-basic">
+      <Popover.Title as="p">Already logged in as <b>{getName()} {getLastName()}</b></Popover.Title>
+      <Popover.Content>
+        <button onClick={logout} class="btn btn-primary">Logout</button>
+      </Popover.Content>
+    </Popover>
+  );
 
-      const Logged = () => (
-        <OverlayTrigger trigger="click" placement="bottom" overlay={loggedInPopover}>
-          <Button variant="light" className="icons">
-              <PersonCircle size={25} />
-            </Button>
-        </OverlayTrigger>
-      );
+  const NotLogged = () => (
+    <OverlayTrigger
+      trigger="click"
+      placement="bottom"
+      overlay={notLoggedPopover}
+    >
+      <Button variant="light" className="icons">
+        <PersonCircle size={25} />
+      </Button>
+    </OverlayTrigger>
+  );
 
+  const Logged = () => (
+    <OverlayTrigger
+      trigger="click"
+      placement="bottom"
+      overlay={loggedInPopover}
+    >
+      <Button variant="light" className="icons">
+        <PersonCircle size={25} />
+      </Button>
+    </OverlayTrigger>
+  );
 
-      const Check = () => {
-        if(!token) {
-          return <NotLogged />
-        } else {
-          return <Logged />
-        }
-      }
+  const Check = () => {
+    if (!token) {
+      return <NotLogged />;
+    } else {
+      return <Logged />;
+    }
+  };
 
-
-    return(
-        <div>
-            <Check />
-        </div>
-    );
-};
+  return (
+    <div>
+      <Check />
+    </div>
+  );
+}
 
 export default OverlayNav;
-

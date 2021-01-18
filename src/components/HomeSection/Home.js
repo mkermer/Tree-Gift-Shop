@@ -8,20 +8,19 @@ import AboutUsSection from "../AboutUsSection/AboutUsSection";
 import ContactSection from "../ContactFormSection/ContactSection";
 
 function Home(props) {
-
   return (
     <div className="App">
-      <Route exact path='/'>
+      <Route exact path="/">
+      <div id="home">
         <HeroSection />
         <ProductSection products={tree} />
         <InfoSection />
         <AboutUsSection />
         <ContactSection />
+        </div>
       </Route>
     </div>
   );
 }
-
-// { <Slideshow /> }
 
 export default Home;

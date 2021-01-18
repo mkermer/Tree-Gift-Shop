@@ -25,8 +25,14 @@
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+<<<<<<< HEAD
     "framer-motion": "^3.2.1",
+=======
+    "cors": "^2.8.5",
+    "mysql": "^2.18.1",
+>>>>>>> 3d19a99ea86bdb2a7cd0718bc406a65c8321f1ad
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
@@ -35,6 +41,7 @@
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.3.1",
     "react-scripts": "4.0.1",
+    "react-scroll": "^1.8.1",
     "reactstrap": "^8.8.1",
     "web-vitals": "^0.2.4"
   },
