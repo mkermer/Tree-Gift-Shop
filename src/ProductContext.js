@@ -1,13 +1,12 @@
-import React, {useState, createContext} from 'react';
-import tree from './tree'
+import React, { useState, createContext } from "react";
+import tree from "./tree";
 
 export const ProductContext = createContext();
 
-
 export const ProductProvider = (props) => {
-    const [products, setProducts] = useState(tree)
+  const [products, setProducts] = useState(tree);
 
-function handleChange(e) {
+  function handleChange(e) {
     var filteredProductList = tree.filter(
       (product) =>
         product.name.toLowerCase().indexOf(e.target.value.toLowerCase()) >= 0
@@ -58,7 +57,21 @@ function handleChange(e) {
     setProducts(sorted);
   }
 
-    return (
-        <ProductContext.Provider value={{products, setProducts, handleCountryChange, sortByCoDescending, sortByCoAscending, sortByName, sortByPriceAscending, sortByPriceDescending, handleChange}}>{props.children}</ProductContext.Provider>
-    )
-}
+  return (
+    <ProductContext.Provider
+      value={{
+        products,
+        setProducts,
+        handleCountryChange,
+        sortByCoDescending,
+        sortByCoAscending,
+        sortByName,
+        sortByPriceAscending,
+        sortByPriceDescending,
+        handleChange,
+      }}
+    >
+      {props.children}
+    </ProductContext.Provider>
+  );
+};

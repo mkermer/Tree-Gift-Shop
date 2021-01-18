@@ -12,9 +12,24 @@
   transform: scale(0.9) translateZ(0);
 }
 
+.cart-menu {
+  overflow: scroll;
+  margin-top: 58px;
+  background-color: #c7e2cf;
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  transition: 1200ms;
+}
+
+.cart-menu.active {
+  right: 0;
+  transition: 600ms;
+}
+
 .Logo{
   height: 50px;
 }
-/* .active {
-  background-color: black;
-} */
+

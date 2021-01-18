@@ -33,6 +33,7 @@ export class InfoSection extends Component {
                         </p>
                     </Col>
                 </Row>
+                <div id='about'></div>
             </Container>
         )
     }

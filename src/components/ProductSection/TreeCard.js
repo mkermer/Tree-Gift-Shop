@@ -5,11 +5,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./TreeCard.css";
-import CollapseDescription from './CollapseDiscription';
-import Collapse from 'react-bootstrap/Collapse';
+import CollapseDescription from "./CollapseDiscription";
+import Collapse from "react-bootstrap/Collapse";
 
 function TreeCard(props) {
   const [open, setOpen] = useState(false);
+  
   return (
       props.products.map((obj) => {
         return (
@@ -70,23 +71,3 @@ function TreeCard(props) {
   );
 }
 
-//                 <CardText>
-//                   <p>
-//                     CO<sub>2</sub>: -{obj.co2}kg
-//                   </p>
-//                   <h3>{obj.price} $</h3>
-//                 </CardText>
-//                 <button id={obj.id} onClick={() => props.add(obj)}>
-//                   {" "}
-//                   Add{" "}
-//                 </button>
-//               </CardBody>
-//             </Card>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// }
-
-export default TreeCard;
