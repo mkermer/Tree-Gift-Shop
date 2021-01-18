@@ -1,0 +1,39 @@
+.TeamMembers{
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.card {
+    margin-bottom: 24px;
+}
+
+@media (min-width: 1140px) { 
+  .TeamMembers card{
+      width:50%;
+  }
+}
+
+@media (min-width: 992px) { 
+  .TeamMembers card{
+      width:12.5%;
+  }
+}
+
+@media (min-width: 770px) { 
+  .TeamMembers card{
+      width:12.5%;
+  }
+}
+
+@media (min-width: 720px) { 
+  .TeamMembers card{
+      width:12.5%;
+  }
+}
+
+@media (min-width: 540px) { 
+  .TeamMembers card{
+      width:6.25%;
+  }
+}

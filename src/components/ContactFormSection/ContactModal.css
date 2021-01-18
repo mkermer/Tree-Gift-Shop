@@ -1,0 +1,18 @@
+.ContactModal p{
+    text-align: center;
+}
+
+.ContactModal Button{
+    margin: 0 auto;
+}
+
+.ContactModal svg{
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: auto;
+}
+
+.ContactModal Footer{
+    height: 72px;
+}
