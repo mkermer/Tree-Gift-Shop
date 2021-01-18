@@ -4,6 +4,7 @@ import { ProductProvider } from "./ProductContext";
 import { CartProvider } from "./CartContext";
 import Navigation from "./components/NavigationBar/Navigation";
 import Footer from "./components/FooTer/Footer";
+
 import "./App.scss";
 // import HeroSection from "./components/HomeSection/HeroSection";
 // import InfoSection from "./components/FaqSection/InfoSection";

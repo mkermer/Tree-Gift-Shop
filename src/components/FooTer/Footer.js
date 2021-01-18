@@ -13,7 +13,6 @@ function Footer() {
   return (
       <div className="test">
         <hr />
-        {/* <Jumbotron fluid> */}
         <Container className="Footer">
           <Row>
             <Col xs={12} md={4} className="background">
@@ -27,7 +26,6 @@ function Footer() {
             </Col>
           </Row>
         </Container>
-        {/* </Jumbotron> */}
         <hr />
         <Container className="FooterTwo">
           <Row>

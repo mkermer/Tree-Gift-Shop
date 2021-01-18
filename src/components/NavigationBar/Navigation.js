@@ -14,6 +14,7 @@ import { LoginProvider } from "../../LoginContext";
 import OverlayNav from "./OverlayNav";
 import Cart from '../CartExtraPage/Cart'
 import "./Navigation.css";
+import logo from "../../Logo/Treeduce.png";
 
 function Navigation(props) {
   const { handleChange } = useContext(ProductContext);
@@ -26,7 +27,7 @@ function Navigation(props) {
       <LoginProvider>
         <Navbar fixed="top" bg="light" expand="lg">
           <Navbar.Brand as={NavHashLink} smooth to="/#">
-            Treeduce
+            <img className="Logo" src={logo} alt="Treeduce"/>
           </Navbar.Brand>
 
           <Navbar.Collapse id="basic-navbar-nav">

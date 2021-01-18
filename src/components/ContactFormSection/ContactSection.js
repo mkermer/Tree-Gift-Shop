@@ -7,19 +7,19 @@ import { ReactComponent as Contact } from '../../illustrations/undraw_contact_us
 export class ContactSection extends Component {
     render() {
         return (
-            <div id='c'>
             <Container>
                 <Row>
+
                     <Col lg={{ span: 6, offset: 3 }} md={{ span: 8, offset: 2 }} sm={12} xs={{ span: 10, offset: 1 }}>
                         <Contact />
                     </Col>
                     <Col lg={{ span: 6, offset: 3 }} md={{ span: 8, offset: 2 }} sm={12} xs={{ span: 10, offset: 1 }}>
+
                     <h4>Contact Us</h4>
                      <ContactForm />
                     </Col>
                 </Row>
             </Container>
-            </div>
         )
     }
 }
