@@ -14,7 +14,6 @@ function ContactModal(props) {
             centered
             className ="ContactModal"
         >
-            
             <Modal.Body>
                 <MessageSent />
                 <h4>Thank you for your Message!</h4>
