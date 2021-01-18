@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-import React from "react";
-import { Card, CardBody, CardTitle, CardText, CardImg, Col } from "reactstrap";
-import "./TreeCard.css";
-=======
 import React, { useState } from "react";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import { Card, CardBody, CardTitle, CardText, CardImg, Col } from "reactstrap";
 import "./TreeCard.css";
-import CollapseDescription from './CollapseDiscription';
-import Collapse from 'react-bootstrap/Collapse';
+import CollapseDescription from "./CollapseDiscription";
+import Collapse from "react-bootstrap/Collapse";
 
->>>>>>> 0a052e4fdfbf7dd0a76898867306cd3c47286be3
 function TreeCard(props) {
   const [open, setOpen] = useState(false);
   return (
@@ -48,37 +42,8 @@ function TreeCard(props) {
               </Collapse>
             </Card>
           </Col>
-<<<<<<< HEAD
-=======
-            
-          
->>>>>>> 0a052e4fdfbf7dd0a76898867306cd3c47286be3
         )
       })
   );
 }
-<<<<<<< HEAD
 export default TreeCard;
-=======
-
-//                 <CardText>
-//                   <p>
-//                     CO<sub>2</sub>: -{obj.co2}kg
-//                   </p>
-//                   <h3>{obj.price} $</h3>
-//                 </CardText>
-//                 <button id={obj.id} onClick={() => props.add(obj)}>
-//                   {" "}
-//                   Add{" "}
-//                 </button>
-//               </CardBody>
-//             </Card>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// }
-
-export default TreeCard;
->>>>>>> 5c3096143157e1a3edf2b70d8e1d62e82ef2719c
