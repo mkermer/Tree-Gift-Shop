@@ -16,9 +16,8 @@ function TreeCard(props) {
         return (
           <>
 
-         {/* <Col > */}
-            {/* lg={4} xl={3} md={4} sm={12} xs={12} */}
-            <Card className="TreeCard" key={obj.id}>   
+         <Col md={4} xs={12} key={obj.id}>
+            <Card className="TreeCard" >   
                 <Card.Img 
                 variant="top"
                 src={obj.img} 
@@ -62,7 +61,7 @@ function TreeCard(props) {
 
             </Card>
 
-          {/* </Col> */}
+          </Col>
           </>
             
           
