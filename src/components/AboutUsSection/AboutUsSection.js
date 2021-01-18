@@ -12,6 +12,8 @@ import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
 
 import MissionJumbotron from "./MissionJumbotron";
 
+import "./AboutUsSection.css";
+
 export class AboutUs extends Component {
     render() {
         return (
@@ -36,9 +38,9 @@ export class AboutUs extends Component {
                         </p>
                     </Col>
                 </Row>
-                </Container> 
+            </Container> 
                 <MissionJumbotron />
-                <Container>
+            <Container className="TeamMembers"> 
                 <Row>
                     <Col md={12}>
                         <h4>Our Team</h4>
@@ -48,7 +50,7 @@ export class AboutUs extends Component {
                             <CardBody>
                                 <CardImg src={Adrian} id="pic" alt="tree" />
                                 <CardTitle tag="h5">Adrian</CardTitle>
-                                <CardText>I love creating things that please my and people's eyes ;) </CardText>
+                                <CardText>Head of Backend</CardText>
                             </CardBody>
                         </Card>
                     </Col>
@@ -57,8 +59,7 @@ export class AboutUs extends Component {
                             <CardBody>
                                 <CardImg src={Yiulia} id="pic" alt="tree"/>
                                 <CardTitle tag="h5">Yuliya</CardTitle>
-                                <CardText>I got to know Programming in a preparation course, which helped me to 
-                                    find out how I would like to rebuild my future.</CardText>
+                                <CardText>Developer</CardText>
                             </CardBody>
                         </Card>
                     </Col>
@@ -67,8 +68,7 @@ export class AboutUs extends Component {
                             <CardBody>
                                 <CardImg src={Morgane} id="pic" alt="tree" />
                                 <CardTitle tag="h5">Morgane</CardTitle>
-                                <CardText>I started coding in school and during the first lockdown I gave myself the goal to look at it again and learn 
-                                    a lot new stuff about it.</CardText>
+                                <CardText>Creative Director</CardText>
                             </CardBody>
                         </Card>
                     </Col>
@@ -77,7 +77,7 @@ export class AboutUs extends Component {
                             <CardBody>
                                 <CardImg src={Johanna} id="pic" alt="tree" />
                                 <CardTitle tag="h5">Johanna</CardTitle>
-                                <CardText>I am an information and graphic designer.</CardText>
+                                <CardText>hdhdh</CardText>
                             </CardBody>
                         </Card>
                     </Col>
