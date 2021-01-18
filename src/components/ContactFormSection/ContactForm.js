@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { Row, Col, Button, Form } from 'react-bootstrap';
 
+import ContactModal from "./ContactModal";
+
 function ContactForm (){
+
     const [validated, setValidated] = useState(false);
+    const [modalShow, setModalShow] = useState(false);
 
     const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
-        setValidated(true);
+        event.preventDefault();
+        setModalShow(!modalShow)
     };
 
+
     return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
         <Row>
             <Col>
                 <Form.Group controlId="validationCustom01">
@@ -61,7 +61,15 @@ function ContactForm (){
                     feedback="You must agree before submitting."
                 />
             </Form.Group>
-        <Button variant="primary" type="submit">Send it</Button>
+            
+            <Button variant="primary" type='submit'>
+                Send
+            </Button>
+
+            <ContactModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
     </Form> 
     )   
     
