@@ -7,7 +7,6 @@ import HelpfulLinks from './HelpfulLinks';
 import SignUp from './SignUp';
 import Contact from './Contact';
 import "./Footer.css";
-import { Jumbotron } from "react-bootstrap";
 
 
 function Footer() {

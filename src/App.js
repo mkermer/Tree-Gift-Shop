@@ -1,4 +1,4 @@
-import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Cart from "./components/CartExtraPage/Cart";
 import { ProductProvider } from "./ProductContext";
 import { CartProvider } from "./CartContext";
@@ -7,42 +7,32 @@ import Footer from "./components/FooTer/Footer";
 import "./App.scss";
 // import HeroSection from "./components/HomeSection/HeroSection";
 // import InfoSection from "./components/FaqSection/InfoSection";
-import LoginSection from "./components/LoginSection/LoginSection";
+import AddTrees from "./components/NavigationBar/AddTrees";
 // import ProductSection from "./components/ProductSection/ProductSection";
 // import FaqSection from "./components/FaqSection/FaqSection";
 // import Impressum from "./components/ImpressumExtraPage/Impressum";
 import Home from "./components/HomeSection/Home";
-import AboutUsSection from "./components/AboutUsSection/AboutUsSection";
-import ContactSection from "./components/ContactFormSection/ContactSection";
+import {LoginProvider} from './LoginContext';
 
 function App() {
   return (
-    <Router>
+    <Router onUpdate={() => window.scrollTo(0, 0)}>
+      <LoginProvider>
       <ProductProvider>
         <CartProvider>
           <div className="App">
             <Navigation />
-            <Route exact path="/">
               <Home />
-              <AboutUsSection />
-            </Route>
             <Switch>
-              <Route exact path="/about">
-                <AboutUsSection />
-              </Route>
-              <Route path="/contact" component={ContactSection} />
               <Route path="/checkout" component={Cart} />
-              <Route path="/add" component={LoginSection} />
+              <Route path="/add" component={AddTrees} />
             </Switch>
             <Footer />
           </div>
         </CartProvider>
       </ProductProvider>
+      </LoginProvider>
     </Router>
-
-    //       <LoginSection />
-    //       <InfoSection />
-    //       <FaqSection />
   );
 }
 

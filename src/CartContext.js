@@ -1,13 +1,26 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Axios from 'axios';
+import { LoginContext } from "./LoginContext";
 
 export const CartContext = createContext();
 
 export const CartProvider = (props) => {
+  const {getEmail} = useContext(LoginContext)
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState([0]);
+    const [sidebar, setSidebar] = useState(false);
 
-  const addToCart = (e) => {
+  const saveCart = () => {
+    Axios.post("http://localhost:9000/cart", {
+        cart: JSON.stringify(cart),
+        username: getEmail(),
+      })
+  }
+
+  const showSidebar = () => setSidebar(!sidebar)
+
+  function addToCart(e) {
     const check = cart.every((item) => {
       return item.id !== e.id;
     });
@@ -18,6 +31,15 @@ export const CartProvider = (props) => {
     }
   };
 
+  const getCart = () => {
+    Axios.post("http://localhost:9000/getcart", {
+      username: getEmail(),
+    }).then((response) => {
+      setCart(JSON.parse(response.data[0].cart))
+    })
+  }
+
+  
   const removeFromCart = (e) => {
     if (window.confirm(`Do you want to remove ${e.name} from your cart?`)) {
       cart.forEach((item, index) => {
@@ -53,8 +75,10 @@ export const CartProvider = (props) => {
   };
 
   const resetCart = () => {
+    if(window.confirm('Are you sure you want to reset your cart?')){
     setCart([]);
     getTotal();
+    }
   };
 
   let sum = function (items, prop) {
@@ -65,9 +89,9 @@ export const CartProvider = (props) => {
 
   function showMessage(arr) {
     return arr.length === 0 ? (
-      <>
-        No items here yet. Wanna go shopping? <Link to="/">See trees</Link>
-      </>
+      <div>
+        No items here yet.
+      </div>
     ) : (
       <p>You have {arr.length} items in your cart.</p>
     );
@@ -88,9 +112,13 @@ export const CartProvider = (props) => {
         reduceCount,
         increaseCount,
         total,
+        saveCart,
         setTotal,
         getTotal,
+        getCart,
         setCart,
+        showSidebar,
+        sidebar,
         addToCart,
         removeFromCart,
         sum,

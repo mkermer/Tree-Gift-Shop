@@ -15,9 +15,9 @@ import MissionJumbotron from "./MissionJumbotron";
 export class AboutUs extends Component {
     render() {
         return (
-            <>
+            <div>
             <Container>
-                <Row>
+                <Row className="mt-20">
                     <Col lg={12} md={12}>
                         <h1>About Us</h1>
                     </Col>
@@ -83,8 +83,8 @@ export class AboutUs extends Component {
                     </Col>
                 </Row>
             </Container>
-            
-            </>
+            <div id='contact'></div>            
+            </div>
         )
     }
 }
