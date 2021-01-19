@@ -15,7 +15,7 @@ import AddTrees from "./components/NavigationBar/AddTrees";
 import Home from "./components/HomeSection/Home";
 import {LoginProvider} from './LoginContext';
 
-import PageError from "./components/Page404";
+// import PageError from "./components/Page404";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
             <Switch>
               <Route exact path="/checkout" component={Cart} />
               <Route exact path="/add" component={AddTrees} />
-              <Route path='*' component={PageError} />
+              
             </Switch>
             <Footer />
           </div>
@@ -41,3 +41,5 @@ function App() {
 }
 
 export default App;
+
+// still need to work on this one <Route path='*' exact={true} component={PageError} />
