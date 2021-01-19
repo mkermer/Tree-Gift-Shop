@@ -34,12 +34,14 @@ export class InfoSection extends Component {
                         </p>
                     </Col>
                 </Row>
-                <div id='about'></div>
                 <Row>
                     <Col>
+                    <h1>Need Help?</h1>
+                        <p>The answer to your question might be here!</p>
                     <FaqSection />
                     </Col>
                 </Row>
+                <div id='about'></div>
             </Container>
         )
     }

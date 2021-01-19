@@ -12,11 +12,11 @@ function FaqSection(){
             <Accordion defaultActiveKey="0">
                 <Card>
                     <Card.Header>
-                        <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
                             {item.question}
                     </Accordion.Toggle>
                     </Card.Header>
-                    <Accordion.Collapse eventKey="0">
+                    <Accordion.Collapse eventKey="1">
                         <Card.Body>{item.answer}</Card.Body>
                     </Accordion.Collapse>
                 </Card>
