@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Container, Row, Col } from 'react-bootstrap';
+import FaqSection from './FaqSection'
 
 import { ReactComponent as Planting } from '../../illustrations/undraw_environment_iaus.svg';
 
@@ -34,6 +35,11 @@ export class InfoSection extends Component {
                     </Col>
                 </Row>
                 <div id='about'></div>
+                <Row>
+                    <Col>
+                    <FaqSection />
+                    </Col>
+                </Row>
             </Container>
         )
     }
