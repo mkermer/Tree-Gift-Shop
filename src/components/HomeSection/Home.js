@@ -9,17 +9,16 @@ import ContactSection from "../ContactFormSection/ContactSection";
 
 // import PageError from "../Page404";
 
-
 function Home(props) {
   return (
     <div className="App">
       <Route exact path="/">
-      <div id="home">
-        <HeroSection />
-        <ProductSection products={tree} />
-        <InfoSection />
-        <AboutUsSection />
-        <ContactSection />
+        <div id="home">
+          <HeroSection />
+          <ProductSection products={tree} />
+          <InfoSection />
+          <AboutUsSection />
+          <ContactSection />
         </div>
       </Route>
     </div>
