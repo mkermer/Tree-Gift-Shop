@@ -13,6 +13,8 @@ import AddTrees from "./components/NavigationBar/AddTrees";
 import Home from "./components/HomeSection/Home";
 import {LoginProvider} from './LoginContext';
 
+// import PageError from "./components/Page404";
+
 function App() {
   return (
     <Router onUpdate={() => window.scrollTo(0, 0)}>
@@ -23,9 +25,8 @@ function App() {
             <Navigation />
               <Home />
             <Switch>
-              <Route exact path="/" />
-              <Route path="/checkout" component={Cart} />
-              <Route path="/add" component={AddTrees} />
+             <Route exact path="/checkout" component={Cart} />
+              <Route exact path="/add" component={AddTrees} />
             </Switch>
             <Footer />
           </div>
@@ -37,3 +38,5 @@ function App() {
 }
 
 export default App;
+
+// still need to work on this one <Route path='*' exact={true} component={PageError} />
