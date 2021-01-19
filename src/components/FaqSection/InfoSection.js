@@ -36,7 +36,7 @@ export class InfoSection extends Component {
                 </Row>
                 <Row>
                     <Col>
-                    <h1>Need Help?</h1>
+                    <h1>Little FAQ</h1>
                         <p>The answer to your question might be here!</p>
                     <FaqSection />
                     </Col>
