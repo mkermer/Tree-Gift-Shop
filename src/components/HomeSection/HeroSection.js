@@ -17,9 +17,10 @@ export class HeroSection extends Component {
                         <Row> 
                             
                             <Col lg={6} md={4}> 
-                                <h1>Lets Make the Earth Green Again!</h1>
+                                <h1 class="text1">
+                                    Lets Make the Earth Green Again!</h1>
 
-                                <h3>Do you consider to buy a gift to your beloved one to save the world? </h3>
+                                <h3 class="text2">Do you consider to buy a gift to your beloved one to save the world? </h3>
 
                                 <Button>Get one now</Button>
                             </Col>
@@ -34,4 +35,4 @@ export class HeroSection extends Component {
     }
 }
 
-export default HeroSection 
+export default HeroSection;

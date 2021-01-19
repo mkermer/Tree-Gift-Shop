@@ -23,4 +23,4 @@ export class MissionJumbotron extends Component {
     }
 }
 
-export default MissionJumbotron
+export default MissionJumbotron;

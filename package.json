@@ -16,7 +16,7 @@
   "author": "Adrian Fabjanski, Johanna von Horn, Morgane Kermer, Yuliya Kalcheva",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkermer/Tree-Gift-Shop.git"
+    "url": "git+https://github.com/mkermer/Tree-Gift-Shop.git"
   },
   "license": "ISC",
   "private": true,
@@ -27,12 +27,7 @@
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
-<<<<<<< HEAD
     "framer-motion": "^3.2.1",
-=======
-    "cors": "^2.8.5",
-    "mysql": "^2.18.1",
->>>>>>> 3d19a99ea86bdb2a7cd0718bc406a65c8321f1ad
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
@@ -68,5 +63,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "bugs": {
+    "url": "https://github.com/mkermer/Tree-Gift-Shop/issues"
+  },
+  "homepage": "https://github.com/mkermer/Tree-Gift-Shop#readme",
+  "main": "index.js"
 }

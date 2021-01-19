@@ -4,19 +4,15 @@ import { ProductProvider } from "./ProductContext";
 import { CartProvider } from "./CartContext";
 import Navigation from "./components/NavigationBar/Navigation";
 import Footer from "./components/FooTer/Footer";
-
 import "./App.scss";
-import HeroSection from "./components/HomeSection/HeroSection";
+// import HeroSection from "./components/HomeSection/HeroSection";
 // import InfoSection from "./components/FaqSection/InfoSection";
 import AddTrees from "./components/NavigationBar/AddTrees";
 // import ProductSection from "./components/ProductSection/ProductSection";
 // import FaqSection from "./components/FaqSection/FaqSection";
 // import Impressum from "./components/ImpressumExtraPage/Impressum";
 import Home from "./components/HomeSection/Home";
-import AboutUsSection from "./components/AboutUsSection/AboutUsSection";
-import ContactSection from "./components/ContactFormSection/ContactSection";
-import LoginSection from "./components/LoginSection/LoginSection";
-
+import {LoginProvider} from './LoginContext';
 function App() {
   return (
     <Router onUpdate={() => window.scrollTo(0, 0)}>
@@ -27,14 +23,8 @@ function App() {
             <Navigation />
               <Home />
             <Switch>
-              <Route exact path="/about">
-                <AboutUsSection />
-              </Route>
-              <Route>
-              <LoginSection />
-              </Route>
-              <Route exact path="/contact" component={ContactSection} />
-              <Route exact path="/checkout" component={Cart} />
+              <Route path="/checkout" component={Cart} />
+              <Route path="/add" component={AddTrees} />
             </Switch>
             <Footer />
           </div>
@@ -42,14 +32,6 @@ function App() {
       </ProductProvider>
       </LoginProvider>
     </Router>
-
-    
-    
-      
-//       <InfoSection />
-//       <FaqSection />
   );
 }
-
 export default App;
-
