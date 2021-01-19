@@ -14,7 +14,7 @@ export const CartProvider = (props) => {
   //============Cart functions==============//
 
   const saveCart = () => {
-    Axios.post("https://treeduce-server.herokuapp.com/cart", {
+    Axios.post("http://localhost:9000/cart", {
       cart: JSON.stringify(cart),
       username: getEmail(),
     });
@@ -33,7 +33,7 @@ export const CartProvider = (props) => {
   }
 
   const getCart = () => {
-    Axios.post("https://treeduce-server.herokuapp.com/getcart", {
+    Axios.post("http://localhost:9000/getcart", {
       username: getEmail(),
     }).then((response) => {
       if (response.data.length > 0) {
@@ -51,7 +51,9 @@ export const CartProvider = (props) => {
   };
 
   const removeFromCart = (e) => {
-    if (window.confirm(`Do you want to remove ${e.name} from your cart?`)) {
+    if (
+      window.confirm(`Do you want to remove ${e.tree_name} from your cart?`)
+    ) {
       cart.forEach((item, index) => {
         if (item.tree_id === e.tree_id) {
           cart.splice(index, 1);

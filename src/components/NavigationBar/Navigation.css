@@ -14,20 +14,24 @@
 
 .cart-menu {
   overflow: scroll;
-  margin-top: 98px;
-  background: rgb(227,245,232);
-  background: linear-gradient(180deg, rgba(227,245,232,0.35) 0%, rgba(129,198,149,0.70) 100%);
+  margin-top: 95px;
+  background: rgb(227, 245, 232);
+  background: linear-gradient(
+    180deg,
+    rgba(227, 245, 232, 0.35) 0%,
+    rgba(129, 198, 149, 0.7) 100%
+  );
   width: 350px;
   height: 100vh;
   position: fixed;
-  right: -100%;
+  right: -20%;
   top: 0;
-  transition: 1200ms;
+  transition: 1000ms ease;
 }
 
 .cart-menu.active {
   right: 0;
-  transition: 600ms;
+  transition: 700ms ease;
 }
 
 .Logo {

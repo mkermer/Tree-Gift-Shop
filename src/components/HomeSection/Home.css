@@ -6,32 +6,14 @@
   animation: text 3s ease;
 }
 
-.container {
-  display: block;
-}
-.jumbotron {
-  background-size: cover;
-  font-weight: bold;
-  margin-top: 100px;
-}
-
-.jumbotron h3 {
-  position: relative;
-}
-
-/* .earth {
-  height: 1000px;
-  width: 1000px;
-} */
-
 @keyframes text {
   0% {
     color: rgb(222, 230, 238);
   }
   30% {
-    letter-spacing: 30px;
+    letter-spacing: 10px;
   }
   100% {
-    letter-spacing: 8px;
+    letter-spacing: 0px;
   }
 }

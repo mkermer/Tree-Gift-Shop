@@ -15,16 +15,14 @@ export const ProductProvider = (props) => {
   const [products, setProducts] = useState([]);
 
   const getTree = () => {
-    Axios.post("https://treeduce-server.herokuapp.com/getTree").then(
-      (response) => {
-        setTrees(response.data);
-      }
-    );
+    Axios.post("http://localhost:9000/getTree").then((response) => {
+      setTrees(response.data);
+    });
   };
 
   const addTree = (e) => {
     e.preventDefault();
-    Axios.post("https://treeduce-server.herokuapp.com/add", {
+    Axios.post("http://localhost:9000/add", {
       tree_name: treeName,
       tree_description: treeDesc,
       tree_img: treeImg,
