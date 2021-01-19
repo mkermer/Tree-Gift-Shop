@@ -40,7 +40,6 @@ function FaqSection(){
                     </Accordion.Collapse>
                 </Card>
             </Accordion> 
-
         ))}
         </>
 

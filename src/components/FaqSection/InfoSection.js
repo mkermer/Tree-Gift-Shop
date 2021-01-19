@@ -35,10 +35,12 @@ export class InfoSection extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
-                    <h1>Little FAQ</h1>
+                    <Col md={12}>
+                        <h1>Little FAQ</h1>
                         <p>The answer to your question might be here!</p>
-                    <FaqSection />
+                    </Col>
+                    <Col>
+                        <FaqSection />
                     </Col>
                 </Row>
                 <div id='about'></div>

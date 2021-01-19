@@ -7,6 +7,8 @@ import InfoSection from "../FaqSection/InfoSection";
 import AboutUsSection from "../AboutUsSection/AboutUsSection";
 import ContactSection from "../ContactFormSection/ContactSection";
 
+
+
 function Home(props) {
   return (
     <div className="App">
