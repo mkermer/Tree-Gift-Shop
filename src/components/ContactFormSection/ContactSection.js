@@ -20,8 +20,8 @@ export class ContactSection extends Component {
                     </Col>
                 </Row>
             </Container>
-        )
+        );
     }
 }
 
-export default ContactSection
+export default ContactSection;

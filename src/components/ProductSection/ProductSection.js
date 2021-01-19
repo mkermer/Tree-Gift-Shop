@@ -9,6 +9,7 @@ import './ProductSection.css';
 
 function ProductSection(props) {
    const {addToCart} = useContext(CartContext);
+
   const {handleCountryChange, sortByCoDescending, sortByCoAscending, sortByName, sortByPriceAscending, sortByPriceDescending, handleChange, getTree, tree} = useContext(ProductContext);
 
  useEffect(() => {
@@ -46,9 +47,6 @@ function ProductSection(props) {
               <TreeCard products={tree} add={addToCart} />
           </Row>
       </Container>
-       
       )
-
     }
-
 export default ProductSection;

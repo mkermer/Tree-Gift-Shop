@@ -72,5 +72,4 @@ function TreeCard(props) {
     <ListTrees add={add}/>
   )
 }
-
 export default TreeCard;

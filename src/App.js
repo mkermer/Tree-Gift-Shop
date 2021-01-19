@@ -12,9 +12,7 @@ import AddTrees from "./components/NavigationBar/AddTrees";
 // import Impressum from "./components/ImpressumExtraPage/Impressum";
 import Home from "./components/HomeSection/Home";
 import {LoginProvider} from './LoginContext';
-
 // import PageError from "./components/Page404";
-
 function App() {
   return (
     <Router onUpdate={() => window.scrollTo(0, 0)}>

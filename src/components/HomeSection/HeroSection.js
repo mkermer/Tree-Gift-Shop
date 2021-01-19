@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
 import  { Jumbotron, Container, Row, Col, Button }  from 'react-bootstrap';
 
-import Slideshow from './Slideshow';
+import {ReactComponent as IntroImg} from '../../illustrations/undraw_the_world_is_mine_nb0e.svg';
+
+import './Home.css';
+
+// import Slideshow from './Slideshow';
 
 
 export class HeroSection extends Component {
     render() {
         return (
+            
                 <Jumbotron fluid>
-                    <Container>
+                    <Container className="slogan">
                         <Row> 
-                            <Col lg={{span: 4, offset: 2 }} md={4}> <Slideshow /> </Col>
-                            <Col md={4}> 
-                                <h1>Intro</h1>
-                                <p>Intro Paragraph</p>
-                                <Button>Read me</Button>
+                            
+                            <Col lg={6} md={4}> 
+                                <h1 class="text1">
+                                    Lets Make the Earth Green Again!</h1>
+
+                                <h3 class="text2">Do you consider to buy a gift to your beloved one to save the world? </h3>
+
+                                <Button>Get one now</Button>
+                            </Col>
+                            <Col lg={6} md={8} >
+                            <IntroImg/>
+                            
                             </Col>
                         </Row>
                     </Container>
@@ -23,4 +35,4 @@ export class HeroSection extends Component {
     }
 }
 
-export default HeroSection
+export default HeroSection;
