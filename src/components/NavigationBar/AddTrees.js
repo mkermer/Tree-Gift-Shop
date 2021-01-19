@@ -6,6 +6,7 @@ import {useContext, useState, useEffect} from 'react'
 import { LoginProvider, LoginContext } from "../../LoginContext";
 import { ProductContext } from "../../ProductContext";
 import Axios from 'axios'
+import './AddTrees.css'
 
 export default function AddTrees() {
     const { getEmail, logout } = useContext(LoginContext);
@@ -15,7 +16,8 @@ export default function AddTrees() {
     const email = getEmail()
   if (email !== 'admin@admin.com') {
     return (
-      <div style={{ marginTop: "5%" }}>
+      <div className="stop-container">
+      <h2>Hey you! Stay where you are!</h2>
         <p>You need admin priviliges to access this page.</p>
       </div>
     );

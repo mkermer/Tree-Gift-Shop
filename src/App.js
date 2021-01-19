@@ -23,6 +23,7 @@ function App() {
             <Navigation />
               <Home />
             <Switch>
+              <Route exact path="/" />
               <Route path="/checkout" component={Cart} />
               <Route path="/add" component={AddTrees} />
             </Switch>

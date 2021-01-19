@@ -23,7 +23,7 @@ function Cart(props) {
   useEffect(() => {
     setTimeout(() => {
       getCart();
-    }, 500);
+    }, 300);
   }, []);
 
   useEffect(() => {

@@ -16,9 +16,6 @@ function ProductSection(props) {
      getTree()
    }, 500);
  }, [])
-
-console.log(tree)
-
        return (
       
         <Container className="ProductSection"> 

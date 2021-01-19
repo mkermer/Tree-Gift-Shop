@@ -12,7 +12,7 @@ export const ProductProvider = (props) => {
     const [country, setCountry] = useState('')
     const [co2, setCo2] = useState('')
     const [tree, setTrees] = useState()
-  // const [products, setProducts] = useState(tree);
+  const [products, setProducts] = useState(tree);
  
 
    const addTree = (e) => {
@@ -91,7 +91,7 @@ export const ProductProvider = (props) => {
   return (
     <ProductContext.Provider
       value={{
-        // products,
+        products,
         treeName,
         setTreeName,
         treeDesc,
