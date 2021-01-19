@@ -1,52 +1,51 @@
 import React, { useState, createContext, useEffect } from "react";
 // import tree from "./tree";
-import Axios from 'axios'
+import Axios from "axios";
 
 export const ProductContext = createContext();
 
 export const ProductProvider = (props) => {
-  const [treeName, setTreeName] = useState('')
-    const [treeDesc, setTreeDesc] = useState('')
-    const [treeImg, setTreeImg] = useState('')
-    const [price, setPrice] = useState('')
-    const [country, setCountry] = useState('')
-    const [co2, setCo2] = useState('')
-    const [tree, setTrees] = useState()
+  const [treeName, setTreeName] = useState("");
+  const [treeDesc, setTreeDesc] = useState("");
+  const [treeImg, setTreeImg] = useState("");
+  const [price, setPrice] = useState("");
+  const [country, setCountry] = useState("");
+  const [co2, setCo2] = useState("");
+  const [tree, setTrees] = useState();
   const [products, setProducts] = useState([]);
- 
-  const getTree = () => {
-    Axios.post('http://localhost:9000/getTree').then((response) => {
-      setTrees(response.data)
-    })
-  }
 
-  
-   const addTree = (e) => {
+  const getTree = () => {
+    Axios.post("https://treeduce-server.herokuapp.com/getTree").then(
+      (response) => {
+        setTrees(response.data);
+      }
+    );
+  };
+
+  const addTree = (e) => {
     e.preventDefault();
-    Axios.post('http://localhost:9000/add', {
+    Axios.post("https://treeduce-server.herokuapp.com/add", {
       tree_name: treeName,
       tree_description: treeDesc,
       tree_img: treeImg,
       price: price,
       country: country,
       co2: co2,
-    }
-    
-    )
-  }
+    });
+  };
 
-
-//============Search==============//
+  //============Search==============//
   function handleChange(e) {
     let newProducts = [...tree];
     var filteredProductList = newProducts.filter(
       (product) =>
-        product.tree_name.toLowerCase().indexOf(e.target.value.toLowerCase()) >= 0
+        product.tree_name.toLowerCase().indexOf(e.target.value.toLowerCase()) >=
+        0
     );
     setTrees(filteredProductList);
   }
 
-//============Sorting==============//
+  //============Sorting==============//
   function sortByPriceDescending() {
     let newProducts = [...tree];
     let sorted = newProducts.sort((a, b) => b.price - a.price);
@@ -61,7 +60,9 @@ export const ProductProvider = (props) => {
 
   function sortByName() {
     let newProducts = [...tree];
-    let sorted = newProducts.sort((a, b) => a.tree_name.localeCompare(b.tree_name));
+    let sorted = newProducts.sort((a, b) =>
+      a.tree_name.localeCompare(b.tree_name)
+    );
     setTrees(sorted);
   }
 
@@ -78,7 +79,7 @@ export const ProductProvider = (props) => {
   }
 
   function handleCountryChange(e) {
-    console.log(e.target.value)
+    console.log(e.target.value);
     let newProducts = [...tree];
     let sorted = [];
     newProducts.forEach((obj) => {

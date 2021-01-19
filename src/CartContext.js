@@ -14,7 +14,7 @@ export const CartProvider = (props) => {
   //============Cart functions==============//
 
   const saveCart = () => {
-    Axios.post("http://localhost:9000/cart", {
+    Axios.post("https://treeduce-server.herokuapp.com/cart", {
       cart: JSON.stringify(cart),
       username: getEmail(),
     });
@@ -33,7 +33,7 @@ export const CartProvider = (props) => {
   }
 
   const getCart = () => {
-    Axios.post("http://localhost:9000/getcart", {
+    Axios.post("https://treeduce-server.herokuapp.com/getcart", {
       username: getEmail(),
     }).then((response) => {
       if (response.data.length > 0) {
