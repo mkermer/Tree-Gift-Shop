@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import React, { useState } from "react";
 import './CollapseDiscription.css'
 
-function CollapseDescription() {
+function CollapseDescription(props) {
     const [open, setOpen] = useState(false);
 
     return (
@@ -18,7 +18,7 @@ function CollapseDescription() {
         </Button>
         <Collapse in={open}>
           <div id="tree-description">
-            Tree picture and Tree description goes here!
+            {props.tree}
           </div>
         </Collapse>
       </div>

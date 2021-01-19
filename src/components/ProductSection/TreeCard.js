@@ -9,14 +9,17 @@ import { ProductContext } from "../../ProductContext";
 
 function TreeCard(props) {
   const [open, setOpen] = useState(false);
-  const {tree, getTree} = useContext(ProductContext)
+  const {tree, getTree,products} = useContext(ProductContext)
   const add = props.add
   const collapse = (card) => {
   }
 
-useEffect(() => {
-    getTree()
-  }, [])
+// useEffect(() => {
+//     getTree()
+//   }, [])
+
+  // console.log(tree)
+  // console.log(products)
 
   const ListTrees = (props) => {
     if(tree) {
@@ -38,11 +41,11 @@ useEffect(() => {
             <Card.Body>
               <Card.Title> {obj.tree_name}</Card.Title>
               <Card.Text>
-                <p>
+                <h3>
                   CO<sub>2</sub>: -{obj.co2}kg
-                </p>
-                <h3>{obj.price} $</h3>
-                <h3>{obj.country} $</h3>
+                </h3>
+                <h2>{obj.price} $</h2>
+                <h2>{obj.country}</h2>
               </Card.Text>
 
               <Button
@@ -53,14 +56,8 @@ useEffect(() => {
                 Add
               </Button>
 
-              <CollapseDescription />
+              <CollapseDescription tree={obj.tree_description} />
             </Card.Body>
-
-            <Collapse in={open}>
-              <div id="tree-description">
-                Tree picture and Tree description goes here!
-              </div>
-            </Collapse>
           </Card>
         </Col>
       </>

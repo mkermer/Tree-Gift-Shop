@@ -25,9 +25,8 @@ function App() {
             <Navigation />
               <Home />
             <Switch>
-              <Route exact path="/checkout" component={Cart} />
+             <Route exact path="/checkout" component={Cart} />
               <Route exact path="/add" component={AddTrees} />
-              
             </Switch>
             <Footer />
           </div>

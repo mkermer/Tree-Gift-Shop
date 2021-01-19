@@ -15,7 +15,8 @@
 .cart-menu {
   overflow: scroll;
   margin-top: 98px;
-  background-color: #c7e2cf;
+  background: rgb(227,245,232);
+  background: linear-gradient(180deg, rgba(227,245,232,0.938813025210084) 0%, rgba(129,198,149,1) 100%);
   width: 350px;
   height: 100vh;
   position: fixed;
