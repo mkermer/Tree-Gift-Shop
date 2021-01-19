@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import TreeCard from "./TreeCard";
 import Filters from "./Filters";
 import Searchbar from "./Searchbar";
@@ -9,8 +9,15 @@ import './ProductSection.css';
 
 function ProductSection(props) {
    const {addToCart} = useContext(CartContext);
-  const {products, handleCountryChange, sortByCoDescending, sortByCoAscending, sortByName, sortByPriceAscending, sortByPriceDescending, handleChange} = useContext(ProductContext);
+  const {handleCountryChange, sortByCoDescending, sortByCoAscending, sortByName, sortByPriceAscending, sortByPriceDescending, handleChange, getTree, tree} = useContext(ProductContext);
 
+ useEffect(() => {
+   setTimeout(() => {
+     getTree()
+   }, 500);
+ }, [])
+
+console.log(tree)
 
        return (
       
@@ -18,6 +25,7 @@ function ProductSection(props) {
           <Row>
             <Col xs={12}>
             <h1>Plant a tree</h1>
+            <div id='products'></div>
             </Col>
           </Row>
           <Row>
@@ -38,7 +46,7 @@ function ProductSection(props) {
             </Col>
           </Row>
           <Row>
-              <TreeCard products={products} add={addToCart} />
+              <TreeCard products={tree} add={addToCart} />
           </Row>
       </Container>
        

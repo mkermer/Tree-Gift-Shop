@@ -13,7 +13,7 @@ import { CartContext } from "../../CartContext";
 import { ProductContext } from "../../ProductContext";
 import { LoginProvider } from "../../LoginContext";
 import OverlayNav from "./OverlayNav";
-import Cart from '../CartExtraPage/Cart'
+import Cart from "../CartExtraPage/Cart";
 import "./Navigation.css";
 import logo from "../../Logo/Treeduce.png";
 
@@ -22,10 +22,10 @@ function Navigation() {
   const [open, setOpen] = useState(false);
   const { cart, sidebar, showSidebar } = useContext(CartContext);
   const [show, setShow] = useState(false);
-  const showDropdown = (e)=>{
+  const showDropdown = (e) => {
     setShow(!show);
   };
-  const hideDropdown = e => {
+  const hideDropdown = (e) => {
     setShow(false);
   };
 
@@ -34,7 +34,7 @@ function Navigation() {
       <LoginProvider>
         <Navbar fixed="top" bg="light" expand="lg">
           <Navbar.Brand as={NavHashLink} smooth to="/#">
-            <img className="Logo" src={logo} alt="Treeduce"/>
+            <img className="Logo" src={logo} alt="Treeduce" />
           </Navbar.Brand>
 
           <Navbar.Collapse id="basic-navbar-nav">
@@ -51,15 +51,17 @@ function Navigation() {
               <Nav.Link as={NavHashLink} smooth to="/#faq">
                 Help & FAQ
               </Nav.Link>
-              <NavDropdown 
-                  title="Buy a tree giftcard!" 
-                  id="collapsible-nav-dropdown"  
-                  show={show} 
-                  onMouseEnter={showDropdown} 
-                  onMouseLeave={hideDropdown}>
-
-                        <NavDropdown.Item href="#action/3.1">How To</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Find your perfect Tree!</NavDropdown.Item>
+              <NavDropdown
+                title="Buy a tree giftcard!"
+                id="collapsible-nav-dropdown"
+                show={show}
+                onMouseEnter={showDropdown}
+                onMouseLeave={hideDropdown}
+              >
+                <NavDropdown.Item href="#action/3.1">How To</NavDropdown.Item>
+                <NavDropdown.Item as={HashLink} smooth to='/#products'>
+                  Find your perfect Tree!
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -72,7 +74,7 @@ function Navigation() {
                   placeholder="Find a tree!"
                   className="mr-sm-2"
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button as={HashLink} smooth to="/#products"variant="outline-success" >Search</Button>
               </Form>
             </div>
           </Collapse>
@@ -92,14 +94,14 @@ function Navigation() {
               <span id="cart-length">{cart.length}</span>
             </Button>
           </HashLink>
-          <div className={sidebar ? 'cart-menu active' : 'cart-menu'}>
-          <Cart />
+          <div className={sidebar ? "cart-menu active" : "cart-menu"}>
+            <Cart />
           </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
         </Navbar>
       </LoginProvider>
     </div>
   );
-};
+}
 
 export default Navigation;
