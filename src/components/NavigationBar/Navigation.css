@@ -13,7 +13,7 @@
 }
 
 .cart-menu {
-  overflow: scroll;
+  overflow: auto;
   margin-top: 95px;
   background: rgb(227, 245, 232);
   background: linear-gradient(
