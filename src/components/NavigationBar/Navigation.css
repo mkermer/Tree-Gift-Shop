@@ -14,8 +14,9 @@
 
 .cart-menu {
   overflow: scroll;
-  margin-top: 58px;
-  background-color: #c7e2cf;
+  margin-top: 98px;
+  background: rgb(227,245,232);
+  background: linear-gradient(180deg, rgba(227,245,232,0.938813025210084) 0%, rgba(129,198,149,1) 100%);
   width: 350px;
   height: 100vh;
   position: fixed;
@@ -29,7 +30,6 @@
   transition: 600ms;
 }
 
-.Logo{
+.Logo {
   height: 70px;
 }
-

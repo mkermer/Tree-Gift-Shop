@@ -8,11 +8,11 @@ import "./App.scss";
 // import HeroSection from "./components/HomeSection/HeroSection";
 // import InfoSection from "./components/FaqSection/InfoSection";
 import AddTrees from "./components/NavigationBar/AddTrees";
-// import ProductSection from "./components/ProductSection/ProductSection";
 // import FaqSection from "./components/FaqSection/FaqSection";
 // import Impressum from "./components/ImpressumExtraPage/Impressum";
 import Home from "./components/HomeSection/Home";
 import {LoginProvider} from './LoginContext';
+// import PageError from "./components/Page404";
 function App() {
   return (
     <Router onUpdate={() => window.scrollTo(0, 0)}>
@@ -23,8 +23,8 @@ function App() {
             <Navigation />
               <Home />
             <Switch>
-              <Route path="/checkout" component={Cart} />
-              <Route path="/add" component={AddTrees} />
+             <Route exact path="/checkout" component={Cart} />
+              <Route exact path="/add" component={AddTrees} />
             </Switch>
             <Footer />
           </div>
@@ -34,4 +34,7 @@ function App() {
     </Router>
   );
 }
+
 export default App;
+
+// still need to work on this one <Route path='*' exact={true} component={PageError} />

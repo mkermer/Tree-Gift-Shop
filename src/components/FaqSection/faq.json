@@ -1,0 +1,32 @@
+[
+  {
+    "question": "I did not gift the tree when I bought it, am I still in time?",
+    "answer": "The tree can be gifted at any moment, even after you bought it. To do so, access your profile by typing in the credentials you chose when you registered, click on the area dedicated to your trees (at the bottom of the page) and click on the tree you want to gift. Access the specific gifting area: here you can choose how to deliver your gift, via e-mail, via message or by means of a printable card.",
+    "id": 1
+  },
+  {
+    "question": "How can I gift a tree?",
+    "answer": "To gift a tree, first you have to buy it. Once you purchased it, the tree can be given as a gift at any time. In order to do so, access your profile, go to the area dedicated to your trees and click on the tree you want to give as a gift. Here you can choose how to deliver the gift: by e-mail.",
+    "id": 2
+  },
+  {
+    "question": "If someone receives a tree, do they have to register?",
+    "answer": "Yes, to receive a tree as a gift, the recipient must sign up (or log in if they have already signed up). By registering, the recipient can follow the tree from their profile and receive updates. During the process of redeeming the tree, the site will provide all instructions on creating a new account, if the recipient does not already have one.",
+    "id": 3
+  },
+  {
+    "question": "I made a mistake while gifting the tree. How can I solve it?",
+    "answer": "The gifting procedure can be easily changed. To do so, access your profile, go to the area dedicated to your trees and click on the tree you chose to give as a gift. Here, you can cancel the gifting procedure, correct it and start over.",
+    "id": 4
+  },
+  {
+    "question": "What does 'gift in progress' mean?",
+    "answer": "It means that you have correctly performed the gift delivery procedure, but the person you have sent the tree to has not yet redeemed it. As long as the person to whom you have given the tree as a gift has not redeemed it, the tree will continue to be yours and appear in the 'tree-yours' section of your profile. When the person redeems the tree, the tree will become theirs. You will still be able to find it on your profile in the 'Trees - Gifts' section of your profile.",
+    "id": 5
+  },
+  {
+    "question": "What should I do if the recipient did not get the e-mail with my gift?",
+    "answer": "First of all, check the delivery status of the tree. To do so, access your profile, go to the area dedicated to your trees and click on the tree you gifted.",
+    "id": 6
+  }
+]

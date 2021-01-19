@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Container, Row, Col } from 'react-bootstrap';
+import FaqSection from './FaqSection'
 
 import { ReactComponent as Planting } from '../../illustrations/undraw_environment_iaus.svg';
 
@@ -31,6 +32,15 @@ export class InfoSection extends Component {
                         <p>Our philosophy is to create sustainable ecosystems and allow farmers to meet the
                         initial costs of planting trees, ensuring food sovereignty and income opportunities.
                         </p>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12}>
+                        <h1>Little FAQ</h1>
+                        <p>The answer to your question might be here!</p>
+                    </Col>
+                    <Col>
+                        <FaqSection />
                     </Col>
                 </Row>
                 <div id='about'></div>

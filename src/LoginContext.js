@@ -8,6 +8,7 @@ export const LoginProvider = (props) => {
   const [password, setPassword] = useState();
   const [loginStatus, setLoginStatus] = useState("");
 
+//============Login==============//
   const login = (e) => {
     e.preventDefault();
     Axios.post("http://localhost:9000/login", {
@@ -29,7 +30,7 @@ export const LoginProvider = (props) => {
       }
     });
   };
-
+  //============Setters==============//
   function setToken(userToken) {
     sessionStorage.setItem("token", JSON.stringify(userToken));
   }
@@ -42,7 +43,7 @@ export const LoginProvider = (props) => {
   function setEmail(userEmail) {
     sessionStorage.setItem("email", userEmail);
   }
-
+//============Getters==============//
   const getToken = () => {
     const tokenString = sessionStorage.getItem("token");
     const userToken = JSON.parse(tokenString);
@@ -65,7 +66,7 @@ export const LoginProvider = (props) => {
       return email
     }
   };
-
+//============Logout==============//
   const logout = () => {
     setFirstname();
     setLastname();
