@@ -7,6 +7,7 @@ import InfoSection from "../FaqSection/InfoSection";
 import AboutUsSection from "../AboutUsSection/AboutUsSection";
 import ContactSection from "../ContactFormSection/ContactSection";
 
+import PageError from "../Page404";
 
 
 function Home(props) {
@@ -21,6 +22,7 @@ function Home(props) {
         <ContactSection />
         </div>
       </Route>
+      <Route path='*' component={PageError} />
     </div>
   );
 }

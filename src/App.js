@@ -27,8 +27,8 @@ function App() {
             <Navigation />
               <Home />
             <Switch>
-              <Route path="/checkout" component={Cart} />
-              <Route path="/add" component={AddTrees} />
+              <Route exact path="/checkout" component={Cart} />
+              <Route exact path="/add" component={AddTrees} />
               <Route path='*' component={PageError} />
             </Switch>
             <Footer />
