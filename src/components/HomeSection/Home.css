@@ -1,9 +1,9 @@
 .slogan h1 {
   line-height: 1.2;
   font-size: 80px;
-  color: rgb(222, 230, 238);
+  color: black;
   position: relative;
-  animation: text 3s 1;
+  animation: text 3s ease;
 }
 
 .container {
@@ -18,17 +18,20 @@
 .jumbotron h3 {
   position: relative;
 }
+
+/* .earth {
+  height: 1000px;
+  width: 1000px;
+} */
+
 @keyframes text {
   0% {
-    color: black;
-    margin-bottom: -30px;
+    color: rgb(222, 230, 238);
   }
   30% {
     letter-spacing: 30px;
-    margin-bottom: -40px;
   }
-  85% {
+  100% {
     letter-spacing: 8px;
-    margin-bottom: -40px;
   }
 }

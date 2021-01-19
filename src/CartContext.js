@@ -30,7 +30,6 @@ export const CartProvider = (props) => {
     } else {
       alert(`${e.tree_name} is already in your cart.`);
     }
-    console.log(cart);
   }
 
   const getCart = () => {
@@ -54,7 +53,7 @@ export const CartProvider = (props) => {
   const removeFromCart = (e) => {
     if (window.confirm(`Do you want to remove ${e.name} from your cart?`)) {
       cart.forEach((item, index) => {
-        if (item.id === e.id) {
+        if (item.tree_id === e.tree_id) {
           cart.splice(index, 1);
         }
       });

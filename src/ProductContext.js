@@ -12,9 +12,15 @@ export const ProductProvider = (props) => {
     const [country, setCountry] = useState('')
     const [co2, setCo2] = useState('')
     const [tree, setTrees] = useState()
-  const [products, setProducts] = useState(tree);
+  const [products, setProducts] = useState([]);
  
+  const getTree = () => {
+    Axios.post('http://localhost:9000/getTree').then((response) => {
+      setTrees(response.data)
+    })
+  }
 
+  
    const addTree = (e) => {
     e.preventDefault();
     Axios.post('http://localhost:9000/add', {
@@ -29,20 +35,17 @@ export const ProductProvider = (props) => {
     )
   }
 
-  const getTree = () => {
-    Axios.post('http://localhost:9000/getTree').then((response) => {
-      setTrees(response.data)
-    })
-  }
 
 //============Search==============//
   function handleChange(e) {
-    var filteredProductList = tree.filter(
+    let newProducts = [...tree];
+    var filteredProductList = newProducts.filter(
       (product) =>
         product.tree_name.toLowerCase().indexOf(e.target.value.toLowerCase()) >= 0
     );
     setTrees(filteredProductList);
   }
+
 //============Sorting==============//
   function sortByPriceDescending() {
     let newProducts = [...tree];
@@ -108,7 +111,7 @@ export const ProductProvider = (props) => {
         setCo2,
         tree,
         setTrees,
-        // setProducts,
+        setProducts,
         handleCountryChange,
         sortByCoDescending,
         sortByCoAscending,
