@@ -1,0 +1,11 @@
+.AccButton {
+    float:right;
+}
+
+.FaqHeader {
+    min-height: 80px;
+}
+
+.QuestionCard .btn{
+    text-align: left !important;
+}

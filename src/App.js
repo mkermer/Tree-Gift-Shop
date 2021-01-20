@@ -3,7 +3,7 @@ import Checkout from "./components/CartExtraPage/Checkout";
 import { ProductProvider } from "./ProductContext";
 import { CartProvider } from "./CartContext";
 import Navigation from "./components/NavigationBar/Navigation";
-import Impressum from "./components/ImpressumExtraPage/Impressum";
+import Impressum from "./components/ExtraPage/Impressum";
 import Footer from "./components/FooTer/Footer";
 import "./App.scss";
 import AddTrees from "./components/NavigationBar/AddTrees";
@@ -14,7 +14,6 @@ import {loadStripe} from '@stripe/stripe-js';
 import PageError from "./components/Page404";
 
 const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
-
 function App() {
   return (
     <Router onUpdate={() => window.scrollTo(0, 0)}>

@@ -44,7 +44,7 @@ export class AboutUs extends Component {
                     <Col lg={3} md={6} sm={6}> 
                         <Card>
                             <CardBody>
-                                <CardImg src={Adrian} id="pic" alt="tree" />
+                                <CardImg src={Adrian} id="picTeam" alt="tree" />
                                 <CardTitle tag="h5">Adrian</CardTitle>
                                 <CardText>Head of Backend</CardText>
                             </CardBody>
@@ -53,7 +53,7 @@ export class AboutUs extends Component {
                     <Col lg={3} md={6} sm={6}>
                         <Card>
                             <CardBody>
-                                <CardImg src={Yiulia} id="pic" alt="tree"/>
+                                <CardImg src={Yiulia} id="picTeam" alt="tree"/>
                                 <CardTitle tag="h5">Yuliya</CardTitle>
                                 <CardText>Developer</CardText>
                             </CardBody>
@@ -62,7 +62,7 @@ export class AboutUs extends Component {
                     <Col lg={3} md={6} sm={6}>
                         <Card >
                             <CardBody>
-                                <CardImg src={Morgane} id="pic" alt="tree" />
+                                <CardImg src={Morgane} id="picTeam" alt="tree" />
                                 <CardTitle tag="h5">Morgane</CardTitle>
                                 <CardText>Creative Director</CardText>
                             </CardBody>
@@ -71,7 +71,7 @@ export class AboutUs extends Component {
                     <Col lg={3} md={6} sm={6}>
                         <Card >
                             <CardBody>
-                                <CardImg src={Johanna} id="pic" alt="tree" />
+                                <CardImg src={Johanna} id="picTeam" alt="tree" />
                                 <CardTitle tag="h5">Johanna</CardTitle>
                                 <CardText>hdhdh</CardText>
                             </CardBody>

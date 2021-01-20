@@ -5,6 +5,7 @@ import HeroSection from "../HomeSection/HeroSection";
 import InfoSection from "../FaqSection/InfoSection";
 import AboutUsSection from "../AboutUsSection/AboutUsSection";
 import ContactSection from "../ContactFormSection/ContactSection";
+import Farmer from '../ExtraPage/Farmer';
 
 
 function Home(props) {
@@ -16,6 +17,7 @@ function Home(props) {
           <InfoSection />
           <AboutUsSection />
           <ContactSection />
+          <Farmer />
         </div>
     </div>
   );
