@@ -1,6 +1,7 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 function HelpfulLinks() {
   return (
@@ -17,13 +18,15 @@ function HelpfulLinks() {
             <a href="#impressum">Legal notice</a>
           </p>
           <p>
-            <HashLink smooth to="/#about">About us</HashLink>
+            <HashLink smooth to="/#about">
+              About us
+            </HashLink>
           </p>
         </Col>
 
         <Col md={6} className="links">
           <p>
-            <a href="#tos">Terms of Service</a>
+            <Link to="/tos">Terms of Service</Link>
           </p>
           <p>
             <a href="#jobs">Join our team</a>
