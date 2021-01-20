@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-
 import { ReactComponent as Plattform } from '../../illustrations/undraw_data_trends_b0wg.svg';
 import Adrian from '../../illustrations/undraw_team_ih79_treeduce_3-01.svg'; 
 import Yiulia from '../../illustrations/undraw_team_ih79_treeduce_3-02.svg';
 import Morgane from '../../illustrations/undraw_team_ih79_treeduce_3-04.svg';
 import Johanna from '../../illustrations/undraw_team_ih79_treeduce_3-03.svg';
-
-
 import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
-
 import MissionJumbotron from "./MissionJumbotron";
-
 import "./AboutUsSection.css";
+
 
 export class AboutUs extends Component {
     render() {

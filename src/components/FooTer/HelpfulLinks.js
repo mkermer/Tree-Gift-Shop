@@ -15,7 +15,7 @@ function HelpfulLinks() {
             <a href="#faq">Help & FAQ</a>
           </p>
           <p>
-            <a href="#impressum">Legal notice</a>
+            <Link to="/impressum">Legal notice</Link>
           </p>
           <p>
             <HashLink smooth to="/#about">

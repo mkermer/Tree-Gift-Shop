@@ -7,6 +7,7 @@
 }
 
 .cart-banner {
+  padding-bottom: 20px;
   border-bottom: 1px solid lightslategray;
 }
 
@@ -54,11 +55,10 @@
   opacity: 70%;
 }
 
-.items-cart-container {
-  margin-top: 30px;
-}
-
 .item {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightslategray;
   animation: slide 0.5s ease;
 }
 
@@ -71,7 +71,12 @@
   }
 }
 
+.item h3 {
+  margin: 5px;
+}
+
 .cart-close {
+  cursor: pointer;
   float: right;
   color: black;
   text-decoration: none;
@@ -98,4 +103,9 @@
 
 .checkout-buttons-container {
   text-align: center;
+}
+
+.check {
+  margin-top: 20%;
+  min-width: 50px;
 }

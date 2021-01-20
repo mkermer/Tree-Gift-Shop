@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+.ProductSection.container .row {
+    justify-content: center;
+}
+
 .HowToBuyCard {
     border-radius: 15px;
     /* margin: 20px; */ 
@@ -31,4 +35,5 @@
    margin-right: auto;
 
 }
+
 
