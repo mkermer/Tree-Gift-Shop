@@ -16,11 +16,6 @@ import MissionJumbotron from './MissionJumbotron';
 
 import './AboutUsSection.css';
 
-import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
-import MissionJumbotron from "./MissionJumbotron";
-import "./AboutUsSection.css";
-
-
 
 export class AboutUs extends Component {
   render() {

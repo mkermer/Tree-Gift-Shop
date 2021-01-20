@@ -16,12 +16,8 @@ function PageError() {
                     </Col>
                 </Row>
             </Container>
-<<<<<<< HEAD
-        );
-=======
-            </div>
-        ) 
->>>>>>> a3f9706822ed80bb25cfc3329d2133973b6fc134
+ </div>
+);
 }
 
 export default PageError;

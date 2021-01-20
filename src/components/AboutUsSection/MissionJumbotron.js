@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import {
-  Jumbotron, Container, Row, Col,
-} from 'react-bootstrap';
-
-=======
 import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
->>>>>>> a3f9706822ed80bb25cfc3329d2133973b6fc134
+
 import { ReactComponent as MissionImg } from '../../illustrations/undraw_the_world_is_mine_nb0e.svg';
 
 
