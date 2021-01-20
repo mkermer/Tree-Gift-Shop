@@ -6,6 +6,7 @@ import HeroSection from "../HomeSection/HeroSection";
 import InfoSection from "../FaqSection/InfoSection";
 import AboutUsSection from "../AboutUsSection/AboutUsSection";
 import ContactSection from "../ContactFormSection/ContactSection";
+import Farmer from '../ExtraPage/Farmer';
 
 // import PageError from "../Page404";
 
@@ -19,6 +20,7 @@ function Home(props) {
           <InfoSection />
           <AboutUsSection />
           <ContactSection />
+          <Farmer />
         </div>
       </Route>
     </div>

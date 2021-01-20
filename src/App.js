@@ -10,6 +10,7 @@ import AddTrees from "./components/NavigationBar/AddTrees";
 import Home from "./components/HomeSection/Home";
 import { LoginProvider } from "./LoginContext";
 
+
 // import PageError from "./components/Page404";
 function App() {
   return (
