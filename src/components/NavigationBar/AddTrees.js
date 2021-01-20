@@ -9,9 +9,10 @@ import './AddTrees.css'
 export default function AddTrees() {
     const { getEmail } = useContext(LoginContext);
     const { addTree, setTreeName, setTreeDesc, setTreeImg, setPrice, setCountry, setCo2} = useContext(ProductContext)
-
-
     const email = getEmail()
+
+  //============No priviliges==============//
+  
   if (email !== 'admin@admin.com') {
     return (
       <div className="stop-container">
@@ -21,7 +22,8 @@ export default function AddTrees() {
     );
   }
 
-  
+    //============Add a tree==============//
+
   return (
     <div style={{ marginTop: "10%" }}>
     <Form onSubmit={addTree}>
@@ -52,6 +54,7 @@ export default function AddTrees() {
 </Form.Group>
 <Button variant='primary' type='submit'> Submit </Button>
     </Form>
+    {}
     </div>
   );
 }

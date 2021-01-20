@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -41,6 +42,21 @@ function FaqSection() {
     </>
 
   );
+=======
+import { Container, Row } from 'react-bootstrap';
+import FaqQuestion from './FaqQuestion';
+// import './FaqSection.css';
+
+function FaqSection(){
+
+    return(
+        <>
+            <Row>
+                <FaqQuestion />
+            </Row>
+        </>
+    )
+>>>>>>> a3f9706822ed80bb25cfc3329d2133973b6fc134
 }
 
 export default FaqSection;

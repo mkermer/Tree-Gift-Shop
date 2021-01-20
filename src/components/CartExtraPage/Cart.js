@@ -2,7 +2,7 @@ import React from "react";
 import "./Cart.css";
 import { CartContext } from "../../CartContext";
 import { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter} from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 function Cart(props) {
@@ -23,13 +23,13 @@ function Cart(props) {
   useEffect(() => {
     setTimeout(() => {
       getCart();
-    }, 300);
+    }, 100);
   }, []);
 
   useEffect(() => {
     setTimeout(() => {
       saveCart();
-    }, 500);
+    }, 200);
   }, [total]);
 
   getTotal();
@@ -37,11 +37,9 @@ function Cart(props) {
   return (
     <div className="cart-container">
       <div className="cart-banner">
-        <Link to="/">
           <h2 className="cart-close" onClick={showSidebar}>
             X
           </h2>
-        </Link>
         <h2>Your cart</h2>
         <span>Please complete your purchase</span>
       </div>
@@ -50,7 +48,8 @@ function Cart(props) {
           <div className="item">
             <img src={item.tree_img} alt={item.name} width="50px" />
             <h3>{item.tree_name}</h3>
-            <span>$ {(item.price * item.count).toFixed(2)} </span>
+            <span>{item.country}</span>
+            <h2>$ {(item.price * item.count).toFixed(2)} </h2>
             <button
               className="item-button-remove"
               value={item.id}
@@ -87,11 +86,8 @@ function Cart(props) {
         <div className="sum">$ {parseFloat(total).toFixed(2)}</div>
         <div className="checkout-buttons-container">
           <div>
-            <Button className="checkout-button">To checkout</Button>
+            <Button as={Link} to='/checkout'className="checkout-button" onClick={showSidebar}>To checkout</Button>
           </div>
-          {/* <Button className="checkout-button" onClick={saveCart}>
-              Save cart
-            </Button> */}
           <Button className="checkout-button" onClick={resetCart}>
             Reset Cart
           </Button>
@@ -101,4 +97,4 @@ function Cart(props) {
   );
 }
 
-export default Cart;
+export default withRouter(Cart);

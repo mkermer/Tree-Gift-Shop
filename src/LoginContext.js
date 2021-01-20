@@ -9,6 +9,7 @@ export const LoginProvider = (props) => {
   const [loginStatus, setLoginStatus] = useState("");
 
   //============Login==============//
+  
   const login = (e) => {
     e.preventDefault();
     Axios.post("https://treeduce-server.herokuapp.com/login", {
@@ -30,7 +31,9 @@ export const LoginProvider = (props) => {
       }
     });
   };
+
   //============Setters==============//
+  
   function setToken(userToken) {
     sessionStorage.setItem("token", JSON.stringify(userToken));
   }
@@ -43,7 +46,9 @@ export const LoginProvider = (props) => {
   function setEmail(userEmail) {
     sessionStorage.setItem("email", userEmail);
   }
+
   //============Getters==============//
+
   const getToken = () => {
     const tokenString = sessionStorage.getItem("token");
     const userToken = JSON.parse(tokenString);
@@ -66,7 +71,9 @@ export const LoginProvider = (props) => {
       return email;
     }
   };
+
   //============Logout==============//
+
   const logout = () => {
     setFirstname();
     setLastname();

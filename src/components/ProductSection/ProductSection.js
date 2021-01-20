@@ -7,6 +7,8 @@ import { ProductContext } from "../../ProductContext";
 import { CartContext } from "../../CartContext";
 import './ProductSection.css';
 
+import HowToBuy from './HowToBuy';
+
 function ProductSection(props) {
    const {addToCart} = useContext(CartContext);
 
@@ -15,11 +17,16 @@ function ProductSection(props) {
  useEffect(() => {
    setTimeout(() => {
      getTree()
-   }, 500);
+   }, 100);
  }, [])
        return (
       
         <Container className="ProductSection"> 
+          <Row> 
+            <Col>
+            <HowToBuy/>
+            </Col>
+          </Row>
           <Row>
             <Col xs={12}>
             <h1>Plant a tree</h1>

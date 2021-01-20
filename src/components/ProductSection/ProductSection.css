@@ -1,3 +1,39 @@
 .ProductSection h1{
     text-align: center;
 }
+
+.ProductSection.container .row {
+    justify-content: center;
+}
+
+.HowToBuyCard {
+    border-radius: 15px;
+    /* margin: 20px; */ 
+    box-shadow: 1px 1px 7px -1px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: 0.3s ease;
+
+}
+
+@media (min-width: 992px){
+    .HowToBuyCard{
+        height: 550px;
+    }
+}
+
+.HowToBuy #picHowTo1,
+#picHowTo2, #picHowTo3{
+ margin-top: 42px;
+ margin-bottom: 42px;
+ min-height: 300px;
+ display:flex;
+}
+
+.HowToBuy #picHowTo2{
+   max-width: 200px;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+

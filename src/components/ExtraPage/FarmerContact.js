@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Row, Col, Button, Form } from "react-bootstrap";
-import ContactModal from "./ContactModal";
 
+// import ContactModal from "./ContactModal";
 
-function ContactForm() {
+function FarmerContact() {
   const [modalShow, setModalShow] = useState(false);
 
   const handleSubmit = (event) => {
@@ -51,26 +51,48 @@ function ContactForm() {
               Please enter your e-mail address, so we can get in touch with you
             </Form.Control.Feedback>
           </Form.Group>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+
           <Form.Group controlId="validationCustom03">
-            <Form.Label>Your Message</Form.Label>
+            <Form.Label>Telephone Number</Form.Label>
             <Form.Control
               required
-              as="textarea"
-              placeholder="What's up?"
-              rows={3}
+              type="text"
+              placeholder="+01 555 555"
             />
-            <Form.Control.Feedback>Great!</Form.Control.Feedback>
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
-              Drop us a line!
+              Please enter your telephone number, so we can get in touch with you
+            </Form.Control.Feedback>
+          </Form.Group>
+
+          <Form.Group controlId="validationCustom04">
+            <Form.Label>Postal Code </Form.Label>
+            <Form.Control
+              required
+              type="text"
+              placeholder="12345"
+            />
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              Please enter your Postal Code
             </Form.Control.Feedback>
           </Form.Group>
         </Col>
       </Row>
-      <Form.Group controlId="validationCustom04">
+      <Row>
+        <Col>
+          <Form.Group>
+            <Form.Label>Any Questions?</Form.Label>
+            <Form.Control
+              as="textarea"
+              placeholder="Still a question open?"
+              rows={3}
+            />
+            <Form.Control.Feedback>Great!</Form.Control.Feedback>
+          </Form.Group>
+        </Col>
+      </Row>
+      <Form.Group controlId="validationCustom05">
         <Form.Check
           required
           label={
@@ -86,9 +108,9 @@ function ContactForm() {
         Send
       </Button>
 
-      <ContactModal show={modalShow} onHide={() => setModalShow(false)} />
+      {/* <ContactModal show={modalShow} onHide={() => setModalShow(false)} /> */}
     </Form>
   );
 }
 
-export default ContactForm;
+export default FarmerContact;

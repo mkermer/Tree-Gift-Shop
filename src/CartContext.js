@@ -10,6 +10,7 @@ export const CartProvider = (props) => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
+  const openSidebar = () => setSidebar(true);
 
   //============Cart functions==============//
 
@@ -120,6 +121,7 @@ export const CartProvider = (props) => {
         getCart,
         setCart,
         showSidebar,
+        openSidebar,
         sidebar,
         addToCart,
         removeFromCart,
