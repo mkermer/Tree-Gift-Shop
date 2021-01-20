@@ -1,3 +1,18 @@
 .ProductSection h1{
     text-align: center;
 }
+
+.HowToBuy #picHowTo1,
+#picHowTo2, #picHowTo3{
+ margin-top: 42px;
+ margin-bottom: 42px;
+ min-height: 300px;
+ display:flex;
+}
+
+.HowToBuy #picHowTo2{
+   max-width: 200px;
+   margin-left: auto;
+   margin-right: auto;
+
+}
