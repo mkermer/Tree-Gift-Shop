@@ -47,6 +47,6 @@ function ProductSection(props) {
               <TreeCard products={tree} add={addToCart} />
           </Row>
       </Container>
-      )
+      );
     }
 export default ProductSection;

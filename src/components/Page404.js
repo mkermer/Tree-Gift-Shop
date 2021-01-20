@@ -14,7 +14,7 @@ function PageError() {
                     </Col>
                 </Row>
             </Container>
-        ) 
+        );
 }
 
-export default PageError
+export default PageError;

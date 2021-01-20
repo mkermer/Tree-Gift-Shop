@@ -70,6 +70,6 @@ function TreeCard(props) {
 
   return (
     <ListTrees add={add}/>
-  )
+  );
 }
 export default TreeCard;

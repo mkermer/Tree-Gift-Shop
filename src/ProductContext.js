@@ -121,4 +121,5 @@ export const ProductProvider = (props) => {
       {props.children}
     </ProductContext.Provider>
   );
-};
+}
+export default ProductContext;

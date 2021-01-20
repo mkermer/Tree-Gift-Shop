@@ -31,7 +31,7 @@ export class HeroSection extends Component {
                         </Row>
                     </Container>
                 </Jumbotron> 
-        )
+        );
     }
 }
 

@@ -95,5 +95,6 @@ export const LoginProvider = (props) => {
     >
       {props.children}
     </LoginContext.Provider>
-  );
+  )
 };
+export default LoginContext;
