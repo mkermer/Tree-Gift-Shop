@@ -1,3 +1,7 @@
 .ProductSection h1{
     text-align: center;
 }
+
+.ProductSection.container .row {
+    justify-content: center;
+}

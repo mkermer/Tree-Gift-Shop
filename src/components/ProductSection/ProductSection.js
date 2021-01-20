@@ -15,7 +15,7 @@ function ProductSection(props) {
  useEffect(() => {
    setTimeout(() => {
      getTree()
-   }, 500);
+   }, 100);
  }, [])
        return (
       

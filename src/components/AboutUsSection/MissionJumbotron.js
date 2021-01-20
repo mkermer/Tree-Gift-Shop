@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
-
 import { ReactComponent as MissionImg } from '../../illustrations/undraw_the_world_is_mine_nb0e.svg';
+
 
 export class MissionJumbotron extends Component {
     render() {

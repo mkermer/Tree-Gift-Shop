@@ -12,15 +12,21 @@ export const ProductProvider = (props) => {
   const [country, setCountry] = useState("");
   const [co2, setCo2] = useState("");
   const [tree, setTrees] = useState();
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState();
+
+  
+   //============Get trees from database==============//
 
   const getTree = () => {
     Axios.post("https://treeduce-server.herokuapp.com/getTree").then(
       (response) => {
         setTrees(response.data);
+        setProducts(response.data);
       }
     );
   };
+
+ //============Add a tree to database==============//
 
   const addTree = (e) => {
     e.preventDefault();
@@ -32,12 +38,14 @@ export const ProductProvider = (props) => {
       country: country,
       co2: co2,
     });
+    alert('Tree added successfuly')
+    window.location.reload()
   };
 
   //============Search==============//
+
   function handleChange(e) {
-    let newProducts = [...tree];
-    var filteredProductList = newProducts.filter(
+    var filteredProductList = products.filter(
       (product) =>
         product.tree_name.toLowerCase().indexOf(e.target.value.toLowerCase()) >=
         0
@@ -46,6 +54,7 @@ export const ProductProvider = (props) => {
   }
 
   //============Sorting==============//
+  
   function sortByPriceDescending() {
     let newProducts = [...tree];
     let sorted = newProducts.sort((a, b) => b.price - a.price);
@@ -79,14 +88,12 @@ export const ProductProvider = (props) => {
   }
 
   function handleCountryChange(e) {
-    console.log(e.target.value);
-    let newProducts = [...tree];
     let sorted = [];
-    newProducts.forEach((obj) => {
+    products.forEach((obj) => {
       if (obj.country.toLowerCase() === e.target.value) {
         return sorted.push(obj);
       } else if (e.target.value === "all") {
-        return (sorted = [...tree]);
+        return (sorted = products);
       }
     });
     setTrees(sorted);

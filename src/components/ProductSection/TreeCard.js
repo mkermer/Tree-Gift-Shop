@@ -5,10 +5,12 @@ import Col from "react-bootstrap/Col";
 import "./TreeCard.css";
 import CollapseDescription from "./CollapseDiscription";
 import { ProductContext } from "../../ProductContext";
+import { CartContext } from "../../CartContext";
 
 function TreeCard(props) {
   const [open, setOpen] = useState(false);
   const {tree, getTree,products} = useContext(ProductContext)
+  const {openSidebar} = useContext(CartContext)
   const add = props.add
 
   const ListTrees = (props) => {
@@ -41,7 +43,7 @@ function TreeCard(props) {
               <Button
                 className="ButtonAdd"
                 id={obj.id}
-                onClick={() => props.add(obj)}
+                onClick={() => {props.add(obj); openSidebar()}}
               >
                 Add
               </Button>

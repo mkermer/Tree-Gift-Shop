@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col, Button, Form } from "react-bootstrap";
-
 import ContactModal from "./ContactModal";
+
 
 function ContactForm() {
   const [modalShow, setModalShow] = useState(false);

@@ -29,6 +29,7 @@ export class InfoSection extends Component {
                         They are the ones who take care of the trees and enjoy their fruits.
                         </p>
                         <h3>Making the difference</h3>
+                        <div id='faq'></div>
                         <p>Our philosophy is to create sustainable ecosystems and allow farmers to meet the
                         initial costs of planting trees, ensuring food sovereignty and income opportunities.
                         </p>
