@@ -3,6 +3,7 @@ import Cart from "./components/CartExtraPage/Cart";
 import { ProductProvider } from "./ProductContext";
 import { CartProvider } from "./CartContext";
 import Navigation from "./components/NavigationBar/Navigation";
+import Impressum from "./components/ImpressumExtraPage/Impressum";
 import Footer from "./components/FooTer/Footer";
 import "./App.scss";
 import AddTrees from "./components/NavigationBar/AddTrees";
@@ -22,6 +23,7 @@ function App() {
               <Switch>
                 <Route path="/checkout" component={Cart} />
                 <Route path="/add" component={AddTrees} />
+                <Route path="/tos" component={Impressum} />
               </Switch>
               <Footer />
             </div>

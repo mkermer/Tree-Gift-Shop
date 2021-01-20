@@ -12,7 +12,7 @@ function FormSignUp() {
 
   const register = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:9000/register", {
+    Axios.post("https://treeduce-server.herokuapp.com/register", {
       username: usernameReg,
       password: passwordReg,
       firstname: firstName,
