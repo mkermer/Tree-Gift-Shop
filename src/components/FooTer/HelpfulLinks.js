@@ -12,7 +12,9 @@ function HelpfulLinks() {
       <Row>
         <Col md={6} className="links">
           <p>
-            <a href="#faq">Help & FAQ</a>
+            <HashLink smooth to="/#faq">
+              Help & FAQ
+            </HashLink>
           </p>
           <p>
             <Link to="/impressum">Legal notice</Link>
@@ -32,7 +34,7 @@ function HelpfulLinks() {
             <a href="#jobs">Join our team</a>
           </p>
           <p>
-            <a href="#sfarmers">Become a farmer</a>
+            <Link to="/farmer">Become a farmer!</Link>
           </p>
         </Col>
       </Row>

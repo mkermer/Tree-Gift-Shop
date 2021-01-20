@@ -10,6 +10,7 @@ function FaqSection(){
             <Row>
                 <FaqQuestion />
             </Row>
+            <div id='contact'></div>  
         </>
     )
 }
