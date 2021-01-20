@@ -4,9 +4,8 @@ import './Impressum.css'
 function Impressum () {
 
         return (
-            <div>
-            <div className="impressum">
-                        <h1 class="adsimple-121612670">Imprint</h1>
+            <div className="Text">
+                        <h1 class="adsimple-121612670">Legal Notice</h1>
                         <p class="adsimple-121612670">Information in accordance with §5 of the E-Commerce Act, §14 of the Unternehmensgesetzbuch, §63 of the Commercial Code and disclosure requirements under §25 of the Media Act.</p>
                         <p class="adsimple-121612670">CO2 - Treeduce<br />Example Street 123, /4, <br />1234 Vienna, <br />Austria</p>
                         <p class="adsimple-121612670">
@@ -540,7 +539,7 @@ function Impressum () {
                         More information on data protection at StackPath or BootstrapCDN can be found at <a class="adsimple-121612670" href="https://www.bootstrapcdn.com/privacy-policy/?tid=121612670" target="_blank" rel="noopener noreferrer">https://www.bootstrapcdn.com/privacy-policy/</a>.</p>
                         <p>Source: Created with the Datenschutz Generator by <a href="https://www.adsimple.at/" title="AdSimple® Online Marketing and Webdesign" rel="follow" target="_blank">AdSimple®</a> in cooperation with <a href="https://www.meinhaushalt.at/" target="_blank" rel="follow">meinhaushalt.at</a>
                         </p>
-            </div>
+            
             </div>
 
         );
