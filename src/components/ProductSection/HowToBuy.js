@@ -19,7 +19,7 @@ export class HowToBuy extends Component {
                             <h1>How to buy a tree gift?</h1>
                         </Col>
                         <Col lg={4} md={4} sm={6}>
-                            <Card>
+                            <Card className="HowToBuyCard">
                                 <CardBody>
                                     <CardImg src={BuyTree} id="picHowTo1" alt="tree" />
                                     <CardTitle tag="h5">Choose the tree</CardTitle>
@@ -28,7 +28,7 @@ export class HowToBuy extends Component {
                             </Card>
                         </Col>
                         <Col lg={4} md={4} sm={6}>
-                            <Card>
+                            <Card className="HowToBuyCard">
                                 <CardBody>
                                     <CardImg src={CreditCard} id="picHowTo2" alt="tree" />
                                     <CardTitle tag="h5">Buy now</CardTitle>
@@ -37,7 +37,7 @@ export class HowToBuy extends Component {
                             </Card>
                         </Col>
                         <Col lg={4} md={4} sm={6}>
-                            <Card >
+                            <Card className="HowToBuyCard">
                                 <CardBody>
                                     <CardImg src={SentGift} id="picHowTo3" alt="sentyourgift" />
                                     <CardTitle tag="h5">Personalize and gift</CardTitle>

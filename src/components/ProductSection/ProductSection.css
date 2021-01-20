@@ -2,6 +2,21 @@
     text-align: center;
 }
 
+.HowToBuyCard {
+    border-radius: 15px;
+    /* margin: 20px; */ 
+    box-shadow: 1px 1px 7px -1px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: 0.3s ease;
+
+}
+
+@media (min-width: 992px){
+    .HowToBuyCard{
+        height: 550px;
+    }
+}
+
 .HowToBuy #picHowTo1,
 #picHowTo2, #picHowTo3{
  margin-top: 42px;
@@ -16,3 +31,4 @@
    margin-right: auto;
 
 }
+
