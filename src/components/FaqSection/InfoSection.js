@@ -45,7 +45,7 @@ export class InfoSection extends Component {
                 </Row>
                 <div id='about'></div>
             </Container>
-        )
+        );
     }
 }
 export default InfoSection;

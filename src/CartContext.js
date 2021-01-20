@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, useEffect } from "react";
+import React, { useState, createContext, useContext } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
 import { LoginContext } from "./LoginContext";
@@ -14,7 +14,7 @@ export const CartProvider = (props) => {
   //============Cart functions==============//
 
   const saveCart = () => {
-    Axios.post("http://localhost:9000/cart", {
+    Axios.post("https://treeduce-server.herokuapp.com/cart", {
       cart: JSON.stringify(cart),
       username: getEmail(),
     });
@@ -30,11 +30,10 @@ export const CartProvider = (props) => {
     } else {
       alert(`${e.tree_name} is already in your cart.`);
     }
-    console.log(cart);
   }
 
   const getCart = () => {
-    Axios.post("http://localhost:9000/getcart", {
+    Axios.post("https://treeduce-server.herokuapp.com/getcart", {
       username: getEmail(),
     }).then((response) => {
       if (response.data.length > 0) {
@@ -52,9 +51,11 @@ export const CartProvider = (props) => {
   };
 
   const removeFromCart = (e) => {
-    if (window.confirm(`Do you want to remove ${e.name} from your cart?`)) {
+    if (
+      window.confirm(`Do you want to remove ${e.tree_name} from your cart?`)
+    ) {
       cart.forEach((item, index) => {
-        if (item.id === e.id) {
+        if (item.tree_id === e.tree_id) {
           cart.splice(index, 1);
         }
       });

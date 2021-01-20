@@ -1,16 +1,14 @@
 import React from "react";
-import FormLogin from "../NavigationBar/FormLogin";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import {useContext, useState, useEffect} from 'react'
-import { LoginProvider, LoginContext } from "../../LoginContext";
+import {useContext} from 'react'
+import { LoginContext } from "../../LoginContext";
 import { ProductContext } from "../../ProductContext";
-import Axios from 'axios'
 import './AddTrees.css'
 
 export default function AddTrees() {
-    const { getEmail, logout } = useContext(LoginContext);
-    const {getTree, addTree, setTreeName, setTreeDesc, setTreeImg, setPrice, setCountry, setCo2} = useContext(ProductContext)
+    const { getEmail } = useContext(LoginContext);
+    const { addTree, setTreeName, setTreeDesc, setTreeImg, setPrice, setCountry, setCo2} = useContext(ProductContext)
 
 
     const email = getEmail()

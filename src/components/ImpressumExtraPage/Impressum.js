@@ -1,9 +1,11 @@
 import React from 'react';
+import './Impressum.css'
 
 function Impressum () {
 
         return (
             <div>
+            <div className="impressum">
                         <h1 class="adsimple-121612670">Imprint</h1>
                         <p class="adsimple-121612670">Information in accordance with §5 of the E-Commerce Act, §14 of the Unternehmensgesetzbuch, §63 of the Commercial Code and disclosure requirements under §25 of the Media Act.</p>
                         <p class="adsimple-121612670">CO2 - Treeduce<br />Example Street 123, /4, <br />1234 Vienna, <br />Austria</p>
@@ -28,7 +30,7 @@ function Impressum () {
                         <p class="adsimple-121612670">
                         <strong>Chief executive</strong>
                         <br />Adrian Fabjanski, Johanna von Horn, Morgane Kermer, Yuliya Kalcheva</p>
-                        <p style="margin-top:15px;">Source: Created with the Impressum Generator by <a href="https://www.adsimple.at/webdesign/" title="AdSimple® Online Marketing and Webdesign" rel="follow" target="_blank">AdSimple® Webdesign</a> in cooperation with <a href="https://www.aboutbusiness.at/" target="_blank" rel="follow">aboutbusiness.at</a>
+                        <p>Source: Created with the Impressum Generator by <a href="https://www.adsimple.at/webdesign/" title="AdSimple® Online Marketing and Webdesign" rel="follow" target="_blank">AdSimple® Webdesign</a> in cooperation with <a href="https://www.aboutbusiness.at/" target="_blank" rel="follow">aboutbusiness.at</a>
                         </p>
                         <h2 id="eu-streitschlichtung-en" class="adsimple-121612670">
                         </h2>
@@ -536,9 +538,11 @@ function Impressum () {
                         <p>If you want to prevent this data transmission, you can install a JavaScript blocker (for example at <a class="adsimple-121612670" href="https://noscript.net/" target="_blank" rel="noopener noreferrer">https://noscript.net/</a>), or deactivate the execution of JavaScript codes in your browser. However, please note that this means that the website then can no longer offer its usual services (such as fast loading speeds).</p>
                         <p>StackPath is an active participant in the EU-U.S. Privacy Shield Framework, which regulates the correct and secure transfer of personal data. More information on this can be found at <a class="adsimple-121612670" href="https://www.privacyshield.gov/participant?id=a2zt0000000CbahAAC&status=Active" target="_blank" rel="follow noopener noreferrer">https://www.privacyshield.gov/participant?id=a2zt0000000CbahAAC&status=Active</a>.<br />
                         More information on data protection at StackPath or BootstrapCDN can be found at <a class="adsimple-121612670" href="https://www.bootstrapcdn.com/privacy-policy/?tid=121612670" target="_blank" rel="noopener noreferrer">https://www.bootstrapcdn.com/privacy-policy/</a>.</p>
-                        <p style="margin-top:15px;">Source: Created with the Datenschutz Generator by <a href="https://www.adsimple.at/" title="AdSimple® Online Marketing and Webdesign" rel="follow" target="_blank">AdSimple®</a> in cooperation with <a href="https://www.meinhaushalt.at/" target="_blank" rel="follow">meinhaushalt.at</a>
+                        <p>Source: Created with the Datenschutz Generator by <a href="https://www.adsimple.at/" title="AdSimple® Online Marketing and Webdesign" rel="follow" target="_blank">AdSimple®</a> in cooperation with <a href="https://www.meinhaushalt.at/" target="_blank" rel="follow">meinhaushalt.at</a>
                         </p>
             </div>
+            </div>
+
         );
     
 }

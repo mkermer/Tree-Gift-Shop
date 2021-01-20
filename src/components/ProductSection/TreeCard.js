@@ -4,22 +4,12 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import "./TreeCard.css";
 import CollapseDescription from "./CollapseDiscription";
-import Collapse from "react-bootstrap/Collapse";
 import { ProductContext } from "../../ProductContext";
 
 function TreeCard(props) {
   const [open, setOpen] = useState(false);
   const {tree, getTree,products} = useContext(ProductContext)
   const add = props.add
-  const collapse = (card) => {
-  }
-
-// useEffect(() => {
-//     getTree()
-//   }, [])
-
-  // console.log(tree)
-  // console.log(products)
 
   const ListTrees = (props) => {
     if(tree) {

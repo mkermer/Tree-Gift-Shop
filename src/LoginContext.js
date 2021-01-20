@@ -8,10 +8,10 @@ export const LoginProvider = (props) => {
   const [password, setPassword] = useState();
   const [loginStatus, setLoginStatus] = useState("");
 
-//============Login==============//
+  //============Login==============//
   const login = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:9000/login", {
+    Axios.post("https://treeduce-server.herokuapp.com/login", {
       username: username,
       password: password,
     }).then((response) => {
@@ -43,7 +43,7 @@ export const LoginProvider = (props) => {
   function setEmail(userEmail) {
     sessionStorage.setItem("email", userEmail);
   }
-//============Getters==============//
+  //============Getters==============//
   const getToken = () => {
     const tokenString = sessionStorage.getItem("token");
     const userToken = JSON.parse(tokenString);
@@ -60,18 +60,18 @@ export const LoginProvider = (props) => {
   };
   const getEmail = () => {
     const email = sessionStorage.getItem("email");
-    if(email === 'undefined'){
-    return
+    if (email === "undefined") {
+      return;
     } else {
-      return email
+      return email;
     }
   };
-//============Logout==============//
+  //============Logout==============//
   const logout = () => {
     setFirstname();
     setLastname();
     setToken("");
-    setEmail()
+    setEmail();
     window.location.reload();
   };
 
@@ -95,6 +95,6 @@ export const LoginProvider = (props) => {
     >
       {props.children}
     </LoginContext.Provider>
-  )
-};
+  );
+}
 export default LoginContext;
