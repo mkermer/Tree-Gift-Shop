@@ -12,6 +12,8 @@ import { LoginProvider } from "./LoginContext";
 import {Elements} from '@stripe/react-stripe-js'
 import {loadStripe} from '@stripe/stripe-js';
 import PageError from "./components/Page404";
+import Farmer from './components/ExtraPage/Farmer';
+import ToS from './components/ExtraPage/ToS';
 
 const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
 function App() {
@@ -28,6 +30,8 @@ function App() {
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/add" component={AddTrees} />
                 <Route path="/impressum" component={Impressum} />
+                <Route path="/farmer" component={Farmer} />
+                <Route path="/tos" component={ToS} />
                 <Route path="*" component={PageError} />
               </Switch>
               <Footer />

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import "./Forms.css";
 import Axios from "axios";
 
@@ -74,7 +75,7 @@ function FormSignUp() {
           type="checkbox"
           label={
             <label>
-              I've read and accept the <a href="#tos">Terms of Service</a>
+              I've read and accept the <Link to="/tos">Terms of Service</Link>
             </label>
           }
           required

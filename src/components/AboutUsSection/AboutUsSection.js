@@ -78,8 +78,7 @@ export class AboutUs extends Component {
                         </Card>
                     </Col>
                 </Row>
-            </Container>
-            <div id='contact'></div>            
+            </Container>          
             </div>
         )
     }
