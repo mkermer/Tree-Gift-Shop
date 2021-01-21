@@ -1,15 +1,17 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext} from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import "./TreeCard.css";
 import CollapseDescription from "./CollapseDiscription";
 import { ProductContext } from "../../ProductContext";
+import { LoginContext } from "../../LoginContext";
 import { CartContext } from "../../CartContext";
 
 function TreeCard(props) {
   const [open, setOpen] = useState(false);
-  const {tree, getTree,products} = useContext(ProductContext)
+  const {tree} = useContext(ProductContext)
+  const {getEmail} = useContext(LoginContext)
   const {openSidebar} = useContext(CartContext)
   const add = props.add
 
@@ -50,7 +52,12 @@ function TreeCard(props) {
               <Button
                 className="ButtonAdd"
                 id={obj.id}
-                onClick={() => {props.add(obj); openSidebar()}}
+                onClick={() => {
+                  if(!getEmail()){
+                    alert('You have to login to add items to cart.')
+                  } else {
+                  props.add(obj)
+                  openSidebar()}}}
               >
                 Add
               </Button>

@@ -1,6 +1,6 @@
 import React from 'react';
 import FarmerContact from './FarmerContact';
-import FarmerFilter from './FarmerFilter'
+// import FarmerFilter from './FarmerFilter'
 import FarmerHowTo from './FarmerHowTo';
 
 function Farmer(){

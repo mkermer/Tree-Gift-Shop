@@ -19,21 +19,40 @@
     .HowToBuyCard{
         height: 550px;
     }
+    .HowToBuy #picHowTo1,
+    #picHowTo2, #picHowTo3{
+        margin-top: 42px;
+        margin-bottom: 42px;
+        min-height: 300px;
+        display:flex;
+    }
+
+    .HowToBuy #picHowTo2{
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
 }
 
-.HowToBuy #picHowTo1,
-#picHowTo2, #picHowTo3{
- margin-top: 42px;
- margin-bottom: 42px;
- min-height: 300px;
- display:flex;
+@media (max-width: 991.98px){
+    .ProductSection h1{
+    text-align: left;
+}
+    .HowToBuyCard{
+        height: 420px;
+    }
+    .HowToBuy #picHowTo1,
+    #picHowTo2, #picHowTo3{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 42px;
+        margin-bottom: 42px;
+        max-height: 200px;
+        display:flex;
+    }  
 }
 
-.HowToBuy #picHowTo2{
-   max-width: 200px;
-   margin-left: auto;
-   margin-right: auto;
 
-}
 
 

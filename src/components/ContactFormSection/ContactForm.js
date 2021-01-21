@@ -3,7 +3,6 @@ import { Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ContactModal from "./ContactModal";
 
-
 function ContactForm() {
   const [modalShow, setModalShow] = useState(false);
 
@@ -86,7 +85,7 @@ function ContactForm() {
       <Button variant="primary" type="submit">
         Send
       </Button>
-
+      <div id="contact"></div>
       <ContactModal show={modalShow} onHide={() => setModalShow(false)} />
     </Form>
   );
