@@ -1,7 +1,11 @@
-.hero {
-  background-color:white;
-  background-image: url("images/Falling-Confetti.gif");
-} 
+/* .confetti-wrap h1 {
+  margin:0 ;
+  color: #fff;
+  letter-spacing: 1.5px;
+} */
+.jumbotron {
+  /* background-image: url("images/Falling-Confetti.gif"); */
+}
 .slogan {
   
   position:relative;
@@ -14,6 +18,7 @@
  
 }
 .slogan h1 {
+  font-family: font-serif;
   text-align:center;
   line-height: 1.3;
   font-size: 80px;
@@ -22,7 +27,7 @@
   animation: text 3s ease;
 }
 .text2 {
-  background-color:grey;
+  background-color:black;
 }
 
 @keyframes text {
@@ -36,4 +41,21 @@
     letter-spacing: 10px;
   }
 }
-
+.jumbotron {
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 100vh;
+}
+Button {
+  /* background: rgba(255,255,255,0.8); */
+  color: #44575b;
+  font-size: 24px;
+  float: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  padding: 20px 90px;
+  text-decoration: none;
+}
