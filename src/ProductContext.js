@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext} from "react";
 // import tree from "./tree";
 import Axios from "axios";
 
@@ -14,8 +14,7 @@ export const ProductProvider = (props) => {
   const [tree, setTrees] = useState();
   const [products, setProducts] = useState();
 
-  
-   //============Get trees from database==============//
+  //============Get trees from database==============//
 
   const getTree = () => {
     Axios.post("https://treeduce-server.herokuapp.com/getTree").then(
@@ -26,7 +25,7 @@ export const ProductProvider = (props) => {
     );
   };
 
- //============Add a tree to database==============//
+  //============Add a tree to database==============//
 
   const addTree = (e) => {
     e.preventDefault();
@@ -38,8 +37,7 @@ export const ProductProvider = (props) => {
       country: country,
       co2: co2,
     });
-    alert('Tree added successfuly')
-    window.location.reload()
+    alert("Tree added successfuly");
   };
 
   //============Search==============//
@@ -54,7 +52,7 @@ export const ProductProvider = (props) => {
   }
 
   //============Sorting==============//
-  
+
   function sortByPriceDescending() {
     let newProducts = [...tree];
     let sorted = newProducts.sort((a, b) => b.price - a.price);

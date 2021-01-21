@@ -42,15 +42,6 @@ function Navigation() {
               <Nav.Link as={NavHashLink} smooth to="/#home" exact={true}>
                 Home
               </Nav.Link>
-              <Nav.Link as={NavHashLink} smooth to="/#about">
-                About us
-              </Nav.Link>
-              <Nav.Link as={NavHashLink} smooth to="/#contact">
-                Contact
-              </Nav.Link>
-              <Nav.Link as={NavHashLink} smooth to="/#faq">
-                Help & FAQ
-              </Nav.Link>
               <NavDropdown
                 title="Buy a tree giftcard!"
                 id="collapsible-nav-dropdown"
@@ -58,11 +49,20 @@ function Navigation() {
                 onMouseEnter={showDropdown}
                 onMouseLeave={hideDropdown}
               >
-                <NavDropdown.Item href="#action/3.1">How To</NavDropdown.Item>
+                <NavDropdown.Item as={HashLink} smooth to='#howto'>How To</NavDropdown.Item>
                 <NavDropdown.Item as={HashLink} smooth to='/#products'>
                   Find your perfect Tree!
                 </NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link as={NavHashLink} smooth to="/#about">
+                About us
+              </Nav.Link>
+              <Nav.Link as={NavHashLink} smooth to="/#faq">
+                Help & FAQ
+              </Nav.Link>
+              <Nav.Link as={NavHashLink} smooth to="/#contact">
+                Contact
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
           <Collapse in={open}>

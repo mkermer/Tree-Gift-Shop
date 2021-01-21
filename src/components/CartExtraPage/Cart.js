@@ -2,7 +2,7 @@ import React from "react";
 import "./Cart.css";
 import { CartContext } from "../../CartContext";
 import { useContext, useEffect } from "react";
-import { Link, withRouter} from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 function Cart(props) {
@@ -23,13 +23,13 @@ function Cart(props) {
   useEffect(() => {
     setTimeout(() => {
       getCart();
-    }, 100);
+    }, 400);
   }, []);
 
   useEffect(() => {
     setTimeout(() => {
       saveCart();
-    }, 200);
+    }, 2000);
   }, [total]);
 
   getTotal();
@@ -37,9 +37,9 @@ function Cart(props) {
   return (
     <div className="cart-container">
       <div className="cart-banner">
-          <h2 className="cart-close" onClick={showSidebar}>
-            X
-          </h2>
+        <h2 className="cart-close" onClick={showSidebar}>
+          X
+        </h2>
         <h2>Your cart</h2>
         <span>Please complete your purchase</span>
       </div>
@@ -86,7 +86,14 @@ function Cart(props) {
         <div className="sum">$ {parseFloat(total).toFixed(2)}</div>
         <div className="checkout-buttons-container">
           <div>
-            <Button as={Link} to='/checkout'className="checkout-button" onClick={showSidebar}>To checkout</Button>
+            <Button
+              as={Link}
+              to="/checkout"
+              className="checkout-button"
+              onClick={showSidebar}
+            >
+              To checkout
+            </Button>
           </div>
           <Button className="checkout-button" onClick={resetCart}>
             Reset Cart

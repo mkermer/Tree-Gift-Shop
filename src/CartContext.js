@@ -1,7 +1,10 @@
 import React, { useState, createContext, useContext } from "react";
 import { Link } from "react-router-dom";
+
 import Axios from "axios";
 import { LoginContext } from "./LoginContext";
+import ls from 'local-storage'
+
 export const CartContext = createContext();
 export const CartProvider = (props) => {
   const { getEmail } = useContext(LoginContext);
@@ -19,7 +22,8 @@ export const CartProvider = (props) => {
       cart: JSON.stringify(cart),
       username: getEmail(),
     });
-    sessionStorage.setItem("cart", JSON.stringify(cart));
+    // sessionStorage.setItem("cart", JSON.stringify(cart));
+    ls.set('cart', JSON.stringify(cart))
   };
 
   function addToCart(e) {

@@ -44,6 +44,16 @@ function FaqSection() {
   );
 
 
+
+    return(
+        <>
+            <Row>
+                <FaqQuestion />
+            </Row>
+            <div id='contact'></div>  
+        </>
+    )
+
 }
 
 export default FaqSection;

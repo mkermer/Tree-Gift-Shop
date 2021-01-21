@@ -1,5 +1,6 @@
 import React, { useState, createContext } from "react";
 import Axios from "axios";
+import ls from 'local-storage'
 
 export const LoginContext = createContext();
 
@@ -35,50 +36,64 @@ export const LoginProvider = (props) => {
   //============Setters==============//
   
   function setToken(userToken) {
-    sessionStorage.setItem("token", JSON.stringify(userToken));
+    // sessionStorage.setItem("token", JSON.stringify(userToken));
+    ls.set("token", JSON.stringify(userToken));
   }
   function setFirstname(userFirstname) {
-    sessionStorage.setItem("name", userFirstname);
+    // sessionStorage.setItem("name", userFirstname);
+        ls.set("name", JSON.stringify(userFirstname));
+
   }
   function setLastname(userLastname) {
-    sessionStorage.setItem("lastname", userLastname);
+    // sessionStorage.setItem("lastname", userLastname);
+        ls.set("lastname", JSON.stringify(userLastname));
+
   }
   function setEmail(userEmail) {
-    sessionStorage.setItem("email", userEmail);
+    // sessionStorage.setItem("email", userEmail);
+        ls.set("email", JSON.stringify(userEmail));
+
   }
 
   //============Getters==============//
 
   const getToken = () => {
-    const tokenString = sessionStorage.getItem("token");
+    // const tokenString = sessionStorage.getItem("token");
+    const tokenString = ls.get("token");
     const userToken = JSON.parse(tokenString);
     return userToken;
   };
 
   const getName = () => {
-    const nameString = sessionStorage.getItem("name");
-    return nameString;
+    // const nameString = sessionStorage.getItem("name");
+    const nameString = ls.get("name");
+    const name = JSON.parse(nameString)
+    return name;
   };
   const getLastName = () => {
-    const lastname = sessionStorage.getItem("lastname");
-    return lastname;
+    // const lastname = sessionStorage.getItem("lastname");
+    const lastname = ls.get("lastname");
+    const lastnameString = JSON.parse(lastname)
+    return lastnameString;
   };
   const getEmail = () => {
-    const email = sessionStorage.getItem("email");
-    if (email === "undefined") {
+    // const email = sessionStorage.getItem("email");
+    const email = ls.get("email");
+    const emailString = JSON.parse(email)
+    if (emailString === "undefined") {
       return;
     } else {
-      return email;
+      return emailString;
     }
   };
 
   //============Logout==============//
 
   const logout = () => {
-    setFirstname();
-    setLastname();
-    setToken("");
-    setEmail();
+    setFirstname('');
+    setLastname('');
+    setToken('');
+    setEmail('');
     window.location.reload();
   };
 

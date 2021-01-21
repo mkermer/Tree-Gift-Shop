@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import BuyTree from '../../illustrations/undraw_walking_outside_without human.svg';
-import CreditCard from '../../illustrations/undraw_Credit_card_re_blml.svg';
-import SentGift from '../../illustrations/undraw_send_gift_7o4m.svg';
+// import CreditCard from '../../illustrations/undraw_Credit_card_re_blml.svg';
+// import SentGift from '../../illustrations/undraw_send_gift_7o4m.svg';
 
 import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col, Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import ContactModal from "./ContactModal";
-
 
 function ContactForm() {
   const [modalShow, setModalShow] = useState(false);
@@ -75,7 +75,7 @@ function ContactForm() {
           required
           label={
             <label>
-              I've read and accept the <a href="#tos">Terms of Service</a>
+              I've read and accept the <Link to="/tos">Terms of Service</Link>
             </label>
           }
           feedback="You must agree before submitting."
@@ -85,7 +85,7 @@ function ContactForm() {
       <Button variant="primary" type="submit">
         Send
       </Button>
-
+      <div id="contact"></div>
       <ContactModal show={modalShow} onHide={() => setModalShow(false)} />
     </Form>
   );
