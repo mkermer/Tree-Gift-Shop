@@ -104,6 +104,7 @@ app.post("/add", (req, res) => {
   );
 });
 
+//============Get trees==============//
 app.post("/getTree", (req, res) => {
   db.query("SELECT * from Trees", (err, result) => {
     if (err) {

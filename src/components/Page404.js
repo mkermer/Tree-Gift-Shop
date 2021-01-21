@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
-import {Route} from 'react-router-dom'
 
 import {ReactComponent as Page404} from '../illustrations/undraw_page_not_found_su7k.svg';
 

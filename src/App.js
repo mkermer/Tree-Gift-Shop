@@ -9,38 +9,44 @@ import "./App.scss";
 import AddTrees from "./components/NavigationBar/AddTrees";
 import Home from "./components/HomeSection/Home";
 import { LoginProvider } from "./LoginContext";
-import {Elements} from '@stripe/react-stripe-js'
-import {loadStripe} from '@stripe/stripe-js';
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import PageError from "./components/Page404";
-import Farmer from './components/ExtraPage/Farmer';
-import ToS from './components/ExtraPage/ToS';
+import Farmer from "./components/ExtraPage/Farmer";
+import ToS from "./components/ExtraPage/ToS";
+import ScrollToTop from "./ScrollToTop";
 
-const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
+const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
+
 function App() {
+
+console.log(process.env.REACT_APP_PUBLISHABLE_KEY)
+
   return (
-    <Router onUpdate={() => window.scrollTo(0, 0)}>
+    <Elements stripe={stripePromise}>
+    <Router>
       <LoginProvider>
-        <Elements stripe={stripePromise}>
-        <ProductProvider>
-          <CartProvider>
-            <div className="App">
-              <Navigation />
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/checkout" component={Checkout} />
-                <Route path="/add" component={AddTrees} />
-                <Route path="/impressum" component={Impressum} />
-                <Route path="/farmer" component={Farmer} />
-                <Route path="/tos" component={ToS} />
-                <Route path="*" component={PageError} />
-              </Switch>
-              <Footer />
-            </div>
-          </CartProvider>
-        </ProductProvider>
-        </Elements>
+          <ProductProvider>
+            <CartProvider>
+              <div className="App">
+                <Navigation />
+                <ScrollToTop />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/checkout" component={Checkout} />
+                  <Route path="/add" component={AddTrees} />
+                  <Route path="/impressum" component={Impressum} />
+                  <Route path="/farmer" component={Farmer} />
+                  <Route path="/tos" component={ToS} />
+                  <Route path="*" component={PageError} />
+                </Switch>
+                <Footer />
+              </div>
+            </CartProvider>
+          </ProductProvider>
       </LoginProvider>
     </Router>
+    </Elements>
   );
 }
 
