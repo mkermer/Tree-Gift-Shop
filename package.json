@@ -30,6 +30,7 @@
     "bootstrap": "^4.5.3",
     "cors": "^2.8.5",
     "framer-motion": "^3.2.1",
+    "local-storage": "^2.0.0",
     "mysql": "^2.18.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
@@ -44,7 +45,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts -r dotenv/config start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
