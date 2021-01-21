@@ -46,11 +46,11 @@ function Cart(props) {
       <div className="items-cart-container">
         {cart.map((item) => (
           <div className="item">
-            <img src={item.tree_img} alt={item.name} width="50px" />
-            <h3>{item.tree_name}</h3>
-            <span>{item.country}</span>
-            <h2>$ {(item.price * item.count).toFixed(2)} </h2>
-            <button
+             <img src={item.tree_img} alt={item.name} width="50px" />
+             <h3>{item.tree_name}</h3>
+             <span>{item.country}</span>
+             <h2>$ {(item.price * item.count).toFixed(2)} </h2>
+             <button
               className="item-button-remove"
               value={item.id}
               onClick={() => {

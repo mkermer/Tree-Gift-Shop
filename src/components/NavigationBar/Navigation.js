@@ -13,7 +13,7 @@ import { CartContext } from "../../CartContext";
 import { ProductContext } from "../../ProductContext";
 import { LoginProvider } from "../../LoginContext";
 import OverlayNav from "./OverlayNav";
-import Cart from "../CartExtraPage/Cart";
+import Cartt from "../CartExtraPage/Cartt";
 import "./Navigation.css";
 import logo from "../../Logo/Treeduce.png";
 
@@ -95,7 +95,7 @@ function Navigation() {
             </Button>
           </HashLink>
           <div className={sidebar ? "cart-menu active" : "cart-menu"}>
-            <Cart />
+            <Cartt />
           </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
         </Navbar>
