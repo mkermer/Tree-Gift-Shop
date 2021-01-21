@@ -4,8 +4,6 @@ import { SortNumericDown } from 'react-bootstrap-icons';
 import { SortNumericUp } from 'react-bootstrap-icons';
 import './Filter.css'
 
-// import { Container, Row, Col } from "react-bootstrap";
-
 function Filters(props) {
   return (
     <div className="filters">

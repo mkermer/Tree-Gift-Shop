@@ -15,13 +15,18 @@ function TreeCard(props) {
   const {openSidebar} = useContext(CartContext)
   const add = props.add
 
+
+  
+
   const ListTrees = (props) => {
     if(tree) {
      return tree.map((obj) => {
     return (
       <>
-        <Col md={4} xs={12} key={obj.id}>
+        <Col md={4} xs={12} key={obj.tree_name}>
           <Card className="TreeCard">
+            <div>
+              <img className="opacity" src={obj.background_img}/>
             <Card.Img
               variant="top"
               src={obj.tree_img}
@@ -31,6 +36,7 @@ function TreeCard(props) {
               aria-controls="tree-description"
               aria-expanded={open}
             />
+            </div>
             <div className="shadow"></div>
             <Card.Body>
               <Card.Title> {obj.tree_name}</Card.Title>
@@ -69,6 +75,6 @@ function TreeCard(props) {
 
   return (
     <ListTrees add={add}/>
-  )
+  );
 }
 export default TreeCard;

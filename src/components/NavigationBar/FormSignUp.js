@@ -22,7 +22,9 @@ function FormSignUp() {
       console.log(response);
     });
     window.confirm(`You can now log in to your account.`);
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
 
   return (

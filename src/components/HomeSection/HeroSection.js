@@ -1,37 +1,43 @@
-import React, { Component } from "react";
+import React, { useEffect, useContext } from "react";
 import { Jumbotron, Container, Row, Col, Button } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
+import {ProductContext} from '../../ProductContext'
 import { ReactComponent as IntroImg } from "../../illustrations/undraw_the_world_is_mine_nb0e.svg";
-
 import "./Home.css";
 
-// import Slideshow from './Slideshow';
+function HeroSection() {
+const {Show} = useContext(ProductContext)
 
-export class HeroSection extends Component {
-  render() {
+useEffect(() => {
+    Show()
+}, [])
+
     return (
-      <Jumbotron fluid>
-        <Container className="slogan">
-          <Row>
-            <Col lg={6} md={4}>
-              <div className="earth">
-                <h1 className="text1">Lets Make the Earth Green Again!</h1>
-                <h3 className="text2">
-                  Do you consider to buy a gift to your beloved one to save the
-                  world?{" "}
-                </h3>
-              </div>
+        <div>
+            <Jumbotron fluid className= "hero">
+                    {Show()}
+                    <Container className="slogan">
+                        <Row> 
+                            
+                            <Col lg={6} md={4}> 
+                                <h1 class="text1">
+                                
+                                    Lets Make the Earth Green Again!</h1>
+                                    
+                                <h3 class="text2">Do you consider to buy a gift to your beloved one to save the world? </h3>
 
-              <Button as={HashLink} smooth to='/#products'>Get one now</Button>
-            </Col>
-            <Col lg={6} md={8}>
-              <IntroImg />
-            </Col>
-          </Row>
-        </Container>
-      </Jumbotron>
-    );
-  }
+                                <Button> Get one now</Button>
+                            </Col>
+                            <Col lg={6} md={8} >
+                            <IntroImg/>
+                            
+                
+                            </Col>
+                        </Row>
+                    </Container>
+                </Jumbotron> 
+        </div>
+    )
 }
 
-export default HeroSection;
+export default HeroSection

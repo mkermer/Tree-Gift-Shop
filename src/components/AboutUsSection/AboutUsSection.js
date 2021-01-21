@@ -1,13 +1,15 @@
-import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { ReactComponent as Plattform } from "../../illustrations/undraw_data_trends_b0wg.svg";
-import Adrian from "../../illustrations/undraw_team_ih79_treeduce_3-01.svg";
-import Yiulia from "../../illustrations/undraw_team_ih79_treeduce_3-02.svg";
-import Morgane from "../../illustrations/undraw_team_ih79_treeduce_3-04.svg";
-import Johanna from "../../illustrations/undraw_team_ih79_treeduce_3-03.svg";
+import React, { Component } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { ReactComponent as Plattform } from '../../illustrations/undraw_data_trends_b0wg.svg';
+import Adrian from '../../illustrations/undraw_team_ih79_treeduce_3-01.svg';
+import Yiulia from '../../illustrations/undraw_team_ih79_treeduce_3-02.svg';
+import Morgane from '../../illustrations/undraw_team_ih79_treeduce_3-04.svg';
+import Johanna from '../../illustrations/undraw_team_ih79_treeduce_3-03.svg';
+
 import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
 import MissionJumbotron from "./MissionJumbotron";
 import "./AboutUsSection.css";
+
 
 export class AboutUs extends Component {
   render() {
@@ -21,12 +23,27 @@ export class AboutUs extends Component {
           </Row>
           <Row>
             <Col lg={6} md={12} sm={12}>
+
+              {' '}
+              <Plattform />
+              {' '}
+
               {" "}
               <Plattform />{" "}
+
             </Col>
             <Col lg={6} md={12}>
               <h3>Our History</h3>
               <p>
+
+                Treeduce is the only online platform in the world where you can have someone plant a tree for you and then follow it online.
+                Since its foundation in 2021 in Vienna, more than 1.000.000 trees have been planted in Austria, Africa, South America and Italy.
+                All trees are planted directly by local farmers and bring environmental, social and financial benefits to their communities.
+                Thanks to its business model, in 2021 Treereduce became part of the Certified B Corporations,
+                a network of companies that stand out for high environmental and social performance.
+                Every tree on Treeduce is geo-localized and photographed and has its online page, it can be kept or virtually gifted to others.
+                Thanks to these features, Treeduce's tree engages people and at the same time it represents a great communication and marketing tool for companies.
+
                 Treeduce is the only online platform in the world where you can
                 have someone plant a tree for you and then follow it online.
                 Since its foundation in 2021 in Vienna, more than 1.000.000
@@ -41,6 +58,7 @@ export class AboutUs extends Component {
                 virtually gifted to others. Thanks to these features, Treeduce's
                 tree engages people and at the same time it represents a great
                 communication and marketing tool for companies.
+
               </p>
             </Col>
           </Row>
@@ -83,13 +101,18 @@ export class AboutUs extends Component {
                 <CardBody>
                   <CardImg src={Johanna} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Johanna</CardTitle>
+
                   <div id="faq"></div>
+
                   <CardText>hdhdh</CardText>
                 </CardBody>
               </Card>
             </Col>
           </Row>
         </Container>
+
+        <div id="contact" />
+
       </div>
     );
   }

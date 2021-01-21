@@ -1,11 +1,14 @@
-import React from 'react';
+import {React, useContext} from 'react';
+import {ProductContext} from '../../ProductContext'
 
 function FarmerFilter(props){
+  const {handleCountryChange, getTree} = useContext(ProductContext)
+
     return(
         <div>
         <label htmlFor="countries">Select a country: </label>
-        <select name="countries" id="countries" onChange={props.selectCountry}>
-          <option value="all">Show all</option>
+        <select name="countries" id="countries" onChange={handleCountryChange}>
+          <option value="select">Select</option>
           <option value="guatemala">Guatemala</option>
           <option value="cameroon">Cameroon</option>
           <option value="kenya">Kenya</option>

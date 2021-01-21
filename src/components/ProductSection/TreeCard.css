@@ -17,11 +17,22 @@
   margin-bottom: 10px;
 }
 
-#pic{
+.TreeCard #pic{
   padding: 10px 30px 0 30px;
   height: 400px;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+
 }
 
+.opacity{
+  opacity: 0.4;
+  position: absolute;
+  z-index: -1;
+  height: 300px;
+  margin-top: 30px;
+}
 
 .shadow{
   background-color: rgb(226, 225, 225);

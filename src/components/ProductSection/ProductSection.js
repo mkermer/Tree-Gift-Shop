@@ -24,13 +24,14 @@ function ProductSection(props) {
     tree,
   } = useContext(ProductContext);
 
-  useEffect(() => {
-    setTimeout(() => {
-      getTree();
-    }, 100);
-  }, []);
 
-  
+ useEffect(() => {
+   setTimeout(() => {
+     getTree()
+   }, 100);
+ }, [])
+      
+
   return (
     <Container className="ProductSection">
       <Row>
@@ -64,8 +65,8 @@ function ProductSection(props) {
       <Row>
         <TreeCard products={tree} add={addToCart} />
       </Row>
-      <div id="about"></div>
     </Container>
   );
 }
+
 export default ProductSection;

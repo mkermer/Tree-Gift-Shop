@@ -1,3 +1,4 @@
+import React from 'react';
 import FormLogin from "./FormLogin";
 import FormSignUp from "./FormSignUp";
 import Accordion from "react-bootstrap/Accordion";

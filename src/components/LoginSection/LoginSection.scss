@@ -1,5 +1,4 @@
 * {
-<<<<<<< HEAD
     margin : 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,7 +18,7 @@ input, button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: 53565A;
+    background-color: #53565A;
 
 }
 form {
@@ -35,7 +34,7 @@ form::after {
     right:-5px;
     bottom: -5px;
     z-index: 1;
-    background-color: linear-gradient(to bottom right, #FFCE00, FE4800 );
+    background-color: linear-gradient(to bottom right, #FFCE00, #FE4800 );
 }
 form .form-inner {
     position: relative;
@@ -65,7 +64,7 @@ form .form-inner .form-group {
     transition: 0.4s;
 }
 .form-inner .form-group:focus-within label {
-    color:FE4880;
+    color:#FE4880;
 }
 
 form .form-inner .form-group input {
@@ -107,40 +106,3 @@ welcome button:hover {
     color: #FE4880;
     font-weight: 700;
 }
-=======
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: montserat, sans-serif;
-}
-
-input,
-button {
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-}
-.LoginSection {
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background-color: #53565a;
-}
-form {
-  display: block;
-  position: relative;
-}
-
-form:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: 1;
-  background-image: linear-gradient(to bottom right, #ffce00, FE4880);
-}
->>>>>>> 3d19a99ea86bdb2a7cd0718bc406a65c8321f1ad
