@@ -92,6 +92,8 @@ export const ProductProvider = (props) => {
         return sorted.push(obj);
       } else if (e.target.value === "all") {
         return (sorted = products);
+      } else if (e.target.value === 'select') {
+        return (sorted = [])
       }
     });
     setTrees(sorted);

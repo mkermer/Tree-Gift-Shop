@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Button, Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 // import ContactModal from "./ContactModal";
 
@@ -14,7 +14,20 @@ function FarmerContact() {
   };
 
   return (
+    <Container>
     <Form onSubmit={handleSubmit} id="contactForm">
+      <Row>
+      <Col>
+          <Form.Group controlId="validationCustom00">
+            <Form.Label>Selected Tree</Form.Label>
+            <Form.Control required type="text" placeholder="Selected: " />
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              do later
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Col>
+      </Row>
       <Row>
         <Col>
           <Form.Group controlId="validationCustom01">
@@ -51,6 +64,9 @@ function FarmerContact() {
               Please enter your e-mail address, so we can get in touch with you
             </Form.Control.Feedback>
           </Form.Group>
+        </Col>
+
+        <Col>
 
           <Form.Group controlId="validationCustom03">
             <Form.Label>Telephone Number</Form.Label>
@@ -65,6 +81,10 @@ function FarmerContact() {
             </Form.Control.Feedback>
           </Form.Group>
 
+        </Col>
+      </Row>
+      <Row>
+        <Col>
           <Form.Group controlId="validationCustom04">
             <Form.Label>Postal Code </Form.Label>
             <Form.Control
@@ -78,7 +98,23 @@ function FarmerContact() {
             </Form.Control.Feedback>
           </Form.Group>
         </Col>
+
+        <Col>
+          <Form.Group controlId="validationCustom05">
+            <Form.Label>Country</Form.Label>
+            <Form.Control
+              required
+              type="text"
+              placeholder="Canada"
+            />
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              Please enter your Postal Code
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Col>
       </Row>
+
       <Row>
         <Col>
           <Form.Group>
@@ -92,6 +128,7 @@ function FarmerContact() {
           </Form.Group>
         </Col>
       </Row>
+
       <Form.Group controlId="validationCustom05">
         <Form.Check
           required
@@ -110,6 +147,7 @@ function FarmerContact() {
 
       {/* <ContactModal show={modalShow} onHide={() => setModalShow(false)} /> */}
     </Form>
+    </Container>
   );
 }
 
