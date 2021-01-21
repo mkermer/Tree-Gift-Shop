@@ -13,7 +13,7 @@ function HelpfulLinks() {
         <Col md={6} className="links">
           <p>
             <HashLink smooth to="/#faq">
-              Help & FAQ
+              FAQ
             </HashLink>
           </p>
           <p>

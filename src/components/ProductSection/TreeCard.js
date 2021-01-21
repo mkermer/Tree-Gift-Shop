@@ -20,6 +20,8 @@ function TreeCard(props) {
       <>
         <Col md={4} xs={12} key={obj.id}>
           <Card className="TreeCard">
+            <div>
+              <img className="opacity" src={obj.background_img}/>
             <Card.Img
               variant="top"
               src={obj.tree_img}
@@ -28,7 +30,12 @@ function TreeCard(props) {
               onClick={() => setOpen(!open)}
               aria-controls="tree-description"
               aria-expanded={open}
+              // style={{  
+              //   backgroundImage: "url(" + obj.background_img + ")"
+              //   // backgroundColor: "rgba(" + "0, 255, 255, 0.2" +")"
+              // }}
             />
+            </div>
             <div className="shadow"></div>
             <Card.Body>
               <Card.Title> {obj.tree_name}</Card.Title>
