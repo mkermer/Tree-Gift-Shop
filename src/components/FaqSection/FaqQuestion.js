@@ -12,7 +12,7 @@ function FaqQuestion(){
     return(
         <>
         {faq.map((item) => (
-
+                <div  key={item.id}>
                     <Col lg={6} xs={12}> 
                     
                     <Accordion defaultActiveKey="0">
@@ -47,7 +47,7 @@ function FaqQuestion(){
                         </Accordion>
                         
                     </Col>
-    
+            </div>
             
         ))}
         </>

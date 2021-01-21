@@ -19,9 +19,6 @@ import ScrollToTop from "./ScrollToTop";
 const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 
 function App() {
-
-console.log(process.env.REACT_APP_PUBLISHABLE_KEY)
-
   return (
     <Elements stripe={stripePromise}>
     <Router>
