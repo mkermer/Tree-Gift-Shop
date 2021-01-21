@@ -5,7 +5,9 @@ import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from "reactstrap";
 
-import { Container, Row, Col } from "react-bootstrap";
+import "./Cart.css";
+
+import { Container } from "react-bootstrap";
 
 function Cartt(props) {
     const {
@@ -37,78 +39,80 @@ function Cartt(props) {
     getTotal();
 
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <h2>Your cart</h2>
-                    <span>Please complete your purchase</span>
-                </Col>
-                <Col md={1}>
-                    <h2 className="cart-close" onClick={showSidebar}> X </h2>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    {cart.map((item) => (
-                        <Card>
-                            <CardBody>
-                                <CardImg src={item.tree_img} alt={item.name} width="50px" />
-                                <CardTitle>{item.tree_name}</CardTitle>
-                                <CardSubtitle>{item.country}</CardSubtitle>
-                                <CardText>$ {(item.price * item.count).toFixed(2)} </CardText>
+        <Container className="cart-container">
+            <div className="cart-banner">
+                <h2 className="cart-close" onClick={showSidebar}>
+                    X
+                </h2>
+                <h2>Your cart</h2>
+                <span>Please complete your purchase</span>
+            </div>
+
+            <>
+                {cart.map((item) => (
+                    <Card className="cart-items">
+                        <CardBody>
+                            <CardImg src={item.tree_img} alt={item.name} width="10px" />
+                            <CardTitle>{item.tree_name}</CardTitle>
+                            <CardSubtitle>{item.country}</CardSubtitle>
+
+                            <CardText>$ {(item.price * item.count).toFixed(2)} </CardText>
+
+                            <CardText> 
                                 <Button
                                     className="item-button-remove"
                                     value={item.id}
                                     onClick={() => {
                                         reduceCount(item.tree_id)
                                     }}>
-                                    minus
-                                    </Button>
+                                    -
+                                </Button>
+                                <span>{item.count}</span>
                                 <Button
                                     className="item-button-add"
                                     value={item.id}
                                     onClick={() => {
                                         increaseCount(item.tree_id);
                                     }}>
-                                    plus
-                                    </Button>
+                                    +
+                                </Button>
+                            </CardText>
+                            
+                            <CardText> 
                                 <Button
                                     value={item.id}
                                     onClick={() => {
-                                        removeFromCart(item)
+                                    removeFromCart(item)
                                     }}>
                                     remove
-                                    </Button>
-                            </CardBody>
-                        </Card>
+                                </Button> 
+                            </CardText>  
+                        </CardBody>
+                    </Card>
 
-                    )
-                    )}
-                </Col>
-            </Row>
-            <Row>
-                <div className="total">
-                    {showMessage(cart)}
-                    <h4>Total:</h4>
-                    <div className="sum">$ {parseFloat(total).toFixed(2)}</div>
-                    <div className="checkout-buttons-container">
-                        <div>
-                            <Button
-                                as={Link}
-                                to="/checkout"
-                                className="checkout-button"
-                                onClick={showSidebar}
-                            >
-                                To checkout
+                )
+                )}
+            </>
+            <div className="total">
+                {showMessage(cart)}
+                <h4>Total:</h4>
+                <div className="sum">$ {parseFloat(total).toFixed(2)}</div>
+                <div className="checkout-buttons-container">
+                    <div>
+                        <Button
+                            as={Link}
+                            to="/checkout"
+                            className="checkout-button"
+                            onClick={showSidebar}
+                        >
+                            To checkout
                                 </Button>
-                        </div>
-                        <Button className="checkout-button" onClick={resetCart}>
-                            Reset Cart
+                    </div>
+                    <Button className="checkout-button" onClick={resetCart}>
+                        Reset Cart
                             </Button>
-                    </ div>
-                </div>
-
-            </Row>
+                </ div>
+            </div>
         </Container>
 
     )
