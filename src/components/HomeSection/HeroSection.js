@@ -1,20 +1,21 @@
-import React, { Component } from "react";
+import React, { useEffect, useContext } from "react";
 import { Jumbotron, Container, Row, Col, Button } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
+import {ProductContext} from '../../ProductContext'
 import { ReactComponent as IntroImg } from "../../illustrations/undraw_the_world_is_mine_nb0e.svg";
-// import Confetti from "react-confetti";
 import "./Home.css";
 
-// import Slideshow from './Slideshow';
+function HeroSection() {
+const {Show} = useContext(ProductContext)
 
-export class HeroSection extends Component {
+useEffect(() => {
+    Show()
+}, [])
 
-
-    render() {
-        return (
-            
-                <Jumbotron fluid className= "hero">
-                    
+    return (
+        <div>
+            <Jumbotron fluid className= "hero">
+                    {Show()}
                     <Container className="slogan">
                         <Row> 
                             
@@ -35,13 +36,8 @@ export class HeroSection extends Component {
                         </Row>
                     </Container>
                 </Jumbotron> 
- 
-
-  
-
-    );
-  }
-
+        </div>
+    )
 }
 
-export default HeroSection;
+export default HeroSection

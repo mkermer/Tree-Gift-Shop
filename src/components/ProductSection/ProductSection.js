@@ -30,51 +30,8 @@ function ProductSection(props) {
      getTree()
    }, 100);
  }, [])
-       return (
       
-        <Container className="ProductSection"> 
-          <Row> 
-            <Col>
-            <HowToBuy/>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12}>
-            <h1>Plant a tree</h1>
-            <div id='products'></div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xl={12} lg={12} md={12} sm={12} sx={12}> 
-              <Searchbar id="search" handleChange={handleChange} />
-            </Col>
-          </Row>
-          <Row> 
-            <Col xl={12} lg={12} md={12} sm={12} sx={12}> 
-              <Filters
-                priceDesc={sortByPriceDescending}
-                priceAsc={sortByPriceAscending}
-                sortByName={sortByName}
-                co2Asc={sortByCoAscending}
-                co2Desc={sortByCoDescending}
-                selectCountry={handleCountryChange}
-              />
-            </Col>
-          </Row>
-          <Row>
-              <TreeCard products={tree} add={addToCart} />
-          </Row>
-      </Container>
-      );
-    }
 
-  useEffect(() => {
-    setTimeout(() => {
-      getTree();
-    }, 100);
-  }, []);
-
-  
   return (
     <Container className="ProductSection">
       <Row>
