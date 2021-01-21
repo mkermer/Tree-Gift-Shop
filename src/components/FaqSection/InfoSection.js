@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FaqSection from './FaqSection';
 import { Container, Row, Col } from "react-bootstrap";
 
 import { ReactComponent as Planting } from "../../illustrations/undraw_environment_iaus.svg";
