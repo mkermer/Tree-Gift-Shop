@@ -45,7 +45,7 @@ function Cart(props) {
       </div>
       <div className="items-cart-container">
         {cart.map((item) => (
-          <div className="item">
+          <div className="item" key={item.tree_id}>
             <img src={item.tree_img} alt={item.name} width="50px" />
             <h3>{item.tree_name}</h3>
             <span>{item.country}</span>

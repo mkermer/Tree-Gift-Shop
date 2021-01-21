@@ -64,7 +64,6 @@ function ProductSection(props) {
       <Row>
         <TreeCard products={tree} add={addToCart} />
       </Row>
-      <div id="about"></div>
     </Container>
   );
 }

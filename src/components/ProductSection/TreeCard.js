@@ -19,8 +19,8 @@ function TreeCard(props) {
     if(tree) {
      return tree.map((obj) => {
     return (
-      <>
-        <Col md={4} xs={12} key={obj.id}>
+      <div key={obj.tree_name}>
+        <Col md={4} xs={12}>
           <Card className="TreeCard">
             <Card.Img
               variant="top"
@@ -59,7 +59,7 @@ function TreeCard(props) {
             </Card.Body>
           </Card>
         </Col>
-      </>
+      </div>
     );
   });
     } else {
