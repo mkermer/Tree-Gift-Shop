@@ -1,4 +1,6 @@
-import React, { useState, createContext, useContext} from "react";
+import React, { useState, createContext, useContext } from "react";
+import { Link } from "react-router-dom";
+
 import Axios from "axios";
 import { LoginContext } from "./LoginContext";
 import ls from 'local-storage'
@@ -135,4 +137,5 @@ export const CartProvider = (props) => {
       {props.children}
     </CartContext.Provider>
   );
-};
+}
+export default CartContext;

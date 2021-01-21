@@ -1,3 +1,4 @@
+import React from 'react';
 import tree from "../../tree.json";
 import ProductSection from "../ProductSection/ProductSection";
 import { Route } from "react-router-dom";

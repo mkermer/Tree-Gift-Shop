@@ -1,5 +1,5 @@
 import React, { useState, createContext} from "react";
-// import tree from "./tree";
+import Confetti from "react-confetti";
 import Axios from "axios";
 
 export const ProductContext = createContext();
@@ -13,6 +13,15 @@ export const ProductProvider = (props) => {
   const [co2, setCo2] = useState("");
   const [tree, setTrees] = useState();
   const [products, setProducts] = useState();
+
+
+  //============Confetti==============//
+const Show = () => {
+        return (
+            <Confetti recycle={false} />
+        )
+    }
+
 
   //============Get trees from database==============//
 
@@ -103,6 +112,7 @@ export const ProductProvider = (props) => {
     <ProductContext.Provider
       value={{
         products,
+        Show,
         treeName,
         setTreeName,
         treeDesc,
@@ -132,4 +142,5 @@ export const ProductProvider = (props) => {
       {props.children}
     </ProductContext.Provider>
   );
-};
+}
+export default ProductContext;
