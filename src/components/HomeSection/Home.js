@@ -18,7 +18,7 @@ function Home(props) {
           <InfoSection />
           <ProductSection products={tree} />
           <AboutUsSection />
-                        <FaqSection />
+          <FaqSection />
           <ContactSection />
         </div>
     </div>
