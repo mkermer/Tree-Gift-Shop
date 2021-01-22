@@ -53,9 +53,37 @@ function Cartt(props) {
                     <>
                         <ListGroup class="cd-cart-items">
                             <ListGroup.Item>
+                                <img src={item.tree_img} alt={item.name} width="50px" height="50px" />
                                 <span class="cd-qty">{item.count}</span> {item.tree_name}
                                 <div class="cd-price">${(item.price * item.count).toFixed(2)}</div>
-                                <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
+                                <button
+
+                                    className="item-button-remove"
+                                    value={item.id}
+                                    onClick={() => {
+                                        reduceCount(item.tree_id);
+                                    }}
+                                >
+                                    -
+            </button>
+                                <span>{item.count}</span>
+                                <button
+                                    className="item-button-add"
+                                    value={item.id}
+                                    onClick={() => {
+                                        increaseCount(item.tree_id);
+                                    }}
+                                >
+                                    +
+            </button>
+                                <Button
+                                    value={item.id}
+                                    onClick={() => {
+                                        removeFromCart(item);
+                                    }}
+                                >
+                                    Remove
+            </Button>
                             </ListGroup.Item>
                         </ListGroup>
                     </>
