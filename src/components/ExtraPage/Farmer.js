@@ -3,7 +3,9 @@ import {ProductContext} from '../../ProductContext'
 import FarmerContact from './FarmerContact';
 import FarmerFilter from './FarmerFilter'
 import FarmerHowTo from './FarmerHowTo';
-import { Container, Card, Col } from 'react-bootstrap';
+import { Container, Card, Col, Row } from 'react-bootstrap';
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import './Farmer.css';
 
 function Farmer(){
     const {tree, getTree, farmerFilter, setFarmerFilter, addToSelectedTree, selectedTree} = useContext(ProductContext)
@@ -17,7 +19,7 @@ function Farmer(){
          return farmerFilter.map((obj) => {
         return (
           <>
-            <Col md={4} xs={12} key={obj.id}>
+            <Col md={4} xs={12} key={obj.id} className="FarmerTreeCard">
               <Card className="TreeCard">
                 <Card.Img
                   variant="top"
@@ -44,21 +46,44 @@ function Farmer(){
         } else {
           return <></>
         }
-      }
+      };
+
+      const ShowSelect = () =>{
+        if (farmerFilter){
+          return(
+              <h3 className="centered"> Select a Tree:</h3>
+          );
+        } else {
+          return <></>
+        };
+      };
 
   
     return(
         <div className="Farmer">
+        <Jumbotron fluid className="center">
+          <h1> Do you want to become a Farmer? </h1>
+        </Jumbotron>
         
         <Container>
-            <h1> Do you want to become a Farmer? </h1>
             <FarmerHowTo />
-            <p> Please select a country to see what kind of trees you could plant in your area to help us:</p>
-            <FarmerFilter />
-            <p> Select a Tree:</p>
-            <ListTrees />
-            <FarmerContact /> 
         </Container>
+        <Jumbotron fluid className="center">
+          <h3> Please select a country to see what kind of trees you could plant in your area to help us:</h3>
+          <FarmerFilter />
+        </Jumbotron>
+            
+          <Container>
+            <Row>
+              <ShowSelect/>
+            </Row>
+            <Row>
+              <ListTrees />
+            </Row>
+          </Container>
+          <h3 className="center"> Fill out this form </h3>
+          <FarmerContact /> 
+        
        
 
         </div>

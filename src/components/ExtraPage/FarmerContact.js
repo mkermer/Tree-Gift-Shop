@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
 import {ProductContext} from '../../ProductContext'
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import ContactModal from '../ContactFormSection/ContactModal';
 
-// import ContactModal from "./ContactModal";
+
 
 function FarmerContact() {
   const [modalShow, setModalShow] = useState(false);
@@ -16,17 +17,16 @@ function FarmerContact() {
   };
 
   return (
-    <Container>
+    <Container className="FarmerContact">
     <Form onSubmit={handleSubmit} id="contactForm">
       <Row>
       <Col>
           <Form.Group controlId="validationCustom00">
             <Form.Label>Selected Tree</Form.Label>
-            <Form.Control required type="text" placeholder={selectedTree.tree_name} disabled />
-
+            <Form.Control required type="text" value={selectedTree.tree_name} disabled />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
-              do later
+              Please click on a tree!
             </Form.Control.Feedback>
           </Form.Group>
         </Col>
@@ -148,7 +148,7 @@ function FarmerContact() {
         Send
       </Button>
 
-      {/* <ContactModal show={modalShow} onHide={() => setModalShow(false)} /> */}
+      <ContactModal show={modalShow} onHide={() => setModalShow(false)} />
     </Form>
     </Container>
   );

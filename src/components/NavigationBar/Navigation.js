@@ -49,7 +49,12 @@ function Navigation() {
                 onMouseEnter={showDropdown}
                 onMouseLeave={hideDropdown}
               >
-                <NavDropdown.Item as={HashLink} smooth to='#howto'>How To</NavDropdown.Item>
+                <NavDropdown.Item as={HashLink} smooth to='#'>
+                  Why Treeduce?
+                </NavDropdown.Item>
+                <NavDropdown.Item as={HashLink} smooth to='#howto'>
+                  How to buy a Tree Gift Card
+                </NavDropdown.Item>
                 <NavDropdown.Item as={HashLink} smooth to='/#products'>
                   Find your perfect Tree!
                 </NavDropdown.Item>
@@ -58,7 +63,7 @@ function Navigation() {
                 About us
               </Nav.Link>
               <Nav.Link as={NavHashLink} smooth to="/#faq">
-                Help & FAQ
+                FAQ
               </Nav.Link>
               <Nav.Link as={NavHashLink} smooth to="/#contact">
                 Contact
