@@ -15,7 +15,7 @@
 .cart-menu {
   overflow: auto;
   margin-top: 95px;
-  background: linear-gradient(180deg, rgba(244,247,245,0.4) 0%, rgba(244,247,245,0.6) 50%, rgba(217,232,207,1) 100%);
+  background: #D9E8CF;
   width: 350px;
   height: 100vh;
   position: fixed;

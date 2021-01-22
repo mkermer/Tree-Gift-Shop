@@ -5,6 +5,7 @@ import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from "reactstrap";
 
+
 import "./Cart.css";
 
 import { Container } from "react-bootstrap";
@@ -58,7 +59,7 @@ function Cartt(props) {
 
                             <CardText>$ {(item.price * item.count).toFixed(2)} </CardText>
 
-                            <CardText> 
+                        
                                 <Button
                                     className="item-button-remove"
                                     value={item.id}
@@ -67,7 +68,12 @@ function Cartt(props) {
                                     }}>
                                     -
                                 </Button>
+                       
                                 <span>{item.count}</span>
+                        
+                            <CardText> 
+                                
+                               
                                 <Button
                                     className="item-button-add"
                                     value={item.id}
