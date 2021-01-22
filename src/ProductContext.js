@@ -13,6 +13,7 @@ export const ProductProvider = (props) => {
   const [co2, setCo2] = useState("");
   const [tree, setTrees] = useState();
   const [products, setProducts] = useState();
+  const [farmerFilter, setFarmerFilter] = useState()
 
 
   //============Confetti==============//
@@ -105,6 +106,7 @@ const Show = () => {
         return (sorted = [])
       }
     });
+    setFarmerFilter(sorted)
     setTrees(sorted);
   }
 
@@ -112,6 +114,7 @@ const Show = () => {
     <ProductContext.Provider
       value={{
         products,
+        farmerFilter,
         Show,
         treeName,
         setTreeName,
