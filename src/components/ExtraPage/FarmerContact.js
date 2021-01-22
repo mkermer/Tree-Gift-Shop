@@ -23,7 +23,6 @@ function FarmerContact() {
           <Form.Group controlId="validationCustom00">
             <Form.Label>Selected Tree</Form.Label>
             <Form.Control required type="text" placeholder={selectedTree.tree_name} disabled />
-
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               do later

@@ -45,6 +45,8 @@ export const ProductProvider = (props) => {
       co2: co2,
     });
     alert("Tree added successfuly");
+    let form = document.getElementById('addTreeForm')
+    form.reset()
   };
 
   //============Search==============//
