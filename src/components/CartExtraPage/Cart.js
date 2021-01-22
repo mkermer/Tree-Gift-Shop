@@ -1,9 +1,9 @@
-import React from "react";
-import "./Cart.css";
-import { CartContext } from "../../CartContext";
-import { useContext, useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import './Cart.css';
+import { CartContext } from '../../CartContext';
+import { useContext, useEffect } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 function Cart(props) {
   const {
@@ -45,11 +45,14 @@ function Cart(props) {
       </div>
       <div className="items-cart-container">
         {cart.map((item) => (
- <div className="item" key={item.tree_id}>
+          <div className="item" key={item.tree_id}>
             <img src={item.tree_img} alt={item.name} width="50px" />
             <h3>{item.tree_name}</h3>
             <span>{item.country}</span>
-            <h2>$ {(item.price * item.count).toFixed(2)} </h2>
+            <h2>
+              $
+              {(item.price * item.count).toFixed(2)}
+            </h2>
             <button
 
               className="item-button-remove"
@@ -84,7 +87,10 @@ function Cart(props) {
       <div className="total">
         {showMessage(cart)}
         <h4>Total:</h4>
-        <div className="sum">$ {parseFloat(total).toFixed(2)}</div>
+        <div className="sum">
+          $
+          {parseFloat(total).toFixed(2)}
+        </div>
         <div className="checkout-buttons-container">
           <div>
             <Button

@@ -1,7 +1,8 @@
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
+import Row from 'react-bootstrap/Row';
+import React from 'react';
+import Col from 'react-bootstrap/Col';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 function HelpfulLinks() {
   return (

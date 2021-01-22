@@ -6,9 +6,11 @@ import Yiulia from '../../illustrations/undraw_team_ih79_treeduce_3-02.svg';
 import Morgane from '../../illustrations/undraw_team_ih79_treeduce_3-04.svg';
 import Johanna from '../../illustrations/undraw_team_ih79_treeduce_3-03.svg';
 
-import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
-import MissionJumbotron from "./MissionJumbotron";
-import "./AboutUsSection.css";
+import {
+  Card, CardBody, CardTitle, CardText, CardImg,
+} from 'reactstrap';
+import MissionJumbotron from './MissionJumbotron';
+import './AboutUsSection.css';
 
 
 export class AboutUs extends Component {
@@ -78,7 +80,7 @@ export class AboutUs extends Component {
                   <CardImg src={Johanna} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Johanna</CardTitle>
 
-                  <div id="faq"></div>
+                  <div id="faq" />
 
                   <CardText>hdhdh</CardText>
                 </CardBody>

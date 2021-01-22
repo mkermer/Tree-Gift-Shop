@@ -1,4 +1,4 @@
-import {React, useEffect, useContext} from "react";
+import {React,  useContext} from "react";
 import { withRouter } from "react-router-dom";
 import {CardElement} from '@stripe/react-stripe-js'
 import {ProductContext} from '../../ProductContext'

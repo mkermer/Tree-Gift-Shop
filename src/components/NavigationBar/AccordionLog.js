@@ -1,13 +1,12 @@
 import React from 'react';
-import FormLogin from "./FormLogin";
-import FormSignUp from "./FormSignUp";
-import Accordion from "react-bootstrap/Accordion";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import { LoginProvider } from "../../LoginContext";
+import FormLogin from './FormLogin';
+import FormSignUp from './FormSignUp';
+import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { LoginProvider } from '../../LoginContext';
 
 function AccordionLog() {
-
   return (
     <LoginProvider>
       <Accordion defaultActiveKey="0">
@@ -19,8 +18,9 @@ function AccordionLog() {
           </Card.Header>
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-              {" "}
-              <FormLogin />{" "}
+              {' '}
+              <FormLogin />
+              {' '}
             </Card.Body>
           </Accordion.Collapse>
         </Card>
@@ -32,8 +32,9 @@ function AccordionLog() {
           </Card.Header>
           <Accordion.Collapse eventKey="1">
             <Card.Body>
-              {" "}
-              <FormSignUp />{" "}
+              {' '}
+              <FormSignUp />
+              {' '}
             </Card.Body>
           </Accordion.Collapse>
         </Card>
