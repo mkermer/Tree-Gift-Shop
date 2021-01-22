@@ -18,13 +18,7 @@ function Home(props) {
           <InfoSection />
           <ProductSection products={tree} />
           <AboutUsSection />
-          <Col md={12}>
-                        <h1>Little FAQ</h1>
-                        <p>The answer to your question might be here!</p>
-                    </Col>
-                    <Col>
                         <FaqSection />
-                    </Col>
           <ContactSection />
         </div>
     </div>

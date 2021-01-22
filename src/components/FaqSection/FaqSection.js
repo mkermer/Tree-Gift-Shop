@@ -1,16 +1,19 @@
 import React from "react";
-import { Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import FaqQuestion from "./FaqQuestion";
 // import './FaqSection.css';
 
 function FaqSection() {
   return (
-    <Row>
+    <Container>
+    <Col md={12}>
+        <h1>Little FAQ</h1>
+      <p>The answer to your question might be here!</p>
+    </Col>
       <Row>
         <FaqQuestion />
       </Row>
-      <div id="contact"></div>
-    </Row>
+    </Container>
   );
 }
 
