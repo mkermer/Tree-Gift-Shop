@@ -6,25 +6,16 @@ import FarmerHowTo from './FarmerHowTo';
 import { Container, Card, Col } from 'react-bootstrap';
 
 function Farmer(){
-    const {tree, getTree} = useContext(ProductContext)
-    const [arr, setArr] = useState([])
-
+    const {tree, getTree, farmerFilter, setFarmerFilter} = useContext(ProductContext)
 
     useEffect(() => {
-        getTree()
+          getTree()
     }, [])
-   
-   
-    useEffect(() => {
-      setArr(tree)
-  }, [tree])
 
-   
-    
 
     const ListTrees = (props) => {
-        if(arr) {
-         return arr.map((obj) => {
+        if(farmerFilter) {
+         return farmerFilter.map((obj) => {
         return (
           <>
             <Col md={4} xs={12} key={obj.id}>
