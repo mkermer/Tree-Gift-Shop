@@ -23,7 +23,9 @@ function FarmerContact() {
       <Col>
           <Form.Group controlId="validationCustom00">
             <Form.Label>Selected Tree</Form.Label>
+
             <Form.Control required type="text" value={selectedTree.tree_name} disabled />
+
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               Please click on a tree!

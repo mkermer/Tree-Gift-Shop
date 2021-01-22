@@ -36,7 +36,7 @@ export default function AddTrees() {
 
   return (
     <div style={{ marginTop: "10%" }}>
-      <Form onSubmit={addTree}>
+      <Form onSubmit={addTree} id="addTreeForm">
         <Form.Group>
           <Form.Control
             type="text"
