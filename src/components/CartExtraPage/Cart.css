@@ -14,7 +14,7 @@
   width:100%;
 }
 .cart-banner h2{
-  font-weight: 700;
+  font-weight: 600;
   font-size: 48px;
 }
 
@@ -129,9 +129,8 @@
 
 #total-sum{
   display: flex;
-  width:100%;
+  width: 250px;
   align-items: center;
-  border-top: 1px solid lightslategray;
 }
 
 #total-sum p{

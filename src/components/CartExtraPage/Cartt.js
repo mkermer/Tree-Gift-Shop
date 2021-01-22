@@ -105,7 +105,7 @@ function Cartt(props) {
                 )}
             </>
             <div className="total">
-                {showMessage(cart)}
+                {/* {showMessage(cart)} */}
                 <div id="total-sum">
                     <h4>Total:</h4>
                     <p>$ {parseFloat(total).toFixed(2)}</p>
