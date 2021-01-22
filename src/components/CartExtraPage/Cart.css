@@ -11,6 +11,10 @@
   border-bottom: 1px solid lightslategray;
 }
 
+.cart-items{
+  width:200px;
+}
+
 .checkout-button {
   margin: 4px;
 }
