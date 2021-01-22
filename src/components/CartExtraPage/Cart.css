@@ -110,5 +110,21 @@
 }
 
 .check {
-  margin-top: 20%;
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 30%;
+}
+
+.checkoutForm {
+  margin-top: 20px;
+}
+
+.StripeElement {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+}
+
+.items-checkout h3, span{
+  margin: 0;
 }
