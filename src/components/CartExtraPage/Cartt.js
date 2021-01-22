@@ -42,11 +42,16 @@ function Cartt(props) {
     return (
         <Container id="cart-container">
             <div className="cart-banner">
-                <h2 className="cart-close" onClick={showSidebar}>
-                    X
-                </h2>
-                <h2>Your cart</h2>
-                <span>Please complete your purchase</span>
+                <div> 
+                    <h2 id="cart-close" onClick={showSidebar}>
+                        X
+                    </h2>
+                </div>
+                <div id="cart-h-text">
+                    <h2>Cart</h2>
+                    <p>Please complete your purchase</p>
+                </div>
+                
             </div>
 
             <>
@@ -101,8 +106,11 @@ function Cartt(props) {
             </>
             <div className="total">
                 {showMessage(cart)}
-                <h4>Total:</h4>
-                <div className="sum">$ {parseFloat(total).toFixed(2)}</div>
+                <div id="total-sum">
+                    <h4>Total:</h4>
+                    <p>$ {parseFloat(total).toFixed(2)}</p>
+                </div>
+                
                 <div className="checkout-buttons-container">
                     <div>
                         <Button
