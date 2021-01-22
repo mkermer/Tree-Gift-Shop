@@ -15,6 +15,18 @@
   margin-right: 24px;
 }
 
+.cd-cart-head h3{
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 0px;
+  line-height: 1.3;
+}
+
+.cd-cart-head p{
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
 .cd-cart-list{
   display:flex;
   border-bottom: none;
@@ -67,7 +79,7 @@
 }
 
 #item-button-remove {
-  background-color: red!important;
+  background-color:#d62347!important;
   display: inline;
   padding-left: 8px;
   padding-right: 8px;

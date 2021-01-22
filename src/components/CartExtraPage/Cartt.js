@@ -56,7 +56,11 @@ function Cartt(props) {
                             <ListGroup.Item className="cd-cart-list-items">
                                 <div className="cd-cart-head"> 
                                     <img src={item.tree_img} alt={item.name} width="50px" height="50px" />
-                                    <h3>{item.tree_name}</h3>
+                                    <div>
+                                        <h3>{item.tree_name}</h3>
+                                        <p>{item.country}</p>
+                                    </div>
+                                    
                                 </div>
                                 <div id="cd-cart-btn"> 
                                 <Button
