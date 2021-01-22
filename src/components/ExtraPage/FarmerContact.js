@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import {ProductContext} from '../../ProductContext'
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 // import ContactModal from "./ContactModal";
 
 function FarmerContact() {
   const [modalShow, setModalShow] = useState(false);
+  const {selectedTree} = useContext(ProductContext)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,7 +22,7 @@ function FarmerContact() {
       <Col>
           <Form.Group controlId="validationCustom00">
             <Form.Label>Selected Tree</Form.Label>
-            <Form.Control required type="text" placeholder="Selected: " />
+            <Form.Control required type="text" placeholder={selectedTree.tree_name} disabled />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               do later

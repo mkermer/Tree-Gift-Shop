@@ -6,12 +6,11 @@ import FarmerHowTo from './FarmerHowTo';
 import { Container, Card, Col } from 'react-bootstrap';
 
 function Farmer(){
-    const {tree, getTree, farmerFilter, setFarmerFilter} = useContext(ProductContext)
+    const {tree, getTree, farmerFilter, setFarmerFilter, addToSelectedTree} = useContext(ProductContext)
 
     useEffect(() => {
           getTree()
     }, [])
-
 
     const ListTrees = (props) => {
         if(farmerFilter) {
@@ -19,7 +18,7 @@ function Farmer(){
         return (
           <>
             <Col md={4} xs={12} key={obj.id}>
-              <Card className="TreeCard">
+              <Card className="TreeCard" onClick={() => addToSelectedTree(obj)}>
                 <Card.Img
                   variant="top"
                   src={obj.tree_img}

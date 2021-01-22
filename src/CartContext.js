@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Axios from "axios";
 import { LoginContext } from "./LoginContext";
-import ls from 'local-storage'
+import ls from "local-storage";
 
 export const CartContext = createContext();
 export const CartProvider = (props) => {
@@ -23,7 +23,7 @@ export const CartProvider = (props) => {
       username: getEmail(),
     });
     // sessionStorage.setItem("cart", JSON.stringify(cart));
-    ls.set('cart', JSON.stringify(cart))
+    ls.set("cart", JSON.stringify(cart));
   };
 
   function addToCart(e) {
@@ -137,5 +137,5 @@ export const CartProvider = (props) => {
       {props.children}
     </CartContext.Provider>
   );
-}
+};
 export default CartContext;
