@@ -1,7 +1,14 @@
 .TeamMembers{
-    text-align: center;
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 160px;
+   
+}
+
+#TeamMembersCard{
+    border-radius: 15px;
+    box-shadow: 1px 1px 7px -1px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: 0.3s ease;
 }
 
 .card {
