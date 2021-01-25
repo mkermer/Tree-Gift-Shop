@@ -2,10 +2,19 @@
     float:right;
 }
 
+.chevronbardown::after{
+ transform: rotate(180deg);
+}
+
 .FaqHeader {
     min-height: 80px;
 }
 
+.QuestionCard link{
+    color:black;
+}
+
 .QuestionCard .btn{
     text-align: left !important;
+    color:black !important;
 }

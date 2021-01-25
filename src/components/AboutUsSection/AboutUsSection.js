@@ -45,7 +45,7 @@ function AboutUs() {
               <h4>Our Team</h4>
             </Col>
             <Col lg={3} md={6} sm={6}>
-              <Card>
+              <Card id="TeamMembersCard">
                 <CardBody>
                   <CardImg src={Adrian} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Adrian</CardTitle>
@@ -54,7 +54,7 @@ function AboutUs() {
               </Card>
             </Col>
             <Col lg={3} md={6} sm={6}>
-              <Card>
+              <Card id="TeamMembersCard">
                 <CardBody>
                   <CardImg src={Yiulia} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Yuliya</CardTitle>
@@ -63,7 +63,7 @@ function AboutUs() {
               </Card>
             </Col>
             <Col lg={3} md={6} sm={6}>
-              <Card>
+              <Card id="TeamMembersCard">
                 <CardBody>
                   <CardImg src={Morgane} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Morgane</CardTitle>
@@ -72,7 +72,7 @@ function AboutUs() {
               </Card>
             </Col>
             <Col lg={3} md={6} sm={6}>
-              <Card>
+              <Card id="TeamMembersCard">
                 <CardBody>
                   <CardImg src={Johanna} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Johanna</CardTitle>
