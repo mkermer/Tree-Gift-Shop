@@ -23,7 +23,7 @@ function OverlayNav() {
     <Popover id="popover-basic">
       <Popover.Title as="p">Already logged in as <b>{getName()} {getLastName()}</b></Popover.Title>
       <Popover.Content>
-        <button onClick={logout} class="btn btn-primary">Logout</button>
+        <button onClick={logout} className="btn btn-primary">Logout</button>
       </Popover.Content>
     </Popover>
   );

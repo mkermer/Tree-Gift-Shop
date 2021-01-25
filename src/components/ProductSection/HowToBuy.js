@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import BuyTree from "../../illustrations/undraw_walking_outside_without human.svg";
@@ -9,15 +9,15 @@ import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
 
 import "./ProductSection.css";
 
-export class HowToBuy extends Component {
-  render() {
+function HowToBuy() {
+
     return (
       <div>
         <Container className="HowToBuy">
           <Row>
             <Col md={12}>
-            <div id="howto">
-            </div>
+            
+
               <h1>How to buy a tree gift?</h1>
             </Col>
             <Col lg={4} md={12}>
@@ -54,7 +54,7 @@ export class HowToBuy extends Component {
         </Container>
       </div>
     );
-  }
+
 }
 
 export default HowToBuy;

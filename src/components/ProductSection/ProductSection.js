@@ -39,10 +39,11 @@ function ProductSection(props) {
           <HowToBuy />
         </Col>
       </Row>
+      <div className="HashTo" id="products"/>
       <Row>
         <Col xs={12}>
           <h1>Plant a tree</h1>
-          <div id="products"></div>
+          
         </Col>
       </Row>
       <Row>

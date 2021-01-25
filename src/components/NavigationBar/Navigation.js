@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import Collapse from "react-bootstrap/Collapse";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Search, Basket3 } from "react-bootstrap-icons";
+import { Search, Basket3, TreeFill} from "react-bootstrap-icons";
 import { NavHashLink } from "react-router-hash-link";
 import { HashLink } from "react-router-hash-link";
 import { CartContext } from "../../CartContext";
@@ -29,6 +29,14 @@ function Navigation() {
     setShow(false);
   };
 
+  useEffect(() => {
+    if(open) {
+      setTimeout(() => {
+      setOpen(false)
+    }, 10000)
+    }
+  }, [open])
+  
   return (
     <div>
       <LoginProvider>
@@ -49,10 +57,10 @@ function Navigation() {
                 onMouseEnter={showDropdown}
                 onMouseLeave={hideDropdown}
               >
-                <NavDropdown.Item as={HashLink} smooth to='#'>
+                <NavDropdown.Item as={HashLink} smooth to='/#info'>
                   Why Treeduce?
                 </NavDropdown.Item>
-                <NavDropdown.Item as={HashLink} smooth to='#howto'>
+                <NavDropdown.Item as={HashLink} smooth to='/#howto'>
                   How to buy a Tree Gift Card
                 </NavDropdown.Item>
                 <NavDropdown.Item as={HashLink} smooth to='/#products'>
@@ -79,7 +87,7 @@ function Navigation() {
                   placeholder="Find a tree!"
                   className="mr-sm-2"
                 />
-                <Button as={HashLink} smooth to="/#products"variant="outline-success" >Search</Button>
+                <Button as={HashLink} smooth to="/#products" >Search</Button>
               </Form>
             </div>
           </Collapse>
@@ -97,6 +105,7 @@ function Navigation() {
             <Button variant="light" className="icons">
               <Basket3 size={25} />
               <span id="cart-length">{cart.length}</span>
+              {/* <TreeFill size={25} className="TreeBasket"/> */}
             </Button>
           </HashLink>
           <div className={sidebar ? "cart-menu active" : "cart-menu"}>

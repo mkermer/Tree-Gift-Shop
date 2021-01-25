@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import ContactForm from './ContactForm';
 import { ReactComponent as Contact } from '../../illustrations/undraw_contact_us_15o2.svg';
 
 
-export class ContactSection extends Component {
-    render() {
+function ContactSection() {
+
         return (
             <Container>
                 <Row>
@@ -21,7 +21,6 @@ export class ContactSection extends Component {
                 </Row>
             </Container>
         );
-    }
-}
+};
 
 export default ContactSection;

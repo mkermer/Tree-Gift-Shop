@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
 
 import { ReactComponent as MissionImg } from '../../illustrations/undraw_the_world_is_mine_nb0e.svg';
 
 
-export class MissionJumbotron extends Component {
-  render() {
+function MissionJumbotron() {
     return (
       <Jumbotron fluid>
         <Container>
@@ -22,7 +21,6 @@ export class MissionJumbotron extends Component {
         </Container>
       </Jumbotron>
     );
-  }
 }
 
 export default MissionJumbotron;

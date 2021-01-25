@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ReactComponent as Plattform } from '../../illustrations/undraw_data_trends_b0wg.svg';
 import Adrian from '../../illustrations/undraw_team_ih79_treeduce_3-01.svg';
@@ -11,8 +11,7 @@ import MissionJumbotron from "./MissionJumbotron";
 import "./AboutUsSection.css";
 
 
-export class AboutUs extends Component {
-  render() {
+function AboutUs() {
     return (
       <div>
         <Container>
@@ -78,7 +77,7 @@ export class AboutUs extends Component {
                   <CardImg src={Johanna} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Johanna</CardTitle>
 
-                  <div id="faq"></div>
+                  
 
                   <CardText>hdhdh</CardText>
                 </CardBody>
@@ -87,11 +86,11 @@ export class AboutUs extends Component {
           </Row>
         </Container>
 
-        <div id="contact" />
+        
 
       </div>
     );
-  }
-}
+  
+};
 
 export default AboutUs;
