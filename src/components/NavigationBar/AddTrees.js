@@ -1,10 +1,10 @@
-import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import { useContext } from 'react';
-import { LoginContext } from '../../LoginContext';
-import { ProductContext } from '../../ProductContext';
-import './AddTrees.css';
+import React from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import { useContext } from "react";
+import { LoginContext } from "../../LoginContext";
+import { ProductContext } from "../../ProductContext";
+import "./AddTrees.css";
 
 export default function AddTrees() {
   const { getEmail } = useContext(LoginContext);
@@ -18,12 +18,12 @@ export default function AddTrees() {
     setCo2,
   } = useContext(ProductContext);
 
-
+  
   const email = getEmail();
 
-  //= ===========No priviliges==============//
+  //============No priviliges==============//
 
-  if (email !== 'admin@admin.com') {
+  if (email !== "admin@admin.com") {
     return (
       <div className="stop-container">
         <h2>Hey you! Stay where you are!</h2>
@@ -32,11 +32,11 @@ export default function AddTrees() {
     );
   }
 
-  //= ===========Add a tree==============//
+  //============Add a tree==============//
 
   return (
-    <div style={{ marginTop: '10%' }}>
-      <Form onSubmit={addTree}>
+    <div style={{ marginTop: "10%" }}>
+      <Form onSubmit={addTree} id="addTreeForm">
         <Form.Group>
           <Form.Control
             type="text"
@@ -87,9 +87,8 @@ export default function AddTrees() {
           />
         </Form.Group>
         <Button variant="primary" type="submit">
-          {' '}
-          Submit
-          {' '}
+          {" "}
+          Submit{" "}
         </Button>
       </Form>
       {}

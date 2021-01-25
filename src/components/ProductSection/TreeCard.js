@@ -32,7 +32,6 @@ function TreeCard(props) {
               src={obj.tree_img}
               id="pic"
               alt="tree"
-              onClick={() => setOpen(!open)}
               aria-controls="tree-description"
               aria-expanded={open}
             />

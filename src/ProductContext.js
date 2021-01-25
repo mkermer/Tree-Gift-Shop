@@ -1,4 +1,4 @@
-import React, { useState, createContext} from "react";
+import React, { useState, createContext } from "react";
 import Confetti from "react-confetti";
 import Axios from "axios";
 
@@ -13,16 +13,13 @@ export const ProductProvider = (props) => {
   const [co2, setCo2] = useState("");
   const [tree, setTrees] = useState();
   const [products, setProducts] = useState();
-  const [farmerFilter, setFarmerFilter] = useState()
-
+  const [farmerFilter, setFarmerFilter] = useState();
+  const [selectedTree, setSelectedTree] = useState([]);
 
   //============Confetti==============//
-const Show = () => {
-        return (
-            <Confetti recycle={false} />
-        )
-    }
-
+  const Show = () => {
+    return <Confetti recycle={false} />;
+  };
 
   //============Get trees from database==============//
 
@@ -48,6 +45,8 @@ const Show = () => {
       co2: co2,
     });
     alert("Tree added successfuly");
+    let form = document.getElementById('addTreeForm')
+    form.reset()
   };
 
   //============Search==============//
@@ -102,12 +101,16 @@ const Show = () => {
         return sorted.push(obj);
       } else if (e.target.value === "all") {
         return (sorted = products);
-      } else if (e.target.value === 'select') {
-        return (sorted = [])
+      } else if (e.target.value === "select") {
+        return (sorted = []);
       }
     });
-    setFarmerFilter(sorted)
+    setFarmerFilter(sorted);
     setTrees(sorted);
+  }
+
+  function addToSelectedTree(e) {
+      setSelectedTree({ ...e });
   }
 
   return (
@@ -115,6 +118,8 @@ const Show = () => {
       value={{
         products,
         farmerFilter,
+        addToSelectedTree,
+        selectedTree,
         Show,
         treeName,
         setTreeName,
@@ -145,5 +150,5 @@ const Show = () => {
       {props.children}
     </ProductContext.Provider>
   );
-}
+};
 export default ProductContext;

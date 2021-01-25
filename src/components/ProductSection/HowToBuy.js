@@ -17,9 +17,6 @@ export class HowToBuy extends Component {
           <Row>
             <Col md={12}>
             <div id="howto">
-            <br/>
-            <br/>
-            <br/>
             </div>
               <h1>How to buy a tree gift?</h1>
             </Col>
