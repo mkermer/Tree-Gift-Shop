@@ -6,6 +6,15 @@
     min-height: 80px;
 }
 
+.QuestionCard link{
+    color:black;
+}
+
 .QuestionCard .btn{
     text-align: left !important;
+    color:black !important;
+}
+
+.QuestionCard .btn::after{
+    transform: translateY(-50%);
 }
