@@ -1,17 +1,21 @@
 import React from "react";
 import "./Searchbar.css";
+import Form from 'react-bootstrap/Form';
 
 function Searchbar(props) {
   return (
-    <div className="search-container">
-      <input
-        className="searchInput"
-        type="text"
-        placeholder="Search.."
-        onChange={props.handleChange}
-      ></input>
+    <div>
+      <Form inline>
+        <Form.Control
+          className="searchInput"
+          type="text"
+          placeholder="Search.."
+          onChange={props.handleChange}
+      />
+      </Form>
     </div>
   );
 }
 
 export default Searchbar;
+

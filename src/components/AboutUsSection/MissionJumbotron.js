@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
 
-export class MissionJumbotron extends Component {
-  render() {
+function MissionJumbotron() {
     return (
       <Jumbotron fluid className="MissionGoal">
         <Container id="MissionGoal-con">
@@ -18,7 +17,6 @@ export class MissionJumbotron extends Component {
         </Container>
       </Jumbotron>
     );
-  }
 }
 
 export default MissionJumbotron;

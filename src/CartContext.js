@@ -11,6 +11,7 @@ export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState([0]);
   const [sidebar, setSidebar] = useState(false);
+  const [paymentComplete, setPaymentComplete] = useState(false)
 
   const showSidebar = () => setSidebar(!sidebar);
   const openSidebar = () => setSidebar(true);
@@ -132,6 +133,8 @@ export const CartProvider = (props) => {
         sum,
         showMessage,
         resetCart,
+        paymentComplete,
+        setPaymentComplete,
       }}
     >
       {props.children}

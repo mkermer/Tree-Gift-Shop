@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Checkout from "./components/CartExtraPage/Checkout";
+import Complete from "./components/CartExtraPage/Complete";
 import { ProductProvider } from "./ProductContext";
 import { CartProvider } from "./CartContext";
 import Navigation from "./components/NavigationBar/Navigation";
@@ -31,6 +32,7 @@ function App() {
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route path="/checkout" component={Checkout} />
+                  <Route path="/complete" component={Complete} />
                   <Route path="/add" component={AddTrees} />
                   <Route path="/impressum" component={Impressum} />
                   <Route path="/farmer" component={Farmer} />
