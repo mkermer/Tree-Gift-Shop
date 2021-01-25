@@ -14,13 +14,29 @@ function Farmer(){
           getTree()
     }, [])
 
+
+  let cards = document.getElementsByClassName('FarmerTreeCard');
+
+  console.log(cards)
+
+  if(cards) {
+    cards.addEventListener('click', function (){
+    cards.forEach(card => card.classList.remove('active'));
+    this.classList.add('active');
+  })
+  }
+
+
     const ListTrees = (props) => {
         if(farmerFilter) {
          return farmerFilter.map((obj) => {
         return (
           <>
-            <Col md={4} xs={12} key={obj.id} className="FarmerTreeCard">
-              <Card className="TreeCard" onClick={() => addToSelectedTree(obj)}>
+            <Col md={4} xs={12} key={obj.id} className="FarmerTreeCard" onClick={(e) => {
+                console.log(e.target.className)
+                addToSelectedTree(obj)
+                }}>
+              <Card className="TreeCard">
 
                 <Card.Img
                   variant="top"
@@ -48,8 +64,10 @@ function Farmer(){
         }
       };
 
+    
+
       const ShowSelect = () =>{
-        if (farmerFilter){
+        if (farmerFilter && farmerFilter.length > 0){
           return(
               <h3 className="centered"> Select a Tree:</h3>
           );
@@ -83,7 +101,7 @@ function Farmer(){
           </Container>
           <h3 className="center"> Fill out this form </h3>
           <FarmerContact /> 
-        
+           
 
 
         </div>
