@@ -1,9 +1,7 @@
 #cart-container {
   margin: 0 auto;
-  margin-top: 5%;
   padding: 50px;
-  padding-top: 10px;
-  padding-bottom: 100px;
+  background-color: #e9ecef;
 }
 
 .cart-banner {
@@ -21,9 +19,12 @@
 .cart-banner p{
   margin-bottom: 12px;
 }
+
 #cart-close{
   font-weight: 600;
   font-size: 24px;
+  float: right;
+  color: black;
 
 }
 
@@ -48,6 +49,9 @@
   margin-bottom: 24px;
 }
 
+.Liste{
+   margin-bottom: 372px;
+}
 .cd-cart-list{
   display:flex;
   border-bottom: none;
@@ -117,7 +121,13 @@
 
 .total{
   border-top: 1px solid lightslategray;
-  margin-top: 24px;
+  margin-top: 32px;
+  position: fixed;
+  background-color: #e9ecef;
+  width: 250px;
+  height: 300px;
+  bottom:0;
+  padding-top: 32px;
 }
 
 
@@ -139,3 +149,13 @@
   margin-bottom:0;
   align-items: flex-end;
 }
+
+
+  @keyframes slide {
+    0% {
+      transform: translateX(200px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

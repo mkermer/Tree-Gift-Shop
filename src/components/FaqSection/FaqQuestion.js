@@ -27,7 +27,7 @@ function FaqQuestion(){
                                 
                                     <Col md={1}>
                                         <Accordion.Toggle className="AccButton" as={Button} variant="link" eventKey="1">
-                                            <ChevronBarDown size={25} />
+                                            <ChevronBarDown className="AccBut"size={25} />
                                         </Accordion.Toggle>
                                     </Col>
                                 </Row>
