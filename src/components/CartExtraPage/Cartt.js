@@ -3,7 +3,7 @@ import { CartContext } from "../../CartContext";
 import { useContext, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from "reactstrap";
+import ListGroup from 'react-bootstrap/ListGroup'
 
 
 import "./Cart.css";
@@ -40,69 +40,77 @@ function Cartt(props) {
     getTotal();
 
     return (
-        <Container className="cart-container">
+        <Container id="cart-container">
             <div className="cart-banner">
-                <h2 className="cart-close" onClick={showSidebar}>
-                    X
-                </h2>
-                <h2>Your cart</h2>
-                <span>Please complete your purchase</span>
+                <div> 
+                    <h2 id="cart-close" onClick={showSidebar}>
+                        X
+                    </h2>
+                </div>
+                <div id="cart-h-text">
+                    <h2>Cart</h2>
+                    <p>Please complete your purchase</p>
+                </div>
+                
             </div>
 
             <>
                 {cart.map((item) => (
-                    <Card className="cart-items">
-                        <CardBody>
-                            <CardImg src={item.tree_img} alt={item.name} width="10px" />
-                            <CardTitle>{item.tree_name}</CardTitle>
-                            <CardSubtitle>{item.country}</CardSubtitle>
-
-                            <CardText>$ {(item.price * item.count).toFixed(2)} </CardText>
-
-                        
+                    <>
+                        <ListGroup className="cd-cart-list">
+                            <ListGroup.Item className="cd-cart-list-items">
+                                <div className="cd-cart-head"> 
+                                    <img src={item.tree_img} alt={item.name} width="50px" height="50px" />
+                                    <div>
+                                        <h3>{item.tree_name}</h3>
+                                        <p>{item.country}</p>
+                                    </div>
+                                    
+                                </div>
+                                <div id="cd-cart-btn"> 
                                 <Button
-                                    className="item-button-remove"
+                                    id="item-button-remove"
                                     value={item.id}
                                     onClick={() => {
-                                        reduceCount(item.tree_id)
-                                    }}>
+                                        reduceCount(item.tree_id);
+                                    }}
+                                >
                                     -
                                 </Button>
-                       
-                                <span>{item.count}</span>
-                        
-                            <CardText> 
-                                
-                               
+                                <span id="cd-cart-count">{item.count}</span>
                                 <Button
-                                    className="item-button-add"
+                                    id="item-button-add"
                                     value={item.id}
                                     onClick={() => {
                                         increaseCount(item.tree_id);
-                                    }}>
+                                    }}
+                                >
                                     +
                                 </Button>
-                            </CardText>
-                            
-                            <CardText> 
+                                <div id="cd-price">${(item.price * item.count).toFixed(2)}</div>
+                                </div>
                                 <Button
                                     value={item.id}
                                     onClick={() => {
-                                    removeFromCart(item)
-                                    }}>
-                                    remove
-                                </Button> 
-                            </CardText>  
-                        </CardBody>
-                    </Card>
-
+                                        removeFromCart(item);
+                                    }}
+                                >
+                                    Remove
+                                </Button>
+                                
+                            </ListGroup.Item>
+                        </ListGroup>
+                    </>
                 )
                 )}
             </>
             <div className="total">
-                {showMessage(cart)}
-                <h4>Total:</h4>
-                <div className="sum">$ {parseFloat(total).toFixed(2)}</div>
+                {/* {showMessage(cart)} */}
+                <div id="total-sum">
+                    <h4>Total:</h4>
+                    <p>$ {parseFloat(total).toFixed(2)}</p>
+                </div>
+                
                 <div className="checkout-buttons-container">
                     <div>
                         <Button
@@ -125,4 +133,4 @@ function Cartt(props) {
 
 }
 
-export default withRouter(Cartt);
+export default withRouter(Cartt)
