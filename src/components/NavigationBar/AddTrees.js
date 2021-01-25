@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { LoginContext } from "../../LoginContext";
 import { ProductContext } from "../../ProductContext";
 import "./AddTrees.css";
+import { HashLink } from 'react-router-hash-link';
 
 export default function AddTrees() {
   const { getEmail } = useContext(LoginContext);
@@ -35,7 +36,7 @@ export default function AddTrees() {
   //============Add a tree==============//
 
   return (
-    <div style={{ marginTop: "10%" }}>
+    <div class ="form-group" >
       <Form onSubmit={addTree} id="addTreeForm">
         <Form.Group>
           <Form.Control
@@ -86,10 +87,12 @@ export default function AddTrees() {
             }}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button type="submit" class="btn btn-primary" >
           {" "}
           Submit{" "}
+
         </Button>
+        
       </Form>
       {}
     </div>

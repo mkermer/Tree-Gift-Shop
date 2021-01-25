@@ -15,7 +15,7 @@
 .cart-menu {
   overflow: auto;
   margin-top: 95px;
-  background: #D9E8CF;
+  background: white;
   width: 350px;
   height: 100vh;
   position: fixed;

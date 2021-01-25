@@ -1,3 +1,49 @@
-.Farmer h1{
-    
+.center{
+    text-align: center !important;
 }
+
+.centered{
+    margin: 0 auto !important;
+}
+
+.Farmer h1{
+    margin: 230px 0;
+}
+
+.Farmer .jumbotron{
+    margin-bottom: 150px;
+}
+
+.FarmerHowTo h2{
+    margin: 100px 0;
+}
+
+.FarmerHowTo #picHowTo1{
+    min-height: 170px !important;
+}
+
+.FarmerHowTo .card-title{
+    min-height: 80px;
+}
+
+/* .FarmerTreeCard #pic:hover{
+    cursor: pointer;
+} */
+
+/* .FarmerTreeCard .TreeCard:active, .FarmerTreeCard .TreeCard:focus, .FarmerTreeCard .TreeCard:visited {
+    border: solid #588157;
+} */
+
+.active {
+    border: solid #588157
+}
+
+.FarmerTreeCard {
+    cursor: pointer;
+}
+
+.FarmerFilter .form-control{
+    width: 40% !important;
+    margin: 0 auto;
+}
+
