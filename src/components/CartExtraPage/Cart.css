@@ -59,6 +59,7 @@
 }
 .checkout-button {
   margin: 4px;
+  cursor: not-allowed;
 }
 
 #cd-cart-btn{
@@ -178,4 +179,7 @@
   font-size: 32px;
   margin-bottom:0;
   align-items: flex-end;
+}
+#complete {
+  margin-top: 10%;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
@@ -28,6 +28,18 @@ function Navigation() {
   const hideDropdown = (e) => {
     setShow(false);
   };
+
+
+  useEffect(() => {
+    if(open) {
+      setTimeout(() => {
+      setOpen(false)
+    }, 5000)
+    }
+  }, [open])
+
+
+
 
   return (
     <div>
