@@ -19,12 +19,12 @@ function Farmer(){
 
   console.log(cards)
 
-  if(cards) {
-    cards.addEventListener('click', function (){
-    cards.forEach(card => card.classList.remove('active'));
-    this.classList.add('active');
-  })
-  }
+  // if(cards) {
+  //   cards.addEventListener('click', function (){
+  //   cards.forEach(card => card.classList.remove('active'));
+  //   this.classList.add('active');
+  // })
+  // }
 
 
     const ListTrees = (props) => {

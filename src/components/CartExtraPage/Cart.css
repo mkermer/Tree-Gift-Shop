@@ -139,3 +139,43 @@
   margin-bottom:0;
   align-items: flex-end;
 }
+
+.check {
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 30%;
+}
+.checkoutForm {
+  margin-top: 20px;
+
+}
+
+.total h4{
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.StripeElement {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+}
+
+
+#total-sum{
+  display: flex;
+  width: 250px;
+  align-items: center;
+}
+
+.items-checkout h3, span{
+  margin: 0;
+}
+
+#total-sum p{
+  margin-left: 12px;
+  font-size: 32px;
+  margin-bottom:0;
+  align-items: flex-end;
+}
