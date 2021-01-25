@@ -36,7 +36,7 @@ function Navigation() {
     }, 10000)
     }
   }, [open])
-  
+
   return (
     <div>
       <LoginProvider>
