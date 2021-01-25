@@ -105,9 +105,23 @@ export const ProductProvider = (props) => {
         return (sorted = []);
       }
     });
-    setFarmerFilter(sorted);
     setTrees(sorted);
   }
+  function handleFarmerFilter(e) {
+    let sorted = [];
+    products.forEach((obj) => {
+      if (obj.country.toLowerCase() === e.target.value) {
+        return sorted.push(obj);
+      } else if (e.target.value === "select") {
+        return (sorted = []);
+      }
+    });
+    setFarmerFilter(sorted)
+  }
+
+
+
+
 
   function addToSelectedTree(e) {
       setSelectedTree({ ...e });
@@ -118,6 +132,7 @@ export const ProductProvider = (props) => {
       value={{
         products,
         farmerFilter,
+        handleFarmerFilter,
         addToSelectedTree,
         selectedTree,
         Show,

@@ -3,12 +3,12 @@ import {ProductContext} from '../../ProductContext'
 import Form from 'react-bootstrap/Form'
 
 function FarmerFilter(props){
-  const {handleCountryChange, getTree} = useContext(ProductContext)
+  const {handleFarmerFilter, getTree} = useContext(ProductContext)
 
     return(
         <div className="FarmerFilter">
         
-        <Form.Control as="select" name="countries" id="countries" onChange={handleCountryChange}>
+        <Form.Control as="select" name="countries" id="countries" onChange={handleFarmerFilter}>
 
         
           <option value="select">Select</option>
