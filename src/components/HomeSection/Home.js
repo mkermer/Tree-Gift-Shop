@@ -13,14 +13,19 @@ import FaqSection from "../FaqSection/FaqSection";
 function Home(props) {
   return (
     <div className="App">
-        <div id="home">
+        <div className="HashTo" id="home"/>
           <HeroSection />
+          <div className="HashTo" id="info"/>
           <InfoSection />
+          <div className="HashTo" id="howto"/>
           <ProductSection products={tree} />
+          {/* div id="products" is in productSection.js */}
+          <div className="HashTo" id="about"/>
           <AboutUsSection />
+          <div className="HashTo" id="faq"/>
           <FaqSection />
+          <div className="HashTo" id="contact" />
           <ContactSection />
-        </div>
     </div>
   );
 }
