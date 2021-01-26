@@ -23,7 +23,7 @@ function TreeCard(props) {
      return tree.map((obj) => {
     return (
       <>
-        <Col md={4} xs={12} key={obj.tree_name}>
+        <Col lg={4} md={6} sm ={12} xs={12} key={obj.tree_name}>
           <Card className="TreeCard">
             <div>
               <img className="opacity" src={obj.background_img}/>
