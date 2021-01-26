@@ -6,6 +6,12 @@
     margin: 0 auto !important;
 }
 
+.centeredContent{
+    justify-content: space-around;
+}
+
+
+
 .Farmer h1{
     margin: 230px 0;
 }
@@ -45,5 +51,7 @@
 .FarmerFilter .form-control{
     width: 40% !important;
     margin: 0 auto;
+    text-align: center;
+    text-align-last:center;
 }
 

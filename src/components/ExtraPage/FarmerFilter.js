@@ -9,8 +9,7 @@ function FarmerFilter(props){
         <div className="FarmerFilter">
         
         <Form.Control as="select" name="countries" id="countries" onChange={handleFarmerFilter}>
-
-        
+          
           <option value="select">Select</option>
           <option value="guatemala">Guatemala</option>
           <option value="cameroon">Cameroon</option>
@@ -18,7 +17,7 @@ function FarmerFilter(props){
           <option value="nepal">Nepal</option>
           <option value="france">France</option>
           
-          </Form.Control>
+        </Form.Control>
         
       </div>
     );

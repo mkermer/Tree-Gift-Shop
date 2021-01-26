@@ -16,11 +16,11 @@ function Filters(props) {
       <Button onClick={props.priceDesc}>Price <SortNumericUp /></Button>
 
       <Button onClick={props.co2Asc}>
-        &nbsp; CO<sub>2</sub> <SortNumericDown />
+        CO<sub>2</sub> <SortNumericDown />
       </Button>
 
       <Button onClick={props.co2Desc}>
-        CO<sub>2</sub> <SortNumericUp />
+        CO<sub>2</sub><SortNumericUp />
       </Button>
       </div>
 

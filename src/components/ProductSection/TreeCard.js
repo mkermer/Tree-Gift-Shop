@@ -35,8 +35,9 @@ function TreeCard(props) {
               aria-controls="tree-description"
               aria-expanded={open}
             />
+            <div className="Treeshadow"></div>
             </div>
-            <div className="shadow"></div>
+            
             <Card.Body>
               <Card.Title> {obj.tree_name}</Card.Title>
               <Card.Text>
