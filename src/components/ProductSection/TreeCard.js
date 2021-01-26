@@ -23,10 +23,10 @@ function TreeCard(props) {
      return tree.map((obj) => {
     return (
       <>
-        <Col md={4} xs={12} key={obj.tree_id}>
+
+        <Col lg={4} md={6} sm ={12} xs={12} key={obj.tree_name}>
           <Card className="TreeCard">
-            <div>
-              <img className="opacity" src={obj.background_img} alt='bg' />
+
             <Card.Img
               variant="top"
               src={obj.tree_img}
@@ -35,18 +35,19 @@ function TreeCard(props) {
               aria-controls="tree-description"
               aria-expanded={open}
             />
-            </div>
-            <div className="shadow"></div>
+            <div className="Treeshadow"></div>
+            
+            
             <Card.Body>
-              <Card.Title> {obj.tree_name}</Card.Title>
+              <div className="CardImages">
+              <img className="opacity" src={obj.background_img}/>
+              </div>
+              <Card.Title> <h2>{obj.tree_name}</h2></Card.Title>
               <Card.Text>
-                <h3>
-                  CO<sub>2</sub>: -{obj.co2}kg
-                </h3>
-                <h2>{obj.price} $</h2>
-                <h2>{obj.country}</h2>
+                CO<sub>2</sub>: -{obj.co2}kg <br/>
+                {obj.country}
               </Card.Text>
-
+              <h2>{obj.price} $</h2>
               <Button
                 className="ButtonAdd"
                 id={obj.id}

@@ -14,6 +14,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import PageError from "./components/Page404";
 import Farmer from "./components/ExtraPage/Farmer";
+import Join from './components/ExtraPage/Join';
 import ToS from "./components/ExtraPage/ToS";
 import ScrollToTop from "./ScrollToTop";
 
@@ -34,8 +35,9 @@ function App() {
                   <Route path="/checkout" component={Checkout} />
                   <Route path="/complete" component={Complete} />
                   <Route path="/add" component={AddTrees} />
-                  <Route path="/impressum" component={Impressum} />
+                  <Route path="/legalnotice" component={Impressum} />
                   <Route path="/farmer" component={Farmer} />
+                  <Route path="/jobs" component={Join} />
                   <Route path="/tos" component={ToS} />
                   <Route path="*" component={PageError} />
                 </Switch>

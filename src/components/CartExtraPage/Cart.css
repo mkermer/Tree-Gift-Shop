@@ -2,6 +2,8 @@
   margin: 0 auto;
   padding: 50px;
   background-color: #e9ecef;
+  display: block;
+  height: 100%;
 }
 
 .cart-banner {

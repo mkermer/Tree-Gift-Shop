@@ -91,23 +91,30 @@ function Navigation() {
               </Form>
             </div>
           </Collapse>
+          <div className="icons">
           <Button
             variant="light"
-            className="icons"
+            
             onClick={() => setOpen(!open)}
             aria-controls="search"
             aria-expanded={open}
           >
             <Search size={25} />
           </Button>
-          <OverlayNav />
+          </div>
+          <div className="icons">
+            <OverlayNav />
+          </div>
+          
+          <div className="icons">
           <HashLink onClick={showSidebar}>
-            <Button variant="light" className="icons">
+            <Button variant="light" >
               <Basket3 size={25} />
               <span id="cart-length">{cart.length}</span>
               {/* <TreeFill size={25} className="TreeBasket"/> */}
             </Button>
           </HashLink>
+          </div>
           <div className={sidebar ? "cart-menu active" : "cart-menu"}>
             <Cartt />
           </div>

@@ -30,15 +30,12 @@ function Farmer(){
                   id="pic"
                   alt="tree" 
                 />
-                <div className="shadow"></div>
+                <div className="Treeshadow"></div>
                 <Card.Body>
-                  <Card.Title> {obj.tree_name}</Card.Title>
-                  <Card.Text>
-                    <h3>
-                      CO<sub>2</sub>: -{obj.co2}kg
-                    </h3>
-                    <h2>{obj.country}</h2>
-                  </Card.Text>
+                <Card.Title> <h2>{obj.tree_name}</h2></Card.Title>
+                <Card.Text>
+                  CO<sub>2</sub>: -{obj.co2}kg
+                </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -81,13 +78,12 @@ function Farmer(){
             <Row>
               <ShowSelect/>
             </Row>
-            <Row>
+            <Row className="centeredContent">
               <ListTrees />
             </Row>
           </Container>
           <h3 className="center"> Fill out this form </h3>
           <FarmerContact /> 
-           
 
 
         </div>

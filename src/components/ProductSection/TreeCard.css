@@ -1,6 +1,6 @@
 .TreeCard {
   border-radius: 25px;
-  margin: 20px;
+  /* margin: 20px; */ 
   box-shadow: 2px 4px 14px -2px rgba(0, 0, 0, 0.15);
   text-align: center;
   transition: 0.3s ease;
@@ -18,24 +18,30 @@
 }
 
 .TreeCard #pic{
-  padding: 10px 30px 0 30px;
-  height: 400px;
+  padding: 30px 30px 0 30px;
+  height: 200px;
 }
 
 .opacity{
-  opacity: 0.4;
+  opacity: 0.3;
   position: absolute;
   z-index: -1;
-  height: 300px;
-  margin-top: 30px;
+  height: 150px;
+  /* margin-top: 200px; */
 }
 
-.shadow{
-  background-color: rgb(226, 225, 225);
+.CardImages{
+  display: flex;
+  justify-content: center;
+}
+
+.Treeshadow{
+  background-color: rgb(219, 219, 219);
   border-radius: 60% ;
-  width: 60%;
-  height: 1%;
-  align-self: center;
+  width: 40%;
+  height: 3px;
+  margin: 0 auto;
+  box-shadow: 2px -1px 5px 2px rgba(0, 0, 0, 0.2);
 }
 /* .parent {
   text-align: center;
@@ -91,3 +97,16 @@
   outline: 0;
 
 } */
+
+@media (min-width:992px) and (max-width:1199.98px){
+  .TreeCard{
+        width:280px;
+    }
+}
+
+@media (max-width:767.98px){
+  .TreeCard{
+      margin-left: 60px;
+      width: 360px;
+    }
+}
