@@ -19,11 +19,15 @@ console.log(formEmail)
     axios({
       method: "POST",
       url: "http://localhost:3002/send",
-      data: formName
+      data: {
+        name: formName,
+        lastname: lastFormName,
+        email: formEmail,
+        message: formMessage,
+      }
     }).then((response) => {
       if (response.data.status === 'success') {
         alert("Message Sent.");
-        this.resetForm()
       } else if (response.data.status === 'fail') {
         console.log(response.data.status)
         alert("Message failed to send.")
@@ -33,7 +37,6 @@ console.log(formEmail)
     let form = document.getElementById("contactForm");
     form.reset();
   };
-
 
 
   return (
