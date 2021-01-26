@@ -19,8 +19,7 @@ function AccordionLog() {
           </Card.Header>
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-              {" "}
-              <FormLogin />{" "}
+              <FormLogin />
             </Card.Body>
           </Accordion.Collapse>
         </Card>
@@ -32,8 +31,7 @@ function AccordionLog() {
           </Card.Header>
           <Accordion.Collapse eventKey="1">
             <Card.Body>
-              {" "}
-              <FormSignUp />{" "}
+              <FormSignUp />
             </Card.Body>
           </Accordion.Collapse>
         </Card>
