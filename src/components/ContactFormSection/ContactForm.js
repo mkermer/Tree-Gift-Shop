@@ -3,23 +3,46 @@ import { Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ContactModal from "./ContactModal";
 
+import axios from 'axios';
+
 function ContactForm() {
   const [modalShow, setModalShow] = useState(false);
+  const [formName, setFormName] = useState('')
+  const [lastFormName, setFormLastName] = useState('')
+  const [formEmail, setFormEmail] = useState('')
+  const [formMessage, setFormMessage] = useState('')
+
+console.log(formEmail)
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    axios({
+      method: "POST",
+      url: "http://localhost:3002/send",
+      data: formName
+    }).then((response) => {
+      if (response.data.status === 'success') {
+        alert("Message Sent.");
+        this.resetForm()
+      } else if (response.data.status === 'fail') {
+        console.log(response.data.status)
+        alert("Message failed to send.")
+      }
+    })
     setModalShow(!modalShow);
     let form = document.getElementById("contactForm");
     form.reset();
   };
 
+
+
   return (
-    <Form onSubmit={handleSubmit} id="contactForm">
+    <Form onSubmit={handleSubmit} id="contactForm" method="POST">
       <Row>
         <Col>
           <Form.Group controlId="validationCustom01">
             <Form.Label>Your First Name</Form.Label>
-            <Form.Control required type="text" placeholder="Jane" />
+            <Form.Control required type="text" placeholder="Jane" onChange={(e) => setFormName(e.target.value)} />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               What's your First Name?
@@ -29,7 +52,7 @@ function ContactForm() {
         <Col>
           <Form.Group controlId="validationCustom02">
             <Form.Label>Your Last Name</Form.Label>
-            <Form.Control required type="text" placeholder="Doe" />
+            <Form.Control required type="text" placeholder="Doe" onChange={(e) => setFormLastName(e.target.value)}/>
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               What's your Last Name?
@@ -45,6 +68,7 @@ function ContactForm() {
               required
               type="email"
               placeholder="jane.doe@mail.com"
+              onChange={(e) => setFormEmail(e.target.value)}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
@@ -61,6 +85,7 @@ function ContactForm() {
               required
               as="textarea"
               placeholder="What's up?"
+              onChange={(e) => setFormMessage(e.target.value)}
               rows={3}
             />
             <Form.Control.Feedback>Great!</Form.Control.Feedback>
