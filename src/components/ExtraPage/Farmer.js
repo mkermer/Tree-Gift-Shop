@@ -17,8 +17,6 @@ function Farmer(){
 
   let cards = document.getElementsByClassName('FarmerTreeCard');
 
-  console.log(cards)
-
   // if(cards) {
   //   cards.addEventListener('click', function (){
   //   cards.forEach(card => card.classList.remove('active'));
@@ -73,7 +71,7 @@ function Farmer(){
           );
         } else {
           return <></>
-        };
+        }
       };
 
   

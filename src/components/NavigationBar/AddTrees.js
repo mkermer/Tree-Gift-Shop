@@ -1,12 +1,15 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
+import {
+  Jumbotron, Container, Row, Col,
+} from 'react-bootstrap';
 import Button from "react-bootstrap/Button";
 import { useContext } from "react";
 import { LoginContext } from "../../LoginContext";
 import { ProductContext } from "../../ProductContext";
 import "./AddTrees.css";
 import { HashLink } from 'react-router-hash-link';
-
+// import { ReactComponent as BgImg } from '../../trees-illustrtion/tree-illu-19.svg';
 export default function AddTrees() {
   const { getEmail } = useContext(LoginContext);
   const {
@@ -36,39 +39,49 @@ export default function AddTrees() {
   //============Add a tree==============//
 
   return (
-    <div class ="form-group" >
+       
+      <div justify-content-md-center>
+      <h2 id="AddTreeHeader">Add a Tree </h2>
+        <div class ="form-group" >
+        < Container lg={6} md={4}>
+              
       <Form onSubmit={addTree} id="addTreeForm">
         <Form.Group>
-          <Form.Control
+          <Form.Control 
             type="text"
             placeholder="Tree name"
             onChange={(e) => {
               setTreeName(e.target.value);
             }}
+            required
           />
           <br />
           <Form.Control
             type="text"
-            placeholder="Tree description"
+            placeholder="Tree Description"
             onChange={(e) => {
               setTreeDesc(e.target.value);
             }}
+            required
           />
           <br />
           <Form.Control
             type="text"
-            placeholder="Tree image"
+            placeholder="Image"
             onChange={(e) => {
               setTreeImg(e.target.value);
             }}
+            required
           />
           <br />
           <Form.Control
+            required
             type="number"
             placeholder="Price"
             onChange={(e) => {
               setPrice(e.target.value);
             }}
+            required
           />
           <br />
           <Form.Control
@@ -77,24 +90,34 @@ export default function AddTrees() {
             onChange={(e) => {
               setCountry(e.target.value);
             }}
+            required
           />
           <br />
           <Form.Control
             type="number"
-            placeholder="Co2"
+            placeholder="CO2*"
             onChange={(e) => {
               setCo2(e.target.value);
             }}
+            required
           />
+          
         </Form.Group>
-        <Button type="submit" class="btn btn-primary" >
+        <Button type="submit" class="tree-button"  >
           {" "}
-          Submit{" "}
+          Add{" "}
 
         </Button>
         
-      </Form>
+        </Form>
+         
+         </Container>
       {}
+      
     </div>
+    
+    </div>
+    
+    
   );
 }

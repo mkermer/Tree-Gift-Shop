@@ -1,0 +1,13 @@
+.check {
+    padding: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 7px -1px rgba(0, 0, 0, 0.15);
+}
+
+.check h1{
+    font-size:48px;
+    text-align: center;
+}
+

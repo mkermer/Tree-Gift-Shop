@@ -3,6 +3,10 @@
 
 $body-bg: #dad7cd;
 
+body{
+    overflow-x: hidden;
+}
+
 .App {
     margin-top: 50px;
 }
@@ -42,10 +46,11 @@ h3 {
 }
 
 h4{
-    font-size: 48px;
+    font-size: 32px;
     margin-top: 72px;
     margin-bottom: 48px;
     text-align: center; 
+    text-transform: uppercase;
 }
 
 h5{

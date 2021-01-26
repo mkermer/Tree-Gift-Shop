@@ -1,12 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import FaqSection from './FaqSection';
 import { Container, Row, Col } from "react-bootstrap";
 import { ReactComponent as Planting } from "../../illustrations/undraw_environment_iaus.svg";
 
 
-class InfoSection extends Component {
-
-    render() {
+function InfoSection() {
         return (
             <Container>
                 <Row>
@@ -37,7 +35,6 @@ class InfoSection extends Component {
                 </Row>
             </Container>
         );
-    }
-
 }
+
 export default InfoSection;

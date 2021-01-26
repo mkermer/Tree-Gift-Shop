@@ -1,21 +1,25 @@
 import {React, useEffect, useContext, useState} from "react";
-
+import axios from 'axios'
 import { withRouter } from "react-router-dom";
 import {CardCvcElement, CardExpiryElement,CardNumberElement, CardElement} from '@stripe/react-stripe-js'
 import {ProductContext} from '../../ProductContext'
 import {CartContext} from '../../CartContext'
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import './CheckOut.css';
 
 
 function Checkout() {
   const {Show} = useContext(ProductContext)
-  const {total, getTotal, cart, getCart} = useContext(CartContext)
+  const {total, getTotal, cart, getCart, paymentComplete, setPaymentComplete} = useContext(CartContext)
+
+getTotal();
 
   const cardElement = document.getElementById('cardElement')
-  const checkoutButton = document.getElementById('checkout-button')
-
+  
+  const cardElementOptions = {
+    hidePostalCode: true
+  }
 
 useEffect(() => {
     setTimeout(() => {
@@ -23,35 +27,38 @@ useEffect(() => {
     }, 400);
   }, []);
 
-getTotal();
 
-const handleSubmit = (e) => {
-  e.preventDefault()
-  if(cardElement.className === 'StripeElement StripeElement--complete') {
-    alert('proceed')
-  } else {
-    alert('incomplete')
-  }
+
+
+const handleFormSubmit = ev => {
+  ev.preventDefault();
+
+  axios.post('https://treeduce-server.herokuapp.com/payment', {
+  amount: total * 100,
+}).then((res) => {
+  console.log(res)
+})
+
 }
 
   return (
     <div className='check'>
-    {Show()}
-    <h2>Complete purchase</h2>
-    <div className='cartCheckout'>
-      <h2>Summary</h2>
-        {cart.map((item) => (
+      {Show()}
+      <h1>Complete purchase</h1>
+        <div className='cartCheckout'>
+          <h2>Summary</h2>
+          {cart.map((item) => (
           <div className="items-checkout">
             <span>{item.tree_name} x {item.count} - </span>
-            <span> ${(item.price * item.count).toFixed(2)} </span>
+            <span> ${parseFloat(item.price * item.count).toFixed(2)} </span>
           </div>
-        ))}
-        <h2>Total:</h2>
-            <span>${parseFloat(total).toFixed(2)}</span>
-      </div>
+          ))}
+         <h2>Total:</h2>
+          <span>${parseFloat(total).toFixed(2)}</span>
+        </div>
     <span>Enter your personal data and valid card details to complete the purchase.</span>
     <div className="checkoutForm">
-      <Form onSubmit={handleSubmit} id="contactForm">
+      <Form onSubmit={handleFormSubmit} id="contactForm">
       <Row>
         <Col>
           <Form.Group controlId="validationCustom01">
@@ -94,10 +101,10 @@ const handleSubmit = (e) => {
         <Col>
           <Form.Group controlId='formGroupEmail'>
           <Form.Label>Card details</Form.Label>
-            <CardElement id="cardElement" />
+            <CardElement id="cardElement" options={cardElementOptions}/>
           </Form.Group>
         </Col>
-      </Row>
+      </Row> 
       <Form.Group controlId="validationCustom04">
         <Form.Check
           required
@@ -110,7 +117,7 @@ const handleSubmit = (e) => {
         />
       </Form.Group>
 
-      <Button variant="primary" type="submit" id='checkout-button'>
+      <Button variant="primary" type="submit" id='pay-button'>
         Pay ${parseFloat(total).toFixed(2)}
       </Button>
     </Form>

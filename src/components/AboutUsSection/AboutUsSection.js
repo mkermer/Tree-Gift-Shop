@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ReactComponent as Plattform } from '../../illustrations/undraw_data_trends_b0wg.svg';
 import Adrian from '../../illustrations/undraw_team_ih79_treeduce_3-01.svg';
@@ -6,15 +6,12 @@ import Yiulia from '../../illustrations/undraw_team_ih79_treeduce_3-02.svg';
 import Morgane from '../../illustrations/undraw_team_ih79_treeduce_3-04.svg';
 import Johanna from '../../illustrations/undraw_team_ih79_treeduce_3-03.svg';
 
-import {
-  Card, CardBody, CardTitle, CardText, CardImg,
-} from 'reactstrap';
-import MissionJumbotron from './MissionJumbotron';
-import './AboutUsSection.css';
+import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
+import MissionJumbotron from "./MissionJumbotron";
+import "./AboutUsSection.css";
 
 
-export class AboutUs extends Component {
-  render() {
+function AboutUs() {
     return (
       <div>
         <Container>
@@ -48,7 +45,7 @@ export class AboutUs extends Component {
               <h4>Our Team</h4>
             </Col>
             <Col lg={3} md={6} sm={6}>
-              <Card>
+              <Card id="TeamMembersCard">
                 <CardBody>
                   <CardImg src={Adrian} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Adrian</CardTitle>
@@ -57,7 +54,7 @@ export class AboutUs extends Component {
               </Card>
             </Col>
             <Col lg={3} md={6} sm={6}>
-              <Card>
+              <Card id="TeamMembersCard">
                 <CardBody>
                   <CardImg src={Yiulia} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Yuliya</CardTitle>
@@ -66,7 +63,7 @@ export class AboutUs extends Component {
               </Card>
             </Col>
             <Col lg={3} md={6} sm={6}>
-              <Card>
+              <Card id="TeamMembersCard">
                 <CardBody>
                   <CardImg src={Morgane} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Morgane</CardTitle>
@@ -75,12 +72,12 @@ export class AboutUs extends Component {
               </Card>
             </Col>
             <Col lg={3} md={6} sm={6}>
-              <Card>
+              <Card id="TeamMembersCard">
                 <CardBody>
                   <CardImg src={Johanna} id="picTeam" alt="tree" />
                   <CardTitle tag="h5">Johanna</CardTitle>
 
-                  <div id="faq" />
+                  
 
                   <CardText>hdhdh</CardText>
                 </CardBody>
@@ -89,11 +86,11 @@ export class AboutUs extends Component {
           </Row>
         </Container>
 
-        <div id="contact" />
+        
 
       </div>
     );
-  }
-}
+  
+};
 
 export default AboutUs;

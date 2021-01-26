@@ -54,7 +54,7 @@ function Cartt(props) {
                 
             </div>
 
-            <>
+            <div className="Liste">
                 {cart.map((item) => (
                     <>
                         <ListGroup className="cd-cart-list">
@@ -103,7 +103,7 @@ function Cartt(props) {
                     </>
                 )
                 )}
-            </>
+            </div>
             <div className="total">
                 {/* {showMessage(cart)} */}
                 <div id="total-sum">

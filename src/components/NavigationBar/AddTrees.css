@@ -6,35 +6,48 @@
 .stop-container h2 {
     padding-bottom: 40px;
 }
-.addTreeForm {
-    display: block;
-    
+
+#AddTreeHeader {
+text-align:center;
+margin-top: 10%;
+
 }
 
-div.form
+#addTreeForm
 {
-    display: block;
-    text-align: center;
-    
-}
-.form-group
-{
-    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
     margin-top: 5%;
-    margin-left: 15%;
-    margin-right:15%;
-    width: 70%;;
-    text-align: center;
-    margin-bottom : 5%;
-    
-  
+    background-image: url('../../trees-illustrtion/tree-illu-19.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+	border: 5px none;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 50px 30px;
+	box-sizing: border-box;
+	margin: 10 10%;
+
     
 }
 
-.[type=text] {
-  width: 100%;
-  padding: 1px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  
+.tree-button {
+  display: inline-block;
+  text-align: center;
+  width:40%;
+  margin-top:10px;
+  border: 5px none;
+ border:0.16em solid #FFFFFF;
+ margin:0 0.3em 0.3em 0;
+
 }
+
+.BgImg {
+ padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+  
+
+    
