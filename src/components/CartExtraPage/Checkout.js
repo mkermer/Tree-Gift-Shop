@@ -59,8 +59,6 @@ function Checkout() {
       }
     );
 
-    console.log(response);
-
     const paymentMethodReq = await stripe.createPaymentMethod({
       type: "card",
       card: cardElement,
