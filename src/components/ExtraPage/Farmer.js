@@ -44,13 +44,10 @@ function Farmer(){
                 />
                 <div className="Treeshadow"></div>
                 <Card.Body>
-                  <Card.Title> {obj.tree_name}</Card.Title>
-                  <Card.Text>
-                    <h3>
-                      CO<sub>2</sub>: -{obj.co2}kg
-                    </h3>
-                    <h2>{obj.country}</h2>
-                  </Card.Text>
+                <Card.Title> <h2>{obj.tree_name}</h2></Card.Title>
+                <Card.Text>
+                  CO<sub>2</sub>: -{obj.co2}kg
+                </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
