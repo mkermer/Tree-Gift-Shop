@@ -1,21 +1,20 @@
 import React, { useEffect, useContext } from "react";
 import { Jumbotron, Container, Row, Col, Button } from "react-bootstrap";
-import { HashLink } from "react-router-hash-link";
 import {ProductContext} from '../../ProductContext'
+import {HashLink} from 'react-router-hash-link'
 import { ReactComponent as IntroImg } from "../../illustrations/undraw_the_world_is_mine_nb0e.svg";
 import "./Home.css";
 
 function HeroSection() {
-const {Show} = useContext(ProductContext)
+// const {Show} = useContext(ProductContext)
 
-useEffect(() => {
-    Show()
-}, [])
+// useEffect(() => {
+//     Show()
+// }, [])
 
     return (
         <div>
             <Jumbotron fluid className= "hero">
-                    {Show()}
                     <Container className="slogan">
                         <Row> 
                             
@@ -26,7 +25,7 @@ useEffect(() => {
                                     
                                 <h3 className="text2">Do you consider to buy a gift to your beloved one to save the world? </h3>
 
-                                <Button> Get one now</Button>
+                                <Button as={HashLink} smooth to='/#products'> Get one now</Button>
                             </Col>
                             <Col lg={6} md={8} >
                             <IntroImg/>

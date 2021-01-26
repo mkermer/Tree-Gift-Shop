@@ -9,7 +9,7 @@ import { LoginContext } from "../../LoginContext";
 import { CartContext } from "../../CartContext";
 
 function TreeCard(props) {
-  const [open, setOpen] = useState(false);
+  const [open] = useState(false);
   const {tree} = useContext(ProductContext)
   const {getEmail} = useContext(LoginContext)
   const {openSidebar} = useContext(CartContext)
@@ -23,9 +23,10 @@ function TreeCard(props) {
      return tree.map((obj) => {
     return (
       <>
+
         <Col lg={4} md={6} sm ={12} xs={12} key={obj.tree_name}>
           <Card className="TreeCard">
-            
+
             <Card.Img
               variant="top"
               src={obj.tree_img}

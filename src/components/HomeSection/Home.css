@@ -52,6 +52,10 @@
   text-decoration: none;
 } */ 
 
+.slogan.container {
+  margin-top: 100px;
+}
+
 .slogan h1 {
   line-height: 1.2;
   font-size: 80px;
@@ -73,6 +77,7 @@
 }
 
 .hero{
+  height: 100vh;
    margin-bottom: 160px;
 }
 
