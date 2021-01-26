@@ -29,27 +29,31 @@ function OverlayNav() {
   );
 
   const NotLogged = () => (
-    <OverlayTrigger
+      <OverlayTrigger
       trigger="click"
       placement="bottom"
       overlay={notLoggedPopover}
     >
-      <Button variant="light" className="icons">
-        <PersonCircle size={25} />
-      </Button>
+      
+        <Button variant="light" >
+          <PersonCircle size={25} />
+        </Button>
+      
+      
     </OverlayTrigger>
   );
 
   const Logged = () => (
-    <OverlayTrigger
+       <OverlayTrigger
       trigger="click"
       placement="bottom"
       overlay={loggedInPopover}
     >
-      <Button variant="light" className="icons">
+      <Button variant="light" >
         <PersonCircle size={25} />
       </Button>
     </OverlayTrigger>
+   
   );
 
   const Check = () => {

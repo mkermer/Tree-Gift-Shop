@@ -42,7 +42,7 @@ function Farmer(){
                   id="pic"
                   alt="tree" 
                 />
-                <div className="shadow"></div>
+                <div className="Treeshadow"></div>
                 <Card.Body>
                   <Card.Title> {obj.tree_name}</Card.Title>
                   <Card.Text>
@@ -93,13 +93,12 @@ function Farmer(){
             <Row>
               <ShowSelect/>
             </Row>
-            <Row>
+            <Row className="centeredContent">
               <ListTrees />
             </Row>
           </Container>
           <h3 className="center"> Fill out this form </h3>
           <FarmerContact /> 
-           
 
 
         </div>

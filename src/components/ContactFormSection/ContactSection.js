@@ -10,10 +10,10 @@ function ContactSection() {
             <Container>
                 <Row>
 
-                    <Col lg={{ span: 6, offset: 3 }} md={{ span: 8, offset: 2 }} sm={12} xs={{ span: 10, offset: 1 }}>
+                    <Col lg={{ span: 8, offset: 2 }} md={{ span: 10, offset: 1 }} sm={12} xs={12}>
                         <Contact />
                     </Col>
-                    <Col lg={{ span: 6, offset: 3 }} md={{ span: 8, offset: 2 }} sm={12} xs={{ span: 10, offset: 1 }}>
+                    <Col lg={{ span: 8, offset: 2 }} md={{ span: 10, offset: 1 }} sm={12} xs={12}>
 
                     <h4>Contact Us</h4>
                      <ContactForm />

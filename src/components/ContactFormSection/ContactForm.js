@@ -86,7 +86,7 @@ function ContactForm() {
         />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button id="sent-btn" variant="primary" type="submit">
         Send
       </Button>
       <div id="contact" />
