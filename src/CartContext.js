@@ -1,6 +1,4 @@
 import React, { useState, createContext, useContext } from "react";
-import { Link } from "react-router-dom";
-
 import Axios from "axios";
 import { LoginContext } from "./LoginContext";
 import ls from "local-storage";
@@ -11,19 +9,26 @@ export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState([0]);
   const [sidebar, setSidebar] = useState(false);
-  const [paymentComplete, setPaymentComplete] = useState(false)
+  const [orders, setOrders] = useState([])
 
   const showSidebar = () => setSidebar(!sidebar);
   const openSidebar = () => setSidebar(true);
 
   //============Cart functions==============//
 
+  const placeOrder = () => {
+    Axios.post("https://treeduce-server.herokuapp.com/order", {
+      cart: JSON.stringify(cart),
+      username: getEmail(),
+    })
+  }
+
+
   const saveCart = () => {
     Axios.post("https://treeduce-server.herokuapp.com/cart", {
       cart: JSON.stringify(cart),
       username: getEmail(),
     });
-    // sessionStorage.setItem("cart", JSON.stringify(cart));
     ls.set("cart", JSON.stringify(cart));
   };
 
@@ -36,6 +41,16 @@ export const CartProvider = (props) => {
     } else {
       alert(`${e.tree_name} is already in your cart.`);
     }
+  }
+
+  const getOrders = () => {
+    Axios.post("https://treeduce-server.herokuapp.com/getcart", {
+      username: getEmail(),
+    }).then((response) => {
+      if(response.data.length > 0){
+        setOrders(JSON.parse(response.data[0].placedOrders))
+      }
+    })
   }
 
   const getCart = () => {
@@ -117,7 +132,10 @@ export const CartProvider = (props) => {
     <CartContext.Provider
       value={{
         cart,
+        orders,
         reduceCount,
+        placeOrder,
+        getOrders,
         increaseCount,
         total,
         saveCart,
@@ -133,8 +151,6 @@ export const CartProvider = (props) => {
         sum,
         showMessage,
         resetCart,
-        paymentComplete,
-        setPaymentComplete,
       }}
     >
       {props.children}

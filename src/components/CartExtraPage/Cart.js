@@ -19,7 +19,7 @@ function Cart(props) {
     showMessage,
     resetCart,
   } = useContext(CartContext);
-
+  const amount = total * 100;
   useEffect(() => {
     setTimeout(() => {
       getCart();
@@ -30,6 +30,7 @@ function Cart(props) {
     setTimeout(() => {
       saveCart();
     }, 2000);
+    console.log(amount);
   }, [total]);
 
   getTotal();
@@ -45,13 +46,12 @@ function Cart(props) {
       </div>
       <div className="items-cart-container">
         {cart.map((item) => (
- <div className="item" key={item.tree_id}>
+          <div className="item" key={item.tree_id}>
             <img src={item.tree_img} alt={item.name} width="50px" />
             <h3>{item.tree_name}</h3>
             <span>{item.country}</span>
             <h2>$ {(item.price * item.count).toFixed(2)} </h2>
             <button
-
               className="item-button-remove"
               value={item.id}
               onClick={() => {

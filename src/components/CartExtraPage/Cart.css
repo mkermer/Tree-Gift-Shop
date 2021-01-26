@@ -21,6 +21,7 @@
 }
 
 #cart-close{
+  cursor: pointer;
   font-weight: 600;
   font-size: 24px;
   float: right;
@@ -200,6 +201,4 @@
   margin-bottom:0;
   align-items: flex-end;
 }
-#complete {
-  margin-top: 10%;
-}
+
