@@ -15,6 +15,7 @@ export const ProductProvider = (props) => {
   const [products, setProducts] = useState();
   const [farmerFilter, setFarmerFilter] = useState();
   const [selectedTree, setSelectedTree] = useState([]);
+  const [jobs, setJobs] = useState([])
 
   //============Confetti==============//
   const Show = () => {
@@ -31,6 +32,14 @@ export const ProductProvider = (props) => {
       }
     );
   };
+
+  const getJobs = () => {
+    Axios.post("https://treeduce-server.herokuapp.com/jobs").then(
+      (response) => {
+        setJobs(response.data)
+      })
+      
+  }
 
   //============Add a tree to database==============//
 
@@ -160,6 +169,8 @@ export const ProductProvider = (props) => {
         sortByPriceAscending,
         sortByPriceDescending,
         handleChange,
+        getJobs,
+        jobs,
       }}
     >
       {props.children}

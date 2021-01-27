@@ -7,17 +7,16 @@ import CollapseDescription from "./CollapseDiscription";
 import { ProductContext } from "../../ProductContext";
 import { LoginContext } from "../../LoginContext";
 import { CartContext } from "../../CartContext";
-// import '../NavigationBar/Navigation.css'
+
 
 function TreeCard(props) {
   const [open] = useState(false);
   const {tree} = useContext(ProductContext)
   const {getEmail} = useContext(LoginContext)
-  const {openSidebar} = useContext(CartContext)
+  const {openSidebar, bounce, setBounce} = useContext(CartContext)
   const add = props.add
-  const [bounce, setBounce] = useState(0);
 
-  
+  console.log(bounce)
 
   const ListTrees = (props) => {
     if(tree) {

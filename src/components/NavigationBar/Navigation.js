@@ -20,9 +20,9 @@ import logo from "../../Logo/Treeduce.png";
 function Navigation() {
   const { handleChange } = useContext(ProductContext);
   const [open, setOpen] = useState(false);
-  const { cart, sidebar, showSidebar } = useContext(CartContext);
+  const { cart, sidebar, showSidebar, bounce, setBounce} = useContext(CartContext);
   const [show, setShow] = useState(false);
-  const [bounce] = useState(0);
+  
   const showDropdown = (e) => {
     setShow(!show);
   };
@@ -106,17 +106,20 @@ function Navigation() {
           <div className="icons">
             <OverlayNav />
           </div>
-          
           <div className="icons">
           <HashLink onClick={showSidebar}>
             <Button variant="light" >
               <Basket3 size={25} />
               <span id="cart-length">{cart.length}</span>
-              {/* <TreeFill 
+              
+              
+              
+              
+              <TreeFill 
                 size={25} 
-                className="bounce swing-out-bottom-bck TreeBasket"
+                className="bounce TreeBasket"
                 bounce={bounce}
-              /> */}
+              />
             </Button>
           </HashLink>
           </div>
