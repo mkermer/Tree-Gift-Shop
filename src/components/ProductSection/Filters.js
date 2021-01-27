@@ -20,7 +20,7 @@ function Filters(props) {
       </Button>
 
       <Button onClick={props.co2Desc}>
-        CO<sub>2</sub><SortNumericUp />
+        CO<sub>2</sub> <SortNumericUp />
       </Button>
       </div>
 

@@ -112,7 +112,7 @@ export const ProductProvider = (props) => {
     products.forEach((obj) => {
       if (obj.country.toLowerCase() === e.target.value) {
         return sorted.push(obj);
-      } else if (e.target.value === "select") {
+      } else if (e.target.value === "default") {
         return (sorted = []);
       }
     });

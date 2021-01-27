@@ -29,10 +29,10 @@ function HelpfulLinks() {
 
         <Col md={6} className="links">
           <p>
-            <a href="#jobs">Join our team</a>
+            <Link to="/jobs">Join our team</Link>
           </p>
           <p>
-            <Link to="/impressum">Legal notice</Link>
+            <Link to="/legalnotice">Legal notice</Link>
           </p>
           <p>
             <Link to="/tos">Terms of Service</Link>

@@ -19,7 +19,7 @@ function Cart(props) {
     showMessage,
     resetCart,
   } = useContext(CartContext);
-
+  const amount = total * 100;
   useEffect(() => {
     setTimeout(() => {
       getCart();
@@ -30,6 +30,7 @@ function Cart(props) {
     setTimeout(() => {
       saveCart();
     }, 2000);
+    console.log(amount);
   }, [total]);
 
   getTotal();
@@ -54,7 +55,6 @@ function Cart(props) {
               {(item.price * item.count).toFixed(2)}
             </h2>
             <button
-
               className="item-button-remove"
               value={item.id}
               onClick={() => {

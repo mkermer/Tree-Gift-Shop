@@ -1,0 +1,12 @@
+.Join {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.Join a{
+    color: white;
+}
+
+.Join .JobDesc{
+    text-align: left !important;
+}

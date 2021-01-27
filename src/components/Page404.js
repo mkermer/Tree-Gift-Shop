@@ -11,7 +11,7 @@ function PageError() {
                     <Col lg={12} md={12} sx={12}> <Page404 /> </Col>
                     <Col>
                         <h1>Upps!</h1>
-                        <p>Something went wrong</p>
+                        <span>Something went wrong</span>
                     </Col>
                 </Row>
             </Container>

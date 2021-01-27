@@ -1,4 +1,4 @@
-import {React, useContext, useEffect, useState} from 'react';
+import {React, useContext, useEffect} from 'react';
 import {ProductContext} from '../../ProductContext'
 import FarmerContact from './FarmerContact';
 import FarmerFilter from './FarmerFilter'
@@ -8,30 +8,18 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import './Farmer.css';
 
 function Farmer(){
-    const {tree, getTree, farmerFilter, setFarmerFilter, addToSelectedTree} = useContext(ProductContext)
+    const {getTree, farmerFilter, addToSelectedTree} = useContext(ProductContext)
 
     useEffect(() => {
           getTree()
     }, [])
-
-
-  let cards = document.getElementsByClassName('FarmerTreeCard');
-
-  // if(cards) {
-  //   cards.addEventListener('click', function (){
-  //   cards.forEach(card => card.classList.remove('active'));
-  //   this.classList.add('active');
-  // })
-  // }
-
 
     const ListTrees = (props) => {
         if(farmerFilter) {
          return farmerFilter.map((obj) => {
         return (
           <>
-            <Col md={4} xs={12} key={obj.id} className="FarmerTreeCard" onClick={(e) => {
-                console.log(e.target.className)
+            <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => {
                 addToSelectedTree(obj)
                 }}>
               <Card className="TreeCard">
@@ -44,13 +32,10 @@ function Farmer(){
                 />
                 <div className="Treeshadow"></div>
                 <Card.Body>
-                  <Card.Title> {obj.tree_name}</Card.Title>
-                  <Card.Text>
-                    <h3>
-                      CO<sub>2</sub>: -{obj.co2}kg
-                    </h3>
-                    <h2>{obj.country}</h2>
-                  </Card.Text>
+                <Card.Title> <h2>{obj.tree_name}</h2></Card.Title>
+                <Card.Text>
+                  CO<sub>2</sub>: -{obj.co2}kg
+                </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
