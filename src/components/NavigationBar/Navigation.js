@@ -22,6 +22,7 @@ function Navigation() {
   const [open, setOpen] = useState(false);
   const { cart, sidebar, showSidebar, setBounce, bounce} = useContext(CartContext);
   const [show, setShow] = useState(false);
+  
   const showDropdown = (e) => {
     setShow(!show);
   };
@@ -76,7 +77,7 @@ function Navigation() {
               <Nav.Link as={NavHashLink} smooth to="/#contact">
                 Contact
               </Nav.Link>
-            </Nav>
+            </Nav>           
           </Navbar.Collapse>
           <Collapse in={open}>
             <div id="search">
@@ -105,11 +106,15 @@ function Navigation() {
           <div className="icons">
             <OverlayNav />
           </div>
-          
           <div className="icons">
             <Button variant="light" onClick={showSidebar}>
               <Basket3 size={25} id='cart-button' onAnimationEnd={() => setBounce(0)} bounce={bounce}/>
               <span id="cart-length">{cart.length}</span>
+              <TreeFill 
+                size={25} 
+                className="bounce TreeBasket"
+                bounce={bounce}
+              />
             </Button>
           </div>
           <div className={sidebar ? "cart-menu active" : "cart-menu"}>

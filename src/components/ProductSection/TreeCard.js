@@ -9,8 +9,10 @@ import { ProductContext } from "../../ProductContext";
 import { LoginContext } from "../../LoginContext";
 import { CartContext } from "../../CartContext";
 
+
 function TreeCard(props) {
   const [open] = useState(false);
+
   const { tree } = useContext(ProductContext);
   const { getEmail } = useContext(LoginContext);
   const { openSidebar, setBounce } = useContext(CartContext);
@@ -31,6 +33,7 @@ function TreeCard(props) {
                 aria-expanded={open}
               />
               <div className="Treeshadow"></div>
+
 
               <Card.Body>
                 <div className="CardImages">
@@ -67,6 +70,7 @@ function TreeCard(props) {
           </Col>
         );
       });
+
     } else {
       return null;
     }

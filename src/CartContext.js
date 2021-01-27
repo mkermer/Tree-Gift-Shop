@@ -11,6 +11,7 @@ export const CartProvider = (props) => {
   const [total, setTotal] = useState([0]);
   const [sidebar, setSidebar] = useState(false);
   const [orders, setOrders] = useState([])
+
   const [paymentComplete, setPaymentComplete] = useState(false)
   const [bounce, setBounce] = useState(0)
 
@@ -152,6 +153,7 @@ export const CartProvider = (props) => {
         setPaymentComplete,
         bounce,
         setBounce
+
       }}
     >
       {props.children}
