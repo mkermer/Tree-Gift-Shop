@@ -37,21 +37,26 @@
   margin-right: 10px;
 }
 
-/* .TreeBasket{
+.TreeBasket{
   margin: -20px 0 0 -40px;
   z-index: 1;
   position: absolute;
-} */
-/* [bounce='1'] */
-/* .bounce {
+} 
+
+#make-gift-button {
+  margin: 10px;
+}
+
+
+ .bounce[bounce='1']{
 	-webkit-animation: bounce 1.1s both;
 	        animation: bounce 1.1s both;
-} */
+}
 
-/* .swing-out-bottom-bck {
-	-webkit-animation: swing-out-bottom-bck 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) 2.3s both;
-	        animation: swing-out-bottom-bck 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) 2.3s both;
-} */
+.swing {
+	-webkit-animation: swing 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) 2.3s both;
+	        animation: swing 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) 2.3s both;
+}
 
 
 
@@ -160,7 +165,7 @@
   }
 }
 
- @-webkit-keyframes swing-out-bottom-bck {
+ @-webkit-keyframes swing {
   0% {
     -webkit-transform: rotateX(0);
             transform: rotateX(0);
@@ -176,7 +181,7 @@
     opacity: 0;
   }
 }
-@keyframes swing-out-bottom-bck {
+@keyframes swing {
   0% {
     -webkit-transform: rotateX(0);
             transform: rotateX(0);
@@ -192,3 +197,4 @@
     opacity: 0;
   }
 }
+
