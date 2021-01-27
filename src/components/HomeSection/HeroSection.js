@@ -9,13 +9,12 @@ function HeroSection() {
 const {Show} = useContext(ProductContext)
 
 useEffect(() => {
-    
+    Show()
 }, [])
 
     return (
         <div>
             <Jumbotron fluid className= "hero">
-                Show()
                     <Container className="slogan">
                         <Row> 
                             
@@ -37,7 +36,7 @@ useEffect(() => {
                     </Container>
                 </Jumbotron> 
         </div>
-    );
+    )
 }
 
-export default HeroSection;
+export default HeroSection

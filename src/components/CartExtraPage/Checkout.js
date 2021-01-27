@@ -3,9 +3,9 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { CartContext } from "../../CartContext";
-import {Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./CheckOut.css";
+import './CheckOut.css';
 
 function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -90,10 +90,10 @@ function Checkout() {
 
   return (
     
-    <div className= "CheckOut-Container">
-    <div className="cartCheckout">
-    <h1>Complete purchase</h1>
-       <h2>Summary</h2>
+    <div className="check">
+      <h2>Complete purchase</h2>
+      <div className="cartCheckout">
+        <h3>Summary</h3>
         {cart.map((item) => (
           <div className="items-checkout" key={item.tree_id}>
             <span>
@@ -104,18 +104,18 @@ function Checkout() {
         ))}
         <h3>Total:</h3>
         <span>${parseFloat(total).toFixed(2)}</span>
+       
       </div>
+       
       <span>
+     
         Enter your personal data and valid card details to complete the
         purchase.
       </span>
-      </Col>
-      </Row>
-      
       <div className="checkoutForm">
         <Form onSubmit={handleFormSubmit} id="contactForm" method="POST">
           <Row>
-            <Col >
+            <Col>
               <Form.Group controlId="validationCustom01">
                 <Form.Label>Your First Name</Form.Label>
                 <Form.Control required type="text" placeholder="Jane" />
@@ -125,7 +125,7 @@ function Checkout() {
                 </Form.Control.Feedback>
               </Form.Group>
             </Col>
-            <Col >
+            <Col>
               <Form.Group controlId="validationCustom02">
                 <Form.Label>Your Last Name</Form.Label>
                 <Form.Control required type="text" placeholder="Doe" />
@@ -160,12 +160,14 @@ function Checkout() {
                 <CardElement id="cardElement" options={cardElementOptions} />
               </Form.Group>
             </Col>
-          </Row>
+          </Row >
+          <div className="Note">
           <span>Auth. required: 4000 0027 6000 3184</span>
           <br />
           <span>No auth: 4242 4242 4242 4242</span>
           <br />
           <span>Insufficient funds: 4000008260003178</span>
+          </div>
           <Form.Group controlId="validationCustom04">
             <Form.Check
               required
@@ -189,13 +191,9 @@ function Checkout() {
               ? "Processing..."
               : "Pay $" + `${parseFloat(total).toFixed(2)}`}
           </Button>
-               
-       </Form>
-        </div>
-        
-        
-        </div>
-       </div>
+        </Form>
+      </div>
+    </div>
   );
 }
 

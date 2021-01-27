@@ -42,7 +42,7 @@ export default function AddTrees() {
        
       <div justify-content-md-center>
       <h2 id="AddTreeHeader">Add a Tree </h2>
-        <div class ="form-group" >
+        <div className ="form-group" >
         < Container lg={6} md={4}>
               
       <Form onSubmit={addTree} id="addTreeForm">
