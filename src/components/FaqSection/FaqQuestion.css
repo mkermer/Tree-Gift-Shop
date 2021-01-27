@@ -18,3 +18,58 @@
     text-align: left !important;
     color:black !important;
 }
+
+.rotateUp {
+	-webkit-animation: rotateUp 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotateUp 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.rotateDown {
+	-webkit-animation: rotateDown 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotateDown 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes rotateUp {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+  }
+  @keyframes rotateUp {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+  }
+  
+
+
+ @-webkit-keyframes rotateDown {
+    0% {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+  }
+  @keyframes rotateDown {
+    0% {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+  }
+  

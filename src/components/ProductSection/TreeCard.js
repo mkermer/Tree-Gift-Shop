@@ -7,6 +7,7 @@ import CollapseDescription from "./CollapseDiscription";
 import { ProductContext } from "../../ProductContext";
 import { LoginContext } from "../../LoginContext";
 import { CartContext } from "../../CartContext";
+// import '../NavigationBar/Navigation.css'
 
 function TreeCard(props) {
   const [open] = useState(false);
@@ -14,7 +15,7 @@ function TreeCard(props) {
   const {getEmail} = useContext(LoginContext)
   const {openSidebar} = useContext(CartContext)
   const add = props.add
-
+  const [bounce, setBounce] = useState(0);
 
   
 
@@ -52,15 +53,16 @@ function TreeCard(props) {
                 className="ButtonAdd"
                 id={obj.id}
                 onClick={() => {
+                  setBounce(1);
                   if(!getEmail()){
                     alert('You have to login to add items to cart.')
                   } else {
                   props.add(obj)
                   openSidebar()}}}
+                onAnimationEnd={() => setBounce(0)}
               >
                 Add
               </Button>
-
               <CollapseDescription tree={obj.tree_description} />
             </Card.Body>
           </Card>

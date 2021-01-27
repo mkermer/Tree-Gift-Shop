@@ -19,7 +19,7 @@ function HowToBuy() {
                         <Col lg={3} md={12}>
                             <Card className="HowToBuyCard">
                                 <CardBody>
-                                    <CardImg src={SelectCountry} id="picHowTo1" alt="country" />
+                                    <CardImg src={SelectCountry} id="picHowTo" alt="country" />
                                     <CardTitle tag="h5">Select the country</CardTitle>
                                     <CardText>Select the country and the Tree you want to plant</CardText>
                                 </CardBody>
@@ -28,7 +28,7 @@ function HowToBuy() {
                         <Col lg={3} md={12} >
                             <Card className="HowToBuyCard">
                                 <CardBody>
-                                    <CardImg src={FillForm} id="picHowTo1" alt="Contact" />
+                                    <CardImg src={FillForm} id="picHowTo" alt="Contact" />
                                     <CardTitle tag="h5">Fill in the Contact Form</CardTitle>
                                     <CardText>Leave us your contact data and one of our team members will contact you soon</CardText>
                                 </CardBody>
@@ -37,7 +37,7 @@ function HowToBuy() {
                         <Col lg={3} md={12}>
                             <Card className="HowToBuyCard">
                             <CardBody>
-                                    <CardImg src={PlantTree} id="picHowTo1" alt="Plant" />
+                                    <CardImg src={PlantTree} id="picHowTo" alt="Plant" />
                                     <CardTitle tag="h5">Plant the Tree</CardTitle>
                                     <CardText>After confirmation buy and plant the tree and send us the receipt or collect it from one of our centers </CardText>
                                 </CardBody>
@@ -46,7 +46,7 @@ function HowToBuy() {
                         <Col lg={3} md={12}>
                             <Card className="HowToBuyCard">
                                 <CardBody>
-                                    <CardImg src={CollectGift} id="picHowTo1" alt="Discount" />
+                                    <CardImg src={CollectGift} id="picHowTo" alt="Discount" />
                                     <CardTitle tag="h5">Collect your Gift</CardTitle>
                                     <CardText>Send us a Picture from your newly planted Tree and recieve a 10$ Gift Card </CardText>
                                 </CardBody>
