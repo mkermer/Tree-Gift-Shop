@@ -22,6 +22,7 @@ function Navigation() {
   const [open, setOpen] = useState(false);
   const { cart, sidebar, showSidebar } = useContext(CartContext);
   const [show, setShow] = useState(false);
+  const [bounce] = useState(0);
   const showDropdown = (e) => {
     setShow(!show);
   };
@@ -76,7 +77,7 @@ function Navigation() {
               <Nav.Link as={NavHashLink} smooth to="/#contact">
                 Contact
               </Nav.Link>
-            </Nav>
+            </Nav>           
           </Navbar.Collapse>
           <Collapse in={open}>
             <div id="search">
@@ -111,7 +112,11 @@ function Navigation() {
             <Button variant="light" >
               <Basket3 size={25} />
               <span id="cart-length">{cart.length}</span>
-              {/* <TreeFill size={25} className="TreeBasket"/> */}
+              {/* <TreeFill 
+                size={25} 
+                className="bounce swing-out-bottom-bck TreeBasket"
+                bounce={bounce}
+              /> */}
             </Button>
           </HashLink>
           </div>
