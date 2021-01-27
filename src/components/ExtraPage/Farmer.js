@@ -3,12 +3,14 @@ import {ProductContext} from '../../ProductContext'
 import FarmerContact from './FarmerContact';
 import FarmerFilter from './FarmerFilter'
 import FarmerHowTo from './FarmerHowTo';
-import { Container, Card, Col, Row } from 'react-bootstrap';
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import { Container, Card, Col, Row, Nav } from 'react-bootstrap';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 import './Farmer.css';
 
 function Farmer(){
-    const {getTree, farmerFilter, addToSelectedTree} = useContext(ProductContext)
+    const {getTree, farmerFilter, addToSelectedTree} = useContext(ProductContext);
+
+    const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 
     useEffect(() => {
           getTree()
@@ -22,22 +24,28 @@ function Farmer(){
             <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => {
                 addToSelectedTree(obj)
                 }}>
-              <Card className="TreeCard">
+              <Nav variant="pills" defaultActiveKey="/home" onSelect={handleSelect} className="TreeCard">
 
-                <Card.Img
-                  variant="top"
-                  src={obj.tree_img}
-                  id="pic"
-                  alt="tree" 
-                />
-                <div className="Treeshadow"></div>
-                <Card.Body>
-                <Card.Title> <h2>{obj.tree_name}</h2></Card.Title>
-                <Card.Text>
-                  CO<sub>2</sub>: -{obj.co2}kg
-                </Card.Text>
-                </Card.Body>
-              </Card>
+                <Nav.Item>
+                  <Nav.Link eventKey="link-1"> 
+                  
+                      <img variant="top"
+                        src={obj.tree_img}
+                        id="pic"
+                        alt="tree" />
+                      <div className="Treeshadow"></div>
+
+                      <h2>{obj.tree_name}</h2>
+
+                      <p>CO<sub>2</sub>: -{obj.co2}kg </p> 
+
+
+                 
+                    
+
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
             </Col>
           </>
         );
