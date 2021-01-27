@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { SortAlphaDown } from 'react-bootstrap-icons';
 import { SortNumericDown } from 'react-bootstrap-icons';
 import { SortNumericUp } from 'react-bootstrap-icons';
@@ -7,6 +7,18 @@ import Form from 'react-bootstrap/Form';
 import './Filter.css'
 
 function Filters(props) {
+
+  var [selectedCountry, setSelectedCountry] = useState("");
+
+  useEffect(() => {
+    props.selectCountry({
+      target: {
+        value: selectedCountry
+      }
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedCountry]);
+
   return (
     <div>
     <div className="filters">
@@ -26,8 +38,8 @@ function Filters(props) {
 
       <div>
         
-        <Form.Control as="select" name="countries" className="SelectCountry" onChange={props.selectCountry}>
-          <option className="hide" value="" disabled selected>Select a country</option>
+        <Form.Control as="select" name="countries" value={selectedCountry} className="SelectCountry" onChange={(e) => setSelectedCountry(e.target.value)}>
+          <option className="hide" value="" disabled>Select a country</option>
           <option value="all">Show all</option>
           <option value="guatemala">Guatemala</option>
           <option value="cameroon">Cameroon</option>

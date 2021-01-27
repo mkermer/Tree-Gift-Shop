@@ -5,6 +5,7 @@ import { PersonCircle } from "react-bootstrap-icons";
 import AccordionLog from "./AccordionLog";
 import { useContext } from "react";
 import { LoginContext } from "../../LoginContext";
+import {Link} from 'react-router-dom'
 
 function OverlayNav() {
   const { getToken, getName, getLastName, logout } = useContext(LoginContext);
@@ -22,6 +23,7 @@ function OverlayNav() {
   const loggedInPopover = (
     <Popover id="popover-basic">
       <Popover.Title as="p">Already logged in as <b>{getName()} {getLastName()}</b></Popover.Title>
+      <Button as={Link} to='/gift' id='make-gift-button'>Make a gift</Button>
       <Popover.Content>
         <button onClick={logout} className="btn btn-primary">Logout</button>
       </Popover.Content>

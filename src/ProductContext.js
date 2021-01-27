@@ -15,6 +15,9 @@ export const ProductProvider = (props) => {
   const [products, setProducts] = useState();
   const [farmerFilter, setFarmerFilter] = useState();
   const [selectedTree, setSelectedTree] = useState([]);
+  const [giftcardTrees, setGiftcardTrees] = useState([])
+  const [recipientName, setRecipientName] = useState('')
+  const [giftMessage, setGiftMessage] = useState('')
 
   //============Confetti==============//
   const Show = () => {
@@ -96,6 +99,10 @@ export const ProductProvider = (props) => {
 
   function handleCountryChange(e) {
     let sorted = [];
+    if (!products) {
+      return [];
+    }
+    
     products.forEach((obj) => {
       if (obj.country.toLowerCase() === e.target.value) {
         return sorted.push(obj);
@@ -119,13 +126,14 @@ export const ProductProvider = (props) => {
     setFarmerFilter(sorted)
   }
 
-
-
-
-
+   //============Farmer site - select a tree==============//
   function addToSelectedTree(e) {
       setSelectedTree({ ...e });
   }
+
+
+
+
 
   return (
     <ProductContext.Provider
@@ -160,6 +168,12 @@ export const ProductProvider = (props) => {
         sortByPriceAscending,
         sortByPriceDescending,
         handleChange,
+        setGiftcardTrees,
+        giftcardTrees,
+        recipientName,
+        setRecipientName,
+        giftMessage,
+        setGiftMessage,
       }}
     >
       {props.children}

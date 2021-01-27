@@ -38,3 +38,26 @@
   z-index: 1;
   position: absolute;
 } */
+
+#make-gift-button {
+  margin: 10px;
+}
+
+#cart-button[bounce='1']{
+  animation: bounce 1s 1
+}
+
+@keyframes bounce {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

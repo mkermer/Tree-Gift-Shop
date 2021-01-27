@@ -29,6 +29,7 @@ function ProductSection(props) {
    setTimeout(() => {
      getTree()
    }, 100);
+   // eslint-disable-next-line react-hooks/exhaustive-deps
  }, [])
       
 
@@ -63,9 +64,7 @@ function ProductSection(props) {
           />
         </Col>
       </Row>
-      <Row>
-        <TreeCard products={tree} add={addToCart} />
-      </Row>
+      <TreeCard products={tree} add={addToCart} />
     </Container>
   );
 }

@@ -4,21 +4,25 @@ import { LoginContext } from "./LoginContext";
 import ls from "local-storage";
 
 export const CartContext = createContext();
+
 export const CartProvider = (props) => {
   const { getEmail } = useContext(LoginContext);
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState([0]);
   const [sidebar, setSidebar] = useState(false);
   const [orders, setOrders] = useState([])
+  const [paymentComplete, setPaymentComplete] = useState(false)
+  const [bounce, setBounce] = useState(0)
 
   const showSidebar = () => setSidebar(!sidebar);
   const openSidebar = () => setSidebar(true);
 
   //============Cart functions==============//
-
   const placeOrder = () => {
+    getOrders()
+    const order = cart.concat(orders) 
     Axios.post("https://treeduce-server.herokuapp.com/order", {
-      cart: JSON.stringify(cart),
+      cart: JSON.stringify(order),
       username: getEmail(),
     })
   }
@@ -120,19 +124,13 @@ export const CartProvider = (props) => {
     }, 0);
   };
 
-  function showMessage(arr) {
-    return arr.length === 0 ? (
-      <div>No items here yet.</div>
-    ) : (
-      <p>You have {arr.length} items in your cart.</p>
-    );
-  }
 
   return (
     <CartContext.Provider
       value={{
         cart,
         orders,
+        setOrders,
         reduceCount,
         placeOrder,
         getOrders,
@@ -149,8 +147,11 @@ export const CartProvider = (props) => {
         addToCart,
         removeFromCart,
         sum,
-        showMessage,
         resetCart,
+        paymentComplete,
+        setPaymentComplete,
+        bounce,
+        setBounce
       }}
     >
       {props.children}

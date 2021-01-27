@@ -1,16 +1,10 @@
-import React, { useEffect, useContext } from "react";
+import React from "react";
 import { Jumbotron, Container, Row, Col, Button } from "react-bootstrap";
-import {ProductContext} from '../../ProductContext'
 import {HashLink} from 'react-router-hash-link'
 import { ReactComponent as IntroImg } from "../../illustrations/undraw_the_world_is_mine_nb0e.svg";
 import "./Home.css";
 
 function HeroSection() {
-// const {Show} = useContext(ProductContext)
-
-// useEffect(() => {
-//     Show()
-// }, [])
 
     return (
         <div>
