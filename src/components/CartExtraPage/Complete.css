@@ -1,4 +1,10 @@
 #complete {
   text-align: center;
   margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#payment-complete-button {
+  margin-top: 20px;
+  width: 150px;
 }

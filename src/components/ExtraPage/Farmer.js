@@ -12,6 +12,7 @@ function Farmer(){
 
     useEffect(() => {
           getTree()
+          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const ListTrees = (props) => {
@@ -43,7 +44,7 @@ function Farmer(){
         );
       });
         } else {
-          return <></>
+          return null
         }
       };
 
@@ -55,7 +56,7 @@ function Farmer(){
               <h3 className="centered"> Select a Tree:</h3>
           );
         } else {
-          return <></>
+          return null
         };
       };
 

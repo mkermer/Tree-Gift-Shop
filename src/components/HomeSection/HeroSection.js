@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React from "react";
 import { Jumbotron, Container, Row, Col, Button } from "react-bootstrap";
 import {HashLink} from 'react-router-hash-link'
 import { ReactComponent as IntroImg } from "../../illustrations/undraw_the_world_is_mine_nb0e.svg";

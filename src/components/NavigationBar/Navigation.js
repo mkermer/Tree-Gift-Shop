@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import Collapse from "react-bootstrap/Collapse";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Search, Basket3, TreeFill} from "react-bootstrap-icons";
+import { Search, Basket3 } from "react-bootstrap-icons";
 import { NavHashLink } from "react-router-hash-link";
 import { HashLink } from "react-router-hash-link";
 import { CartContext } from "../../CartContext";
@@ -20,7 +20,7 @@ import logo from "../../Logo/Treeduce.png";
 function Navigation() {
   const { handleChange } = useContext(ProductContext);
   const [open, setOpen] = useState(false);
-  const { cart, sidebar, showSidebar, bounce, setBounce} = useContext(CartContext);
+  const { cart, sidebar, showSidebar, setBounce, bounce} = useContext(CartContext);
   const [show, setShow] = useState(false);
   
   const showDropdown = (e) => {
@@ -107,21 +107,15 @@ function Navigation() {
             <OverlayNav />
           </div>
           <div className="icons">
-          <HashLink onClick={showSidebar}>
-            <Button variant="light" >
-              <Basket3 size={25} />
+            <Button variant="light" onClick={showSidebar}>
+              <Basket3 size={25} id='cart-button' onAnimationEnd={() => setBounce(0)} bounce={bounce}/>
               <span id="cart-length">{cart.length}</span>
-              
-              
-              
-              
               <TreeFill 
                 size={25} 
                 className="bounce TreeBasket"
                 bounce={bounce}
               />
             </Button>
-          </HashLink>
           </div>
           <div className={sidebar ? "cart-menu active" : "cart-menu"}>
             <Cartt />
