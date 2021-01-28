@@ -20,10 +20,11 @@ function Farmer() {
         return (
           <>
             <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => {
-              addToSelectedTree(obj)
-            }}>
-              <Card className="TreeCard">
-
+                addToSelectedTree(obj)
+                document.getElementById(index).setAttribute('class', 'asdd')
+                console.log(document.getElementById(index))
+                }}>
+              <Card className='TreeCard' id={index}>
                 <Card.Img
                   variant="top"
                   src={obj.tree_img}
