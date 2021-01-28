@@ -1,50 +1,26 @@
-.check h3 {
- box-sizing: border-box;
- /* box-sizing: border-box; */
- width: 50%;
- margin-top: 5%;
- border:5px none;
- border-radius: 5px;
- box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
- /* border:5px none;
- border-radius: 5px; */
- /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
- background-color: white;
+.stop-container {
+    margin: 100px;
+    margin-top: 8%;
 }
-
-
-.Note span {
-
- width: 80%;
- margin-top: 0 auto;
- background-repeat: no-repeat;
- position: relative;
-background-color: #c3cbdc;
-background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
-width: 100%;
-
-margin-top: 0 auto;
+.stop-container h2 {
+    padding-bottom: 40px;
+}
+#AddTreeHeader {
+text-align:center;
+margin-top: 10%;
+}
+#addTreeForm
+{
+margin: 0 auto;
+width: 80%;
+margin-top: 5%;
+background-image: url('../../trees-illustrtion/tree-illu-49.svg');
 background-repeat: no-repeat;
 background-position: right;
 border: 5px none;
-/* border: 5px none;
 border-radius: 5px;
 box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-padding: 20px 20px;
+padding: 50px 30px;
 box-sizing: border-box;
-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
-padding: 0px 20px;
-/* box-sizing: border-box; */
-margin: 50px auto 30px;
-position: relative;
+background-color: #c3cbdc;
 }
-
-.div
-{
-margin-bottom:10px;
-width: 40% !important;
-}
-
-
-    
-
