@@ -28,7 +28,6 @@ function Farmer(){
                 console.log(document.getElementById(index))
                 }}>
               <Card className='TreeCard' id={index}>
-
                 <Card.Img
                   variant="top"
                   src={obj.tree_img}
