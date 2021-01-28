@@ -172,7 +172,8 @@ function GiftTree() {
           </Button>
         </Form>
       </Container>
-      {generated ? <Pdf /> : null}
+      {/* {generated ? <Pdf /> : null} */}
+      {/* <Pdf /> */}
     </div>
   );
 }

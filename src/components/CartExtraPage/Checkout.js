@@ -17,6 +17,7 @@ function Checkout() {
     setCart,
     saveCart,
     placeOrder,
+    getOrders,
   } = useContext(CartContext);
 
   const stripe = useStripe();
@@ -25,6 +26,7 @@ function Checkout() {
 
   useEffect(() => {
     getTotal()
+    getOrders();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart])
 

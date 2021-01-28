@@ -1,0 +1,10 @@
+#certificate-container {
+  margin: 0 auto;
+  height: 60vh;
+  width: 50vw;
+  background-color: #f8f9fa;
+}
+
+#certificate-header {
+  text-align: center;
+}
