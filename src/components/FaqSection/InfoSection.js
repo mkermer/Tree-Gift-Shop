@@ -34,6 +34,6 @@ function InfoSection() {
                 </Row>
             </Container>
         );
-};
+}
 
 export default InfoSection;
