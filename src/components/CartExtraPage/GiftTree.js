@@ -119,54 +119,49 @@ function GiftTree() {
             </Row>
         <h3>Trees to give:</h3>
         <Row className="giftCenteredContent">
-              <ListGiftTrees />
-            </Row>
-            <Form id="gift-contactForm" onSubmit={elo}>
-      <Row>
-        <Col>
-          <Form.Group controlId="validationCustom01">
-            <Form.Label>Name of recipient</Form.Label>
-            <Form.Control required type="text" placeholder="Jane" onChange={(e) => setRecipientName(e.target.value) } />
-          </Form.Group>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Form.Group controlId="formGroupEmail">
-            <Form.Label>E-mail address</Form.Label>
-            <Form.Control
-              required
-              type="email"
-              placeholder="jane.doe@mail.com"
-            />
-          </Form.Group>
-        </Col>
-      </Row>
-       <Row>
-        <Col>
-          <Form.Group controlId="validationCustom03">
-            <Form.Label>Your Message</Form.Label>
-            <Form.Control
-              required
-              as="textarea"
-              placeholder="Let's save the planet together!"
-              rows={3}
-              onChange={(e) => setGiftMessage(e.target.value)}
-            />
-            <Form.Control.Feedback>Great!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Drop us a line!
-            </Form.Control.Feedback>
-          </Form.Group>
-        </Col>
-      </Row>
-      <Button variant="primary" type="submit" id='generate-gift-btn'>
-        Generate giftcard!
-      </Button>
-    </Form>
-        </Container>
-        </div>
-    )
+          <ListGiftTrees />
+        </Row>
+        <Form id="gift-contactForm" onSubmit={elo}>
+          <Row>
+            <Col>
+              <Form.Group controlId="validationCustom01">
+                <Form.Label>Name of recipient</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Jane"
+                  onChange={(e) => setRecipientName(e.target.value)}
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Form.Group controlId="validationCustom03">
+                <Form.Label>Your Message</Form.Label>
+                <Form.Control
+                  required
+                  as="textarea"
+                  placeholder="Let's save the planet together!"
+                  rows={3}
+                  onChange={(e) => setGiftMessage(e.target.value)}
+                />
+                <Form.Control.Feedback>Great!</Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">
+                  Drop us a line!
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+          </Row>
+          <Button variant="primary" type="submit" id="generate-gift-btn">
+            Generate giftcard!
+          </Button>
+        </Form>
+      </Container>
+      {/* {generated ? <Pdf /> : null} */}
+      {/* <Pdf /> */}
+    </div>
+  );
 }
 
 export default GiftTree
