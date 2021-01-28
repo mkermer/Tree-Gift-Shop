@@ -1,6 +1,23 @@
 .Join {
-    margin-top: 150px;
+    margin-bottom: 300px;
     text-align: center;
+}
+
+.Join h1{
+    margin: 230px 0;
+}
+
+.Join h2{
+    margin: 100px 0;
+}
+
+
+.Join .jumbotron{
+    margin-bottom: 150px;
+    background-image: url("../../illustrations/undraw_working_from_anywhere_ub67.svg");
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
 }
 
 .Join a{
@@ -32,3 +49,35 @@
 .Join .Email{
     width: 20% !important;
 }
+
+.Join .title{
+    width: 60% !important;
+    padding-left: 180px;
+}
+
+.Join .categ{
+    width: 15% !important;
+}
+
+.Join .loc{
+    width: 25% !important;
+}
+
+.Join .title, .categ, .loc{
+    text-align: left;
+}
+
+
+.Join .block{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Join .card-header{
+    background-repeat: no-repeat;
+    background-color:  #e9ecef;
+    background-size: 200px;
+
+}
+
+
