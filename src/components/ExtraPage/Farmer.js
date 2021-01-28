@@ -23,7 +23,7 @@ function Farmer(){
             <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => {
                 addToSelectedTree(obj)
                 }}>
-              <Card className="TreeCard">
+              <Card className="TreeCard" style={{}}>
 
                 <Card.Img
                   variant="top"
