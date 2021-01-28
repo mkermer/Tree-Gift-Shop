@@ -1,15 +1,12 @@
 #gift-tree-container {
-  margin-top: 10%;
+    margin-top: 10%;
 }
 
 #gift-tree-error {
-  margin-top: 10%;
+    margin-top: 10%;
 }
 
 .giftCenteredContent.row {
-  justify-content: center;
-}
-
-#giftTree-h3 {
-  text-align: center;
+    justify-content: center;
+    height: 800px;
 }
