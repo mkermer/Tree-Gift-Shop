@@ -56,7 +56,7 @@ function HowToBuy() {
                 </Container>
                 <div id='contact'></div>
             </div>
-        )
+        );
     
 }
 
