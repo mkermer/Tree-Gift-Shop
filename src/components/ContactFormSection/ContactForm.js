@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import {
-  Row, Col, Button, Form,
-} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import ContactModal from './ContactModal';
+import React, { useState } from "react";
+import { Row, Col, Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import ContactModal from "./ContactModal";
 
 import axios from 'axios';
 
@@ -36,7 +34,7 @@ console.log(formEmail)
       }
     })
     setModalShow(!modalShow);
-    const form = document.getElementById('contactForm');
+    let form = document.getElementById("contactForm");
     form.reset();
   };
 
@@ -103,13 +101,11 @@ console.log(formEmail)
       <Form.Group controlId="validationCustom04">
         <Form.Check
           required
-          label={(
+          label={
             <label>
-              I've read and accept the
-              {' '}
-              <Link to="/tos">Terms of Service</Link>
+              I've read and accept the <Link to="/tos">Terms of Service</Link>
             </label>
-          )}
+          }
           feedback="You must agree before submitting."
         />
       </Form.Group>
@@ -117,7 +113,7 @@ console.log(formEmail)
       <Button id="sent-btn" variant="primary" type="submit">
         Send
       </Button>
-      <div id="contact" />
+      <div id="contact"></div>
       <ContactModal show={modalShow} onHide={() => setModalShow(false)} />
     </Form>
   );
