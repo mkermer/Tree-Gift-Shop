@@ -1,9 +1,3 @@
-// import React from "react";
-// import "./Cart.css";
-// import { CartContext } from "../../CartContext";
-// import { useContext, useEffect } from "react";
-// import { Link, withRouter } from "react-router-dom";
-// import { Button } from "react-bootstrap";
 
 // function Cart(props) {
 //   const {
