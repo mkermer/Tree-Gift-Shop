@@ -1,4 +1,4 @@
-import {React, useContext, useEffect} from 'react';
+import {React, useContext, useEffect, useState} from 'react';
 import {ProductContext} from '../../ProductContext'
 import FarmerContact from './FarmerContact';
 import FarmerFilter from './FarmerFilter'
@@ -9,21 +9,25 @@ import './Farmer.css';
 
 function Farmer(){
     const {getTree, farmerFilter, addToSelectedTree} = useContext(ProductContext)
+    const [selected, setSelected] = useState()
 
     useEffect(() => {
           getTree()
           // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+
     const ListTrees = (props) => {
         if(farmerFilter) {
-         return farmerFilter.map((obj) => {
+         return farmerFilter.map((obj, index) => {
         return (
           <>
             <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => {
                 addToSelectedTree(obj)
+                document.getElementById(index).setAttribute('class', 'asd')
+                console.log(document.getElementById(index))
                 }}>
-              <Card className="TreeCard">
+              <Card className='TreeCard' id={index}>
 
                 <Card.Img
                   variant="top"
@@ -31,8 +35,10 @@ function Farmer(){
                   id="pic"
                   alt="tree" 
                 />
+
                 <div className="Treeshadow"></div>
                 <Card.Body>
+                
                 <Card.Title> <h2>{obj.tree_name}</h2></Card.Title>
                 <Card.Text>
                   CO<sub>2</sub>: -{obj.co2}kg
