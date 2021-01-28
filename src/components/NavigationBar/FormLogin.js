@@ -1,19 +1,17 @@
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import React, { useContext } from 'react';
-import { LoginContext } from '../../LoginContext';
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import React, { useContext } from "react";
+import { LoginContext } from "../../LoginContext";
 
 function FormLogin() {
-  const {
-    login, setUserName, setPassword, loginStatus,
-  } = useContext(LoginContext);
+  const {login, setUserName, setPassword, loginStatus} = useContext(LoginContext);
 
   return (
     <Form onSubmit={login}>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control
-          required
+        required
           type="email"
           placeholder="Enter email"
           onChange={(e) => {

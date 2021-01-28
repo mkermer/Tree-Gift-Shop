@@ -1,136 +1,122 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../CartContext";
 import { ProductContext } from "../../ProductContext";
-import { Container, Card, Col, Row, Button, Form } from "react-bootstrap";
-import "./GiftTree.css";
-import Pdf from "./Pdf";
+import { Container, Card, Col, Row, Button, Form  } from 'react-bootstrap';
+import './GiftTree.css'
 
 function GiftTree() {
-  const { getOrders, orders, setOrders } = useContext(CartContext);
-  const {
-    setGiftcardTrees,
-    giftcardTrees,
-    setRecipientName,
-    recipientName,
-    setGiftMessage,
-    giftMessage,
-  } = useContext(ProductContext);
-  const [generated, setGenerated] = useState(false);
+      const { getOrders, orders, setOrders} = useContext(CartContext);
+      const { setGiftcardTrees, giftcardTrees, setRecipientName, recipientName, setGiftMessage, giftMessage} = useContext(ProductContext);
+      const [generated, setGenerated] = useState(0)
 
-  useEffect(() => {
+
+
+ useEffect(() => {
     getOrders();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(generated);
+   const addToGiftcard = (e) => {
+       orders.forEach((item, index) => {
+           if(item.tree_id === e.tree_id) {
+               orders.splice(index, 1)
+           }
+       })
+       setOrders(orders)
+     setGiftcardTrees([...giftcardTrees, {...e}])
+   }
 
-  const addToGiftcard = (e) => {
-    orders.forEach((item, index) => {
-      if (item.tree_id === e.tree_id) {
-        orders.splice(index, 1);
-      }
-    });
-    setOrders(orders);
-    setGiftcardTrees([...giftcardTrees, { ...e }]);
-  };
 
-  const addToCustomersTrees = (e) => {
-    giftcardTrees.forEach((item, index) => {
-      if (item.tree_id === e.tree_id) {
-        giftcardTrees.splice(index, 1);
-      }
-    });
-    setGiftcardTrees(giftcardTrees);
-    setOrders([...orders, { ...e }]);
-  };
+   const addToCustomersTrees = (e) => {
+       giftcardTrees.forEach((item, index) => {
+           if(item.tree_id === e.tree_id) {
+               giftcardTrees.splice(index, 1)
+           }
+       })
+       setGiftcardTrees(giftcardTrees);
+       setOrders([...orders, {...e}])
+   }
 
-  //   if (!orders || orders.length < 1) {
-  //     return <div id='gift-tree-error'>
-  //     <h4>You don't have any trees to give :(</h4>
-  //         </div>
-  //   }
+//   if (!orders || orders.length < 1) {
+//     return <div id='gift-tree-error'>
+//     <h4>You don't have any trees to give :(</h4>
+//         </div>
+//   }
 
   const ListCustomersTrees = (props) => {
-    if (orders) {
-      return orders.map((obj) => {
+        if(orders) {
+         return orders.map((obj) => {
         return (
-          <Col
-            md={4}
-            xs={12}
-            key={obj.tree_id}
-            className="FarmerTreeCard"
-            onClick={(e) => addToGiftcard(obj)}
-          >
-            <Card className="TreeCard">
-              <Card.Img variant="top" src={obj.tree_img} id="pic" alt="tree" />
-              <div className="Treeshadow"></div>
-              <Card.Body>
-                <Card.Title>
-                  {" "}
-                  <h2>{obj.tree_name}</h2>
-                </Card.Title>
+            <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => addToGiftcard(obj)}>
+              <Card className="TreeCard">
+
+                <Card.Img
+                  variant="top"
+                  src={obj.tree_img}
+                  id="pic"
+                  alt="tree" 
+                />
+                <div className="Treeshadow"></div>
+                <Card.Body>
+                <Card.Title> <h2>{obj.tree_name}</h2></Card.Title>
                 <span>Quantity: {obj.count}</span>
                 <Card.Text>
                   CO<sub>2</sub>: -{obj.co2}kg
                 </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+                </Card.Body>
+              </Card>
+            </Col>
         );
       });
-    } else {
-      return null;
-    }
-  };
+        } else {
+          return null
+        }
+      };
 
-  const ListGiftTrees = (props) => {
-    if (orders) {
-      return giftcardTrees.map((obj) => {
+      const ListGiftTrees = (props) => {
+        if(orders) {
+         return giftcardTrees.map((obj) => {
         return (
-          <Col
-            md={4}
-            xs={12}
-            key={obj.tree_id}
-            className="FarmerTreeCard"
-            onClick={(e) => addToCustomersTrees(obj)}
-          >
-            <Card className="TreeCard">
-              <Card.Img variant="top" src={obj.tree_img} id="pic" alt="tree" />
-              <div className="Treeshadow"></div>
-              <Card.Body>
-                <Card.Title>
-                  {" "}
-                  <h2>{obj.tree_name}</h2>
-                </Card.Title>
+            <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => addToCustomersTrees(obj)}>
+              <Card className="TreeCard">
+
+                <Card.Img
+                  variant="top"
+                  src={obj.tree_img}
+                  id="pic"
+                  alt="tree" 
+                />
+                <div className="Treeshadow"></div>
+                <Card.Body>
+                <Card.Title> <h2>{obj.tree_name}</h2></Card.Title>
                 <span>Quantity: {obj.count}</span>
                 <Card.Text>
                   CO<sub>2</sub>: -{obj.co2}kg
                 </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+                </Card.Body>
+              </Card>
+            </Col>
         );
       });
-    } else {
-      return null;
+        } else {
+          return null
+        }
+      };
+
+    const elo = (e) => {
+        e.preventDefault()
+        setGenerated(1)
     }
-  };
 
-  const elo = (e) => {
-    e.preventDefault();
-    setGenerated(true);
-  };
-
-  return (
-    <div id="gift-tree-container">
-      <h4>Choose trees to make a gift card!</h4>
-      <hr />
-      <Container>
-        <h3 id="giftTree-h3">Click on the tree you want to gift.</h3>
+    return (
+        <div id='gift-tree-container'>
+        <h4>Choose trees to make a gift card!</h4>
+        <hr />
+        <Container>
         <h3>Your trees:</h3>
         <Row className="giftCenteredContent">
-          <ListCustomersTrees />
-        </Row>
+              <ListCustomersTrees />
+            </Row>
         <h3>Trees to give:</h3>
         <Row className="giftCenteredContent">
           <ListGiftTrees />
@@ -178,4 +164,4 @@ function GiftTree() {
   );
 }
 
-export default GiftTree;
+export default GiftTree

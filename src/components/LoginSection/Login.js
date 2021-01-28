@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 async function loginUser(credentials) {
-  return fetch('http://localhost:9000/login', {
-    method: 'POST',
+  return fetch("http://localhost:9000/login", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(credentials),
   }).then((data) => data.json());
@@ -17,7 +17,7 @@ export default function Login({ setToken }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (username === 'admin@admin.com' && password === 'admin') {
+    if (username === "admin@admin.com" && password === "admin") {
       const token = await loginUser({
         username,
         password,

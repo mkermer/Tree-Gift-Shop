@@ -20,11 +20,9 @@ import logo from "../../Logo/Treeduce.png";
 function Navigation() {
   const { handleChange } = useContext(ProductContext);
   const [open, setOpen] = useState(false);
-  const { cart, sidebar, showSidebar, setBounce, bounce } = useContext(
-    CartContext
-  );
+  const { cart, sidebar, showSidebar, setBounce, bounce} = useContext(CartContext);
   const [show, setShow] = useState(false);
-
+  
   const showDropdown = (e) => {
     setShow(!show);
   };
@@ -33,12 +31,12 @@ function Navigation() {
   };
 
   useEffect(() => {
-    if (open) {
+    if(open) {
       setTimeout(() => {
-        setOpen(false);
-      }, 10000);
+      setOpen(false)
+    }, 10000)
     }
-  }, [open]);
+  }, [open])
 
   return (
     <div>
@@ -60,13 +58,13 @@ function Navigation() {
                 onMouseEnter={showDropdown}
                 onMouseLeave={hideDropdown}
               >
-                <NavDropdown.Item as={HashLink} smooth to="/#info">
+                <NavDropdown.Item as={HashLink} smooth to='/#info'>
                   Why Treeduce?
                 </NavDropdown.Item>
-                <NavDropdown.Item as={HashLink} smooth to="/#howto">
+                <NavDropdown.Item as={HashLink} smooth to='/#howto'>
                   How to buy a Tree Gift Card
                 </NavDropdown.Item>
-                <NavDropdown.Item as={HashLink} smooth to="/#products">
+                <NavDropdown.Item as={HashLink} smooth to='/#products'>
                   Find your perfect Tree!
                 </NavDropdown.Item>
               </NavDropdown>
@@ -79,7 +77,7 @@ function Navigation() {
               <Nav.Link as={NavHashLink} smooth to="/#contact">
                 Contact
               </Nav.Link>
-            </Nav>
+            </Nav>           
           </Navbar.Collapse>
           <Collapse in={open}>
             <div id="search">
@@ -90,39 +88,33 @@ function Navigation() {
                   placeholder="Find a tree!"
                   className="mr-sm-2"
                 />
-                <Button as={HashLink} smooth to="/#products">
-                  Search
-                </Button>
+                <Button as={HashLink} smooth to="/#products" >Search</Button>
               </Form>
             </div>
           </Collapse>
           <div className="icons">
-            <Button
-              variant="light"
-              onClick={() => setOpen(!open)}
-              aria-controls="search"
-              aria-expanded={open}
-            >
-              <Search size={25} />
-            </Button>
+          <Button
+            variant="light"
+            
+            onClick={() => setOpen(!open)}
+            aria-controls="search"
+            aria-expanded={open}
+          >
+            <Search size={25} />
+          </Button>
           </div>
           <div className="icons">
             <OverlayNav />
           </div>
           <div className="icons">
             <Button variant="light" onClick={showSidebar}>
-              <Basket3
-                size={25}
-                id="cart-button"
-                onAnimationEnd={() => setBounce(0)}
-                bounce={bounce}
-              />
+              <Basket3 size={25} id='cart-button' onAnimationEnd={() => setBounce(0)} bounce={bounce}/>
               <span id="cart-length">{cart.length}</span>
-              {/* <TreeFill 
+              <TreeFill 
                 size={25} 
                 className="bounce TreeBasket"
                 bounce={bounce}
-              /> */}
+              />
             </Button>
           </div>
           <div className={sidebar ? "cart-menu active" : "cart-menu"}>
