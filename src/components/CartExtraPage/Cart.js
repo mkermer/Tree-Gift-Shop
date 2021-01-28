@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import './Cart.css';
-import { CartContext } from '../../CartContext';
-import { useContext, useEffect } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
-=======
-// import React from "react";
-// import "./Cart.css";
-// import { CartContext } from "../../CartContext";
-// import { useContext, useEffect } from "react";
-// import { Link, withRouter } from "react-router-dom";
-// import { Button } from "react-bootstrap";
->>>>>>> 0c02f3b6729b798766a33e8977599d4aff0f9c2a
+// import React from 'react';
+// import './Cart.css';
+// import { CartContext } from '../../CartContext';
+// import { useContext, useEffect } from 'react';
+// import { Link, withRouter } from 'react-router-dom';
+// import { Button } from 'react-bootstrap';
 
 // function Cart(props) {
 //   const {
