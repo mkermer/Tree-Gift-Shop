@@ -27,14 +27,20 @@ function Cartt(props) {
     setTimeout(() => {
       getCart();
     }, 400);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    getTotal();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cart]);
 
   useEffect(() => {
     setTimeout(() => {
       saveCart();
     }, 2000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [total]);
-  getTotal();
 
   return (
     <Container id="cart-container">
@@ -52,8 +58,8 @@ function Cartt(props) {
 
       <div className="Liste">
         {cart.map((item) => (
-          <>
-            <ListGroup className="cd-cart-list" key={item.tree_id}>
+          <div key={item.tree_id}>
+            <ListGroup className="cd-cart-list">
               <ListGroup.Item className="cd-cart-list-items">
                 <div className="cd-cart-head">
                   <img
@@ -101,7 +107,7 @@ function Cartt(props) {
                 </Button>
               </ListGroup.Item>
             </ListGroup>
-          </>
+          </div>
         ))}
       </div>
       <div className="total">
