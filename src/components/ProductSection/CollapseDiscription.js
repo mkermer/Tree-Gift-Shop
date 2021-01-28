@@ -23,7 +23,7 @@ function CollapseDescription(props) {
         </Collapse>
       </div>
     );
-  };
+  }
 
   export default CollapseDescription;
 

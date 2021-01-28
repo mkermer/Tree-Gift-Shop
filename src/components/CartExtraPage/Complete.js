@@ -19,6 +19,25 @@ function Complete() {
     return <PageError />;
   }
 
+    return (
+        <div id='complete'>
+        {Show()}
+            <h2>Thank you for your purchase!</h2>
+            <h3>Your items:</h3>
+            {orders.map((item) => {
+                return (
+                    <div>
+                    <h2>{item.tree_name}</h2>
+                    <img src={item.tree_img} width="50px"/>
+                    <h3>Quantity: {item.count}</h3>
+                    </div>
+                )
+            })}
+            
+            
+        </div>
+    );
+
   return (
     <div id="complete">
       {Show()}
@@ -34,6 +53,7 @@ function Complete() {
       </Button>
     </div>
   );
+
 }
 
 export default Complete;
