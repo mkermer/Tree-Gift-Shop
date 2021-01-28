@@ -5,10 +5,12 @@ import { PersonCircle } from "react-bootstrap-icons";
 import AccordionLog from "./AccordionLog";
 import { useContext } from "react";
 import { LoginContext } from "../../LoginContext";
+import { CartContext } from "../../CartContext";
 import {Link} from 'react-router-dom'
 
 function OverlayNav() {
   const { getToken, getName, getLastName, logout } = useContext(LoginContext);
+  const {orders} = useContext(CartContext)
     const token = getToken()
 
   const notLoggedPopover = (
@@ -53,6 +55,7 @@ function OverlayNav() {
     >
       <Button variant="light" >
         <PersonCircle size={25} />
+        <span id="cart-length">{orders.length}</span>
       </Button>
     </OverlayTrigger>
    
@@ -65,6 +68,7 @@ function OverlayNav() {
       return <Logged />;
     }
   };
+
 
   return (
     <div>
