@@ -1,5 +1,8 @@
 .check h3 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9aa1c9671cb5a45f2c4290c863b7a834d21c221a
  box-sizing: border-box;
  width: 100%;
  margin-top: 5%;
@@ -54,6 +57,7 @@ position: relative;
 margin-bottom:10px;
 width: 40% !important;
 }
+<<<<<<< HEAD
 =======
     /* box-sizing: border-box; */
     width: 50%;
@@ -63,6 +67,9 @@ width: 40% !important;
     /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
     background-color: white;
    }
+=======
+
+>>>>>>> 9aa1c9671cb5a45f2c4290c863b7a834d21c221a
    
    .check{
    background-color: #c3cbdc;
