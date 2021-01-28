@@ -157,7 +157,7 @@ function Checkout() {
               <Col>
                 <Form.Group controlId="formGroupEmail">
                   <Form.Label>Card details</Form.Label>
-                  <CardElement id="cardElement" options={cardElementOptions} />
+                  <CardElement id="cardElementNumber" options={cardElementOptions} />
                 </Form.Group>
               </Col>
             </Row>
