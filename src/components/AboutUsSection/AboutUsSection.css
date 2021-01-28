@@ -49,12 +49,6 @@
   }
 }
 
-@media (min-width: 720px) { 
-  .TeamMembers card{
-      width:12.5%;
-  }
-}
-
 @media (min-width: 540px) { 
   .TeamMembers card{
       width:6.25%;

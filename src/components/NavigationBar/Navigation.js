@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import Collapse from "react-bootstrap/Collapse";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Search, Basket3 } from "react-bootstrap-icons";
+import { Search, Basket3, TreeFill } from "react-bootstrap-icons";
 import { NavHashLink } from "react-router-hash-link";
 import { HashLink } from "react-router-hash-link";
 import { CartContext } from "../../CartContext";
