@@ -5,7 +5,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { CartContext } from "../../CartContext";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./Checkout.css";
+// import "./Checkout.css";
 
 function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -25,10 +25,10 @@ function Checkout() {
   const amount = Number(parseFloat(total * 100).toFixed(2));
 
   useEffect(() => {
-    getTotal()
+    getTotal();
     getOrders();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cart])
+  }, [cart]);
 
   useEffect(() => {
     setTimeout(() => {
