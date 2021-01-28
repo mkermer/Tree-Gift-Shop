@@ -10,7 +10,7 @@ import "./ProductSection.css";
 import HowToBuy from "./HowToBuy";
 
 function ProductSection(props) {
-  const { addToCart, getOrders} = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   const {
     handleCountryChange,
@@ -28,7 +28,6 @@ function ProductSection(props) {
  useEffect(() => {
    setTimeout(() => {
      getTree()
-     getOrders()
    }, 100);
    // eslint-disable-next-line react-hooks/exhaustive-deps
  }, [])

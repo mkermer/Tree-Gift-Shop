@@ -76,7 +76,7 @@ function FaqQuestion(){
         ))}
         </>
 
-    );
+    )
 }
 
 export default FaqQuestion;

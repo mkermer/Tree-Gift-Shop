@@ -21,6 +21,6 @@ function ContactSection() {
                 </Row>
             </Container>
         );
-}
+};
 
 export default ContactSection;
