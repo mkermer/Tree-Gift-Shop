@@ -7,22 +7,23 @@
     margin: 230px 0;
 }
 
-.Join h2{
+.Join .space{
     margin: 100px 0;
 }
 
 
 .Join .jumbotron{
     margin-bottom: 150px;
-    background-image: url("../../illustrations/undraw_working_from_anywhere_ub67.svg");
+    background-image: url("../../illustrations/undraw_working_from_anywhere_ub67_cropped.svg"),url("../../illustrations/undraw_working_from_anywhere_ub67_tree_flipped.svg");
     background-size: 700px;
     background-repeat: no-repeat;
-    background-position: 100% 100%;
+    background-position: 100% 100%, 0 0;
+
+    /* background:  #e9ecef url("../../illustrations/undraw_working_from_anywhere_ub67_cropped.svg")  100% 100%/700px no-repeat, 
+    #e9ecef url("../../illustrations/undraw_working_from_anywhere_ub67_tree_flipped.svg")  0 0/700px no-repeat; */
+
 }
 
-.Join a{
-    color: white;
-}
 
 .Join .JobDesc{
     text-align: left;
@@ -48,19 +49,11 @@
 
 .Join .Email{
     width: 20% !important;
+    color: white;
 }
 
 .Join .title{
-    width: 60% !important;
     padding-left: 180px;
-}
-
-.Join .categ{
-    width: 15% !important;
-}
-
-.Join .loc{
-    width: 25% !important;
 }
 
 .Join .title, .categ, .loc{
@@ -68,16 +61,24 @@
 }
 
 
-.Join .block{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .Join .card-header{
     background-repeat: no-repeat;
     background-color:  #e9ecef;
     background-size: 200px;
-
 }
 
+/* .Join .accordion{
+    margin-bottom: 200px;
+} */
+
+.Join .linktext{
+    margin-top: 200px !important;
+    width: 60%;
+}
+
+@media (max-width: 991.98px){
+    .Join .categ{
+        padding-left: 180px;
+    }
+}
 

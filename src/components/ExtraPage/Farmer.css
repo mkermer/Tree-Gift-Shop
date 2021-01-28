@@ -14,9 +14,14 @@
     margin: 230px 0;
 }
 
-.Farmer .jumbotron{
+.Farmer .jumbotron:nth-of-type(1){
     margin-bottom: 150px;
+    background-image: url("../../illustrations/undraw_farm_girl_dnpe.svg");
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
 }
+
 
 .FarmerHowTo h2{
     margin: 100px 0;

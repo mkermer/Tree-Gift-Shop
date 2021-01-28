@@ -1,6 +1,7 @@
 import React,{ useContext, useEffect } from 'react';
 import { ProductContext } from "../../ProductContext";
-import {Accordion, Card, Button, Container, Jumbotron} from 'react-bootstrap';
+import {Accordion, Card, Button, Container, Jumbotron, Col, Row} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Join.css';
 
 function Join(props){
@@ -19,20 +20,26 @@ useEffect(() => {
         return (
             <Accordion>
             <Card>
-            {/* https://svgshare.com/i/TZb.svg */}
                 <Card.Header style={{backgroundImage: 'url(' + obj.image + ')'}}>
                 <Accordion.Toggle as={Button} variant="link" eventKey="0">
                 <div className="block">
-                    
-                        <h3 className="title">
-                        {obj.jobtitle}
-                        </h3>
-                        <h3 className="categ">
-                        {obj.category}
-                        </h3>
-                        <h3 className="loc">
-                        {obj.location}
-                        </h3>
+                        <Row>
+                            <Col xs={12} md={12} lg={7}>
+                                <h3 className="title">
+                                    {obj.jobtitle}
+                                </h3>   
+                            </Col>
+                            <Col xs={12} md={6} lg={2}>
+                                <h3 className="categ">
+                                    {obj.category}
+                                </h3>
+                            </Col>
+                            <Col xs={12} md={6} lg={3}>
+                                <h3 className="loc">
+                                    {obj.location}
+                                </h3>
+                            </Col>
+                        </Row>
                 </div>
                 
                 </Accordion.Toggle>
@@ -59,7 +66,7 @@ useEffect(() => {
                         <strong>{obj.salary} $ per month</strong>
                         </p>
                     </div>
-                    <Button className="Email"> <a href="mailto:office@co2-treeduce.com?subject=Application" > Apply Now </a> </Button>
+                    <Button className="Email" href="mailto:office@co2-treeduce.com?subject=Application" > Apply Now </Button>
                     
                 </Card.Body>
                 </Accordion.Collapse>
@@ -77,11 +84,17 @@ useEffect(() => {
         <Jumbotron fluid>
         <h1>Do you want to join us on our mission?</h1>
         </Jumbotron>
-        <h2>We are currently looking for:</h2>
+        <h2 className="space">We are currently looking for:</h2>
             <Container>
                 
                     <ListJobs />
-                
+                    <div className="linktext centered">
+                    <h2>Haven't seen anything that appeals to you?</h2>
+                    <h2>You can still work with us!</h2> 
+                    <h3> Send us your <a href="mailto:office@co2-treeduce.com?subject=Unsolicited Application">unsolicited application</a> </h3> 
+                    <h3>or help us make our earth greener by <Link to="/farmer">planting a tree!</Link></h3>
+                    
+                    </div>
             </Container>
         </div>
       )
