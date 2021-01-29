@@ -36,6 +36,8 @@ export const ProductProvider = (props) => {
     );
   };
 
+  //============Get jobs from database==============//
+
   const getJobs = () => {
     Axios.post("https://treeduce-server.herokuapp.com/jobs").then(
       (response) => {
