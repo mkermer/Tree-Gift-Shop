@@ -3,7 +3,7 @@
   height: 1000px;
   width: 70;
   /* background-color: #f8f9fa; */
-  background-image: url("https://i.ibb.co/VD0sLyB/vertical.jpg");
+  background-image: url("https://i.imgur.com/QERwLl0.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -49,4 +49,8 @@
   width: 500px;
   height: 100px;
   font-style: italic;
+}
+
+#giftMessage {
+  width: 300px;
 }
