@@ -3,11 +3,13 @@ import { Container, Row, Col} from 'react-bootstrap';
 
 import {ReactComponent as Page404} from '../illustrations/undraw_page_not_found_su7k.svg';
 
+import './Page404.css';
+
 function PageError() {
         return (
             <div>
             <Container className="BigErrorMessage">
-                <Row>
+                 <Row className="BEM-ro">
                     <Col lg={12} md={12} sx={12}> <Page404 /> </Col>
                     <Col>
                         <h1>Upps!</h1>
