@@ -20,7 +20,6 @@ function Pdf(props) {
       <div id="certificate-container">
         <div id="certificate-header-container" ref={ref}>
           <h4 id="certificate-header">Tree certificate</h4>
-          <img src="../Logo/Treeduce.png" alt='logo'/>
         </div>
         <h3 id="certificate-desc">
           {result} wonderful trees are being grown in new tree plantations in
