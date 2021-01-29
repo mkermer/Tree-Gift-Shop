@@ -6,23 +6,17 @@ import "./GiftTree.css";
 import Pdf from "./Pdf";
 
 function GiftTree() {
-  const { getOrders, orders, setOrders } = useContext(CartContext);
-  const {
-    setGiftcardTrees,
-    giftcardTrees,
-    setRecipientName,
-    recipientName,
-    setGiftMessage,
-    giftMessage,
-  } = useContext(ProductContext);
+  const { getOrders, orders, setOrders, updateOrders } = useContext(
+    CartContext
+  );
+  const { setRecipientName, setGiftMessage } = useContext(ProductContext);
   const [generated, setGenerated] = useState(false);
+  const [giftcardTrees, setGiftcardTrees] = useState([]);
 
   useEffect(() => {
     getOrders();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log(generated);
 
   const addToGiftcard = (e) => {
     orders.forEach((item, index) => {
@@ -43,12 +37,6 @@ function GiftTree() {
     setGiftcardTrees(giftcardTrees);
     setOrders([...orders, { ...e }]);
   };
-
-  //   if (!orders || orders.length < 1) {
-  //     return <div id='gift-tree-error'>
-  //     <h4>You don't have any trees to give :(</h4>
-  //         </div>
-  //   }
 
   const ListCustomersTrees = (props) => {
     if (orders) {
@@ -84,7 +72,7 @@ function GiftTree() {
   };
 
   const ListGiftTrees = (props) => {
-    if (orders) {
+    if (giftcardTrees) {
       return giftcardTrees.map((obj) => {
         return (
           <Col
@@ -116,9 +104,17 @@ function GiftTree() {
     }
   };
 
-  const elo = (e) => {
+  const generateCertificate = (e) => {
     e.preventDefault();
-    setGenerated(true);
+    if (window.confirm("Are you sure you want to generate the giftcard?")) {
+      if (giftcardTrees.length < 1) {
+        alert("You dont have any trees to give");
+      } else {
+        setGenerated(true);
+        updateOrders();
+      }
+    }
+    getOrders();
   };
 
   return (
@@ -135,7 +131,7 @@ function GiftTree() {
         <Row className="giftCenteredContent">
           <ListGiftTrees />
         </Row>
-        <Form id="gift-contactForm" onSubmit={elo}>
+        <Form id="gift-contactForm" onSubmit={generateCertificate}>
           <Row>
             <Col>
               <Form.Group controlId="validationCustom01">
@@ -172,7 +168,7 @@ function GiftTree() {
           </Button>
         </Form>
       </Container>
-      {/* {generated ? <Pdf /> : null} */}
+      <div id="certif">{generated ? <Pdf trees={giftcardTrees} /> : null}</div>
       {/* <Pdf /> */}
     </div>
   );

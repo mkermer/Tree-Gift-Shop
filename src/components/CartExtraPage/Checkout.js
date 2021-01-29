@@ -5,7 +5,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { CartContext } from "../../CartContext";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import "./Checkout.css";
+import "./Checkout.css";
 
 function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -85,7 +85,7 @@ function Checkout() {
       saveCart();
       setTimeout(() => {
         window.location.href = "/complete";
-      }, 4000);
+      }, 5000);
     } else {
       alert("An error occured while processing your payment.");
       setIsProcessing(false);
