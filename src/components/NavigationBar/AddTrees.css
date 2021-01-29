@@ -2,17 +2,13 @@
     margin: 100px;
     margin-top: 8%;
 }
-
 .stop-container h2 {
     padding-bottom: 40px;
 }
-
 #AddTreeHeader {
 text-align:center;
 margin-top: 10%;
-
 }
-
 #addTreeForm
 {
 margin: 0 auto;
@@ -26,8 +22,8 @@ border-radius: 5px;
 box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 padding: 50px 30px;
 box-sizing: border-box;
-background-color: #e9ecef;
 
+background-color: #c3cbdc;
 }
 
-    
+
