@@ -37,10 +37,10 @@ function Pdf(props) {
         <div className="date">on {currentDay}</div>
         <div id="quote">
           <h3>Our planet can now breath a little deeper</h3>
-          <h3 id='giftMessage'>{giftMessage}</h3>
+          <h3>{giftMessage}</h3>
         </div>
-      </div>
         <button>Download</button>
+      </div>
     </div>
   );
 }
