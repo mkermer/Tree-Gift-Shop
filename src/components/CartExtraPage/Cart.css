@@ -77,38 +77,39 @@
 
 #cd-cart-count {
   width: 32px;
-  height: 32px;
+  text-align: center;
 }
 
 #cd-price {
   width: 50%;
-  margin-left: 25px;
+  margin-left: 24px;
 }
 
 #item-button-add {
   background-color: #2ba031 !important;
-  display: inline;
-  align-self: center;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-left: 24px;
+  /* display: inline; */
+  padding: 0px;
+  margin-left: 0px;
   outline: none;
   border: none;
-  width: 48px;
-  height: auto;
+  line-height: 0.1;
+  font-size: 20px;
+  width: 24px !important;
+  height: 24px !important;
   border-radius: 50%;
 }
 
 #item-button-remove {
   background-color: #d62347 !important;
-  display: inline;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-right: 24px;
+  /* display: inline; */
+  padding: 0px;
+  margin-right: 0px;
   outline: none;
   border: none;
-  width: 48px;
-  height: auto;
+  line-height: 0.1;
+  font-size: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
 }
 
