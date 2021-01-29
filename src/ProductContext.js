@@ -15,7 +15,6 @@ export const ProductProvider = (props) => {
   const [products, setProducts] = useState();
   const [farmerFilter, setFarmerFilter] = useState();
   const [selectedTree, setSelectedTree] = useState([]);
-  const [giftcardTrees, setGiftcardTrees] = useState([])
   const [recipientName, setRecipientName] = useState('')
   const [giftMessage, setGiftMessage] = useState('')
   const [jobs, setJobs] = useState([])
@@ -35,6 +34,8 @@ export const ProductProvider = (props) => {
       }
     );
   };
+
+  //============Get jobs from database==============//
 
   const getJobs = () => {
     Axios.post("https://treeduce-server.herokuapp.com/jobs").then(
@@ -177,8 +178,6 @@ export const ProductProvider = (props) => {
         sortByPriceAscending,
         sortByPriceDescending,
         handleChange,
-        setGiftcardTrees,
-        giftcardTrees,
         recipientName,
         setRecipientName,
         giftMessage,

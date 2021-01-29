@@ -1,10 +1,52 @@
 #certificate-container {
   margin: 0 auto;
-  height: 60vh;
-  width: 50vw;
-  background-color: #f8f9fa;
+  height: 1000px;
+  width: 70;
+  /* background-color: #f8f9fa; */
+  background-image: url("https://i.ibb.co/VD0sLyB/vertical.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#certificate-header-container {
+  display: flex;
+  justify-content: center;
 }
 
 #certificate-header {
+  display: inline-block;
+  margin-top: 200px;
+}
+
+#certificate-desc {
   text-align: center;
+}
+
+#recipientName {
+  font-size: 50px;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #225B4A;
+}
+
+#certificate-items {
+  margin: 0 auto;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.date {
+  font-weight: 500;
+  text-align: center;
+}
+
+
+#quote {
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  height: 100px;
+  font-style: italic;
 }

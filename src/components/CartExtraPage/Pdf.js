@@ -1,47 +1,47 @@
-import React, { useContext, useEffect, useState } from "react";
-import { CartContext } from "../../CartContext";
+import React, { useContext } from "react";
 import { ProductContext } from "../../ProductContext";
+import dateFormat from "dateformat";
 import "./Pdf.css";
 
-const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-const d = new Date();
+const ref = React.createRef();
 
-function Pdf() {
-  const {
-    setGiftcardTrees,
-    giftcardTrees,
-    setRecipientName,
-    recipientName,
-    setGiftMessage,
-    giftMessage,
-  } = useContext(ProductContext);
+const now = new Date();
+const currentDay = dateFormat(now, "mmmm dS, yyyy");
+
+function Pdf(props) {
+  const { recipientName, giftMessage } = useContext(ProductContext);
+
+  let result = props.trees.reduce(function (tot, arr) {
+    return tot + arr.count;
+  }, 0);
 
   return (
-    <div id="certificate-container">
-      <h4>Tree certificate</h4>
-      <h4>{recipientName}</h4>
-      <h3 id="certificate-header">Has been gifted these beautiful trees:</h3>
-      {giftcardTrees.map((item) => (
-        <div>
-          <span>
-            {item.tree_name} in {item.country}
-          </span>
+    <div className="certif">
+      <div id="certificate-container">
+        <div id="certificate-header-container" ref={ref}>
+          <h4 id="certificate-header">Tree certificate</h4>
+          <img src="../Logo/Treeduce.png" alt='logo'/>
         </div>
-      ))}
-      <div>{monthNames[d.getMonth()]}</div>
+        <h3 id="certificate-desc">
+          {result} wonderful trees are being grown in new tree plantations in
+          the name of
+        </h3>
+        <h4 id="recipientName">{recipientName}</h4>
+        <div id="certificate-items">
+          {props.trees.map((item) => (
+            <span id="certificate-item">
+              {" "}
+              {item.count} {item.tree_name} trees in {item.country},{" "}
+            </span>
+          ))}
+        </div>
+        <div className="date">on {currentDay}</div>
+        <div id="quote">
+          <h3>Our planet can now breath a little deeper</h3>
+          <h3>{giftMessage}</h3>
+        </div>
+        <button>Download</button>
+      </div>
     </div>
   );
 }
