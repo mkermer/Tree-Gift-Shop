@@ -118,11 +118,12 @@ function Navigation() {
                 bounce={bounce}
               />
               <span id="cart-length">{cart.length}</span>
-              {/* <TreeFill 
+              <TreeFill 
                 size={25} 
                 className="bounce TreeBasket"
                 bounce={bounce}
-              /> */}
+                onAnimationEnd={() => setBounce(0)}
+              />
             </Button>
           </div>
           <div className={sidebar ? "cart-menu active" : "cart-menu"}>
