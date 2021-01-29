@@ -12,21 +12,39 @@ import {
 import MissionJumbotron from './MissionJumbotron';
 import './AboutUsSection.css';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+
+Aos.init({});
+
 
 function AboutUs() {
   return (
     <div>
       <Container>
         <Row className="mt-20">
-          <Col lg={12} md={12}>
+          <Col
+            data-aos="fade-right"
+            data-aos-offset="500"
+            data-aos-duration="500"
+            lg={12} md={12}>
             <h1>About Us</h1>
           </Col>
         </Row>
         <Row>
-          <Col lg={6} md={12} sm={12}>
+          <Col
+            data-aos="fade-right"
+            data-aos-offset="500"
+            data-aos-duration="400" 
+            lg={6} md={12} sm={12}>
             <Plattform />
           </Col>
-          <Col lg={6} md={12}>
+          <Col 
+            data-aos="fade-left"
+            data-aos-offset="500"
+            data-aos-duration="400" 
+            lg={6} md={12}>
             <h3>Our History</h3>
             <p>
               Treeduce is the only online platform in the world where you can have someone plant a tree for you and then follow it online.
