@@ -2,18 +2,31 @@
 
 *A webshop for buying tree gift cards. You buy, we plant. Why buy flowers if you can buy a tree? It's good for your marriage AND the environment!*
 
-1. Fork this Repo
-2. Clone it to your own
-3. Create a pull request **only once** as soon as you have changed or added a single thing
-4. Commit regulary to automatically update the pull request:
+In a team of four people we worked out our first project in Full Stack Development. 
+Together we developed a web app where the user can buy a tree as a gift.
 
-- git add .
-- git commit -m "message"
-- git push
+## Summary of our main features:
 
-After a merge, type **git pull upstream main**!!!
+*choosing a tree/ trees 
+*saving the chosen trees in a cart 
+*Login 
+*Checkout/ Payment
+*generating a Gift Card 
 
-Note: This React App is running on Port 8080
+## To program this application we used different tools and libraries:
+
+*react
+*react-bootstrap
+*react-bootstrap-icons 
+*mysql
+*nodemailer
+*stripe
+*axios
+*cors
+*local-storage
+*sass
+*confetti
+*express
 
 **Product Owner:** Johanna von Horn
 

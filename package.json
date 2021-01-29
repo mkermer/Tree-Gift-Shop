@@ -31,7 +31,6 @@
     "confetti": "^1.1.1",
     "cors": "^2.8.5",
     "dateformat": "^4.5.0",
-    "dom-to-image": "^2.6.0",
     "framer-motion": "^3.2.1",
     "local-storage": "^2.0.0",
     "mysql": "^2.18.1",
