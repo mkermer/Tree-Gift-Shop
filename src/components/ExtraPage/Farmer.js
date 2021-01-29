@@ -23,8 +23,7 @@ function Farmer(){
           <>
             <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => {
                 addToSelectedTree(obj)
-                document.getElementById(index).setAttribute('class', 'asdd')
-                console.log(document.getElementById(index))
+                alert(`You successfully selected a ${obj.tree_name} tree!`)
                 }}>
               <Card className='TreeCard' id={index}>
                 <Card.Img
