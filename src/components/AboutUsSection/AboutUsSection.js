@@ -61,11 +61,16 @@ function AboutUs() {
       <MissionJumbotron />
       <Container className="TeamMembers">
         <Row>
-          <Col md={12}>
+          <Col
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-duration="500"
+            md={12}>
             <h4>Our Team</h4>
           </Col>
           <Col lg={3} md={6} sm={6}>
-            <Card id="TeamMembersCard">
+            <Card 
+              data-aos="fade-up-right" id="TeamMembersCard">
               <CardBody>
                 <CardImg src={Adrian} id="picTeam" alt="tree" />
                 <CardTitle tag="h5">Adrian</CardTitle>
@@ -74,7 +79,7 @@ function AboutUs() {
             </Card>
           </Col>
           <Col lg={3} md={6} sm={6}>
-            <Card id="TeamMembersCard">
+            <Card data-aos="fade-up-right" id="TeamMembersCard">
               <CardBody>
                 <CardImg src={Yiulia} id="picTeam" alt="tree" />
                 <CardTitle tag="h5">Yuliya</CardTitle>
@@ -83,7 +88,7 @@ function AboutUs() {
             </Card>
           </Col>
           <Col lg={3} md={6} sm={6}>
-            <Card id="TeamMembersCard">
+            <Card data-aos="fade-up-left" id="TeamMembersCard">
               <CardBody>
                 <CardImg src={Morgane} id="picTeam" alt="tree" />
                 <CardTitle tag="h5">Morgane</CardTitle>
@@ -92,7 +97,7 @@ function AboutUs() {
             </Card>
           </Col>
           <Col lg={3} md={6} sm={6}>
-            <Card id="TeamMembersCard">
+            <Card data-aos="fade-up-left" id="TeamMembersCard">
               <CardBody>
                 <CardImg src={Johanna} id="picTeam" alt="tree" />
                 <CardTitle tag="h5">Johanna</CardTitle>
