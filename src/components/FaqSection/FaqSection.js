@@ -5,7 +5,7 @@ import FaqQuestion from "./FaqQuestion";
 
 function FaqSection() {
   return (
-    <Container className="come-in">
+    <Container>
     <Col md={12}>
         <h1>Little FAQ</h1>
       <p>The answer to your question might be here!</p>
