@@ -9,6 +9,12 @@ import "./ProductSection.css";
 
 import HowToBuy from "./HowToBuy";
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+
+Aos.init({});
+
 function ProductSection(props) {
   const { addToCart, getOrders} = useContext(CartContext);
 
@@ -43,18 +49,30 @@ function ProductSection(props) {
       </Row>
       <div className="HashTo" id="products"/>
       <Row>
-        <Col xs={12}>
+        <Col 
+          data-aos="fade-down"
+          data-aos-offset="100"
+          data-aos-duration="400"
+          xs={12}>
           <h1>Plant a tree</h1>
           
         </Col>
       </Row>
       <Row>
-        <Col xl={12} lg={12} md={12} sm={12} sx={12}>
+        <Col 
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-duration="500"
+          xl={12} lg={12} md={12} sm={12} sx={12}>
           <Searchbar id="search" handleChange={handleChange} />
         </Col>
       </Row>
       <Row>
-        <Col xl={12} lg={12} md={12} sm={12} sx={12}>
+        <Col
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-duration="500"
+          xl={12} lg={12} md={12} sm={12} sx={12}>
           <Filters
             priceDesc={sortByPriceDescending}
             priceAsc={sortByPriceAscending}

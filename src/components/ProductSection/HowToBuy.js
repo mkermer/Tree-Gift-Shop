@@ -12,12 +12,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 
-Aos.init({
-  offset: 100,
-  duration: 500,
-  easing: 'ease-in-sine',
-  delay: 20,
-});
+Aos.init({});
 
 function HowToBuy() {
 
@@ -26,9 +21,16 @@ function HowToBuy() {
         <Container className="HowToBuy">
           <Row>
             <Col md={12}>
-              <h1 data-aos="zoom-in-up">How to buy a tree gift?</h1>
+              <h1 
+                data-aos="zoom-in-up" 
+                data-aos-offset="500"
+                data-aos-duration="600">How to buy a tree gift?</h1>
             </Col>
-            <Col data-aos="fade-up" lg={4} md={12}>
+            <Col 
+              data-aos="fade-up" 
+              data-aos-offset="400"
+              data-aos-duration="700"
+              lg={4} md={12}>
               <Card className="HowToBuyCard">
                 <CardBody>
                   <CardImg src={BuyTree} id="picHowTo1" alt="tree" />
@@ -37,7 +39,11 @@ function HowToBuy() {
                 </CardBody>
               </Card>
             </Col>
-            <Col data-aos="fade-up" lg={4} md={12}>
+            <Col 
+              data-aos="fade-up"
+              data-aos-offset="400"
+              data-aos-duration="700"
+              lg={4} md={12}>
               <Card className="HowToBuyCard">
                 <CardBody>
                   <CardImg src={CreditCard} id="picHowTo2" alt="tree" />
@@ -46,7 +52,11 @@ function HowToBuy() {
                 </CardBody>
               </Card>
             </Col>
-            <Col data-aos="fade-up"  lg={4} md={12}>
+            <Col 
+              data-aos="fade-up"
+              data-aos-offset="400"
+              data-aos-duration="700" 
+              lg={4} md={12}>
               <Card className="HowToBuyCard">
                 <CardBody>
                   <CardImg src={SentGift} id="picHowTo3" alt="sentyourgift" />

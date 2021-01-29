@@ -9,6 +9,12 @@ import { ProductContext } from "../../ProductContext";
 import { LoginContext } from "../../LoginContext";
 import { CartContext } from "../../CartContext";
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+
+Aos.init({});
+
 
 function TreeCard(props) {
   const [open] = useState(false);
@@ -22,7 +28,11 @@ function TreeCard(props) {
     if (tree) {
       return tree.map((obj) => {
         return (
-          <Col lg={4} md={6} sm={12} xs={12} key={obj.tree_name}>
+          <Col 
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-duration="600"
+          lg={4} md={6} sm={12} xs={12} key={obj.tree_name}>
             <Card className="TreeCard">
               <Card.Img
                 variant="top"
