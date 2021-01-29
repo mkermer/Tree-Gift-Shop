@@ -20,7 +20,7 @@ console.log(formEmail)
     event.preventDefault();
     axios({
       method: "POST",
-      url: "http://localhost:3002/send",
+      url: "https://treeduce-server.herokuapp.com/send",
       data: {
         name: formName,
         lastname: lastFormName,
