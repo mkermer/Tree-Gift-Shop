@@ -7,26 +7,26 @@ Together we developed a web app where the user can buy a tree as a gift.
 
 ## Summary of our main features:
 
-*choosing a tree/ trees 
-*saving the chosen trees in a cart 
-*Login 
-*Checkout/ Payment
-*generating a Gift Card 
+* choosing a tree/ trees 
+* saving the chosen trees in a cart 
+* Login 
+* Checkout/ Payment
+* generating a Gift Card 
 
 ## To program this application we used different tools and libraries:
 
-*react
-*react-bootstrap
-*react-bootstrap-icons 
-*mysql
-*nodemailer
-*stripe
-*axios
-*cors
-*local-storage
-*sass
-*confetti
-*express
+* react
+* react-bootstrap
+* react-bootstrap-icons 
+* mysql
+* nodemailer
+* stripe
+* axios
+* cors
+* local-storage
+* sass
+* confetti
+* express
 
 **Product Owner:** Johanna von Horn
 
