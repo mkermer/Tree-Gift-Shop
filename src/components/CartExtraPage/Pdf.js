@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../../ProductContext";
 import dateFormat from "dateformat";
+import { Download } from "react-bootstrap-icons";
+import { Container, Button } from 'react-bootstrap';
 import "./Pdf.css";
 
 const ref = React.createRef();
@@ -16,8 +18,10 @@ function Pdf(props) {
   }, 0);
 
   return (
-    <div className="certif">
-      <div id="certificate-container">
+    <>
+          <Button className="download">Download &nbsp;<Download size={25}/></Button>
+
+      <Container id="certificate-container">
         <div id="certificate-header-container" ref={ref}>
           <h4 id="certificate-header">Tree certificate</h4>
         </div>
@@ -39,9 +43,9 @@ function Pdf(props) {
           <h3>Our planet can now breath a little deeper</h3>
           <h3>{giftMessage}</h3>
         </div>
-        <button>Download</button>
-      </div>
-    </div>
+      
+      </Container>
+    </>
   );
 }
 
