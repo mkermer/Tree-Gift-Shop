@@ -1,6 +1,6 @@
 # Tree-Gift-Shop
 
-![CO2 Treeduce](https://github.com/mkermer/Tree-Gift-Shop/blob/main/src/Logo/Treeduce-old.png "CO2 Treeduce") [CO2 Treeduce Website](https://treeduce.herokuapp.com/)
+![CO2 Treeduce](https://github.com/mkermer/Tree-Gift-Shop/blob/main/src/Logo/Treeduce-old.png =100 "CO2 Treeduce") [CO2 Treeduce Website](https://treeduce.herokuapp.com/)
 
 *A webshop for buying tree gift cards. You buy, we plant. Why buy flowers if you can buy a tree? It's good for your marriage AND the environment!*
 
