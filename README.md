@@ -35,6 +35,7 @@ Together we developed a web app where the user can buy a tree as a gift.
 * sass
 * confetti
 * express
+* Aos
 
 **Product Owner:** Johanna von Horn
 
