@@ -8,7 +8,7 @@ import './Page404.css';
 function PageError() {
         return (
             <div>
-            <Container className="BigErrorMessage">
+            <Container className="BigErrorMessage come-in">
                  <Row className="BEM-ro">
                     <Col lg={12} md={12} sx={12}> <Page404 /> </Col>
                     <Col>

@@ -8,18 +8,27 @@ import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
 
 import "./ProductSection.css";
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+
+Aos.init({
+  offset: 100,
+  duration: 500,
+  easing: 'ease-in-sine',
+  delay: 20,
+});
+
 function HowToBuy() {
 
     return (
-      <div>
+      <div >
         <Container className="HowToBuy">
           <Row>
             <Col md={12}>
-            
-
-              <h1>How to buy a tree gift?</h1>
+              <h1 data-aos="zoom-in-up">How to buy a tree gift?</h1>
             </Col>
-            <Col lg={4} md={12}>
+            <Col data-aos="fade-up" lg={4} md={12}>
               <Card className="HowToBuyCard">
                 <CardBody>
                   <CardImg src={BuyTree} id="picHowTo1" alt="tree" />
@@ -28,7 +37,7 @@ function HowToBuy() {
                 </CardBody>
               </Card>
             </Col>
-            <Col lg={4} md={12}>
+            <Col data-aos="fade-up" lg={4} md={12}>
               <Card className="HowToBuyCard">
                 <CardBody>
                   <CardImg src={CreditCard} id="picHowTo2" alt="tree" />
@@ -37,7 +46,7 @@ function HowToBuy() {
                 </CardBody>
               </Card>
             </Col>
-            <Col lg={4} md={12}>
+            <Col data-aos="fade-up"  lg={4} md={12}>
               <Card className="HowToBuyCard">
                 <CardBody>
                   <CardImg src={SentGift} id="picHowTo3" alt="sentyourgift" />
