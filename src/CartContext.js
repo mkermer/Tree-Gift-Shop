@@ -11,7 +11,6 @@ export const CartProvider = (props) => {
   const [total, setTotal] = useState([0]);
   const [sidebar, setSidebar] = useState(false);
   const [orders, setOrders] = useState([])
-
   const [paymentComplete, setPaymentComplete] = useState(false)
   const [bounce, setBounce] = useState(0)
 
@@ -19,6 +18,16 @@ export const CartProvider = (props) => {
   const openSidebar = () => setSidebar(true);
 
   //============Cart functions==============//
+  const updateOrders = () => {
+    getOrders()
+    Axios.post('http://treeduce-server.herokuapp.com/order', {
+      cart:JSON.stringify(orders),
+      username: getEmail(),
+    })
+  }
+
+
+
   const placeOrder = () => {
     getOrders()
     const order = cart.concat(orders) 
@@ -152,8 +161,8 @@ export const CartProvider = (props) => {
         paymentComplete,
         setPaymentComplete,
         bounce,
-        setBounce
-
+        setBounce,
+        updateOrders,
       }}
     >
       {props.children}

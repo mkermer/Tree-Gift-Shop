@@ -85,7 +85,7 @@ function Checkout() {
       saveCart();
       setTimeout(() => {
         window.location.href = "/complete";
-      }, 4000);
+      }, 5000);
     } else {
       alert("An error occured while processing your payment.");
       setIsProcessing(false);

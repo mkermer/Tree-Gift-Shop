@@ -1,4 +1,4 @@
-import {React, useContext, useEffect, useState} from 'react';
+import {React, useContext, useEffect} from 'react';
 import {ProductContext} from '../../ProductContext'
 import FarmerContact from './FarmerContact';
 import FarmerFilter from './FarmerFilter'
@@ -9,7 +9,6 @@ import './Farmer.css';
 
 function Farmer(){
     const {getTree, farmerFilter, addToSelectedTree} = useContext(ProductContext)
-    const [selected, setSelected] = useState()
 
     useEffect(() => {
           getTree()

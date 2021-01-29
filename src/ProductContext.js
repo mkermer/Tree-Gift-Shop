@@ -15,7 +15,6 @@ export const ProductProvider = (props) => {
   const [products, setProducts] = useState();
   const [farmerFilter, setFarmerFilter] = useState();
   const [selectedTree, setSelectedTree] = useState([]);
-  const [giftcardTrees, setGiftcardTrees] = useState([])
   const [recipientName, setRecipientName] = useState('')
   const [giftMessage, setGiftMessage] = useState('')
   const [jobs, setJobs] = useState([])
@@ -179,8 +178,6 @@ export const ProductProvider = (props) => {
         sortByPriceAscending,
         sortByPriceDescending,
         handleChange,
-        setGiftcardTrees,
-        giftcardTrees,
         recipientName,
         setRecipientName,
         giftMessage,

@@ -1,22 +1,20 @@
-import React,{ useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../../ProductContext";
 import {Accordion, Card, Button, Container, Jumbotron, Col, Row} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Join.css';
 
-function Join(props){
-    const {jobs, getJobs} = useContext(ProductContext)
+function Join(props) {
+  const { jobs, getJobs } = useContext(ProductContext);
 
-useEffect(() => {
-    getJobs()
-}, [])
+  useEffect(() => {
+    getJobs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-
-
-    const ListJobs = (props) => {
-        if(jobs) {
-            return jobs.map((obj) => {
-
+  const ListJobs = (props) => {
+    if (jobs) {
+      return jobs.map((obj) => {
         return (
             <Accordion>
             <Card>
@@ -99,5 +97,11 @@ useEffect(() => {
         </div>
       )
 
+
+  return (
+    <div>
+      <ListJobs />
+    </div>
+  );
 }
 export default Join;

@@ -1,14 +1,13 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import {
-  Jumbotron, Container, Row, Col,
+Container
 } from 'react-bootstrap';
 import Button from "react-bootstrap/Button";
 import { useContext } from "react";
 import { LoginContext } from "../../LoginContext";
 import { ProductContext } from "../../ProductContext";
 import "./AddTrees.css";
-import { HashLink } from 'react-router-hash-link';
 // import { ReactComponent as BgImg } from '../../trees-illustrtion/tree-illu-19.svg';
 export default function AddTrees() {
   const { getEmail } = useContext(LoginContext);
@@ -81,7 +80,6 @@ export default function AddTrees() {
             onChange={(e) => {
               setPrice(e.target.value);
             }}
-            required
           />
           <br />
           <Form.Control
