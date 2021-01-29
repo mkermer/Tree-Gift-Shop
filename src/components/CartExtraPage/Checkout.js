@@ -5,11 +5,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { CartContext } from "../../CartContext";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import "./CheckOut.css";
-=======
-// import "./Checkout.css";
->>>>>>> 6fd497029d1a64fe2be012b064d283749100857f
+import "./Checkout.css";
 
 function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);

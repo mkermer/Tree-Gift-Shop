@@ -62,7 +62,7 @@ function Farmer(){
           );
         } else {
           return null
-        };
+        }
       };
 
   
