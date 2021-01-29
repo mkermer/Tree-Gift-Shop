@@ -98,7 +98,7 @@ function Checkout() {
       <hr />
       <div className="check">
         <div className="cartCheckout">
-          <h2>Summary</h2>
+          <h3>Summary</h3>
           {cart.map((item) => (
             <div className="items-checkout" key={item.tree_id}>
               <span>
@@ -107,7 +107,7 @@ function Checkout() {
               <span> ${parseFloat(item.price * item.count).toFixed(2)} </span>
             </div>
           ))}
-          <h2>Total:</h2>
+          <h3>Total:</h3>
           <span>${parseFloat(total).toFixed(2)}</span>
         </div>
         <span>

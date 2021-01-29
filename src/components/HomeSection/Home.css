@@ -78,11 +78,63 @@
 
 .hero{
   height: 100vh;
-   margin-bottom: 160px;
+  margin-bottom: 160px;
 }
 
 .HashTo{
   z-index: -1;
   position: absolute;
   margin-top: -120px;
+}
+
+
+#callto{
+  border: none;
+  box-shadow: 1px 1px 7px -1px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+@media (min-width:999px){
+  .slogan h1 {
+  line-height: 1.2;
+  font-size: 80px;
+  color: black;
+  position: relative;
+  animation: text 3s ease;
+  }
+}
+
+@media (max-width: 991.98px){
+  
+  .hero{
+    height:80vh;
+  }
+  .intro-img{
+   visibility: hidden;
+  }
+  @keyframes text {
+  0% {
+    color: rgb(222, 230, 238);
+  }
+  30% {
+    letter-spacing: 1px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
+}
+
+@media (max-width: 768.98px){
+  .hero{
+    height:60vh;
+  }
+  .slogan h1 {
+  line-height: 1.2;
+  font-size: 56px;
+  color: black;
+  position: relative;
+  animation: text 3s ease;
+  }
+
 }

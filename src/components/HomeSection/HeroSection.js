@@ -11,20 +11,17 @@ function HeroSection() {
             <Jumbotron fluid className= "hero">
                     <Container className="slogan">
                         <Row> 
-                            
-                            <Col lg={6} md={4}> 
+                            <Col lg={6} md={12}> 
                                 <h1 className="text1">
-                                
+
                                     Lets Make the Earth Green Again!</h1>
                                     
                                 <h3 className="text2">Do you consider to buy a gift to your beloved one to save the world? </h3>
 
-                                <Button as={HashLink} smooth to='/#products'> Get one now</Button>
+                                <Button id="callto" as={HashLink} smooth to='/#products'> Get one now</Button>
                             </Col>
-                            <Col lg={6} md={8} >
-                            <IntroImg/>
-                            
-                
+                            <Col lg={6} md={12} >
+                            <IntroImg className="intro-img"/>
                             </Col>
                         </Row>
                     </Container>

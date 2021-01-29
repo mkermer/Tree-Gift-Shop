@@ -5,7 +5,7 @@ import FillForm from '../../illustrations/undraw_delivery_address_03n0.svg';
 import PlantTree from '../../illustrations/undraw_environment_iaus.svg';
 import CollectGift from '../../illustrations/undraw_Gift_box_re_vau4.svg';
 import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
-import '../ProductSection/ProductSection.css'
+import '../ProductSection/ProductSection.css';
 
 
 function HowToBuy() {
