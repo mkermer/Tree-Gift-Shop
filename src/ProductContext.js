@@ -138,7 +138,7 @@ export const ProductProvider = (props) => {
 
    //============Farmer site - select a tree==============//
   function addToSelectedTree(e) {
-      setSelectedTree({ ...e });
+      setSelectedTree(e);
   }
 
 

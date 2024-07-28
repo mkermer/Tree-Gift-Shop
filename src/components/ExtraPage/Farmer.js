@@ -8,7 +8,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import './Farmer.css';
 
 function Farmer(){
-    const {getTree, farmerFilter, addToSelectedTree} = useContext(ProductContext)
+    const {getTree, farmerFilter, addToSelectedTree, selectedTree} = useContext(ProductContext)
 
     useEffect(() => {
           getTree()
@@ -22,10 +22,13 @@ function Farmer(){
         return (
           <>
             <Col md={4} xs={12} key={obj.tree_id} className="FarmerTreeCard" onClick={(e) => {
-                addToSelectedTree(obj)
+                addToSelectedTree(obj);
                 alert(`You successfully selected a ${obj.tree_name} tree!`)
                 }}>
-              <Card className='TreeCard' id={index}>
+              <Card className='TreeCard' id={index} style={selectedTree.tree_id == obj.tree_id ? {
+                borderWidth: 2,
+                borderColor: "green"
+              } : {}}>
                 <Card.Img
                   variant="top"
                   src={obj.tree_img}
